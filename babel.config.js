@@ -14,7 +14,7 @@ const MODULE_RESOLVER = [
             '.android.js',
         ],
         alias: {
-            '@root': ['.'],
+            './': ['.'],
             '@src': './src',
             '@app': './src/app',
             '@pages': './src/pages',
