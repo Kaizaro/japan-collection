@@ -1,7 +1,1 @@
-import React, {FC} from 'react';
-
-const App: FC = () => {
-    return <></>;
-};
-
-export {App};
+export {App as App} from '@app/ui/App';
