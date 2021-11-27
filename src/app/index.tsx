@@ -1,1 +1,1 @@
-export {App as App} from '@app/ui/App';
+export {App as App} from './ui/App';

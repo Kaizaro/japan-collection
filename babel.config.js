@@ -1,18 +1,20 @@
 const MODULE_RESOLVER = [
     'module-resolver',
     {
-        root: './',
+        root: ['./src'],
         extensions: [
             '.ts',
-            '.ios.ts',
-            '.android.ts',
+            '.tsx',
             '.js',
-            '.ios.js',
-            '.android.js',
+            '.jsx',
             '.json',
+            '.ios.ts',
+            '.ios.js',
+            '.android.ts',
+            '.android.js',
         ],
         alias: {
-            '@root': '.',
+            '@root': ['.'],
             '@src': './src',
             '@app': './src/app',
             '@pages': './src/pages',
