@@ -27,6 +27,7 @@ const ModelList: FC = () => {
     return (
         <Container>
             <FlatList
+                showsVerticalScrollIndicator={false}
                 keyExtractor={keyExtractor}
                 data={models}
                 renderItem={renderItem}

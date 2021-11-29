@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import MainText, {IDefaultTextProps} from './MainText';
+import {MainText, IDefaultTextProps} from './MainText';
 
 import {styles} from './styles';
 
