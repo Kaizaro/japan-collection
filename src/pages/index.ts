@@ -1,1 +1,1 @@
-export {ModelList as ModelList} from '@pages/ui/ModelList';
+export {Exhibits as ModelList} from '@pages/ui/ModelList';

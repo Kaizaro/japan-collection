@@ -1,18 +1,19 @@
 import {useCallback, useEffect, useState} from 'react';
 
-import {getModels} from '@features/models/getModels';
+import {getExhibits} from '@features/getExhibits/models/getExhibits';
+
 import {models as IModels} from '@entities';
 
 interface IUseGetModels {
-    models: IModels.IModel;
+    models: IModels.IExhibit;
     fetchModels: () => void;
 }
 
-const useGetModels = (): IUseGetModels => {
-    const [models, setModels] = useState<IModels.IModel | null>(null);
+const useGetExhibits = (): IUseGetModels => {
+    const [models, setModels] = useState<IModels.IExhibit | null>(null);
 
     const fetchModels = useCallback(() => {
-        const fetchedModels = getModels();
+        const fetchedModels = getExhibits();
 
         console.log('@SEAN', 'models', fetchedModels);
         if (fetchedModels) {
@@ -30,4 +31,4 @@ const useGetModels = (): IUseGetModels => {
     };
 };
 
-export {useGetModels};
+export {useGetExhibits};
