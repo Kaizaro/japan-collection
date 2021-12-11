@@ -11,4 +11,5 @@ const App: FC = () => {
     );
 };
 
-export {App};
+/** @internal */
+export default App;

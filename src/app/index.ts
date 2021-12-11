@@ -1,1 +1,3 @@
-export {App as App} from './ui/App';
+import {App} from './core';
+
+export {App as AppCore};
