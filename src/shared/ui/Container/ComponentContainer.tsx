@@ -3,9 +3,9 @@ import {View, ViewStyle} from 'react-native';
 
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
-import {styles} from './styles';
+import {componentContainerStyles} from './styles';
 
-const Container: FC = ({children}) => {
+const ComponentContainer: FC = ({children}) => {
     const {top} = useSafeAreaInsets();
     const marginTop = useMemo<ViewStyle>(
         () => ({
@@ -14,7 +14,11 @@ const Container: FC = ({children}) => {
         [top],
     );
 
-    return <View style={{...styles.container, ...marginTop}}>{children}</View>;
+    return (
+        <View style={{...componentContainerStyles.container, ...marginTop}}>
+            {children}
+        </View>
+    );
 };
 
-export {Container};
+export default ComponentContainer;

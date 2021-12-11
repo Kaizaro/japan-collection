@@ -1,13 +1,12 @@
 import React, {FC} from 'react';
+import {View} from 'react-native';
 
 import {SafeAreaProvider} from 'react-native-safe-area-context';
-
-import {ModelList} from '@src/pages';
 
 const App: FC = () => {
     return (
         <SafeAreaProvider>
-            <ModelList />
+            <View />
         </SafeAreaProvider>
     );
 };
