@@ -1,13 +1,13 @@
 import React, {FC} from 'react';
 import {View} from 'react-native';
 
-import {SafeAreaProvider} from 'react-native-safe-area-context';
+import {UIProvider} from '@app/providers';
 
 const App: FC = () => {
     return (
-        <SafeAreaProvider>
+        <UIProvider>
             <View />
-        </SafeAreaProvider>
+        </UIProvider>
     );
 };
 
