@@ -2,16 +2,17 @@ import React, {FC} from 'react';
 
 import MainText, {IDefaultTextProps} from './MainText';
 
-import {styles} from './styles';
+import {textStyles} from './styles';
 
 const RegularText: FC<IDefaultTextProps> = (props) => {
     const {text, textStyle, children} = props;
 
     return (
-        <MainText textStyle={{...styles.regular, ...textStyle}}>
+        <MainText textStyle={{...textStyles.regular, ...textStyle}}>
             {text ?? children}
         </MainText>
     );
 };
 
-export {RegularText};
+/** @internal */
+export default RegularText;

@@ -21,4 +21,5 @@ const ComponentContainer: FC = ({children}) => {
     );
 };
 
+/** @internal */
 export default ComponentContainer;

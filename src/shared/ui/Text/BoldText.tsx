@@ -1,17 +1,18 @@
 import React, {FC} from 'react';
 
-import {MainText, IDefaultTextProps} from './MainText';
+import MainText, {IDefaultTextProps} from './MainText';
 
-import {styles} from './styles';
+import {textStyles} from './styles';
 
 const BoldText: FC<IDefaultTextProps> = (props) => {
     const {text, textStyle, children} = props;
 
     return (
-        <MainText textStyle={{...styles.bold, ...textStyle}}>
+        <MainText textStyle={{...textStyles.bold, ...textStyle}}>
             {text ?? children}
         </MainText>
     );
 };
 
-export {BoldText};
+/** @internal */
+export default BoldText;

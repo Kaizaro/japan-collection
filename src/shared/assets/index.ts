@@ -1,3 +1,3 @@
-import models from './models.json';
+import exhibitsMockJson from './models.json';
 
-export {models as exhibits};
+export {exhibitsMockJson as exhibitsList};

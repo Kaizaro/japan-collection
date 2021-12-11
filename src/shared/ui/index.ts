@@ -1,2 +1,4 @@
-export {RegularText, BoldText} from './Text';
-export {Container as Container} from './Container';
+import * as Container from './Container';
+import * as Text from './Text';
+
+export {Container, Text};

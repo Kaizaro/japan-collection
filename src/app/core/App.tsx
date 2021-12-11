@@ -1,12 +1,12 @@
 import React, {FC} from 'react';
-import {View} from 'react-native';
 
 import {UIProvider} from '@app/providers';
+import AppStack from '@app/navigation/app-stack/AppStack';
 
 const App: FC = () => {
     return (
         <UIProvider>
-            <View />
+            <AppStack />
         </UIProvider>
     );
 };

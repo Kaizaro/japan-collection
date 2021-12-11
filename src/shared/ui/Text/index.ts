@@ -1,2 +1,4 @@
-export {RegularText as RegularText} from './RegularText';
-export {BoldText as BoldText} from './BoldText';
+import RegularText from './RegularText';
+import BoldText from './BoldText';
+
+export {RegularText as RegularText, BoldText as BoldText};

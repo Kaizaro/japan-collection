@@ -1,4 +1,3 @@
-/** @internal */
 import React, {FC} from 'react';
 import {Text, TextStyle} from 'react-native';
 
@@ -21,5 +20,8 @@ const MainText: FC<IProps> = (props) => {
     );
 };
 
-export {MainText};
+/** @internal */
+export default MainText;
+
+/** @internal */
 export type {IDefaultTextProps};
