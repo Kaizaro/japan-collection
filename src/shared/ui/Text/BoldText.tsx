@@ -2,13 +2,15 @@ import React, {FC} from 'react';
 
 import MainText, {IDefaultTextProps} from './MainText';
 
+import {setComponentTextStyle} from './setTextStyle';
+
 import {textStyles} from './styles';
 
 const BoldText: FC<IDefaultTextProps> = (props) => {
-    const {text, textStyle, children} = props;
+    const {text, children} = props;
 
     return (
-        <MainText textStyle={{...textStyles.bold, ...textStyle}}>
+        <MainText textStyle={setComponentTextStyle(textStyles.bold, props)}>
             {text ?? children}
         </MainText>
     );

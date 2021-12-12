@@ -23,6 +23,7 @@ const ExhibitsList: FC = () => {
             data={exhibitsList}
             renderItem={renderItem}
             ListEmptyComponent={renderEmptyList}
+            showsVerticalScrollIndicator={false}
         />
     );
 };
