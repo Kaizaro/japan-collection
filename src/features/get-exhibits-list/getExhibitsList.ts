@@ -1,8 +1,8 @@
-import {exhibitsList} from '@shared/assets';
+import {exhibitsList} from '@shared/assets/mocks';
 
 import {IExhibit} from '@entities/exhibit';
 
-import fuji from '@shared/assets/fuji.png';
+import fuji from '@shared/assets/graphics/images/fuji.png';
 
 /** @internal */
 export const getExhibitsList = (): IExhibit[] => {
