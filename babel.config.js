@@ -1,42 +1,38 @@
 const MODULE_RESOLVER = [
-  'module-resolver',
-  {
-    root: './',
-    extensions: [
-      '.ts',
-      '.ios.ts',
-      '.android.ts',
-      '.js',
-      '.ios.js',
-      '.android.js',
-      '.json',
-    ],
-    alias: {
-      // '@root': '.',
-      // '@assets': './assets',
-      // '@src': './src',
-      // '@constants': './src/constants',
-      // '@helpers': './src/helpers',
-      // '@API': './src/helpers/API',
-      // '@lib': './src/helpers/lib',
-      // '@navigation': './src/helpers/navigation',
-      // '@styleguide': './src/helpers/styleguide',
-      // '@store': './src/store',
-      // '@ui': './src/ui',
-      // '@components': './src/ui/components',
-      // '@screens': './src/ui/screens',
+    'module-resolver',
+    {
+        root: ['./src'],
+        extensions: [
+            '.ts',
+            '.tsx',
+            '.js',
+            '.jsx',
+            '.json',
+            '.ios.ts',
+            '.ios.js',
+            '.android.ts',
+            '.android.js',
+        ],
+        alias: {
+            './': ['.'],
+            '@src': './src',
+            '@app': './src/app',
+            '@pages': './src/pages',
+            '@features': './src/features',
+            '@entities': './src/entities',
+            '@shared': './src/shared',
+        },
     },
-  },
 ];
 
 module.exports = {
-  presets: ['module:metro-react-native-babel-preset'],
-  env: {
-    production: {
-      plugins: ['transform-remove-console', MODULE_RESOLVER],
+    presets: ['module:metro-react-native-babel-preset'],
+    env: {
+        production: {
+            plugins: ['transform-remove-console', MODULE_RESOLVER],
+        },
+        development: {
+            plugins: [MODULE_RESOLVER],
+        },
     },
-    development: {
-      plugins: [MODULE_RESOLVER],
-    },
-  },
 };
