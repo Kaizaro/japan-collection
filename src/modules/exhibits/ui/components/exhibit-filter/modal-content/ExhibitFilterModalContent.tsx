@@ -1,10 +1,8 @@
-import React, {FC} from "react";
-import {FlatList} from "react-native";
+import React, {FC} from 'react';
+import {FlatList} from 'react-native';
 
 const ExhibitFilterModalContent: FC = () => {
-    return (
-        <FlatList data={[]} renderItem={} />
-    )
+    return <FlatList data={[]} renderItem={} />;
 };
 
 export default ExhibitFilterModalContent;

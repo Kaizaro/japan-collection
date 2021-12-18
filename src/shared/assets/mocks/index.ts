@@ -1,3 +1,2 @@
-import exhibitsMockJson from './models.json';
-
-export {exhibitsMockJson as exhibitsList};
+declare module '*.json';
+declare module '*.txt';

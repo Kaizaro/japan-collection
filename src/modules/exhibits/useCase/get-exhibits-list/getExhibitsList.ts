@@ -1,4 +1,4 @@
-import {exhibitsList} from '@shared/assets/mocks';
+import {exhibitsList} from '@shared/assets/mocks/exhibits';
 
 import {IExhibit} from '@src/modules/exhibits/entities';
 
