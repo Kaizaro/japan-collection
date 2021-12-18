@@ -23,7 +23,14 @@ const ExhibitFilterModalContent: FC = () => {
         [],
     );
 
-    return <FlatList data={exhibitCategories} renderItem={renderItem} />;
+    return (
+        <FlatList
+            keyExtractor={keyExtractor}
+            data={exhibitCategories}
+            renderItem={renderItem}
+            showsVerticalScrollIndicator={false}
+        />
+    );
 };
 
 export default ExhibitFilterModalContent;
