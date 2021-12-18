@@ -1,9 +1,9 @@
-/** @internal */
 import React, {FC} from 'react';
 import {Text, TextStyle} from 'react-native';
 
 interface IDefaultTextProps {
     text?: string;
+    fontSize?: number;
     textStyle?: TextStyle;
 }
 
@@ -15,11 +15,14 @@ const MainText: FC<IProps> = (props) => {
     const {textStyle, children} = props;
 
     return (
-        <Text style={textStyle} {...props}>
+        <Text adjustsFontSizeToFit={true} style={textStyle} {...props}>
             {children}
         </Text>
     );
 };
 
-export {MainText};
+/** @internal */
+export default MainText;
+
+/** @internal */
 export type {IDefaultTextProps};

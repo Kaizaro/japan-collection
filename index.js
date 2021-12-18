@@ -2,11 +2,14 @@
  * @format
  */
 
+import 'react-native-gesture-handler';
 import {AppRegistry, LogBox} from 'react-native';
-import {App} from './src/app';
+
+import {AppCore} from './src/app';
+
 import {name as appName} from './app.json';
 
 // Actual
 LogBox.ignoreAllLogs(true);
 
-AppRegistry.registerComponent(appName, () => App);
+AppRegistry.registerComponent(appName, () => AppCore);

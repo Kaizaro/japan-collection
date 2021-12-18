@@ -1,6 +1,7 @@
 import {StyleSheet} from 'react-native';
 
-export const styles = StyleSheet.create({
+/** @internal */
+export const componentContainerStyles = StyleSheet.create({
     container: {
         paddingHorizontal: 20,
     },

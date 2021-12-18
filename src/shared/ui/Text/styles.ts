@@ -1,6 +1,7 @@
 import {StyleSheet} from 'react-native';
 
-export const styles = StyleSheet.create({
+/** @internal */
+export const textStyles = StyleSheet.create({
     regular: {
         fontSize: 14,
         fontWeight: '300',
