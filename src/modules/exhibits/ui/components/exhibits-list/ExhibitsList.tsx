@@ -4,7 +4,7 @@ import {FlatList} from 'react-native';
 import ExhibitCard from '@src/modules/exhibits/ui/components/exhibit-card/ExhibitCard';
 
 import {keyExtractor} from '../../../presenter/lib/keyExtractor';
-import {useExhibitsList} from '../../../presenter/useExhibitsList';
+import {useExhibitsList} from '../../../presenter/hooks/useExhibitsList';
 
 const ExhibitsList: FC = () => {
     const {exhibitsList} = useExhibitsList();

@@ -3,7 +3,7 @@ import {Image, TouchableOpacity} from 'react-native';
 
 import {Text} from '@shared/ui';
 
-import {useExhibitCard} from '@src/modules/exhibits/presenter/useExhibitCard';
+import {useExhibitCard} from '@src/modules/exhibits/presenter/hooks/useExhibitCard';
 
 import {exhibitCardStyles} from '@src/modules/exhibits/ui/components/exhibit-card/styles';
 
