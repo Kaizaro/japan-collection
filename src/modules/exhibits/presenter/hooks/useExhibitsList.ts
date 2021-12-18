@@ -1,14 +1,12 @@
 import {useCallback, useEffect, useState} from 'react';
 
 import {getExhibitsList} from '@src/modules/exhibits/useCase/get-exhibits-list';
+import {filterExhibitsList} from '@src/modules/exhibits/presenter/lib/filterExhibitsList';
 
 import {
     IExhibit,
     TExhibitFilterCategoryId,
 } from '@src/modules/exhibits/entities';
-import {useNavigation} from '@react-navigation/core';
-import {exhibitCategoryId} from '@src/modules/exhibits/data/dictionary/exhibitCategoryId';
-import {filterExhibitsList} from '@src/modules/exhibits/presenter/lib/filterExhibitsList';
 
 const useExhibitsList = () => {
     const [exhibitsList, setExhibitsList] = useState<IExhibit[]>([]);
