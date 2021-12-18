@@ -1,10 +1,10 @@
 import React, {FC, useCallback} from 'react';
-import {FlatList, FlatListProps} from 'react-native';
+import {FlatList} from 'react-native';
 
-import ExhibitCard from '@entities/exhibit-card/ui/ExhibitCard';
+import ExhibitCard from '@src/modules/exhibits/ui/components/exhibit-card/ExhibitCard';
 
-import {keyExtractor} from '../model/keyExtractor';
-import {useExhibitsList} from '../model/useExhibitsList';
+import {keyExtractor} from '../../../presenter/lib/keyExtractor';
+import {useExhibitsList} from '../../../presenter/useExhibitsList';
 
 const ExhibitsList: FC = () => {
     const {exhibitsList} = useExhibitsList();

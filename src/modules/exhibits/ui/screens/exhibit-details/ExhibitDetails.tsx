@@ -2,7 +2,7 @@ import React, {FC, useCallback, useEffect} from 'react';
 import TrackPlayer, {State} from 'react-native-track-player';
 
 const slotTrack = {
-    url: require('../../../shared/assets/sound/slot_nebo.mp3'), // Load media from the app bundle
+    url: require('@shared/assets/sound/slot_nebo.mp3'), // Load media from the app bundle
     title: 'Небо',
     artist: 'Слот',
     duration: 120,
@@ -21,7 +21,7 @@ const ExhibitDetails: FC = () => {
     }, []);
 
     useEffect(() => {
-        testCallback();
+        // testCallback();
         // TrackPlayer.play();
 
         // return () => TrackPlayer.stop();

@@ -1,6 +1,6 @@
 import {exhibitsList} from '@shared/assets/mocks';
 
-import {IExhibit} from '@entities/exhibit';
+import {IExhibit} from '@src/modules/exhibits/entities';
 
 import fuji from '@shared/assets/graphics/images/fuji.png';
 

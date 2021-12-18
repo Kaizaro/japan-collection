@@ -1,11 +1,13 @@
 import React, {FC} from 'react';
-import {Image, TouchableOpacity, View} from 'react-native';
+import {Image, TouchableOpacity} from 'react-native';
 
 import {Text} from '@shared/ui';
 
-import {IExhibit} from '@entities/exhibit';
-import {exhibitCardStyles} from '@entities/exhibit-card/ui/styles';
-import {useExhibitCard} from "@entities/exhibit-card/model/useExhibitCard";
+import {useExhibitCard} from '@src/modules/exhibits/presenter/useExhibitCard';
+
+import {exhibitCardStyles} from '@src/modules/exhibits/ui/components/exhibit-card/styles';
+
+import {IExhibit} from '@src/modules/exhibits/entities';
 
 interface IProps {
     card: IExhibit;

@@ -4,7 +4,7 @@ import {useNavigation} from '@react-navigation/core';
 
 import {APP_SCREEN_NAME} from '@shared/constants';
 
-import {IExhibit} from '@entities/exhibit';
+import {IExhibit} from '@src/modules/exhibits/entities';
 
 const useExhibitCard = (exhibit: IExhibit) => {
     const {navigate} = useNavigation();

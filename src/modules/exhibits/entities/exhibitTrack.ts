@@ -1,4 +1,4 @@
-export class ExhibitTrack {
+class ExhibitTrack {
     // Load media from the network
     url: string;
     title: string;
@@ -32,3 +32,5 @@ export class ExhibitTrack {
         this.duration = duration;
     }
 }
+
+export default ExhibitTrack;
