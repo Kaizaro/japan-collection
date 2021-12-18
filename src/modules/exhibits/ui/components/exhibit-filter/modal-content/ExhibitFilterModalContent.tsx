@@ -5,22 +5,35 @@ import {ExhibitFilterModalContentItem} from '@src/modules/exhibits/ui/components
 
 import {exhibitCategories} from '@src/modules/exhibits/presenter/constants/exhibitCategories';
 
-import {IExhibitFilterCategory} from '@src/modules/exhibits/entities';
+import {
+    IExhibitFilterCategory,
+    TExhibitFilterCategoryId,
+} from '@src/modules/exhibits/entities';
 
-interface IProps {}
+interface IProps {
+    closeModal: () => void;
+    selectedCategory: TExhibitFilterCategoryId;
+    setSelectedCategory: () => void;
+}
 
 const keyExtractor = (item: IExhibitFilterCategory, index: number) =>
     `${item.id}_${index}`;
 
-const ExhibitFilterModalContent: FC = () => {
+const ExhibitFilterModalContent: FC<IProps> = (props) => {
+    const {closeModal, selectedCategory, setSelectedCategory} = props;
+
     const renderItem = useCallback(
         ({item}) => (
             <ExhibitFilterModalContentItem
                 category={item}
-                onPress={() => console.log(item)}
+                onPress={() => {
+                    console.log(item);
+                    setSelectedCategory(item.id);
+                    closeModal();
+                }}
             />
         ),
-        [],
+        [closeModal, setSelectedCategory],
     );
 
     return (

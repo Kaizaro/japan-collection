@@ -3,16 +3,30 @@ import {Modal} from 'react-native';
 
 import {ExhibitFilterModalContent} from '../modal-content';
 
+import {TExhibitFilterCategoryId} from '@src/modules/exhibits/entities';
+
 interface IProps {
     isVisible: boolean;
+    closeModal: () => void;
+    selectedCategory: TExhibitFilterCategoryId;
+    setSelectedCategory: () => void;
 }
 
 const ExhibitFilterModal: FC<IProps> = (props) => {
-    const {isVisible} = props;
+    const {isVisible, closeModal, selectedCategory, setSelectedCategory} =
+        props;
 
     return (
-        <Modal visible={isVisible} animated={true} animationType={'slide'}>
-            <ExhibitFilterModalContent />
+        <Modal
+            visible={isVisible}
+            animated={true}
+            animationType={'slide'}
+            onRequestClose={closeModal}>
+            <ExhibitFilterModalContent
+                closeModal={closeModal}
+                selectedCategory={selectedCategory}
+                setSelectedCategory={setSelectedCategory}
+            />
         </Modal>
     );
 };

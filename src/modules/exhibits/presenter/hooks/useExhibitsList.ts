@@ -1,18 +1,49 @@
-import {useEffect, useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 
 import {getExhibitsList} from '@src/modules/exhibits/useCase/get-exhibits-list';
 
-import {IExhibit} from '@src/modules/exhibits/entities';
+import {
+    IExhibit,
+    TExhibitFilterCategoryId,
+} from '@src/modules/exhibits/entities';
+import {useNavigation} from '@react-navigation/core';
+import {exhibitCategoryId} from '@src/modules/exhibits/data/dictionary/exhibitCategoryId';
+import {filterExhibitsList} from '@src/modules/exhibits/presenter/lib/filterExhibitsList';
 
 const useExhibitsList = () => {
     const [exhibitsList, setExhibitsList] = useState<IExhibit[]>([]);
+    const [selectedCategory, setSelectedCategory] =
+        useState<TExhibitFilterCategoryId | null>(null);
+    const [isFilterModalVisible, setFilterModalVisible] =
+        useState<boolean>(false);
+
+    const showFilterModal = useCallback(() => {
+        setFilterModalVisible(true);
+    }, []);
+
+    const closeFilterModal = useCallback(() => {
+        setFilterModalVisible(false);
+    }, []);
 
     useEffect(() => {
         setExhibitsList(getExhibitsList());
     }, []);
 
+    useEffect(() => {
+        if (selectedCategory) {
+            setExhibitsList(
+                filterExhibitsList(getExhibitsList(), selectedCategory),
+            );
+        }
+    }, [selectedCategory]);
+
     return {
         exhibitsList,
+        selectedCategory,
+        setSelectedCategory,
+        isFilterModalVisible,
+        showFilterModal,
+        closeFilterModal,
     };
 };
 
