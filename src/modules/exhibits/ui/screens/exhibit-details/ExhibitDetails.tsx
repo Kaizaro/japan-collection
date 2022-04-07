@@ -1,12 +1,12 @@
 import React, {FC, useCallback, useEffect} from 'react';
 import TrackPlayer, {State} from 'react-native-track-player';
 
-const slotTrack = {
-    url: require('@shared/assets/sound/slot_nebo.mp3'), // Load media from the app bundle
-    title: 'Небо',
-    artist: 'Слот',
-    duration: 120,
-};
+// const slotTrack = {
+//     url: require('../../../../../shared/assets/sound/SteinsGate.m4p'), // Load media from the app bundle
+//     title: 'SteinsGate',
+//     artist: 'ITO KANAKO',
+//     duration: 120,
+// };
 
 const ExhibitDetails: FC = () => {
     const testCallback = useCallback(async () => {
