@@ -1,12 +1,11 @@
 import {StyleSheet} from 'react-native';
+import {scaleHorizontal, scaleVertical} from "@shared/utils/scale";
 
 /** @internal */
 export const exhibitCardStyles = StyleSheet.create({
     card: {
-        marginVertical: 10,
-        padding: 20,
-        borderWidth: 1,
-        borderRadius: 10,
+        width: scaleHorizontal(347),
+        height: scaleVertical(478),
     },
     image: {
         width: '100%',

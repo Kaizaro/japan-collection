@@ -1,12 +1,15 @@
 import React, {FC, useCallback} from 'react';
-import {FlatList, Pressable} from 'react-native';
+import {FlatList, Pressable, View} from 'react-native';
 
-import ExhibitCard from '@src/modules/exhibits/ui/components/exhibit-card/ExhibitCard';
+import {ExhibitCard} from '@src/modules/exhibits/ui/components/exhibit-card';
 import {ExhibitFilterModal} from '@src/modules/exhibits/ui/components/exhibit-filter/modal';
 import {Text} from '@shared/ui';
 
 import {keyExtractor} from '../../../presenter/lib/keyExtractor';
 import {useExhibitsList} from '../../../presenter/hooks/useExhibitsList';
+import {RegularText} from '@shared/ui/text';
+import {PressableComponent} from '@shared/ui/buttons/pressable-component';
+import {exhibitListStyles as styles} from './styles';
 
 const ExhibitsList: FC = () => {
     const {
@@ -18,9 +21,22 @@ const ExhibitsList: FC = () => {
         closeFilterModal,
     } = useExhibitsList();
 
-    const renderItem = useCallback(({item}) => {
-        return <ExhibitCard card={item} />;
+    const renderItemCard = useCallback((card, index) => {
+        return <ExhibitCard key={`${card.title}_${index}`} card={card} />;
     }, []);
+
+    const renderItemRow = useCallback(
+        ({item}) => {
+            return (
+                <View style={styles.flatListItemRow}>
+                    {item.map((card, index: number) =>
+                        renderItemCard(card, index),
+                    )}
+                </View>
+            );
+        },
+        [renderItemCard],
+    );
 
     const renderEmptyList = useCallback<() => JSX.Element>(() => {
         return <></>;
@@ -28,13 +44,13 @@ const ExhibitsList: FC = () => {
 
     return (
         <>
-            <Pressable onPress={showFilterModal}>
-                <Text.RegularText>{'Выбор категории'}</Text.RegularText>
-            </Pressable>
+            <PressableComponent onPress={showFilterModal}>
+                <RegularText>{'Выбор категории'}</RegularText>
+            </PressableComponent>
             <FlatList
                 keyExtractor={keyExtractor}
                 data={exhibitsList}
-                renderItem={renderItem}
+                renderItem={renderItemRow}
                 ListEmptyComponent={renderEmptyList}
                 showsVerticalScrollIndicator={false}
             />
@@ -49,4 +65,4 @@ const ExhibitsList: FC = () => {
 };
 
 /** @internal */
-export default ExhibitsList;
+export {ExhibitsList};
