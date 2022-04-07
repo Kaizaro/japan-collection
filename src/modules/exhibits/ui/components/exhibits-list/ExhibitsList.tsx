@@ -1,9 +1,8 @@
 import React, {FC, useCallback} from 'react';
-import {FlatList, Pressable, View} from 'react-native';
+import {FlatList, View} from 'react-native';
 
 import {ExhibitCard} from '@src/modules/exhibits/ui/components/exhibit-card';
 import {ExhibitFilterModal} from '@src/modules/exhibits/ui/components/exhibit-filter/modal';
-import {Text} from '@shared/ui';
 
 import {keyExtractor} from '../../../presenter/lib/keyExtractor';
 import {useExhibitsList} from '../../../presenter/hooks/useExhibitsList';
