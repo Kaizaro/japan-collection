@@ -22,7 +22,7 @@ const MainText: FC<IProps> = (props) => {
 };
 
 /** @internal */
-export default MainText;
+export {MainText};
 
 /** @internal */
 export type {IDefaultTextProps};

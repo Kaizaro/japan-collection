@@ -1,13 +1,17 @@
 import {StyleSheet} from 'react-native';
+import {APP_FONTS} from "@shared/config/fonts";
+import {APP_TEXT_COLORS} from "@shared/config/colors";
 
 /** @internal */
 export const textStyles = StyleSheet.create({
     regular: {
-        fontSize: 14,
-        fontWeight: '300',
+        fontFamily: APP_FONTS.REGULAR,
+        fontSize: 16,
+        color: APP_TEXT_COLORS.MAIN,
     },
     bold: {
-        fontSize: 18,
-        fontWeight: '700',
+        fontFamily: APP_FONTS.HEADER,
+        fontSize: 24,
+        color: APP_TEXT_COLORS.MAIN,
     },
 });

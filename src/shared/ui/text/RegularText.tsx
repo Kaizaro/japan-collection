@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import MainText, {IDefaultTextProps} from './MainText';
+import {MainText, IDefaultTextProps} from './MainText';
 
 import {setComponentTextStyle} from './setTextStyle';
 
@@ -17,4 +17,4 @@ const RegularText: FC<IDefaultTextProps> = (props) => {
 };
 
 /** @internal */
-export default RegularText;
+export {RegularText};
