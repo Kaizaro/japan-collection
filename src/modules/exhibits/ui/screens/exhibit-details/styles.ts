@@ -29,4 +29,15 @@ export const exhibitDetailsStyles = StyleSheet.create({
         width: scaleHorizontal(794),
         height: scaleVertical(391),
     },
+    blacksmith: {
+        marginTop: scaleVertical(44),
+    },
+    blacksmithJapanese: {
+        marginTop: scaleVertical(8),
+    },
+    timeContainer: {
+        marginTop: scaleVertical(27),
+        flexDirection: 'row',
+        width: '100%',
+    },
 });

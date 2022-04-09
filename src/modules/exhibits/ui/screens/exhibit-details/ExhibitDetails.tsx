@@ -36,6 +36,14 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                     resizeMode={'contain'}
                 />
             </View>
+            <View style={styles.blacksmith}>
+                <HeaderText fontSize={24}>{exhibit.blacksmith_name}</HeaderText>
+                <View style={styles.blacksmithJapanese}>
+                    <RegularText fontSize={18}>
+                        {exhibit.blacksmith_name_japanese}
+                    </RegularText>
+                </View>
+            </View>
         </ComponentContainer>
     );
 };
