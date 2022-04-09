@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {scaleHorizontal, scaleVertical} from "@shared/utils/scale";
+import {scaleHorizontal, scaleVertical} from '@shared/utils/scale';
 
 /** @internal */
 export const exhibitCardStyles = StyleSheet.create({

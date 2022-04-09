@@ -12,4 +12,4 @@ const App: FC = () => {
 };
 
 /** @internal */
-export default App;
+export {App};

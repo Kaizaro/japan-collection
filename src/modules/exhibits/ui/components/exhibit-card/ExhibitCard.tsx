@@ -20,7 +20,6 @@ const ExhibitCard: FC<IProps> = ({card}) => {
         <PressableComponent
             onPress={onCardPress}
             innerStyle={exhibitCardStyles.card}>
-            <HeaderText>{card.title}</HeaderText>
             {card.image && (
                 <Image
                     source={card.image}
@@ -28,6 +27,7 @@ const ExhibitCard: FC<IProps> = ({card}) => {
                     style={exhibitCardStyles.image}
                 />
             )}
+            <HeaderText>{card.title}</HeaderText>
             <RegularText fontSize={16}>{card.subtitle}</RegularText>
             <RegularText>{card.description}</RegularText>
         </PressableComponent>
