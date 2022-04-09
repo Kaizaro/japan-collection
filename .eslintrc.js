@@ -18,7 +18,7 @@ module.exports = {
             version: 'detect',
         },
     },
-    plugins: ['@typescript-eslint', 'module-resolver'],
+    plugins: ['@typescript-eslint', 'eslint-plugin-import', 'module-resolver'],
     extends: [
         // default lib for RN
         // '@react-native-community/eslint-plugin-react',
@@ -35,8 +35,11 @@ module.exports = {
         'plugin:react-hooks/recommended',
     ],
     rules: {
-        'no-shadow': 'off',
-        '@typescript-eslint/no-shadow': ['error'],
+        '@typescript-eslint/no-inferrable-types': 0,
+        '@typescript-eslint/ban-ts-comment': 0,
+        '@typescript-eslint/no-var-requires': 0,
+        '@typescript-eslint/no-explicit-any': 'error',
+        'no-shadow': 0,
         'import/newline-after-import': ['warn', {count: 1}],
         'sort-imports': [
             'warn',
@@ -170,5 +173,8 @@ module.exports = {
                 },
             },
         ],
+    },
+    globals: {
+        __DEV__: true,
     },
 };

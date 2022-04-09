@@ -1,8 +1,8 @@
-import React, {FC} from "react";
-import {IDefaultFCProps} from "@shared/types";
-import {NativeStackHeaderProps} from "@react-navigation/native-stack";
-import {Image, View} from "react-native";
-import {useHeaderHeight} from "@react-navigation/elements";
+import React, {FC} from 'react';
+import {IDefaultFCProps} from '@shared/types';
+import {NativeStackHeaderProps} from '@react-navigation/native-stack';
+import {Image, View} from 'react-native';
+import {useHeaderHeight} from '@react-navigation/elements';
 import backIcon from '../../../shared/assets/graphics/icons/back.png';
 import {appHeaderStyles as styles} from './styles';
 
@@ -13,7 +13,11 @@ const AppHeader: FC<TProps> = () => {
 
     return (
         <View style={{marginTop: statusBarHeight}}>
-            <Image source={backIcon} style={} resizeMode={} />
+            <Image
+                source={backIcon}
+                style={styles.icon}
+                resizeMode={'contain'}
+            />
         </View>
     );
 };
