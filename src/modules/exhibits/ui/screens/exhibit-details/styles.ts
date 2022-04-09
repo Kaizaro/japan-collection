@@ -4,11 +4,12 @@ import {scaleHorizontal, scaleVertical} from '@shared/utils/scale';
 import {APP_COLORS} from '@shared/config/colors';
 
 export const exhibitDetailsStyles = StyleSheet.create({
-    backgroundImage: {
+    backgroundImageContainer: {
         position: 'absolute',
         top: scaleVertical(-100),
         left: scaleHorizontal(-200),
-        borderWidth: 1,
+    },
+    backgroundImage: {
         width: scaleHorizontal(1385),
         height: scaleVertical(1304),
     },
@@ -35,9 +36,7 @@ export const exhibitDetailsStyles = StyleSheet.create({
     blacksmithJapanese: {
         marginTop: scaleVertical(8),
     },
-    timeContainer: {
+    time: {
         marginTop: scaleVertical(27),
-        flexDirection: 'row',
-        width: '100%',
     },
 });

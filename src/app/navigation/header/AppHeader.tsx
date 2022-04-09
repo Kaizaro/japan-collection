@@ -1,6 +1,6 @@
 import React, {FC, useMemo} from 'react';
 
-import {Image, View} from 'react-native';
+import {Alert, Image, TouchableOpacity, View} from 'react-native';
 
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {NativeStackHeaderProps} from '@react-navigation/native-stack';
@@ -19,8 +19,12 @@ const AppHeader: FC<TProps> = ({navigation}) => {
     const insetTop = useSafeAreaInsets().top;
 
     return (
-        <View style={{...styles.header, paddingTop: getHeaderHeight(insetTop)}}>
-            <PressableComponent onPress={navigation.goBack}>
+        <View
+            style={{
+                ...styles.header,
+                paddingTop: getHeaderHeight(insetTop),
+            }}>
+            <PressableComponent onPress={() => navigation.goBack()}>
                 <Image
                     source={backIcon}
                     style={styles.icon}
