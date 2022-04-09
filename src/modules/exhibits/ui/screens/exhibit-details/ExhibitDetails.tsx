@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {Image, ImageBackground, ScrollView, View} from 'react-native';
+import {Image, ScrollView, View} from 'react-native';
 
 import {useRoute} from '@react-navigation/core';
 
@@ -9,6 +9,8 @@ import {ComponentContainer} from '@shared/ui/container';
 import {IDefaultFCProps} from '@shared/types';
 
 import {ExhibitTime} from '@src/modules/exhibits/ui/components/exhibit-time';
+import {ExhibitStatus} from '@src/modules/exhibits/ui/components/exhibit-status';
+import {ExhibitLocation} from '@src/modules/exhibits/ui/components/exhibit-location';
 import {IExhibit} from '@src/modules/exhibits/entities';
 
 import MOCK_IMAGE from '../../../../../shared/assets/graphics/images/exhibits/sakai_masamune.png';
@@ -51,6 +53,15 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                     </View>
                 </View>
                 <ExhibitTime time={exhibit.time} innerStyle={styles.time} />
+                <ExhibitStatus
+                    exhibitStatuses={exhibit.status}
+                    innerStyle={styles.status}
+                />
+                <ExhibitLocation
+                    school={exhibit.school}
+                    location={exhibit.province}
+                    innerStyle={styles.location}
+                />
             </ScrollView>
         </ComponentContainer>
     );

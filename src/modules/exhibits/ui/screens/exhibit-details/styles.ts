@@ -39,4 +39,10 @@ export const exhibitDetailsStyles = StyleSheet.create({
     time: {
         marginTop: scaleVertical(27),
     },
+    status: {
+        marginTop: scaleVertical(12),
+    },
+    location: {
+        marginTop: scaleVertical(12),
+    },
 });
