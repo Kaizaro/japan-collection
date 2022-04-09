@@ -2,11 +2,14 @@ import React, {FC} from 'react';
 
 import {View} from 'react-native';
 
+import {IDefaultFCProps} from '@shared/types';
+
 import {componentContainerStyles} from './styles';
 
-const ComponentContainer: FC = ({children}) => (
-    <View style={componentContainerStyles.container}>{children}</View>
+const ComponentContainer: FC<IDefaultFCProps> = ({children, innerStyle}) => (
+    <View style={{...componentContainerStyles.container, ...innerStyle}}>
+        {children}
+    </View>
 );
 
-/** @internal */
-export default ComponentContainer;
+export {ComponentContainer};

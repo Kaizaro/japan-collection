@@ -1,34 +1,43 @@
-import React, {FC, useCallback, useEffect} from 'react';
-import TrackPlayer, {State} from 'react-native-track-player';
+import React, {FC} from 'react';
 
-// const slotTrack = {
-//     url: require('../../../../../shared/assets/sound/SteinsGate.m4p'), // Load media from the app bundle
-//     title: 'SteinsGate',
-//     artist: 'ITO KANAKO',
-//     duration: 120,
-// };
+import {Image, View} from 'react-native';
 
-const ExhibitDetails: FC = () => {
-    const testCallback = useCallback(async () => {
-        await TrackPlayer.add([slotTrack]);
-        await TrackPlayer.play();
-        let trackIndex = await TrackPlayer.getCurrentTrack();
-        const state = await TrackPlayer.getState();
-        console.log(state, trackIndex);
-        if (state === State.Playing) {
-            console.log('The player is playing');
-        }
-    }, []);
+import {useRoute} from '@react-navigation/core';
 
-    useEffect(() => {
-        // testCallback();
-        // TrackPlayer.play();
+import {HeaderText, RegularText} from '@shared/ui/text';
+import {ComponentContainer} from '@shared/ui/container';
+import {IDefaultFCProps} from '@shared/types';
 
-        // return () => TrackPlayer.stop();
-    }, [testCallback]);
+import {IExhibit} from '@src/modules/exhibits/entities';
 
-    return <></>;
+import MOCK_IMAGE from '../../../../../shared/assets/graphics/images/exhibits/sakai_masamune.png';
+import backgroundImage from '../../../../../shared/assets/graphics/images/dragon.png';
+
+import {exhibitDetailsStyles as styles} from './styles';
+
+const ExhibitDetails: FC<IDefaultFCProps> = () => {
+    const exhibit = useRoute().params?.exhibit as IExhibit;
+
+    return (
+        <ComponentContainer innerStyle={styles.container}>
+            <Image
+                source={backgroundImage}
+                style={styles.backgroundImage}
+                resizeMode={'contain'}
+            />
+            <HeaderText fontSize={48}>{exhibit.title}</HeaderText>
+            <View style={styles.subtitle}>
+                <RegularText fontSize={24}>{exhibit.subtitle}</RegularText>
+            </View>
+            <View style={styles.gallery}>
+                <Image
+                    source={MOCK_IMAGE}
+                    style={styles.image}
+                    resizeMode={'contain'}
+                />
+            </View>
+        </ComponentContainer>
+    );
 };
 
-/** @internal */
-export default ExhibitDetails;
+export {ExhibitDetails};
