@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {Image} from 'react-native';
+import {Image, View} from 'react-native';
 
 import {HeaderText, RegularText} from '@shared/ui/text';
 import {PressableComponent} from '@shared/ui/buttons/pressable-component';
@@ -21,11 +21,13 @@ const ExhibitCard: FC<IProps> = ({card}) => {
             onPress={onCardPress}
             innerStyle={exhibitCardStyles.card}>
             {card.image && (
-                <Image
-                    source={card.image}
-                    resizeMode={'contain'}
-                    style={exhibitCardStyles.image}
-                />
+                <View style={exhibitCardStyles.imageContainer}>
+                    <Image
+                        source={card.image}
+                        resizeMode={'contain'}
+                        style={exhibitCardStyles.image}
+                    />
+                </View>
             )}
             <HeaderText>{card.title}</HeaderText>
             <RegularText fontSize={16}>{card.subtitle}</RegularText>
