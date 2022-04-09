@@ -1,13 +1,16 @@
 import React, {FC, useCallback} from 'react';
+
 import {FlatList, View} from 'react-native';
 
-import {ExhibitCard} from '@src/modules/exhibits/ui/components/exhibit-card';
+import {RegularText} from '@shared/ui/text';
+import {PressableComponent} from '@shared/ui/buttons/pressable-component';
+
 import {ExhibitFilterModal} from '@src/modules/exhibits/ui/components/exhibit-filter/modal';
+import {ExhibitCard} from '@src/modules/exhibits/ui/components/exhibit-card';
 
 import {keyExtractor} from '../../../presenter/lib/keyExtractor';
 import {useExhibitsList} from '../../../presenter/hooks/useExhibitsList';
-import {RegularText} from '@shared/ui/text';
-import {PressableComponent} from '@shared/ui/buttons/pressable-component';
+
 import {exhibitListStyles as styles} from './styles';
 
 const ExhibitsList: FC = () => {
@@ -43,9 +46,9 @@ const ExhibitsList: FC = () => {
 
     return (
         <>
-            <PressableComponent onPress={showFilterModal}>
-                <RegularText>{'Выбор категории'}</RegularText>
-            </PressableComponent>
+            {/*<PressableComponent onPress={showFilterModal}>*/}
+            {/*    <RegularText>{'Выбор категории'}</RegularText>*/}
+            {/*</PressableComponent>*/}
             <FlatList
                 keyExtractor={keyExtractor}
                 data={exhibitsList}
