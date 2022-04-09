@@ -4,6 +4,7 @@ import {Image, ScrollView, View} from 'react-native';
 
 import {useRoute} from '@react-navigation/core';
 
+import {scaleVertical} from '@shared/utils/scale';
 import {HeaderText, RegularText} from '@shared/ui/text';
 import {ComponentContainer} from '@shared/ui/container';
 import {IDefaultFCProps} from '@shared/types';
@@ -30,7 +31,9 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                     resizeMode={'contain'}
                 />
             </View>
-            <ScrollView showsVerticalScrollIndicator={false}>
+            <ScrollView
+                showsVerticalScrollIndicator={false}
+                contentInset={{bottom: scaleVertical(30)}}>
                 <HeaderText fontSize={48}>{exhibit.title}</HeaderText>
                 <View style={styles.subtitle}>
                     <RegularText fontSize={24}>{exhibit.subtitle}</RegularText>
@@ -62,6 +65,11 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                     location={exhibit.province}
                     innerStyle={styles.location}
                 />
+                <View style={styles.description}>
+                    <RegularText fontSize={18}>
+                        {exhibit.description}
+                    </RegularText>
+                </View>
             </ScrollView>
         </ComponentContainer>
     );

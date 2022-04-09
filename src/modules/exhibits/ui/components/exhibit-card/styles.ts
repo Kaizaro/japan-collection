@@ -1,7 +1,6 @@
 import {StyleSheet} from 'react-native';
 
 import {scaleHorizontal, scaleVertical} from '@shared/utils/scale';
-import { IExhibit } from './src/modules/exhibits/entities';
 
 const ICON_SIZE = scaleVertical(32);
 
@@ -9,7 +8,6 @@ export const exhibitCardStyles = StyleSheet.create({
     card: {
         width: scaleHorizontal(347),
         paddingBottom: scaleVertical(5),
-        borderWidth: 1,
     },
     imageContainer: {
         borderRadius: scaleVertical(16),
