@@ -1,13 +1,13 @@
 import React, {FC} from 'react';
+
 import {Image} from 'react-native';
 
-import {useExhibitCard} from '@src/modules/exhibits/presenter/hooks/useExhibitCard';
-
-import {exhibitCardStyles} from '@src/modules/exhibits/ui/components/exhibit-card/styles';
-
-import {IExhibit} from '@src/modules/exhibits/entities';
 import {HeaderText, RegularText} from '@shared/ui/text';
 import {PressableComponent} from '@shared/ui/buttons/pressable-component';
+
+import {exhibitCardStyles} from '@src/modules/exhibits/ui/components/exhibit-card/styles';
+import {useExhibitCard} from '@src/modules/exhibits/presenter/hooks/useExhibitCard';
+import {IExhibit} from '@src/modules/exhibits/entities';
 
 interface IProps {
     card: IExhibit;
