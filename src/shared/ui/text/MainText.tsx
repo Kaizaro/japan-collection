@@ -4,7 +4,6 @@ import {Text, TextProps, TextStyle} from 'react-native';
 
 interface IDefaultTextProps extends TextProps {
     text?: string;
-    numberOfLines?: number;
     fontSize?: number;
     textStyle?: TextStyle;
 }

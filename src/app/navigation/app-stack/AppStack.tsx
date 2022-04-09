@@ -2,11 +2,12 @@ import React from 'react';
 
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import {Exhibits} from '@src/modules/exhibits/ui/screens/exhibits';
-import {ExhibitDetails} from '@src/modules/exhibits/ui/screens/exhibit-details';
+import {AppHeader} from '@app/navigation/header';
 
 import {APP_SCREEN_NAME} from '@shared/constants';
-import {AppHeader} from "@app/navigation/header";
+
+import {Exhibits} from '@src/modules/exhibits/ui/screens/exhibits';
+import {ExhibitDetails} from '@src/modules/exhibits/ui/screens/exhibit-details';
 
 const Stack = createNativeStackNavigator();
 

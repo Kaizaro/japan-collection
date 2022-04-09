@@ -12,15 +12,15 @@ import {IDefaultFCProps} from '@shared/types';
 import backIcon from '../../../shared/assets/graphics/icons/back.png';
 
 import {appHeaderStyles as styles} from './styles';
+import {getHeaderHeight} from "@shared/utils/height";
 
 type TProps = NativeStackHeaderProps & IDefaultFCProps;
 
 const AppHeader: FC<TProps> = ({navigation}) => {
     const insetTop = useSafeAreaInsets().top;
-    const marginTop = useMemo(() => insetTop + scaleVertical(20), [insetTop]);
 
     return (
-        <View style={{...styles.header, paddingTop: marginTop}}>
+        <View style={{...styles.header, paddingTop: getHeaderHeight(insetTop)}}>
             <PressableComponent onPress={navigation.goBack}>
                 <Image
                     source={backIcon}

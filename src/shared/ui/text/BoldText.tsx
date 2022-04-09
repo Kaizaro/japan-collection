@@ -1,8 +1,7 @@
 import React, {FC} from 'react';
 
-import {MainText, IDefaultTextProps} from './MainText';
-
 import {setComponentTextStyle} from './setTextStyle';
+import {IDefaultTextProps, MainText} from './MainText';
 
 import {textStyles} from './styles';
 
