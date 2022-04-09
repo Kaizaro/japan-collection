@@ -1,13 +1,15 @@
 import React, {FC} from 'react';
-import {Text, TextStyle} from 'react-native';
 
-interface IDefaultTextProps {
+import {Text, TextProps, TextStyle} from 'react-native';
+
+interface IDefaultTextProps extends TextProps {
     text?: string;
+    numberOfLines?: number;
     fontSize?: number;
     textStyle?: TextStyle;
 }
 
-interface IProps {
+interface IProps extends TextProps {
     textStyle?: TextStyle;
 }
 
@@ -15,7 +17,7 @@ const MainText: FC<IProps> = (props) => {
     const {textStyle, children} = props;
 
     return (
-        <Text adjustsFontSizeToFit={true} style={textStyle} {...props}>
+        <Text style={textStyle} {...props}>
             {children}
         </Text>
     );

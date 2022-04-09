@@ -29,7 +29,7 @@ const ExhibitCard: FC<IProps> = ({card}) => {
             )}
             <HeaderText>{card.title}</HeaderText>
             <RegularText fontSize={16}>{card.subtitle}</RegularText>
-            <RegularText>{card.description}</RegularText>
+            <RegularText numberOfLines={3}>{card.description}</RegularText>
         </PressableComponent>
     );
 };

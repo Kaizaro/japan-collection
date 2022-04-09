@@ -6,12 +6,12 @@ import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {NativeStackHeaderProps} from '@react-navigation/native-stack';
 
 import {scaleVertical} from '@shared/utils/scale';
+import {PressableComponent} from '@shared/ui/buttons/pressable-component';
 import {IDefaultFCProps} from '@shared/types';
 
 import backIcon from '../../../shared/assets/graphics/icons/back.png';
 
 import {appHeaderStyles as styles} from './styles';
-import {PressableComponent} from "@shared/ui/buttons/pressable-component";
 
 type TProps = NativeStackHeaderProps & IDefaultFCProps;
 

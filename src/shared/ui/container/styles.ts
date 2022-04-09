@@ -1,8 +1,10 @@
 import {StyleSheet} from 'react-native';
 
+import {scaleHorizontal} from '@shared/utils/scale';
+
 /** @internal */
 export const componentContainerStyles = StyleSheet.create({
     container: {
-        paddingHorizontal: 20,
+        paddingHorizontal: scaleHorizontal(60),
     },
 });

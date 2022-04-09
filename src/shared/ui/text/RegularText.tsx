@@ -1,8 +1,7 @@
 import React, {FC} from 'react';
 
-import {MainText, IDefaultTextProps} from './MainText';
-
 import {setComponentTextStyle} from './setTextStyle';
+import {IDefaultTextProps, MainText} from './MainText';
 
 import {textStyles} from './styles';
 
@@ -10,7 +9,9 @@ const RegularText: FC<IDefaultTextProps> = (props) => {
     const {text, children} = props;
 
     return (
-        <MainText textStyle={setComponentTextStyle(textStyles.regular, props)}>
+        <MainText
+            textStyle={setComponentTextStyle(textStyles.regular, props)}
+            {...props}>
             {text ?? children}
         </MainText>
     );

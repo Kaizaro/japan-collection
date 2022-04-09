@@ -1,25 +1,12 @@
-import React, {FC, useMemo} from 'react';
-import {View, ViewStyle} from 'react-native';
+import React, {FC} from 'react';
 
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import {View} from 'react-native';
 
 import {componentContainerStyles} from './styles';
 
-const ComponentContainer: FC = ({children}) => {
-    const {top} = useSafeAreaInsets();
-    const marginTop = useMemo<ViewStyle>(
-        () => ({
-            marginTop: top,
-        }),
-        [top],
-    );
-
-    return (
-        <View style={{...componentContainerStyles.container, ...marginTop}}>
-            {children}
-        </View>
-    );
-};
+const ComponentContainer: FC = ({children}) => (
+    <View style={componentContainerStyles.container}>{children}</View>
+);
 
 /** @internal */
 export default ComponentContainer;
