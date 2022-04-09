@@ -2,6 +2,8 @@ import React, {FC, useCallback} from 'react';
 
 import {FlatList, View} from 'react-native';
 
+import {scaleVertical} from '@shared/utils/scale';
+
 import {ExhibitFilterModal} from '@src/modules/exhibits/ui/components/exhibit-filter/modal';
 import {ExhibitCard} from '@src/modules/exhibits/ui/components/exhibit-card';
 
@@ -9,7 +11,6 @@ import {keyExtractor} from '../../../presenter/lib/keyExtractor';
 import {useExhibitsList} from '../../../presenter/hooks/useExhibitsList';
 
 import {exhibitListStyles as styles} from './styles';
-import {scaleVertical} from "@shared/utils/scale";
 
 const ExhibitsList: FC = () => {
     const {
