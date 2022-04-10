@@ -22,8 +22,10 @@ export const exhibitDictionaryStyles = StyleSheet.create({
         width: '100%',
     },
     documentRow: {
+        marginVertical: scaleVertical(10),
         flexDirection: 'row',
         width: '100%',
+        alignItems: 'center',
     },
     documentIcon: {
         width: DOCUMENT_ICON_SIZE,

@@ -15,6 +15,7 @@ import {APP_SCREEN_NAME} from '@shared/constants';
 import {ExhibitTime} from '@src/modules/exhibits/ui/components/exhibit-time';
 import {ExhibitStatus} from '@src/modules/exhibits/ui/components/exhibit-status';
 import {ExhibitLocation} from '@src/modules/exhibits/ui/components/exhibit-location';
+import {ExhibitDictionary} from '@src/modules/exhibits/ui/components/exhibit-dictionary';
 import {IExhibit} from '@src/modules/exhibits/entities';
 
 import MOCK_IMAGE from '../../../../../shared/assets/graphics/images/exhibits/sakai_masamune.png';
@@ -81,6 +82,10 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                         {exhibit.description}
                     </RegularText>
                 </View>
+                <ExhibitDictionary
+                    dictionary={exhibit.links}
+                    innerStyle={styles.dictionary}
+                />
             </ScrollView>
         </ComponentContainer>
     );

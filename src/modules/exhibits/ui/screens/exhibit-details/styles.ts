@@ -48,4 +48,7 @@ export const exhibitDetailsStyles = StyleSheet.create({
     description: {
         marginTop: scaleVertical(25),
     },
+    dictionary: {
+        marginTop: scaleVertical(24),
+    },
 });
