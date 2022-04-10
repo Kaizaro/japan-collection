@@ -7,7 +7,7 @@ export const setComponentTextStyle = (
     textDefaultStyle: TextStyle,
     textProps: IDefaultTextProps,
 ): TextStyle => {
-    const {textStyle, fontSize} = textProps;
+    const {textStyle, fontSize, color} = textProps;
 
-    return {...textDefaultStyle, fontSize, ...textStyle};
+    return {...textDefaultStyle, fontSize, color, ...textStyle};
 };

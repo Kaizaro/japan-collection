@@ -1,0 +1,1 @@
+export {ArticleGoroNudoMasamune} from './ArticleGoroNudoMasamune';
