@@ -1,5 +1,5 @@
-/** @internal */
 export enum SCREEN_NAME {
+    Splash = 'AppSplash',
     Exhibits = 'Exhibits',
     ExhibitDetails = 'ExhibitDetails',
 }

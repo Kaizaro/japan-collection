@@ -32,6 +32,7 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                 />
             </View>
             <ScrollView
+                bounces={false}
                 showsVerticalScrollIndicator={false}
                 contentInset={{bottom: scaleVertical(30)}}>
                 <HeaderText fontSize={48}>{exhibit.title}</HeaderText>
