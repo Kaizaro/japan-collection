@@ -1,13 +1,16 @@
-import React, {FC} from 'react';
+import React, {FC, useCallback} from 'react';
 
 import {Image, ScrollView, View} from 'react-native';
 
+import {useNavigation} from '@react-navigation/native';
 import {useRoute} from '@react-navigation/core';
 
 import {scaleVertical} from '@shared/utils/scale';
 import {HeaderText, RegularText} from '@shared/ui/text';
 import {ComponentContainer} from '@shared/ui/container';
+import {PressableComponent} from '@shared/ui/buttons/pressable-component';
 import {IDefaultFCProps} from '@shared/types';
+import {APP_SCREEN_NAME} from '@shared/constants';
 
 import {ExhibitTime} from '@src/modules/exhibits/ui/components/exhibit-time';
 import {ExhibitStatus} from '@src/modules/exhibits/ui/components/exhibit-status';
@@ -21,6 +24,11 @@ import {exhibitDetailsStyles as styles} from './styles';
 
 const ExhibitDetails: FC<IDefaultFCProps> = () => {
     const exhibit = useRoute().params?.exhibit as IExhibit;
+    const {navigate} = useNavigation();
+
+    const handleGoroMasamuneLink = useCallback(() => {
+        navigate(APP_SCREEN_NAME.ArticleGoroNudoMasamune);
+    }, [navigate]);
 
     return (
         <ComponentContainer innerStyle={styles.container}>
@@ -46,7 +54,9 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                         resizeMode={'contain'}
                     />
                 </View>
-                <View style={styles.blacksmith}>
+                <PressableComponent
+                    onPress={handleGoroMasamuneLink}
+                    innerStyle={styles.blacksmith}>
                     <HeaderText fontSize={24}>
                         {exhibit.blacksmith_name}
                     </HeaderText>
@@ -55,7 +65,7 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                             {exhibit.blacksmith_name_japanese}
                         </RegularText>
                     </View>
-                </View>
+                </PressableComponent>
                 <ExhibitTime time={exhibit.time} innerStyle={styles.time} />
                 <ExhibitStatus
                     exhibitStatuses={exhibit.status}

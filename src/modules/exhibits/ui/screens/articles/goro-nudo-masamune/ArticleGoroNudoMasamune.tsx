@@ -2,6 +2,7 @@ import React, {FC} from 'react';
 
 import {Image, ScrollView, View} from 'react-native';
 
+import {scaleVertical} from '@shared/utils/scale';
 import {HeaderText, RegularText} from '@shared/ui/text';
 import {ComponentContainer} from '@shared/ui/container';
 import {APP_COLORS, APP_TEXT_COLORS} from '@shared/config/colors';
@@ -12,8 +13,11 @@ import {articleGoroNudoMasamuneStyles as styles} from './styles';
 
 const ArticleGoroNudoMasamune: FC = () => {
     return (
-        <ComponentContainer>
-            <ScrollView showsVerticalScrollIndicator={false} bounces={false}>
+        <ComponentContainer innerStyle={styles.container}>
+            <ScrollView
+                showsVerticalScrollIndicator={false}
+                bounces={false}
+                contentInset={{bottom: scaleVertical(30)}}>
                 <View>
                     <Image
                         source={goroNudoMasamune}
@@ -21,7 +25,7 @@ const ArticleGoroNudoMasamune: FC = () => {
                         resizeMode={'contain'}
                     />
                 </View>
-                <View>
+                <View style={styles.title}>
                     <HeaderText fontSize={48}>ГОРО НЮДО МАСАМУНЭ</HeaderText>
                 </View>
                 <View>
