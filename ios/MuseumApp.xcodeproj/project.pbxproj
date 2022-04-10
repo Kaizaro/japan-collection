@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* MuseumAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MuseumAppTests.m */; };
 		07CBB17E27666DF6008FE484 /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CBB17D27666DF6008FE484 /* Bridge.swift */; };
+		07F1EAAB27FE8D9A002B5EC5 /* Arsenal-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07F1EAA927FE8D9A002B5EC5 /* Arsenal-Regular.ttf */; };
+		07F1EAAC27FE8D9A002B5EC5 /* ViaodaLibre-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07F1EAAA27FE8D9A002B5EC5 /* ViaodaLibre-Regular.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -33,6 +35,8 @@
 		00E356F21AD99517003FC87E /* MuseumAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuseumAppTests.m; sourceTree = "<group>"; };
 		07CBB17C27666DF6008FE484 /* MuseumApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MuseumApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		07CBB17D27666DF6008FE484 /* Bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bridge.swift; path = MuseumApp/Bridge.swift; sourceTree = "<group>"; };
+		07F1EAA927FE8D9A002B5EC5 /* Arsenal-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Arsenal-Regular.ttf"; path = "../src/shared/assets/fonts/Arsenal-Regular.ttf"; sourceTree = "<group>"; };
+		07F1EAAA27FE8D9A002B5EC5 /* ViaodaLibre-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ViaodaLibre-Regular.ttf"; path = "../src/shared/assets/fonts/ViaodaLibre-Regular.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* MuseumApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuseumApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = MuseumApp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = MuseumApp/AppDelegate.m; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				07F1EAA927FE8D9A002B5EC5 /* Arsenal-Regular.ttf */,
+				07F1EAAA27FE8D9A002B5EC5 /* ViaodaLibre-Regular.ttf */,
 				13B07FAE1A68108700A75B9A /* MuseumApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* MuseumAppTests */,
@@ -247,6 +253,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07F1EAAB27FE8D9A002B5EC5 /* Arsenal-Regular.ttf in Resources */,
+				07F1EAAC27FE8D9A002B5EC5 /* ViaodaLibre-Regular.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
@@ -574,7 +582,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -640,7 +648,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

@@ -1,0 +1,1 @@
+export {ExhibitLocation} from './ExhibitLocation';

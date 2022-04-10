@@ -1,14 +1,38 @@
 import {StyleSheet} from 'react-native';
 
-/** @internal */
+import {scaleHorizontal, scaleVertical} from '@shared/utils/scale';
+
+const ICON_SIZE = scaleVertical(32);
+
 export const exhibitCardStyles = StyleSheet.create({
     card: {
-        marginVertical: 10,
-        padding: 20,
-        borderWidth: 1,
-        borderRadius: 10,
+        width: scaleHorizontal(347),
+        paddingBottom: scaleVertical(5),
+    },
+    imageContainer: {
+        borderRadius: scaleVertical(16),
+        overflow: 'hidden',
     },
     image: {
+        width: scaleHorizontal(347),
+        height: scaleVertical(260),
+    },
+    title: {
+        marginTop: scaleVertical(20),
+    },
+    subtitle: {
+        marginTop: scaleVertical(4),
+    },
+    description: {
+        marginTop: scaleVertical(16),
+    },
+    categoryIconContainer: {
+        marginTop: scaleVertical(8),
         width: '100%',
+        alignItems: 'flex-end',
+    },
+    categoryIcon: {
+        width: ICON_SIZE,
+        height: ICON_SIZE,
     },
 });

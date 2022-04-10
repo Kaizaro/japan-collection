@@ -1,3 +1,3 @@
-import ExhibitsList from './ExhibitsList';
+import {ExhibitsList} from './ExhibitsList';
 
 export {ExhibitsList};

@@ -1,12 +1,13 @@
 import React, {FC} from 'react';
-import {Image, TouchableOpacity} from 'react-native';
 
-import {Text} from '@shared/ui';
+import {Image, View} from 'react-native';
 
+import {HeaderText, RegularText} from '@shared/ui/text';
+import {PressableComponent} from '@shared/ui/buttons/pressable-component';
+
+import {getCategoryIcon} from '@src/modules/exhibits/utils/getCategoryIcon';
+import {exhibitCardStyles as styles} from '@src/modules/exhibits/ui/components/exhibit-card/styles';
 import {useExhibitCard} from '@src/modules/exhibits/presenter/hooks/useExhibitCard';
-
-import {exhibitCardStyles} from '@src/modules/exhibits/ui/components/exhibit-card/styles';
-
 import {IExhibit} from '@src/modules/exhibits/entities';
 
 interface IProps {
@@ -17,19 +18,34 @@ const ExhibitCard: FC<IProps> = ({card}) => {
     const {onCardPress} = useExhibitCard(card);
 
     return (
-        <TouchableOpacity onPress={onCardPress} style={exhibitCardStyles.card}>
-            <Text.BoldText>{card.title}</Text.BoldText>
+        <PressableComponent onPress={onCardPress} innerStyle={styles.card}>
             {card.image && (
-                <Image
-                    source={card.image}
-                    resizeMode={'contain'}
-                    style={exhibitCardStyles.image}
-                />
+                <View style={styles.imageContainer}>
+                    <Image
+                        source={card.image}
+                        resizeMode={'contain'}
+                        style={styles.image}
+                    />
+                </View>
             )}
-            <Text.RegularText fontSize={16}>{card.subtitle}</Text.RegularText>
-            <Text.RegularText>{card.description}</Text.RegularText>
-        </TouchableOpacity>
+            <View style={styles.title}>
+                <HeaderText>{card.title}</HeaderText>
+            </View>
+            <View style={styles.subtitle}>
+                <RegularText fontSize={16}>{card.subtitle}</RegularText>
+            </View>
+            <View style={styles.description}>
+                <RegularText numberOfLines={3}>{card.description}</RegularText>
+            </View>
+            <View style={styles.categoryIconContainer}>
+                <Image
+                    source={getCategoryIcon(card.category)}
+                    resizeMode={'contain'}
+                    style={styles.categoryIcon}
+                />
+            </View>
+        </PressableComponent>
     );
 };
 
-export default ExhibitCard;
+export {ExhibitCard};
