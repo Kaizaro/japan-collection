@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* MuseumAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MuseumAppTests.m */; };
+		00E356F31AD99517003FC87E /* JapanCollectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* JapanCollectionTests.m */; };
 		07CBB17E27666DF6008FE484 /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CBB17D27666DF6008FE484 /* Bridge.swift */; };
 		07F1EAAB27FE8D9A002B5EC5 /* Arsenal-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07F1EAA927FE8D9A002B5EC5 /* Arsenal-Regular.ttf */; };
 		07F1EAAC27FE8D9A002B5EC5 /* ViaodaLibre-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07F1EAAA27FE8D9A002B5EC5 /* ViaodaLibre-Regular.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		3B1BECFC4FE1E8C24D26A90B /* libPods-MuseumApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF3518DD580EA916CB2C05E /* libPods-MuseumApp.a */; };
-		47922454AB1EF9455917E648 /* libPods-MuseumApp-MuseumAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBCE6FEC551156D71428D61 /* libPods-MuseumApp-MuseumAppTests.a */; };
+		3B1BECFC4FE1E8C24D26A90B /* libPods-JapanCollection.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF3518DD580EA916CB2C05E /* libPods-JapanCollection.a */; };
+		47922454AB1EF9455917E648 /* libPods-JapanCollection-JapanCollectionTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBCE6FEC551156D71428D61 /* libPods-JapanCollection-JapanCollectionTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -25,32 +25,32 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = MuseumApp;
+			remoteInfo = JapanCollection;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* MuseumAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuseumAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* JapanCollectionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JapanCollectionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* MuseumAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuseumAppTests.m; sourceTree = "<group>"; };
-		07CBB17C27666DF6008FE484 /* MuseumApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MuseumApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		07CBB17D27666DF6008FE484 /* Bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bridge.swift; path = MuseumApp/Bridge.swift; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* JapanCollectionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JapanCollectionTests.m; sourceTree = "<group>"; };
+		07CBB17C27666DF6008FE484 /* JapanCollection-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JapanCollection-Bridging-Header.h"; sourceTree = "<group>"; };
+		07CBB17D27666DF6008FE484 /* Bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bridge.swift; path = JapanCollection/Bridge.swift; sourceTree = "<group>"; };
 		07F1EAA927FE8D9A002B5EC5 /* Arsenal-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Arsenal-Regular.ttf"; path = "../src/shared/assets/fonts/Arsenal-Regular.ttf"; sourceTree = "<group>"; };
 		07F1EAAA27FE8D9A002B5EC5 /* ViaodaLibre-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ViaodaLibre-Regular.ttf"; path = "../src/shared/assets/fonts/ViaodaLibre-Regular.ttf"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* MuseumApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuseumApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = MuseumApp/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = MuseumApp/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MuseumApp/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MuseumApp/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MuseumApp/main.m; sourceTree = "<group>"; };
-		6E5924FFE6F028494F5A93B6 /* Pods-MuseumApp-MuseumAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuseumApp-MuseumAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MuseumApp-MuseumAppTests/Pods-MuseumApp-MuseumAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = MuseumApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		95F22057F241A04B9F397B68 /* Pods-MuseumApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuseumApp.debug.xcconfig"; path = "Target Support Files/Pods-MuseumApp/Pods-MuseumApp.debug.xcconfig"; sourceTree = "<group>"; };
-		9FBCE6FEC551156D71428D61 /* libPods-MuseumApp-MuseumAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MuseumApp-MuseumAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF27C8BC55AF8365AB357700 /* Pods-MuseumApp-MuseumAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuseumApp-MuseumAppTests.release.xcconfig"; path = "Target Support Files/Pods-MuseumApp-MuseumAppTests/Pods-MuseumApp-MuseumAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		CDF3518DD580EA916CB2C05E /* libPods-MuseumApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MuseumApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* JapanCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JapanCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = JapanCollection/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = JapanCollection/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = JapanCollection/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = JapanCollection/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = JapanCollection/main.m; sourceTree = "<group>"; };
+		6E5924FFE6F028494F5A93B6 /* Pods-JapanCollection-JapanCollectionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JapanCollection-JapanCollectionTests.debug.xcconfig"; path = "Target Support Files/Pods-JapanCollection-JapanCollectionTests/Pods-JapanCollection-JapanCollectionTests.debug.xcconfig"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = JapanCollection/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		95F22057F241A04B9F397B68 /* Pods-JapanCollection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JapanCollection.debug.xcconfig"; path = "Target Support Files/Pods-JapanCollection/Pods-JapanCollection.debug.xcconfig"; sourceTree = "<group>"; };
+		9FBCE6FEC551156D71428D61 /* libPods-JapanCollection-JapanCollectionTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JapanCollection-JapanCollectionTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF27C8BC55AF8365AB357700 /* Pods-JapanCollection-JapanCollectionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JapanCollection-JapanCollectionTests.release.xcconfig"; path = "Target Support Files/Pods-JapanCollection-JapanCollectionTests/Pods-JapanCollection-JapanCollectionTests.release.xcconfig"; sourceTree = "<group>"; };
+		CDF3518DD580EA916CB2C05E /* libPods-JapanCollection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JapanCollection.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F7B25C594B74EC45A60AA358 /* Pods-MuseumApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuseumApp.release.xcconfig"; path = "Target Support Files/Pods-MuseumApp/Pods-MuseumApp.release.xcconfig"; sourceTree = "<group>"; };
+		F7B25C594B74EC45A60AA358 /* Pods-JapanCollection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JapanCollection.release.xcconfig"; path = "Target Support Files/Pods-JapanCollection/Pods-JapanCollection.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47922454AB1EF9455917E648 /* libPods-MuseumApp-MuseumAppTests.a in Frameworks */,
+				47922454AB1EF9455917E648 /* libPods-JapanCollection-JapanCollectionTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,20 +66,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B1BECFC4FE1E8C24D26A90B /* libPods-MuseumApp.a in Frameworks */,
+				3B1BECFC4FE1E8C24D26A90B /* libPods-JapanCollection.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* MuseumAppTests */ = {
+		00E356EF1AD99517003FC87E /* JapanCollectionTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* MuseumAppTests.m */,
+				00E356F21AD99517003FC87E /* JapanCollectionTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = MuseumAppTests;
+			path = JapanCollectionTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -90,7 +90,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* MuseumApp */ = {
+		13B07FAE1A68108700A75B9A /* JapanCollection */ = {
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -100,17 +100,17 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				07CBB17D27666DF6008FE484 /* Bridge.swift */,
-				07CBB17C27666DF6008FE484 /* MuseumApp-Bridging-Header.h */,
+				07CBB17C27666DF6008FE484 /* JapanCollection-Bridging-Header.h */,
 			);
-			name = MuseumApp;
+			name = JapanCollection;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				CDF3518DD580EA916CB2C05E /* libPods-MuseumApp.a */,
-				9FBCE6FEC551156D71428D61 /* libPods-MuseumApp-MuseumAppTests.a */,
+				CDF3518DD580EA916CB2C05E /* libPods-JapanCollection.a */,
+				9FBCE6FEC551156D71428D61 /* libPods-JapanCollection-JapanCollectionTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -127,9 +127,9 @@
 			children = (
 				07F1EAA927FE8D9A002B5EC5 /* Arsenal-Regular.ttf */,
 				07F1EAAA27FE8D9A002B5EC5 /* ViaodaLibre-Regular.ttf */,
-				13B07FAE1A68108700A75B9A /* MuseumApp */,
+				13B07FAE1A68108700A75B9A /* JapanCollection */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* MuseumAppTests */,
+				00E356EF1AD99517003FC87E /* JapanCollectionTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				8823A9DEB419CDDB5EE21681 /* Pods */,
@@ -142,8 +142,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* MuseumApp.app */,
-				00E356EE1AD99517003FC87E /* MuseumAppTests.xctest */,
+				13B07F961A680F5B00A75B9A /* JapanCollection.app */,
+				00E356EE1AD99517003FC87E /* JapanCollectionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,10 +151,10 @@
 		8823A9DEB419CDDB5EE21681 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				95F22057F241A04B9F397B68 /* Pods-MuseumApp.debug.xcconfig */,
-				F7B25C594B74EC45A60AA358 /* Pods-MuseumApp.release.xcconfig */,
-				6E5924FFE6F028494F5A93B6 /* Pods-MuseumApp-MuseumAppTests.debug.xcconfig */,
-				AF27C8BC55AF8365AB357700 /* Pods-MuseumApp-MuseumAppTests.release.xcconfig */,
+				95F22057F241A04B9F397B68 /* Pods-JapanCollection.debug.xcconfig */,
+				F7B25C594B74EC45A60AA358 /* Pods-JapanCollection.release.xcconfig */,
+				6E5924FFE6F028494F5A93B6 /* Pods-JapanCollection-JapanCollectionTests.debug.xcconfig */,
+				AF27C8BC55AF8365AB357700 /* Pods-JapanCollection-JapanCollectionTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -162,9 +162,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* MuseumAppTests */ = {
+		00E356ED1AD99517003FC87E /* JapanCollectionTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "MuseumAppTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "JapanCollectionTests" */;
 			buildPhases = (
 				EF04E8C564AC7C3957A72F5A /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -178,14 +178,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = MuseumAppTests;
-			productName = MuseumAppTests;
-			productReference = 00E356EE1AD99517003FC87E /* MuseumAppTests.xctest */;
+			name = JapanCollectionTests;
+			productName = JapanCollectionTests;
+			productReference = 00E356EE1AD99517003FC87E /* JapanCollectionTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* MuseumApp */ = {
+		13B07F861A680F5B00A75B9A /* JapanCollection */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "MuseumApp" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "JapanCollection" */;
 			buildPhases = (
 				B3B9CA69D689037717C4FE72 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -200,9 +200,9 @@
 			);
 			dependencies = (
 			);
-			name = MuseumApp;
-			productName = MuseumApp;
-			productReference = 13B07F961A680F5B00A75B9A /* MuseumApp.app */;
+			name = JapanCollection;
+			productName = JapanCollection;
+			productReference = 13B07F961A680F5B00A75B9A /* JapanCollection.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -222,7 +222,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "MuseumApp" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "JapanCollection" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -235,8 +235,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* MuseumApp */,
-				00E356ED1AD99517003FC87E /* MuseumAppTests */,
+				13B07F861A680F5B00A75B9A /* JapanCollection */,
+				00E356ED1AD99517003FC87E /* JapanCollectionTests */,
 			);
 		};
 /* End PBXProject section */
@@ -283,15 +283,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MuseumApp/Pods-MuseumApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-JapanCollection/Pods-JapanCollection-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MuseumApp/Pods-MuseumApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-JapanCollection/Pods-JapanCollection-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MuseumApp/Pods-MuseumApp-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JapanCollection/Pods-JapanCollection-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9781B04A47F5C893742BC498 /* [CP] Copy Pods Resources */ = {
@@ -300,15 +300,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MuseumApp-MuseumAppTests/Pods-MuseumApp-MuseumAppTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-JapanCollection-JapanCollectionTests/Pods-JapanCollection-JapanCollectionTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MuseumApp-MuseumAppTests/Pods-MuseumApp-MuseumAppTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-JapanCollection-JapanCollectionTests/Pods-JapanCollection-JapanCollectionTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MuseumApp-MuseumAppTests/Pods-MuseumApp-MuseumAppTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JapanCollection-JapanCollectionTests/Pods-JapanCollection-JapanCollectionTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A909AF13BD7EA417C610F4E1 /* [CP] Embed Pods Frameworks */ = {
@@ -317,15 +317,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MuseumApp/Pods-MuseumApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-JapanCollection/Pods-JapanCollection-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MuseumApp/Pods-MuseumApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-JapanCollection/Pods-JapanCollection-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MuseumApp/Pods-MuseumApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JapanCollection/Pods-JapanCollection-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B3B9CA69D689037717C4FE72 /* [CP] Check Pods Manifest.lock */ = {
@@ -343,7 +343,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MuseumApp-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-JapanCollection-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -356,15 +356,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MuseumApp-MuseumAppTests/Pods-MuseumApp-MuseumAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-JapanCollection-JapanCollectionTests/Pods-JapanCollection-JapanCollectionTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MuseumApp-MuseumAppTests/Pods-MuseumApp-MuseumAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-JapanCollection-JapanCollectionTests/Pods-JapanCollection-JapanCollectionTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MuseumApp-MuseumAppTests/Pods-MuseumApp-MuseumAppTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JapanCollection-JapanCollectionTests/Pods-JapanCollection-JapanCollectionTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EF04E8C564AC7C3957A72F5A /* [CP] Check Pods Manifest.lock */ = {
@@ -382,7 +382,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MuseumApp-MuseumAppTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-JapanCollection-JapanCollectionTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -415,7 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* MuseumAppTests.m in Sources */,
+				00E356F31AD99517003FC87E /* JapanCollectionTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,7 +434,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* MuseumApp */;
+			target = 13B07F861A680F5B00A75B9A /* JapanCollection */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -442,7 +442,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E5924FFE6F028494F5A93B6 /* Pods-MuseumApp-MuseumAppTests.debug.xcconfig */;
+			baseConfigurationReference = 6E5924FFE6F028494F5A93B6 /* Pods-JapanCollection-JapanCollectionTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -450,7 +450,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = MuseumAppTests/Info.plist;
+				INFOPLIST_FILE = JapanCollectionTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -464,18 +464,18 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuseumApp.app/MuseumApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JapanCollection.app/JapanCollection";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF27C8BC55AF8365AB357700 /* Pods-MuseumApp-MuseumAppTests.release.xcconfig */;
+			baseConfigurationReference = AF27C8BC55AF8365AB357700 /* Pods-JapanCollection-JapanCollectionTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = MuseumAppTests/Info.plist;
+				INFOPLIST_FILE = JapanCollectionTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -489,32 +489,33 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuseumApp.app/MuseumApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JapanCollection.app/JapanCollection";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95F22057F241A04B9F397B68 /* Pods-MuseumApp.debug.xcconfig */;
+			baseConfigurationReference = 95F22057F241A04B9F397B68 /* Pods-JapanCollection.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B3N9HQ5L43;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = MuseumApp/Info.plist;
+				INFOPLIST_FILE = JapanCollection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = MuseumApp;
-				SWIFT_OBJC_BRIDGING_HEADER = "MuseumApp-Bridging-Header.h";
+				PRODUCT_BUNDLE_IDENTIFIER = com.museum.JapanCollection;
+				PRODUCT_NAME = JapanCollection;
+				SWIFT_OBJC_BRIDGING_HEADER = "JapanCollection-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -524,25 +525,26 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7B25C594B74EC45A60AA358 /* Pods-MuseumApp.release.xcconfig */;
+			baseConfigurationReference = F7B25C594B74EC45A60AA358 /* Pods-JapanCollection.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B3N9HQ5L43;
-				INFOPLIST_FILE = MuseumApp/Info.plist;
+				INFOPLIST_FILE = JapanCollection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = MuseumApp;
-				SWIFT_OBJC_BRIDGING_HEADER = "MuseumApp-Bridging-Header.h";
+				PRODUCT_BUNDLE_IDENTIFIER = com.museum.JapanCollection;
+				PRODUCT_NAME = JapanCollection;
+				SWIFT_OBJC_BRIDGING_HEADER = "JapanCollection-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -677,7 +679,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "MuseumAppTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "JapanCollectionTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -686,7 +688,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "MuseumApp" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "JapanCollection" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -695,7 +697,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "MuseumApp" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "JapanCollection" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

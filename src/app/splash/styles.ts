@@ -25,7 +25,7 @@ export const appSplashStyles = StyleSheet.create({
         flexDirection: 'row',
     },
     textContainer: {
-        width: scaleHorizontal(316),
+        width: scaleHorizontal(350),
     },
     text: {
         marginTop: scaleVertical(16),

@@ -1,4 +1,4 @@
-package com.museumapp;
+package com.museum.japancollection;
 
 import com.facebook.react.ReactActivity;
 import android.os.Bundle;
@@ -18,6 +18,6 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "MuseumApp";
+    return "JapanCollection";
   }
 }

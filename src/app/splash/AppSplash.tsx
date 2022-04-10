@@ -10,7 +10,7 @@ import {APP_SCREEN_NAME} from '@shared/constants';
 
 import backgroundImage from '../../shared/assets/graphics/images/dragon_splash.png';
 import nextIcon from '../../shared/assets/graphics/icons/next.png';
-import {name as appName} from '../../../app.json';
+import {displayName as appName} from '../../../app.json';
 
 import {appSplashStyles as styles} from './styles';
 
