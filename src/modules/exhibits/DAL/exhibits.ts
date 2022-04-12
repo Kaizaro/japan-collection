@@ -1,0 +1,169 @@
+import {EXHIBIT_WEAPON_SUBCATEGORY} from '@src/modules/exhibits/entities/exhibitWeaponSubCategory';
+import {ExhibitCategory} from '@src/modules/exhibits/entities/exhibitCategory';
+import {IExhibit} from '@src/modules/exhibits/entities';
+
+import threeStarsIcon from '../../../shared/assets/graphics/icons/three_stars.png';
+import tickIcon from '../../../shared/assets/graphics/icons/active.png';
+import {ARTICLE_IMAGES} from "@src/modules/exhibits/DAL/articleImages";
+
+export const EXHIBITS = [
+    {
+        id: 'sakai_masamune',
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Вакидзаси «Сакаи Масамунэ»',
+        subtitle: 'それは長い間確立された',
+        type: 'Вакидзаси',
+        blacksmith_name: 'Горо Нюдо Масамунэ',
+        blacksmith_name_japanese: '五郎入道正宗',
+        school: 'Сосю',
+        province: 'Сагами',
+        time: 'Конец периода Камакура – начало периода Намбокутё, первая треть XIV века',
+        status: [
+            {
+                name: 'Мэйбуцу (исторический меч с личным именем)',
+                icon: threeStarsIcon,
+            },
+            {
+                name: 'Сайдзё-саку (наивысшее качество). Сертификат от Фукунага Суйкэн',
+                icon: tickIcon,
+            },
+        ],
+        description:
+            'Уникальнейший клинок одного из самых выдающихся кузнецов Японии, Горо Масамунэ (ссылка-кнопка), представителя школы Сосю в провинции Сагами. Выкован в эпоху Камакура в эру Каряку (1326-1329 гг.), и относится к мечам периода Кото (ссылка-модалка «классификация мечей по временным периодам») («старые мечи»). Клинок шире обычного - «дамбира», по классификации длины - «вакидзаси» (ссылка-модалка). По форме относится типу «о-танто», и имеет однолезвийную форму, именуемую «хира-дзукури» (ссылка-модалка – «формы клинков»). На лезвии вырезано изображение самого почитаемого самураями буддийского божества Фудо-мёо. Меч обладает статусом «Мэйбуцу» (меч с именем), имеет собственное имя «Сакаи Масамунэ», поскольку хранился в семье князей Сакаи (ссылка-статья). Это подтверждено экспертизой одного из самых авторитетных экспертов Японии, доктором Фукунага Суйкэном в 1989 году. Признан клинком наивысшего качества «Сайдзёсаку» (ссылка-модалка «Рейтинги мечей по Фудзисиро»).\n',
+        links: [
+            {
+                route_id: 'goro_masamune',
+                linkName: 'Горо Масамунэ',
+                image: ARTICLE_IMAGES.GORO_NUDO_MASAMUNE,
+                title: 'ГОРО НЮДО МАСАМУНЭ (1264-1343)',
+            },
+            {
+                route_id: 'goro_masamune',
+                name: 'Горо Масамунэ',
+            },
+            {
+                route_id: 'koto',
+                name: 'Кото (ссылка «классификация мечей по временным периодам»)',
+            },
+            {
+                route_id: 'wakizashi',
+                name: 'Вакидзаси',
+            },
+            {
+                route_id: 'hira_zukuri',
+                name: '«Хира-дзукури» (ссылка – «формы клинков»)',
+            },
+            {
+                route_id: 'sakai',
+                name: 'Сакаи',
+            },
+            {
+                route_id: 'saizesaku',
+                name: 'Сайдзёсаку (ссылка «Рейтинги мечей по Фудзисиро»)',
+            },
+            {
+                route_id: 'legend_muramasa_masamune',
+                name: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            },
+        ],
+    },
+    {
+        id: 'katana_masamune',
+        category: 'blade_weapon',
+        subcategory: 'katana',
+        title: 'Катана Масамунэ',
+        subtitle: 'それは長い間確立された',
+        type: 'Катана',
+        blacksmith_name: 'Горо Нюдо Масамунэ',
+        blacksmith_name_japanese: '五郎入道正宗',
+        school: 'Сосю',
+        province: 'Сагами',
+        time: 'Конец периода Камакура – начало периода Намбокутё, первая треть XIV века',
+        status: [
+            {
+                name: 'Сайдзё-саку (наивысшее качество). Сертификат от Хонъами Кондзюн',
+                icon_type: 'tick',
+            },
+        ],
+        description:
+            'Удивительный клинок легендарнейшего кузнеца Японии, яркий пример идеальной классической формы и превосходного качества, которое невозможно повторить. Поэтому Масамунэ в основном не подписывал свои клинки. Подлинность подтверждена авторитетным экспертом из старинной семьи оценщиков, Хонъами Кондзюном.',
+        links: [
+            {
+                route_id: 'goro_masamune',
+                name: 'Горо Масамунэ',
+            },
+            {
+                route_id: 'koto',
+                name: 'Кото (ссылка «классификация мечей по временным периодам»)',
+            },
+            {
+                route_id: 'katana',
+                name: 'Катана',
+            },
+            {
+                route_id: 'saizesaku',
+                name: 'Сайдзёсаку (ссылка «Рейтинги мечей по Фудзисиро»)',
+            },
+            {
+                route_id: 'legend_muramasa_masamune',
+                name: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            },
+        ],
+    },
+    {
+        id: 'o_tanto_masamune',
+        category: 'blade_weapon',
+        subcategory: 'wakizashi',
+        title: 'О-танто Масамунэ',
+        subtitle: 'それは長い間確立された',
+        type: 'Вакидзаси',
+        blacksmith_name: 'Горо Нюдо Масамунэ',
+        blacksmith_name_japanese: '五郎入道正宗',
+        school: 'Сосю',
+        province: 'Сагами',
+        time: 'Конец периода Камакура – начало периода Намбокутё, первая треть XIV века',
+        status: [
+            {
+                name: 'Китё Токэн (Драгоценный Меч). Сертификат от NBTHK',
+                icon_type: 'three_stars',
+            },
+            {
+                name: 'Сайдзё-саку (наивысшее качество)',
+                icon_type: 'tick',
+            },
+        ],
+        description:
+            'Редчайший предмет и великолепный образец японского кузнечного искусства, произведенный великим кузнецом. Меч имеет довольно большой размер, что говорит о том, что возможно он был изготовлен для подношения в храм. Однако его вполне можно было одеть и в качестве малого меча «косигатана».',
+        links: [
+            {
+                route_id: 'goro_masamune',
+                name: 'Горо Масамунэ',
+            },
+            {
+                route_id: 'koto',
+                name: 'Кото (ссылка «классификация мечей по временным периодам»)',
+            },
+            {
+                route_id: 'wakizashi',
+                name: 'Вакидзаси',
+            },
+            {
+                route_id: 'hira_zukuri',
+                name: '«Хира-дзукури» (ссылка – «формы клинков»)',
+            },
+            {
+                route_id: 'sakai',
+                name: 'Сакаи',
+            },
+            {
+                route_id: 'saizesaku',
+                name: 'Сайдзёсаку (ссылка «Рейтинги мечей по Фудзисиро»)',
+            },
+            {
+                route_id: 'legend_muramasa_masamune',
+                name: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            },
+        ],
+    },
+] as IExhibit;

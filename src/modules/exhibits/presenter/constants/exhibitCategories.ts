@@ -1,4 +1,4 @@
-import {exhibitCategoryId} from '../../data/dictionary/exhibitCategoryId';
+import {exhibitCategoryId} from '../../DAL/dictionary/exhibitCategoryId';
 import {IExhibitFilterCategory} from '@src/modules/exhibits/entities';
 
 export const exhibitCategories = [

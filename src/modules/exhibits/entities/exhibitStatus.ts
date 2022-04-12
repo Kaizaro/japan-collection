@@ -1,4 +1,6 @@
+import {ImageSourcePropType} from 'react-native';
+
 export interface IExhibitStatus {
     name: string;
-    icon_type: string;
+    icon: ImageSourcePropType;
 }

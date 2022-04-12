@@ -1,14 +1,14 @@
 import {ImageSourcePropType} from 'react-native';
 
-import {IExhibitWeaponSubCategory} from '@src/modules/exhibits/entities/exhibitWeaponSubCategory';
+import {EXHIBIT_WEAPON_SUBCATEGORY} from '@src/modules/exhibits/entities/exhibitWeaponSubCategory';
 import {IExhibitStatus} from '@src/modules/exhibits/entities/exhibitStatus';
 import {IExhibitLink} from '@src/modules/exhibits/entities/exhibitLink';
-import {IExhibitCategory} from '@src/modules/exhibits/entities/exhibitCategory';
+import {ExhibitCategory} from '@src/modules/exhibits/entities/exhibitCategory';
 
 export interface IExhibit {
     id: string;
-    category: IExhibitCategory;
-    subcategory: IExhibitWeaponSubCategory;
+    category: ExhibitCategory;
+    subcategory: EXHIBIT_WEAPON_SUBCATEGORY;
     title: string;
     subtitle: string;
     type: string;
