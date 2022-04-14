@@ -110,8 +110,8 @@ export const EXHIBITS = [
     },
     {
         id: 'o_tanto_masamune',
-        category: 'blade_weapon',
-        subcategory: 'wakizashi',
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
         title: 'О-танто Масамунэ',
         subtitle: 'それは長い間確立された',
         type: 'Вакидзаси',
@@ -123,44 +123,24 @@ export const EXHIBITS = [
         status: [
             {
                 name: 'Китё Токэн (Драгоценный Меч). Сертификат от NBTHK',
-                icon_type: 'three_stars',
-            },
-            {
-                name: 'Сайдзё-саку (наивысшее качество)',
-                icon_type: 'tick',
+                icon: threeStarsIcon,
             },
         ],
         description:
             'Редчайший предмет и великолепный образец японского кузнечного искусства, произведенный великим кузнецом. Меч имеет довольно большой размер, что говорит о том, что возможно он был изготовлен для подношения в храм. Однако его вполне можно было одеть и в качестве малого меча «косигатана».',
         links: [
             {
-                route_id: 'goro_masamune',
+                route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
                 name: 'Горо Масамунэ',
             },
             {
-                route_id: 'koto',
-                name: 'Кото (ссылка «классификация мечей по временным периодам»)',
-            },
-            {
-                route_id: 'wakizashi',
+                route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
                 name: 'Вакидзаси',
             },
-            {
-                route_id: 'hira_zukuri',
-                name: '«Хира-дзукури» (ссылка – «формы клинков»)',
-            },
-            {
-                route_id: 'sakai',
-                name: 'Сакаи',
-            },
-            {
-                route_id: 'saizesaku',
-                name: 'Сайдзёсаку (ссылка «Рейтинги мечей по Фудзисиро»)',
-            },
-            {
-                route_id: 'legend_muramasa_masamune',
-                name: 'Легенда О противостоянии Мурамаса и Масамунэ',
-            },
+            // {
+            //     route_id: 'legend_muramasa_masamune',
+            //     name: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            // },
         ],
     },
 ] as IExhibit[];

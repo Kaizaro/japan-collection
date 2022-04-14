@@ -6,7 +6,7 @@ import {IExhibitLink} from '@src/modules/exhibits/entities/exhibitLink';
 import {ExhibitCategory} from '@src/modules/exhibits/entities/exhibitCategory';
 
 export interface IExhibit {
-    id: string;
+    id?: string;
     category: ExhibitCategory;
     subcategory: EXHIBIT_WEAPON_SUBCATEGORY;
     title: string;
