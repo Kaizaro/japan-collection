@@ -143,4 +143,295 @@ export const EXHIBITS = [
             // },
         ],
     },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.KATANA,
+        title: 'Катана Нидай Мурамаса',
+        type: 'Катана',
+        blacksmith_name: 'Нидай Мурамаса, II поколение',
+        blacksmith_name_japanese: '村正',
+        school: 'Сэнго Мурамаса',
+        province: 'Исэ',
+        time: 'Муромати, XVI век',
+        status: [
+            {
+                name: 'Китё Токэн (Драгоценный Меч) от NBTHK',
+                icon: threeStarsIcon,
+            },
+        ],
+        description:
+            'Меч, выкованный кузнецом Второго поколения кузнецов Мурамаса. Сын основателя школы Сэнго был не менее талантливым, чем его отец. Качество его работы оценивается также высоко. Поскольку легенды о мечах Мурамаса имеют скорее коллективный образ, мы не можем точно сказать какие именно из мечей самые зловещие.',
+        links: [
+            // {
+            //     route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
+            //     name: 'Горо Масамунэ',
+            // },
+            // {
+            //     route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
+            //     name: 'Вакидзаси',
+            // },
+            // {
+            //     route_id: 'legend_muramasa_masamune',
+            //     name: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            // },
+        ],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'О-танто Нидай Мурамаса',
+        type: 'Вакидзаси',
+        blacksmith_name: 'Нидай Мурамаса, II поколение',
+        blacksmith_name_japanese: '村正',
+        school: 'Сэнго Мурамаса',
+        province: 'Исэ',
+        time: 'Муромати, XVI век',
+        status: [
+            {
+                name: 'Китё Токэн (Драгоценный Меч) от NBTHK',
+                icon: threeStarsIcon,
+            },
+        ],
+        description:
+            'Малый меч, выкованный кузнецом Второго поколения кузнецов Мурамаса. Сын основателя школы Сэнго был не менее талантливым, чем его отец. Качество его работы оценивается также высоко. Данный клинок, учитывая длину, был изготовлен для ношения при доспехах, в качестве вспомогательного меча «косигатана».',
+        links: [
+            // {
+            //     route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
+            //     name: 'Горо Масамунэ',
+            // },
+            // {
+            //     route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
+            //     name: 'Вакидзаси',
+            // },
+            // {
+            //     route_id: 'legend_muramasa_masamune',
+            //     name: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            // },
+        ],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.TANTO,
+        title: 'Танто Нидай Мурамаса',
+        type: 'Танто',
+        blacksmith_name: 'Нидай Мурамаса, II поколение',
+        blacksmith_name_japanese: '村正',
+        school: 'Сэнго Мурамаса',
+        province: 'Исэ',
+        time: 'Муромати, XVI век',
+        status: [
+            {
+                name: 'Кантэйсё (Важная Работа) от NTHK',
+                icon: threeStarsIcon,
+            },
+        ],
+        description:
+            'Танто, короткий клинок, выкованный кузнецом Второго поколения кузнецов Мурамаса. Сын основателя школы Сэнго был не менее талантливым, чем его отец. Качество его работы оценивается также высоко. Танто традиции Мурамаса отличаются, от большинства танто того времени чуть большей длиной. Прекрасный образец танто эпохи Кото (ссылка «классификация мечей по временным периодам»).',
+        links: [
+            // {
+            //     route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
+            //     name: 'Горо Масамунэ',
+            // },
+            // {
+            //     route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
+            //     name: 'Вакидзаси',
+            // },
+            // {
+            //     route_id: 'legend_muramasa_masamune',
+            //     name: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            // },
+        ],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.KATANA,
+        title: 'Катана Сэнго Мурамаса',
+        type: 'Катана',
+        blacksmith_name: 'Сэнго Мурамаса, I поколение',
+        blacksmith_name_japanese: '村正',
+        school: 'Сэнго Мурамаса',
+        province: 'Исэ',
+        time: 'Муромати, XVI век',
+        status: [
+            {
+                name: 'Косю Токубэцу Китё (Чрезвычайно драгоценный Меч) от NBTHK',
+                icon: threeStarsIcon,
+            },
+        ],
+        description:
+            '«Демоническая» катана великого Сэнго, основателя школы «Сэнго Мурамаса». Редчайший и легендарный предмет. Мечей «первого» Мурамасы осталось очень немного, это очень коллекционно редкий предмет. Поражает совершенством формы и удивительным балансом. При этом имеет очень скромный и гармоничный вид, характерный для школы Мурамаса, что выдаёт в нём настоящий боевой меч.',
+        links: [
+            // {
+            //     route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
+            //     name: 'Горо Масамунэ',
+            // },
+            // {
+            //     route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
+            //     name: 'Вакидзаси',
+            // },
+            // {
+            //     route_id: 'legend_muramasa_masamune',
+            //     name: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            // },
+        ],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.TANTO,
+        title: 'О-танто Сэнго Мурамаса',
+        type: 'Танто',
+        blacksmith_name: 'Сэнго Мурамаса, I поколение',
+        blacksmith_name_japanese: '村正',
+        school: 'Сэнго Мурамаса',
+        province: 'Исэ',
+        time: 'Муромати, XVI век',
+        status: [
+            {
+                name: 'Ходзон Токэн (Оберегаемый Меч) от NBTHK',
+                icon: threeStarsIcon,
+            },
+        ],
+        description:
+            'Искусное произведение великого Сэнго, основателя школы «Сэнго Мурамаса». Очень редкий предмет. Мечей «первого» Мурамасы осталось очень немного. Очень многие знатные самураи мечтали владеть подобной вещью.',
+        links: [
+            // {
+            //     route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
+            //     name: 'Горо Масамунэ',
+            // },
+            // {
+            //     route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
+            //     name: 'Вакидзаси',
+            // },
+            // {
+            //     route_id: 'legend_muramasa_masamune',
+            //     name: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            // },
+        ],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.KATANA,
+        title: 'Катана Садамунэ',
+        type: 'Катана',
+        blacksmith_name: 'Хикосиро Садамунэ',
+        blacksmith_name_japanese: '貞宗',
+        school: 'Сосю',
+        province: 'Сагами',
+        time: 'Период раннего Намбокутё, Эпохи Муромати, первая треть XIV века',
+        status: [
+            {
+                name: 'Сертификат от Хонъами Нарисигэ',
+                icon: threeStarsIcon,
+            },
+        ],
+        description:
+            'Клинок лучшего ученика и сына великого Масамунэ. Многие эксперты ставят Садамунэ на один уровень со своим отцом. Лезвие имеет хорошую форму, без резких изгибов, достойное продолжение традиции школы Сосю, представителем которой он являлся. Подлинность клинка подтверждается заключением Хонъами Нарисигэ из уважаемой старинной семьи экспертов по мечам.',
+        links: [
+            // {
+            //     route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
+            //     name: 'Горо Масамунэ',
+            // },
+            // {
+            //     route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
+            //     name: 'Вакидзаси',
+            // },
+            // {
+            //     route_id: 'legend_muramasa_masamune',
+            //     name: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            // },
+        ],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Вакидзаси Садамунэ',
+        type: 'Вакидзаси',
+        blacksmith_name: 'Хикосиро Садамунэ',
+        blacksmith_name_japanese: '貞宗',
+        school: 'Сосю',
+        province: 'Сагами',
+        time: 'Период раннего Намбокутё, Эпохи Муромати, первая треть XIV века',
+        status: [
+            {
+                name: 'Китё Токэн (Драгоценный Меч) от NBTHK',
+                icon: threeStarsIcon,
+            },
+        ],
+        description:
+            'Клинок лучшего ученика и сына великого Масамунэ. Многие эксперты ставят Садамунэ на один уровень со своим отцом. Клинок большого размера, с сечением «хира-дзукури» (ссылка-модалка - «формы клинков»), такие обычно изготавливали для подношения богам в храм.',
+        links: [
+            // {
+            //     route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
+            //     name: 'Горо Масамунэ',
+            // },
+            // {
+            //     route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
+            //     name: 'Вакидзаси',
+            // },
+            // {
+            //     route_id: 'legend_muramasa_masamune',
+            //     name: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            // },
+        ],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.KATANA,
+        title: 'Катана в оправе тати',
+        type: 'Катана',
+        blacksmith_name: 'Минамото Хиромаса',
+        blacksmith_name_japanese: '廣政',
+        school: 'Сукэхиро',
+        province: 'Сэтцу',
+        time: 'Эпоха Эдо, 1681-1688 г.г.',
+        status: [
+            {
+                name: 'Вадзамоно',
+                icon: threeStarsIcon,
+            },
+        ],
+        description:
+            'Хиромаса был известным мастером в провинции Сетцу, в начале периода Эдо. Его клинки были довольно хорошего качества, а благодаря прекрасным режущим свойствам попали в рейтинговый список остроты «вадзамоно» (ссылка-модалка). Клинок облачён в великолепно сохранившуюся оправу для ношения при доспехах «итомаки-но-тати» (ссылка-модалка «тати»).',
+        links: [
+            // {
+            //     route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
+            //     name: 'Горо Масамунэ',
+            // },
+            // {
+            //     route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
+            //     name: 'Вакидзаси',
+            // },
+            // {
+            //     route_id: 'legend_muramasa_masamune',
+            //     name: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            // },
+        ],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Вакидзаси Тадамицу',
+        type: 'Вакидзаси',
+        blacksmith_name: 'Бисю Осафунэ Тадамицу',
+        blacksmith_name_japanese: '備州長船忠光',
+        school: 'Осафунэ',
+        province: 'Бидзэн',
+        time: 'Муромати, XVI век',
+        description:
+            'Кузнечная школа Осафунэ в провинции Бидзэн – это крупнейшая и одна из самых уважаемых школ Японии, существовавшая довольно давно. Не будет большим преувеличением сказать, что около трети всех шедевров раннего времени были созданы в провинции Бидзэн при активном участии мастеров школы Осафунэ. Традиция Бидзэн потерпела серьезную неудачу, когда разлив реки Ёсии почти полностью уничтожил деревни Осафунэ и Хатакэда в 1591 году.',
+        links: [
+            // {
+            //     route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
+            //     name: 'Горо Масамунэ',
+            // },
+            // {
+            //     route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
+            //     name: 'Вакидзаси',
+            // },
+            // {
+            //     route_id: 'legend_muramasa_masamune',
+            //     name: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            // },
+        ],
+    },
 ] as IExhibit[];
