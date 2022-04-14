@@ -12,6 +12,7 @@ import {PressableComponent} from '@shared/ui/buttons/pressable-component';
 import {IDefaultFCProps} from '@shared/types';
 import {APP_SCREEN_NAME} from '@shared/constants';
 
+import {ExhibitTrack} from '@src/modules/exhibits/ui/components/exhibit-track/ExhibitTrack';
 import {ExhibitTime} from '@src/modules/exhibits/ui/components/exhibit-time';
 import {ExhibitStatus} from '@src/modules/exhibits/ui/components/exhibit-status';
 import {ExhibitLocation} from '@src/modules/exhibits/ui/components/exhibit-location';
@@ -87,6 +88,7 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                     innerStyle={styles.dictionary}
                 />
             </ScrollView>
+            <ExhibitTrack />
         </ComponentContainer>
     );
 };
