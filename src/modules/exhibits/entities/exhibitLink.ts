@@ -2,6 +2,6 @@ import {ARTICLE_MODAL_IDS} from '@src/modules/exhibits/DAL/articles/articleModal
 import {ARTICLE_IDS} from '@src/modules/exhibits/DAL/articles/articleIds';
 
 export interface IExhibitLink {
-    route_id: ARTICLE_IDS | ARTICLE_MODAL_IDS;
+    route_id: ARTICLE_IDS | ARTICLE_MODAL_IDS | '';
     text: string;
 }
