@@ -37,12 +37,6 @@ export const EXHIBITS = [
             route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
         },
         linkWords: [
-            // {
-            //     route_id: 'goro_masamune',
-            //     linkName: 'Горо Масамунэ',
-            //     image: ARTICLE_IMAGES.GORO_NUDO_MASAMUNE,
-            //     title: 'ГОРО НЮДО МАСАМУНЭ (1264-1343)',
-            // },
             {
                 route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
                 text: 'Горо Масамунэ',
@@ -67,10 +61,6 @@ export const EXHIBITS = [
                 route_id: ARTICLE_MODAL_IDS,
                 text: '«Сайдзёсаку»',
             },
-            // {
-            //     route_id: 'legend_muramasa_masamune',
-            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
-            // },
         ],
         dictionaryLinks: [
             {
@@ -97,10 +87,10 @@ export const EXHIBITS = [
                 route_id: ARTICLE_MODAL_IDS,
                 text: '«Сайдзёсаку»',
             },
-            // {
-            //     route_id: 'legend_muramasa_masamune',
-            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
-            // },
+            {
+                route_id: 'legend_muramasa_masamune',
+                text: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            },
         ],
         images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
     },
