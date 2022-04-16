@@ -1,7 +1,7 @@
 import {ARTICLE_IDS} from './articleIds';
 
 import {IArticleModal} from '@src/modules/exhibits/entities/articleModal';
-import {ARTICLE_MODAL_IDS} from '@src/modules/exhibits/DAL/articleModalIds';
+import {ARTICLE_MODAL_IDS} from '@src/modules/exhibits/DAL/articles/articleModalIds';
 
 export const ARTICLE_MODALS = [
     // Naginata

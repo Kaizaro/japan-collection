@@ -14,7 +14,7 @@ import {IArticle} from '@src/modules/exhibits/entities/article';
 import {articleGoroNudoMasamuneStyles as styles} from './styles';
 
 const ExhibitArticle: FC = () => {
-    const article = useRoute().params?.article as IArticle;
+    const article = useRoute().params?.article as Record<string, IArticle>;
 
     return (
         <ComponentContainer innerStyle={styles.container}>
@@ -33,13 +33,15 @@ const ExhibitArticle: FC = () => {
                 <View style={styles.title}>
                     <HeaderText fontSize={48}>{article.title}</HeaderText>
                 </View>
-                <View>
-                    <RegularText
-                        fontSize={24}
-                        color={APP_TEXT_COLORS.SECONDARY}>
-                        {article.subtitle}
-                    </RegularText>
-                </View>
+                {article.subtitle && (
+                    <View>
+                        <RegularText
+                            fontSize={24}
+                            color={APP_TEXT_COLORS.SECONDARY}>
+                            {article.subtitle}
+                        </RegularText>
+                    </View>
+                )}
                 <View style={styles.description}>
                     <RegularText fontSize={18}>
                         {article.description}

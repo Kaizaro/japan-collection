@@ -8,7 +8,7 @@ import {APP_SCREEN_NAME} from '@shared/constants';
 import {ARTICLES} from '@src/modules/exhibits/DAL/articles/articles';
 import {ARTICLE_MODALS} from '@src/modules/exhibits/DAL/articles/articleModals';
 import {ARTICLE_IDS} from '@src/modules/exhibits/DAL/articles/articleIds';
-import {ARTICLE_MODAL_IDS} from '@src/modules/exhibits/DAL/articleModalIds';
+import {ARTICLE_MODAL_IDS} from '@src/modules/exhibits/DAL/articles/articleModalIds';
 
 const useExhibitLinks = () => {
     const {navigate} = useNavigation();

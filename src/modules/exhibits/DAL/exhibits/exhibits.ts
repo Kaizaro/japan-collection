@@ -1,11 +1,11 @@
 import {EXHIBIT_WEAPON_SUBCATEGORY} from '@src/modules/exhibits/entities/exhibitWeaponSubCategory';
 import {ExhibitCategory} from '@src/modules/exhibits/entities/exhibitCategory';
 import {IExhibit} from '@src/modules/exhibits/entities';
+import {ARTICLE_MODAL_IDS} from '@src/modules/exhibits/DAL/articles/articleModalIds';
 import {ARTICLE_IDS} from '@src/modules/exhibits/DAL/articles/articleIds';
-import {ARTICLE_MODAL_IDS} from '@src/modules/exhibits/DAL/articleModalIds';
 
-import threeStarsIcon from '../../../shared/assets/graphics/icons/three_stars.png';
-import tickIcon from '../../../shared/assets/graphics/icons/active.png';
+import threeStarsIcon from '../../../../shared/assets/graphics/icons/three_stars.png';
+import tickIcon from '../../../../shared/assets/graphics/icons/active.png';
 
 export const EXHIBITS = [
     {

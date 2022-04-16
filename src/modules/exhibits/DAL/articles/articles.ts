@@ -1,7 +1,7 @@
 import {IArticle} from '@src/modules/exhibits/entities/article';
+import {ARTICLE_MODAL_IDS} from '@src/modules/exhibits/DAL/articles/articleModalIds';
+import {ARTICLE_IMAGES} from '@src/modules/exhibits/DAL/articles/articleImages';
 import {ARTICLE_IDS} from '@src/modules/exhibits/DAL/articles/articleIds';
-import {ARTICLE_MODAL_IDS} from '@src/modules/exhibits/DAL/articleModalIds';
-import {ARTICLE_IMAGES} from '@src/modules/exhibits/DAL/articleImages';
 
 export const ARTICLES = [
     // Nobunaga Oda
@@ -217,7 +217,8 @@ export const ARTICLES = [
     // Goro Nudo Masamune
     {
         id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
-        title: 'Горо Нюдо Масамунэ (1264-1343)',
+        title: 'Горо Нюдо Масамунэ',
+        subtitle: '(1264-1343)',
         description:
             'Масамунэ считается самым величайшим кузнецом в Японии, работавшим в эпоху Камакура в провинции Сагами. Принадлежал к школе Сосю. Разработал неповторимую сложную технику ковки из разных по плотности сортов стали, которая делала клинок одновременно прочным и гибким. Характерной чертой клинков Масамунэ является рисунок «ниэ» («кипение»), при рассмотрении которого частицы мартенсита выглядят как «мерцающие звёзды». Большинство клинков Масамунэ не подписывал, зная, что их не возможно подделать. Многие из дошедших клинков были укорочены (ссылка-модалка) «укорачивание клинков») в эпоху Эдо, начиная с XVII века. Мечи Масамунэ были излюбленными клинками правящего рода Токугава (ссылка-статья), а меч "Хондзё Масамунэ" (ссылка-модалка) стал символом сёгуната Токугава, который передавали по наследству как символ власти. Традиции школы Масамунэ продолжил его сын Хикосиро Садамуне (ссылка-статья), десять учеников «Дзютэцу» (ссылка-модалка), а также его ученики Хиромицу и Акихиро.',
         images: [ARTICLE_IMAGES.GORO_NUDO_MASAMUNE],
