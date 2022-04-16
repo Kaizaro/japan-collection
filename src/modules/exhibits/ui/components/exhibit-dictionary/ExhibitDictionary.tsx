@@ -39,7 +39,7 @@ const ExhibitDictionary: FC<IProps> = ({dictionary, innerStyle}) => {
         <View style={{...innerStyle}}>
             <View style={styles.titleContainer}>
                 <RegularText fontSize={18} color={APP_COLORS.RED}>
-                    Словарь слов
+                    Справочник
                 </RegularText>
                 <Image
                     source={dictionaryIcon}
