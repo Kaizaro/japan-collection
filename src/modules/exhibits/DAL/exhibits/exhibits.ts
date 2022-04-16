@@ -49,18 +49,18 @@ export const EXHIBITS = [
                 route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
                 text: '«вакидзаси»',
             },
-            {
-                route_id: ARTICLE_MODAL_IDS,
-                text: '«хира-дзукури»',
-            },
+            // {
+            //     route_id: ARTICLE_MODAL_IDS,
+            //     text: '«хира-дзукури»',
+            // },
             {
                 route_id: ARTICLE_IDS.SAKAI_CLAN,
                 text: 'Сакаи',
             },
-            {
-                route_id: ARTICLE_MODAL_IDS,
-                text: '«Сайдзёсаку»',
-            },
+            // {
+            //     route_id: ARTICLE_MODAL_IDS,
+            //     text: '«Сайдзёсаку»',
+            // },
         ],
         dictionaryLinks: [
             {
@@ -75,22 +75,22 @@ export const EXHIBITS = [
                 route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
                 text: '«вакидзаси»',
             },
-            {
-                route_id: ARTICLE_MODAL_IDS,
-                text: '«хира-дзукури»',
-            },
+            // {
+            //     route_id: ARTICLE_MODAL_IDS,
+            //     text: '«хира-дзукури»',
+            // },
             {
                 route_id: ARTICLE_IDS.SAKAI_CLAN,
                 text: 'Сакаи',
             },
-            {
-                route_id: ARTICLE_MODAL_IDS,
-                text: '«Сайдзёсаку»',
-            },
-            {
-                route_id: 'legend_muramasa_masamune',
-                text: 'Легенда О противостоянии Мурамаса и Масамунэ',
-            },
+            // {
+            //     route_id: ARTICLE_MODAL_IDS,
+            //     text: '«Сайдзёсаку»',
+            // },
+            // {
+            //     route_id: 'legend_muramasa_masamune',
+            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            // },
         ],
         images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
     },

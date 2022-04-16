@@ -1,14 +1,13 @@
 import {useCallback} from 'react';
 
-import {instanceOf} from 'prop-types';
 import {useNavigation} from '@react-navigation/native';
 
 import {APP_SCREEN_NAME} from '@shared/constants';
 
 import {ARTICLES} from '@src/modules/exhibits/DAL/articles/articles';
 import {ARTICLE_MODALS} from '@src/modules/exhibits/DAL/articles/articleModals';
-import {ARTICLE_IDS} from '@src/modules/exhibits/DAL/articles/articleIds';
 import {ARTICLE_MODAL_IDS} from '@src/modules/exhibits/DAL/articles/articleModalIds';
+import {ARTICLE_IDS} from '@src/modules/exhibits/DAL/articles/articleIds';
 
 const useExhibitLinks = () => {
     const {navigate} = useNavigation();
@@ -18,7 +17,6 @@ const useExhibitLinks = () => {
             const article = ARTICLES.find(
                 (articleItem) => articleItem.id === route_id,
             );
-            console.log('@SEAN', article);
 
             navigate(
                 APP_SCREEN_NAME.ExhibitArticle as never,

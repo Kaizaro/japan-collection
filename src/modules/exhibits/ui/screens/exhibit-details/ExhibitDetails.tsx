@@ -15,6 +15,7 @@ import {ExhibitTime} from '@src/modules/exhibits/ui/components/exhibit-time';
 import {ExhibitStatus} from '@src/modules/exhibits/ui/components/exhibit-status';
 import {ExhibitLocation} from '@src/modules/exhibits/ui/components/exhibit-location';
 import {ExhibitDictionary} from '@src/modules/exhibits/ui/components/exhibit-dictionary';
+import {ExhibitDescription} from '@src/modules/exhibits/ui/components/exhibit-description';
 import {useExhibitLinks} from '@src/modules/exhibits/presenter/hooks/useExhibitLinks';
 import {IExhibit} from '@src/modules/exhibits/entities';
 
@@ -78,11 +79,11 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                     location={exhibit.province}
                     innerStyle={styles.location}
                 />
-                <View style={styles.description}>
-                    <RegularText fontSize={18}>
-                        {exhibit.description}
-                    </RegularText>
-                </View>
+                <ExhibitDescription
+                    description={exhibit.description}
+                    linkWords={exhibit.linkWords}
+                    innerStyle={styles.description}
+                />
                 {exhibit.dictionaryLinks && (
                     <ExhibitDictionary
                         dictionary={exhibit.dictionaryLinks}
