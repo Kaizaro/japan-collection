@@ -1,4 +1,5 @@
-export enum IExhibitWeaponSubCategory {
-    WAKIZASHI = 'wakizashi',
-    KATANA = 'katana',
+export enum EXHIBIT_WEAPON_SUBCATEGORY {
+    WAKIZASHI = 'WAKIZASHI',
+    KATANA = 'KATANA',
+    TANTO = 'TANTO',
 }

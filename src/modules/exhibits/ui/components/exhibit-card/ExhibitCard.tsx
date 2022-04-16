@@ -19,10 +19,10 @@ const ExhibitCard: FC<IProps> = ({card}) => {
 
     return (
         <PressableComponent onPress={onCardPress} innerStyle={styles.card}>
-            {card.image && (
+            {card.images && (
                 <View style={styles.imageContainer}>
                     <Image
-                        source={card.image}
+                        source={card.images[0]}
                         resizeMode={'contain'}
                         style={styles.image}
                     />

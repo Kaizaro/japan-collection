@@ -1,14 +1,14 @@
 import {ImageSourcePropType} from 'react-native';
 
-import {IExhibitCategory} from '@src/modules/exhibits/entities/exhibitCategory';
+import {ExhibitCategory} from '@src/modules/exhibits/entities/exhibitCategory';
 
 import bladeIcon from '../../../shared/assets/graphics/icons/categories/blade_weapon.png';
 
 export const getCategoryIcon = (
-    category: IExhibitCategory,
+    category: ExhibitCategory,
 ): ImageSourcePropType => {
     switch (category) {
-        case IExhibitCategory.BLADE_WEAPON:
+        case ExhibitCategory.BLADE_WEAPON:
             return bladeIcon;
         default:
             return bladeIcon;

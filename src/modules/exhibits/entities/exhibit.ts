@@ -1,16 +1,16 @@
 import {ImageSourcePropType} from 'react-native';
 
-import {IExhibitWeaponSubCategory} from '@src/modules/exhibits/entities/exhibitWeaponSubCategory';
+import {EXHIBIT_WEAPON_SUBCATEGORY} from '@src/modules/exhibits/entities/exhibitWeaponSubCategory';
 import {IExhibitStatus} from '@src/modules/exhibits/entities/exhibitStatus';
 import {IExhibitLink} from '@src/modules/exhibits/entities/exhibitLink';
-import {IExhibitCategory} from '@src/modules/exhibits/entities/exhibitCategory';
+import {ExhibitCategory} from '@src/modules/exhibits/entities/exhibitCategory';
 
 export interface IExhibit {
-    id: string;
-    category: IExhibitCategory;
-    subcategory: IExhibitWeaponSubCategory;
+    id?: string;
+    category: ExhibitCategory;
+    subcategory: EXHIBIT_WEAPON_SUBCATEGORY;
     title: string;
-    subtitle: string;
+    subtitle?: string;
     type: string;
     blacksmith_name: string;
     blacksmith_name_japanese: string;
@@ -19,6 +19,8 @@ export interface IExhibit {
     time: string;
     status: IExhibitStatus[];
     description: string;
-    links: IExhibitLink[];
-    image?: ImageSourcePropType;
+    buttonLink?: IExhibitLink;
+    linkWords?: IExhibitLink[];
+    dictionaryLinks?: IExhibitLink[];
+    images?: ImageSourcePropType[];
 }

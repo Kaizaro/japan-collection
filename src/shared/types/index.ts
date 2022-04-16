@@ -6,6 +6,7 @@ export interface IDefaultFCProps {
 }
 
 export type TNullable<T> = T | null | undefined;
+export type TRecord<T> = Record<string, T>;
 
 export type TStyles = {
     [key: string]: ViewStyle | TextStyle | ImageStyle;
