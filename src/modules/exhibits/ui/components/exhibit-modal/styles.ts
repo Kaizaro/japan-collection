@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 
 import {scaleHorizontal, scaleVertical} from '@shared/utils/scale';
-import {APP_COLORS} from "@shared/config/colors";
+import {APP_COLORS} from '@shared/config/colors';
 
 export const exhibitModalStyles = StyleSheet.create({
     externalContainer: {
