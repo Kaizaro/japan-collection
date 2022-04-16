@@ -10,6 +10,7 @@ export enum APP_COLORS {
 
 export enum APP_TEXT_COLORS {
     MAIN = '#000000',
+    MAIN_OPACITY = '#00000099',
     SECONDARY = '#524D48',
     LIGHT_GRAY = '#656060',
 }
