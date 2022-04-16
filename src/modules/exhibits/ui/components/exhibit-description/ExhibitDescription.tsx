@@ -4,10 +4,10 @@ import {View} from 'react-native';
 
 import {RegularTextNew} from '@shared/ui/RegularText';
 import {IDefaultFCProps} from '@shared/types';
+import {APP_FONTS} from '@shared/config/fonts';
 
 import {useExhibitLinks} from '@src/modules/exhibits/presenter/hooks/useExhibitLinks';
 import {IExhibitLink} from '@src/modules/exhibits/entities/exhibitLink';
-import {APP_FONTS} from "@shared/config/fonts";
 
 interface IText extends IExhibitLink {
     type: 'regular' | 'pressable';
