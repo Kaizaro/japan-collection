@@ -29,10 +29,15 @@ module.exports = {
     presets: ['module:metro-react-native-babel-preset'],
     env: {
         production: {
-            plugins: ['transform-remove-console', MODULE_RESOLVER],
+            plugins: [
+                'transform-remove-console',
+                MODULE_RESOLVER,
+                'react-native-reanimated/plugin',
+            ],
         },
         development: {
-            plugins: [MODULE_RESOLVER],
+            plugins: [MODULE_RESOLVER, 'react-native-reanimated/plugin'],
         },
     },
+    plugins: ['react-native-reanimated/plugin'],
 };
