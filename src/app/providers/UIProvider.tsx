@@ -18,13 +18,13 @@ const UIProvider: FC = ({children}) => {
                 barStyle={'dark-content'}
                 backgroundColor={APP_COLORS.GRAY_MAIN}
             />
-            <BottomSheetModalProvider>
-                <ExhibitModalProvider>
-                    <SafeAreaProvider>
+            <SafeAreaProvider>
+                <BottomSheetModalProvider>
+                    <ExhibitModalProvider>
                         <NavigationContainer>{children}</NavigationContainer>
-                    </SafeAreaProvider>
-                </ExhibitModalProvider>
-            </BottomSheetModalProvider>
+                    </ExhibitModalProvider>
+                </BottomSheetModalProvider>
+            </SafeAreaProvider>
         </>
     );
 };
