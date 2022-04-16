@@ -9,8 +9,8 @@ import {APP_SCREEN_NAME} from '@shared/constants';
 
 import {Exhibits} from '@src/modules/exhibits/ui/screens/exhibits';
 import {ExhibitDetails} from '@src/modules/exhibits/ui/screens/exhibit-details';
+import {ExhibitArticle} from '@src/modules/exhibits/ui/screens/exhibit-article';
 import {ArticleGoroNudoMasamune} from '@src/modules/exhibits/ui/screens/articles/goro-nudo-masamune';
-import {ExhibitArticle} from "@src/modules/exhibits/ui/screens/exhibit-article";
 
 const Stack = createNativeStackNavigator();
 
