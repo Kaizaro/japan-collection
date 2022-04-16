@@ -1,6 +1,5 @@
 import {useCallback} from 'react';
 
-import {instanceOf} from 'prop-types';
 import {useNavigation} from '@react-navigation/native';
 
 import {APP_SCREEN_NAME} from '@shared/constants';
@@ -18,7 +17,6 @@ const useExhibitLinks = () => {
             const article = ARTICLES.find(
                 (articleItem) => articleItem.id === route_id,
             );
-            console.log('@SEAN', article);
 
             navigate(
                 APP_SCREEN_NAME.ExhibitArticle as never,
