@@ -9,7 +9,7 @@ import {scaleVertical} from '@shared/utils/scale';
 import {HeaderText, RegularText} from '@shared/ui/text';
 import {ComponentContainer} from '@shared/ui/container';
 import {PressableComponent} from '@shared/ui/buttons/pressable-component';
-import {IDefaultFCProps} from '@shared/types';
+import {IDefaultFCProps, TRecord} from '@shared/types';
 import {APP_SCREEN_NAME} from '@shared/constants';
 
 import {ExhibitTrack} from '@src/modules/exhibits/ui/components/exhibit-track/ExhibitTrack';
@@ -26,7 +26,7 @@ import backgroundImage from '../../../../../shared/assets/graphics/images/dragon
 import {exhibitDetailsStyles as styles} from './styles';
 
 const ExhibitDetails: FC<IDefaultFCProps> = () => {
-    const exhibit = useRoute().params?.exhibit as IExhibit;
+    const {exhibit} = useRoute().params as TRecord<IExhibit>;
     const {handleLinkPress} = useExhibitLinks();
 
     return (
@@ -54,11 +54,6 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                     />
                 </View>
                 <PressableComponent
-                    // onPress={() =>
-                    //     exhibit.linkWords?.[0]?.route_id
-                    //         ? handleLinkPress(exhibit.linkWords[0].route_id)
-                    //         : null
-                    // }
                     onPress={() =>
                         exhibit.buttonLink?.route_id
                             ? handleLinkPress(exhibit.buttonLink.route_id)
