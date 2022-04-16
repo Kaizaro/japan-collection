@@ -24,19 +24,24 @@ export interface IContextValue {
     showModal: () => void;
     dismissModal: () => void;
     title: string;
-    handleTitleChanges?: (title?: string) => void;
+    handleTitleChanges: (digit?: string) => void;
     subtitle: string;
-    handleSubtitleChanges?: (subtitle?: string) => void;
+    handleSubtitleChanges: (digit?: string) => void;
     text: string;
-    handleTextChanges?: (text?: string) => void;
+    handleTextChanges: (digit?: string) => void;
     clearAllData?: () => void;
 }
 
 const initialContextValue = {
     isModalVisible: false,
+    showModal: () => null,
+    dismissModal: () => null,
     title: '',
+    handleTitleChanges: (digit) => null,
     subtitle: '',
+    handleSubtitleChanges: (digit) => null,
     text: '',
+    handleTextChanges: (digit) => null,
 } as IContextValue;
 
 const ExhibitModalContext = createContext(initialContextValue);
