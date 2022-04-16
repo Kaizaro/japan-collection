@@ -73,7 +73,7 @@ export enum ARTICLE_MODAL_IDS {
     SEPPUKU = 'SEPPUKU',
     KUBIOKE = 'KUBIOKE',
     KUBI_JIKEN = 'KUBI_JIKEN',
-    // TODO need to check Хондзё Масамунэ
-    // HONDZE_MASAMUNE = 'HONDZE_MASAMUNE',
     MANRIKI_GUSARI = 'MANRIKI_GUSARI',
+    // TODO need to check Хондзё Масамунэ
+    HONDZE_MASAMUNE = 'HONDZE_MASAMUNE',
 }
