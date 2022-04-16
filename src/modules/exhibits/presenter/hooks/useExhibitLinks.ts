@@ -1,5 +1,6 @@
 import {useCallback} from 'react';
 
+import {instanceOf} from 'prop-types';
 import {useNavigation} from '@react-navigation/native';
 
 import {APP_SCREEN_NAME} from '@shared/constants';
@@ -41,14 +42,17 @@ const useExhibitLinks = () => {
 
     const handleLinkPress = useCallback(
         (route_id: ARTICLE_IDS | ARTICLE_MODAL_IDS) => {
-            const articleValues = Object.values(ARTICLE_IDS);
-            if (articleValues) {
+            if (Object.values(ARTICLE_IDS).includes(route_id as ARTICLE_IDS)) {
                 handleRouteToArticle(route_id as ARTICLE_IDS);
-            } else {
+            } else if (
+                Object.values(ARTICLE_MODAL_IDS).includes(
+                    route_id as ARTICLE_MODAL_IDS,
+                )
+            ) {
                 handleArticleModal(route_id as ARTICLE_MODAL_IDS);
             }
         },
-        [handleRouteToArticle],
+        [handleArticleModal, handleRouteToArticle],
     );
 
     return {handleLinkPress};
