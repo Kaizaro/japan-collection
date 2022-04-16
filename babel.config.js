@@ -39,5 +39,33 @@ module.exports = {
     //         plugins: [MODULE_RESOLVER],
     //     },
     // },
-    plugins: [MODULE_RESOLVER, 'react-native-reanimated/plugin'],
+    plugins: [
+        [
+            'module-resolver',
+            {
+                root: ['./src'],
+                extensions: [
+                    '.ts',
+                    '.tsx',
+                    '.js',
+                    '.jsx',
+                    '.json',
+                    '.ios.ts',
+                    '.ios.js',
+                    '.android.ts',
+                    '.android.js',
+                ],
+                alias: {
+                    './': ['.'],
+                    '@src': './src',
+                    '@app': './src/app',
+                    '@pages': './src/pages',
+                    '@features': './src/features',
+                    '@entities': './src/entities',
+                    '@shared': './src/shared',
+                },
+            },
+        ],
+        'react-native-reanimated/plugin',
+    ],
 };
