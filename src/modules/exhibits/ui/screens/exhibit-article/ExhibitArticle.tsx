@@ -14,7 +14,7 @@ import {IArticle} from '@src/modules/exhibits/entities/article';
 import {articleGoroNudoMasamuneStyles as styles} from './styles';
 
 const ExhibitArticle: FC = () => {
-    const article = useRoute().params?.article as Record<string, IArticle>;
+    const {article} = useRoute().params as Record<string, IArticle>;
 
     return (
         <ComponentContainer innerStyle={styles.container}>
