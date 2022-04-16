@@ -27,7 +27,7 @@ const ExhibitDictionary: FC<IProps> = ({dictionary, innerStyle}) => {
             <PressableComponent
                 onPress={() => handleLinkPress(route_id)}
                 key={`${route_id}_${index}`}
-                style={styles.documentRow}>
+                innerStyle={styles.documentRow}>
                 <Image
                     source={documentIcon}
                     resizeMode={'contain'}
