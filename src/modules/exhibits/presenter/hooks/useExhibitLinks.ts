@@ -4,34 +4,48 @@ import {useNavigation} from '@react-navigation/native';
 
 import {APP_SCREEN_NAME} from '@shared/constants';
 
-import {IArticle} from '@src/modules/exhibits/entities/article';
 import {ARTICLES} from '@src/modules/exhibits/DAL/articles/articles';
+import {ARTICLE_MODALS} from '@src/modules/exhibits/DAL/articles/articleModals';
 import {ARTICLE_IDS} from '@src/modules/exhibits/DAL/articles/articleIds';
 import {ARTICLE_MODAL_IDS} from '@src/modules/exhibits/DAL/articleModalIds';
 
 const useExhibitLinks = () => {
     const {navigate} = useNavigation();
 
-    const handleRouteToArticle = useCallback((route_id: ARTICLE_IDS) => {
-        const article = ARTICLES.find(
-            (articleItem) => articleItem.id === route_id,
-        );
-        console.log('@SEAN', article);
+    const handleRouteToArticle = useCallback(
+        (route_id: ARTICLE_IDS) => {
+            const article = ARTICLES.find(
+                (articleItem) => articleItem.id === route_id,
+            );
+            console.log('@SEAN', article);
 
-        // navigate(APP_SCREEN_NAME);
+            navigate(
+                APP_SCREEN_NAME.ExhibitArticle as never,
+                {article} as never,
+            );
+        },
+        [navigate],
+    );
+
+    const handleArticleModal = useCallback((route_id: ARTICLE_MODAL_IDS) => {
+        const articleModalValues = Object.values(ARTICLE_MODAL_IDS);
+        console.log(articleModalValues);
+        if (articleModalValues) {
+            const articleModal = ARTICLE_MODALS.find(
+                (articleModalItem) => articleModalItem.id === route_id,
+            );
+
+            console.log('@SEAN', articleModal);
+        }
     }, []);
 
     const handleLinkPress = useCallback(
         (route_id: ARTICLE_IDS | ARTICLE_MODAL_IDS) => {
             const articleValues = Object.values(ARTICLE_IDS);
             if (articleValues) {
-                handleRouteToArticle(route_id, articleValues);
+                handleRouteToArticle(route_id as ARTICLE_IDS);
             } else {
-                const articleModalValues = Object.values(
-                    ARTICLE_MODAL_IDS,
-                ).includes(route_id as ARTICLE_MODAL_IDS);
-
-                console.log(articleModalValues);
+                handleArticleModal(route_id as ARTICLE_MODAL_IDS);
             }
         },
         [handleRouteToArticle],
