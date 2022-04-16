@@ -1,11 +1,21 @@
-import React, {FC, createContext, useCallback, useMemo, useState} from 'react';
+import React, {
+    FC,
+    createContext,
+    useCallback,
+    useContext,
+    useMemo,
+    useState,
+} from 'react';
 
 import {BottomSheetView} from '@gorhom/bottom-sheet';
 
 import {HeaderText} from '@shared/ui/text';
+import {MIN_HEIGHT_SNAP_POINT} from '@shared/ui/AppBottomSheetModal/styles';
 import {AppBottomSheetModal} from '@shared/ui/AppBottomSheetModal/AppBottomSheetModal';
 import {IDefaultFCProps} from '@shared/types';
 import {APP_COLORS, APP_TEXT_COLORS} from '@shared/config/colors';
+
+import {exhibitModalStyles as styles} from './styles';
 
 export interface IContextValue {
     isModalVisible: boolean;
@@ -98,19 +108,24 @@ const ExhibitModalProvider: FC<IDefaultFCProps> = ({children}) => {
     return (
         <ExhibitModalContext.Provider value={contextValue}>
             {children}
-            <AppBottomSheetModal>
-                <BottomSheetView>
+            <AppBottomSheetModal
+                modalVisible={isModalVisible}
+                closeModal={dismissModal}
+                snapPoints={MIN_HEIGHT_SNAP_POINT}
+                // innerStyle={styles.externalContainer}
+            >
+                <BottomSheetView style={styles.container}>
                     <HeaderText color={APP_COLORS.RED} fontSize={24}>
                         {title}
                     </HeaderText>
-                    <BottomSheetView>
+                    <BottomSheetView style={styles.subtitle}>
                         <HeaderText
                             color={APP_TEXT_COLORS.MAIN_OPACITY}
                             fontSize={18}>
                             {subtitle}
                         </HeaderText>
                     </BottomSheetView>
-                    <BottomSheetView>
+                    <BottomSheetView style={styles.text}>
                         <HeaderText color={APP_TEXT_COLORS.MAIN} fontSize={18}>
                             {text}
                         </HeaderText>
@@ -121,4 +136,6 @@ const ExhibitModalProvider: FC<IDefaultFCProps> = ({children}) => {
     );
 };
 
-export {ExhibitModalProvider};
+const useExhibitModal = (): IContextValue => useContext(ExhibitModalContext);
+
+export {ExhibitModalProvider, ExhibitModalContext, useExhibitModal};
