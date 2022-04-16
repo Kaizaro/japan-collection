@@ -26,15 +26,15 @@ const ExhibitStatus: FC<IProps> = ({exhibitStatuses, innerStyle}) => {
             {exhibitStatuses.map((exhibitStatus, index) => (
                 <View
                     style={styles.item}
-                    key={`${exhibitStatus.name}_${index}`}>
+                    key={`${exhibitStatus.text}_${index}`}>
                     <Image
-                        source={getExhibitIcon(index)}
+                        source={exhibitStatus.icon}
                         resizeMode={'contain'}
                         style={styles.icon}
                     />
                     <View style={styles.text}>
                         <RegularText fontSize={18}>
-                            {exhibitStatus.name}
+                            {exhibitStatus.text}
                         </RegularText>
                     </View>
                 </View>

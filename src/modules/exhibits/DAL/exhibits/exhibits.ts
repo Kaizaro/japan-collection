@@ -23,11 +23,11 @@ export const EXHIBITS = [
         time: 'Конец периода Камакура – начало периода Намбокутё, первая треть XIV века',
         status: [
             {
-                name: 'Мэйбуцу (исторический меч с личным именем)',
+                text: 'Мэйбуцу (исторический меч с личным именем)',
                 icon: threeStarsIcon,
             },
             {
-                name: 'Сайдзё-саку (наивысшее качество). Сертификат от Фукунага Суйкэн',
+                text: 'Сайдзё-саку (наивысшее качество). Сертификат от Фукунага Суйкэн',
                 icon: tickIcon,
             },
         ],
@@ -37,70 +37,60 @@ export const EXHIBITS = [
             route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
         },
         linkWords: [
-            // {
-            //     route_id: 'goro_masamune',
-            //     linkName: 'Горо Масамунэ',
-            //     image: ARTICLE_IMAGES.GORO_NUDO_MASAMUNE,
-            //     title: 'ГОРО НЮДО МАСАМУНЭ (1264-1343)',
-            // },
             {
                 route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
-                name: 'Горо Масамунэ',
+                text: 'Горо Масамунэ',
             },
             {
                 route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
-                name: 'Кото',
+                text: 'Кото',
             },
             {
                 route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
-                name: '«вакидзаси»',
+                text: '«вакидзаси»',
             },
             {
                 route_id: ARTICLE_MODAL_IDS,
-                name: '«хира-дзукури»',
+                text: '«хира-дзукури»',
             },
             {
                 route_id: ARTICLE_IDS.SAKAI_CLAN,
-                name: 'Сакаи',
+                text: 'Сакаи',
             },
             {
                 route_id: ARTICLE_MODAL_IDS,
-                name: '«Сайдзёсаку»',
+                text: '«Сайдзёсаку»',
             },
-            // {
-            //     route_id: 'legend_muramasa_masamune',
-            //     name: 'Легенда О противостоянии Мурамаса и Масамунэ',
-            // },
         ],
         dictionaryLinks: [
             {
                 route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
-                name: 'Горо Масамунэ',
+                text: 'Горо Масамунэ',
             },
             {
                 route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
-                name: 'Кото',
+                text: 'Кото',
             },
             {
                 route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
-                name: '«вакидзаси»',
+                text: '«вакидзаси»',
             },
             {
                 route_id: ARTICLE_MODAL_IDS,
-                name: '«хира-дзукури»',
+                text: '«хира-дзукури»',
             },
             {
                 route_id: ARTICLE_IDS.SAKAI_CLAN,
-                name: 'Сакаи',
+                text: 'Сакаи',
             },
             {
                 route_id: ARTICLE_MODAL_IDS,
-                name: '«Сайдзёсаку»',
+                text: '«Сайдзёсаку»',
             },
-            // {
-            //     route_id: 'legend_muramasa_masamune',
-            //     name: 'Легенда О противостоянии Мурамаса и Масамунэ',
-            // },
+            {
+                route_id: 'legend_muramasa_masamune',
+                text: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            },
         ],
         images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
     },
@@ -118,7 +108,7 @@ export const EXHIBITS = [
         time: 'Конец периода Камакура – начало периода Намбокутё, первая треть XIV века',
         status: [
             {
-                name: 'Сайдзё-саку (наивысшее качество). Сертификат от Хонъами Кондзюн',
+                text: 'Сайдзё-саку (наивысшее качество). Сертификат от Хонъами Кондзюн',
                 icon: threeStarsIcon,
             },
         ],
@@ -127,19 +117,19 @@ export const EXHIBITS = [
         linkWords: [
             {
                 route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
-                name: 'Масамунэ',
+                text: 'Масамунэ',
             },
             {
                 route_id: ARTICLE_MODAL_IDS.KATANA,
-                name: 'Катана',
+                text: 'Катана',
             },
             {
                 route_id: ARTICLE_MODAL_IDS.SWORD_RATING_FUJISIRO,
-                name: 'Сайдзёсаку',
+                text: 'Сайдзёсаку',
             },
             // {
             //     route_id: 'legend_muramasa_masamune',
-            //     name: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
     },
@@ -157,7 +147,7 @@ export const EXHIBITS = [
         time: 'Конец периода Камакура – начало периода Намбокутё, первая треть XIV века',
         status: [
             {
-                name: 'Китё Токэн (Драгоценный Меч). Сертификат от NBTHK',
+                text: 'Китё Токэн (Драгоценный Меч). Сертификат от NBTHK',
                 icon: threeStarsIcon,
             },
         ],
@@ -166,15 +156,15 @@ export const EXHIBITS = [
         linkWords: [
             {
                 route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
-                name: 'Горо Масамунэ',
+                text: 'Горо Масамунэ',
             },
             {
                 route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
-                name: 'Вакидзаси',
+                text: 'Вакидзаси',
             },
             // {
             //     route_id: 'legend_muramasa_masamune',
-            //     name: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
     },
@@ -190,7 +180,7 @@ export const EXHIBITS = [
         time: 'Муромати, XVI век',
         status: [
             {
-                name: 'Китё Токэн (Драгоценный Меч) от NBTHK',
+                text: 'Китё Токэн (Драгоценный Меч) от NBTHK',
                 icon: threeStarsIcon,
             },
         ],
@@ -199,15 +189,15 @@ export const EXHIBITS = [
         linkWords: [
             // {
             //     route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
-            //     name: 'Горо Масамунэ',
+            //     text: 'Горо Масамунэ',
             // },
             // {
             //     route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
-            //     name: 'Вакидзаси',
+            //     text: 'Вакидзаси',
             // },
             // {
             //     route_id: 'legend_muramasa_masamune',
-            //     name: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
     },
@@ -223,7 +213,7 @@ export const EXHIBITS = [
         time: 'Муромати, XVI век',
         status: [
             {
-                name: 'Китё Токэн (Драгоценный Меч) от NBTHK',
+                text: 'Китё Токэн (Драгоценный Меч) от NBTHK',
                 icon: threeStarsIcon,
             },
         ],
@@ -232,15 +222,15 @@ export const EXHIBITS = [
         linkWords: [
             // {
             //     route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
-            //     name: 'Горо Масамунэ',
+            //     text: 'Горо Масамунэ',
             // },
             // {
             //     route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
-            //     name: 'Вакидзаси',
+            //     text: 'Вакидзаси',
             // },
             // {
             //     route_id: 'legend_muramasa_masamune',
-            //     name: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
     },
@@ -256,7 +246,7 @@ export const EXHIBITS = [
         time: 'Муромати, XVI век',
         status: [
             {
-                name: 'Кантэйсё (Важная Работа) от NTHK',
+                text: 'Кантэйсё (Важная Работа) от NTHK',
                 icon: threeStarsIcon,
             },
         ],
@@ -265,15 +255,15 @@ export const EXHIBITS = [
         linkWords: [
             // {
             //     route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
-            //     name: 'Горо Масамунэ',
+            //     text: 'Горо Масамунэ',
             // },
             // {
             //     route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
-            //     name: 'Вакидзаси',
+            //     text: 'Вакидзаси',
             // },
             // {
             //     route_id: 'legend_muramasa_masamune',
-            //     name: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
     },
@@ -289,7 +279,7 @@ export const EXHIBITS = [
         time: 'Муромати, XVI век',
         status: [
             {
-                name: 'Косю Токубэцу Китё (Чрезвычайно драгоценный Меч) от NBTHK',
+                text: 'Косю Токубэцу Китё (Чрезвычайно драгоценный Меч) от NBTHK',
                 icon: threeStarsIcon,
             },
         ],
@@ -298,15 +288,15 @@ export const EXHIBITS = [
         linkWords: [
             // {
             //     route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
-            //     name: 'Горо Масамунэ',
+            //     text: 'Горо Масамунэ',
             // },
             // {
             //     route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
-            //     name: 'Вакидзаси',
+            //     text: 'Вакидзаси',
             // },
             // {
             //     route_id: 'legend_muramasa_masamune',
-            //     name: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
     },
@@ -322,7 +312,7 @@ export const EXHIBITS = [
         time: 'Муромати, XVI век',
         status: [
             {
-                name: 'Ходзон Токэн (Оберегаемый Меч) от NBTHK',
+                text: 'Ходзон Токэн (Оберегаемый Меч) от NBTHK',
                 icon: threeStarsIcon,
             },
         ],
@@ -331,15 +321,15 @@ export const EXHIBITS = [
         linkWords: [
             // {
             //     route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
-            //     name: 'Горо Масамунэ',
+            //     text: 'Горо Масамунэ',
             // },
             // {
             //     route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
-            //     name: 'Вакидзаси',
+            //     text: 'Вакидзаси',
             // },
             // {
             //     route_id: 'legend_muramasa_masamune',
-            //     name: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
     },
@@ -355,7 +345,7 @@ export const EXHIBITS = [
         time: 'Период раннего Намбокутё, Эпохи Муромати, первая треть XIV века',
         status: [
             {
-                name: 'Сертификат от Хонъами Нарисигэ',
+                text: 'Сертификат от Хонъами Нарисигэ',
                 icon: threeStarsIcon,
             },
         ],
@@ -364,15 +354,15 @@ export const EXHIBITS = [
         linkWords: [
             // {
             //     route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
-            //     name: 'Горо Масамунэ',
+            //     text: 'Горо Масамунэ',
             // },
             // {
             //     route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
-            //     name: 'Вакидзаси',
+            //     text: 'Вакидзаси',
             // },
             // {
             //     route_id: 'legend_muramasa_masamune',
-            //     name: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
     },
@@ -388,7 +378,7 @@ export const EXHIBITS = [
         time: 'Период раннего Намбокутё, Эпохи Муромати, первая треть XIV века',
         status: [
             {
-                name: 'Китё Токэн (Драгоценный Меч) от NBTHK',
+                text: 'Китё Токэн (Драгоценный Меч) от NBTHK',
                 icon: threeStarsIcon,
             },
         ],
@@ -397,15 +387,15 @@ export const EXHIBITS = [
         linkWords: [
             // {
             //     route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
-            //     name: 'Горо Масамунэ',
+            //     text: 'Горо Масамунэ',
             // },
             // {
             //     route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
-            //     name: 'Вакидзаси',
+            //     text: 'Вакидзаси',
             // },
             // {
             //     route_id: 'legend_muramasa_masamune',
-            //     name: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
     },
@@ -421,7 +411,7 @@ export const EXHIBITS = [
         time: 'Эпоха Эдо, 1681-1688 г.г.',
         status: [
             {
-                name: 'Вадзамоно',
+                text: 'Вадзамоно',
                 icon: threeStarsIcon,
             },
         ],
@@ -430,15 +420,15 @@ export const EXHIBITS = [
         linkWords: [
             // {
             //     route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
-            //     name: 'Горо Масамунэ',
+            //     text: 'Горо Масамунэ',
             // },
             // {
             //     route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
-            //     name: 'Вакидзаси',
+            //     text: 'Вакидзаси',
             // },
             // {
             //     route_id: 'legend_muramasa_masamune',
-            //     name: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
     },
@@ -457,15 +447,15 @@ export const EXHIBITS = [
         linkWords: [
             {
                 route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
-                name: 'Вакидзаси',
+                text: 'Вакидзаси',
             },
             // {
             //     route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
-            //     name: 'Вакидзаси',
+            //     text: 'Вакидзаси',
             // },
             // {
             //     route_id: 'legend_muramasa_masamune',
-            //     name: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
     },

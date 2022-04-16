@@ -3,9 +3,11 @@ import React, {FC, useCallback} from 'react';
 import {Image, View} from 'react-native';
 
 import {RegularText} from '@shared/ui/text';
+import {PressableComponent} from '@shared/ui/buttons/pressable-component';
 import {IDefaultFCProps} from '@shared/types';
 import {APP_COLORS} from '@shared/config/colors';
 
+import {useExhibitLinks} from '@src/modules/exhibits/presenter/hooks/useExhibitLinks';
 import {IExhibitLink} from '@src/modules/exhibits/entities/exhibitLink';
 
 import documentIcon from '../../../../../shared/assets/graphics/icons/document.png';
@@ -18,22 +20,26 @@ interface IProps extends IDefaultFCProps {
 }
 
 const ExhibitDictionary: FC<IProps> = ({dictionary, innerStyle}) => {
-    const renderItem = useCallback((document: IExhibitLink, index: number) => {
-        return (
-            <View
-                key={`${document.route_id}_${index}`}
-                style={styles.documentRow}>
+    const {handleLinkPress} = useExhibitLinks();
+
+    const renderItem = useCallback(
+        ({route_id, text}: IExhibitLink, index: number) => (
+            <PressableComponent
+                onPress={() => handleLinkPress(route_id)}
+                key={`${route_id}_${index}`}
+                innerStyle={styles.documentRow}>
                 <Image
                     source={documentIcon}
                     resizeMode={'contain'}
                     style={styles.documentIcon}
                 />
                 <View style={styles.documentText}>
-                    <RegularText fontSize={18}>{document.text}</RegularText>
+                    <RegularText fontSize={18}>{text}</RegularText>
                 </View>
-            </View>
-        );
-    }, []);
+            </PressableComponent>
+        ),
+        [handleLinkPress],
+    );
 
     return (
         <View style={{...innerStyle}}>

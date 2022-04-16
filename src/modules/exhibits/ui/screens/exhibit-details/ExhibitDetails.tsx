@@ -83,10 +83,12 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                         {exhibit.description}
                     </RegularText>
                 </View>
-                <ExhibitDictionary
-                    dictionary={exhibit.dictionaryLinks}
-                    innerStyle={styles.dictionary}
-                />
+                {exhibit.dictionaryLinks && (
+                    <ExhibitDictionary
+                        dictionary={exhibit.dictionaryLinks}
+                        innerStyle={styles.dictionary}
+                    />
+                )}
             </ScrollView>
             <ExhibitTrack />
         </ComponentContainer>
