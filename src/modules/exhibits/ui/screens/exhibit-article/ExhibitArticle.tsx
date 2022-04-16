@@ -6,6 +6,7 @@ import {useRoute} from '@react-navigation/core';
 
 import {HeaderText, RegularText} from '@shared/ui/text';
 import {ComponentContainer} from '@shared/ui/container';
+import {TRecord} from '@shared/types';
 import {DEFAULT_BOTTOM_INSET} from '@shared/constants/styles';
 import {APP_TEXT_COLORS} from '@shared/config/colors';
 
@@ -14,7 +15,7 @@ import {IArticle} from '@src/modules/exhibits/entities/article';
 import {articleGoroNudoMasamuneStyles as styles} from './styles';
 
 const ExhibitArticle: FC = () => {
-    const {article} = useRoute().params as Record<string, IArticle>;
+    const {article} = useRoute().params as TRecord<IArticle>;
 
     return (
         <ComponentContainer innerStyle={styles.container}>
