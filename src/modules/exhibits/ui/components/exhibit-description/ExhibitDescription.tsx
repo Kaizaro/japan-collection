@@ -39,7 +39,7 @@ const ExhibitDescription: FC<IProps> = ({
 
     return (
         <View style={innerStyle}>
-            {/*<RegularText fontSize={18}>{exhibit.description}</RegularText>*/}
+            <RegularText fontSize={18}>{description}</RegularText>
         </View>
     );
 };

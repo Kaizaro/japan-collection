@@ -79,9 +79,7 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                     innerStyle={styles.location}
                 />
                 <View style={styles.description}>
-                    <RegularText fontSize={18}>
-                        {exhibit.description}
-                    </RegularText>
+                    <E
                 </View>
                 {exhibit.dictionaryLinks && (
                     <ExhibitDictionary
