@@ -7,6 +7,8 @@ import React, {
     useState,
 } from 'react';
 
+import {Alert} from 'react-native';
+
 import {BottomSheetView} from '@gorhom/bottom-sheet';
 
 import {HeaderText} from '@shared/ui/text';
@@ -112,8 +114,7 @@ const ExhibitModalProvider: FC<IDefaultFCProps> = ({children}) => {
                 modalVisible={isModalVisible}
                 closeModal={dismissModal}
                 snapPoints={MIN_HEIGHT_SNAP_POINT}
-                // innerStyle={styles.externalContainer}
-            >
+                innerStyle={styles.externalContainer}>
                 <BottomSheetView style={styles.container}>
                     <HeaderText color={APP_COLORS.RED} fontSize={24}>
                         {title}

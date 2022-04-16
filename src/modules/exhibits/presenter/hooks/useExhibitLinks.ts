@@ -4,6 +4,7 @@ import {useNavigation} from '@react-navigation/native';
 
 import {APP_SCREEN_NAME} from '@shared/constants';
 
+import {useExhibitModal} from '@src/modules/exhibits/ui/components/exhibit-modal';
 import {ARTICLES} from '@src/modules/exhibits/DAL/articles/articles';
 import {ARTICLE_MODALS} from '@src/modules/exhibits/DAL/articles/articleModals';
 import {ARTICLE_MODAL_IDS} from '@src/modules/exhibits/DAL/articles/articleModalIds';
@@ -11,6 +12,7 @@ import {ARTICLE_IDS} from '@src/modules/exhibits/DAL/articles/articleIds';
 
 const useExhibitLinks = () => {
     const {navigate} = useNavigation();
+    const {showModal} = useExhibitModal();
 
     const handleRouteToArticle = useCallback(
         (route_id: ARTICLE_IDS) => {
@@ -26,17 +28,21 @@ const useExhibitLinks = () => {
         [navigate],
     );
 
-    const handleArticleModal = useCallback((route_id: ARTICLE_MODAL_IDS) => {
-        const articleModalValues = Object.values(ARTICLE_MODAL_IDS);
-        console.log(articleModalValues);
-        if (articleModalValues) {
-            const articleModal = ARTICLE_MODALS.find(
-                (articleModalItem) => articleModalItem.id === route_id,
-            );
+    const handleArticleModal = useCallback(
+        (route_id: ARTICLE_MODAL_IDS) => {
+            const articleModalValues = Object.values(ARTICLE_MODAL_IDS);
+            console.log(articleModalValues);
+            if (articleModalValues) {
+                const articleModal = ARTICLE_MODALS.find(
+                    (articleModalItem) => articleModalItem.id === route_id,
+                );
 
-            console.log('@SEAN', articleModal);
-        }
-    }, []);
+                console.log('@SEAN', articleModal);
+                showModal();
+            }
+        },
+        [showModal],
+    );
 
     const handleLinkPress = useCallback(
         (route_id: ARTICLE_IDS | ARTICLE_MODAL_IDS) => {
