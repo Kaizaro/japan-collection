@@ -4,7 +4,8 @@ import {scaleVertical} from '@shared/utils/scale';
 
 export const exhibitListStyles = StyleSheet.create({
     flatList: {
-        marginTop: scaleVertical(80),
+        // flex: 1,
+        // marginTop: scaleVertical(80),
         width: '100%',
         height: '100%',
     },

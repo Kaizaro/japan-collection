@@ -13,7 +13,7 @@ export const setComponentTextStyle = (
 
     return {
         ...textDefaultStyle,
-        fontSize: scaleFontSize(fontSize),
+        fontSize,
         fontWeight,
         color,
         ...textStyle,

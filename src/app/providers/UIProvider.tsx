@@ -7,7 +7,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {BottomSheetModalProvider} from '@gorhom/bottom-sheet';
 
 import {APP_COLORS} from '@shared/config/colors';
-import {ExhibitModalProvider} from "@src/modules/exhibits/ui/components/exhibit-modal";
+
+import {ExhibitModalProvider} from '@src/modules/exhibits/ui/components/exhibit-modal';
 
 const UIProvider: FC = ({children}) => {
     return (
@@ -17,13 +18,13 @@ const UIProvider: FC = ({children}) => {
                 barStyle={'dark-content'}
                 backgroundColor={APP_COLORS.GRAY_MAIN}
             />
-            <BottomSheetModalProvider>
-                <SafeAreaProvider>
-                    <ExhibitModalProvider>
+            {/*<BottomSheetModalProvider>*/}
+            {/*    <ExhibitModalProvider>*/}
+                    <SafeAreaProvider>
                         <NavigationContainer>{children}</NavigationContainer>
-                    </ExhibitModalProvider>
-                </SafeAreaProvider>
-            </BottomSheetModalProvider>
+                    </SafeAreaProvider>
+                {/*</ExhibitModalProvider>*/}
+            {/*</BottomSheetModalProvider>*/}
         </>
     );
 };
