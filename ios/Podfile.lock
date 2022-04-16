@@ -346,8 +346,35 @@ PODS:
     - React-perflogger (= 0.66.3)
   - RNCMaskedView (0.2.6):
     - React-Core
-  - RNGestureHandler (2.1.0):
+  - RNGestureHandler (2.4.0):
     - React-Core
+  - RNReanimated (2.7.0):
+    - DoubleConversion
+    - FBLazyVector
+    - FBReactNativeSpec
+    - glog
+    - RCT-Folly
+    - RCTRequired
+    - RCTTypeSafety
+    - React-callinvoker
+    - React-Core
+    - React-Core/DevSupport
+    - React-Core/RCTWebSocket
+    - React-CoreModules
+    - React-cxxreact
+    - React-jsi
+    - React-jsiexecutor
+    - React-jsinspector
+    - React-RCTActionSheet
+    - React-RCTAnimation
+    - React-RCTBlob
+    - React-RCTImage
+    - React-RCTLinking
+    - React-RCTNetwork
+    - React-RCTSettings
+    - React-RCTText
+    - ReactCommon/turbomodule/core
+    - Yoga
   - RNScreens (3.10.1):
     - React-Core
     - React-RCTImage
@@ -414,6 +441,7 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNCMaskedView (from `../node_modules/@react-native-masked-view/masked-view`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
+  - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -504,6 +532,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-masked-view/masked-view"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
+  RNReanimated:
+    :path: "../node_modules/react-native-reanimated"
   RNScreens:
     :path: "../node_modules/react-native-screens"
   Yoga:
@@ -556,7 +586,8 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: bbbdb3d8fcf327c6e2249ee71b6ef1764b7dc266
   ReactCommon: 9bac022ab71596f2b0fde1268272543184c63971
   RNCMaskedView: c298b644a10c0c142055b3ae24d83879ecb13ccd
-  RNGestureHandler: e5c7cab5f214503dcefd6b2b0cefb050e1f51c4a
+  RNGestureHandler: 50e6ffee79932d14ea747d4ea4cc99aac0f24e86
+  RNReanimated: a05a0a5ba7c20a0be99fa15d18d0fbf21b025a57
   RNScreens: 522705f2e5c9d27efb17f24aceb2bf8335bc7b8e
   SwiftAudioEx: bfaff9894c885aded7edfb0793e25165d55053d4
   Yoga: 32a18c0e845e185f4a2a66ec76e1fd1f958f22fa

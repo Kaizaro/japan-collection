@@ -20,7 +20,7 @@ export enum ARTICLE_MODAL_IDS {
     KATANA = 'KATANA',
     NAGINATA = 'NAGINATA',
     // TODO need to check "Укорачивание мечей"
-    // BLADE_SHORTENING
+    BLADE_SHORTENING = 'BLADE_SHORTENING',
     SASIMONO = 'SASIMONO',
     HINAWADZU = 'HINAWADZU',
     YARI = 'YARI',
@@ -60,8 +60,8 @@ export enum ARTICLE_MODAL_IDS {
     UTINE = 'UTINE',
     GANDO = 'GANDO',
     KUBIKIRI = 'KUBIKIRI',
-    // TODO need to check Формы клинков
-    // BLADE_SHAPES = 'BLADE_SHAPES',
+    // TODO need to check Формы клинков (модалка или статья)
+    BLADE_SHAPES = 'BLADE_SHAPES',
     FOUR_HEAVEN_RULERS = 'FOUR_HEAVEN_RULERS',
     THREE_UNIFIERS_JAPAN = 'THREE_UNIFIERS_JAPAN',
     DAIME = 'DAIME',
@@ -73,6 +73,7 @@ export enum ARTICLE_MODAL_IDS {
     SEPPUKU = 'SEPPUKU',
     KUBIOKE = 'KUBIOKE',
     KUBI_JIKEN = 'KUBI_JIKEN',
+    MANRIKI_GUSARI = 'MANRIKI_GUSARI',
     // TODO need to check Хондзё Масамунэ
-    // HONDZE_MASAMUNE = 'HONDZE_MASAMUNE',
+    HONDZE_MASAMUNE = 'HONDZE_MASAMUNE',
 }
