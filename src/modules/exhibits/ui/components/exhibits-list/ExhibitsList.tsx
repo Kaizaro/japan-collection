@@ -46,7 +46,7 @@ const ExhibitsList: FC = () => {
     return (
         <>
             {/*<PressableComponent onPress={showFilterModal}>*/}
-            {/*    <RegularText>{'Выбор категории'}</RegularText>*/}
+            {/*    <RegularTextNew>{'Выбор категории'}</RegularTextNew>*/}
             {/*</PressableComponent>*/}
             <FlatList
                 style={styles.flatList}

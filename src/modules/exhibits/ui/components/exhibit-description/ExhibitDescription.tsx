@@ -2,13 +2,12 @@ import React, {FC, useCallback} from 'react';
 
 import {View} from 'react-native';
 
-import {RegularText} from '@shared/ui/RegularText';
+import {RegularTextNew} from '@shared/ui/RegularText';
 import {IDefaultFCProps} from '@shared/types';
 
 import {useExhibitLinks} from '@src/modules/exhibits/presenter/hooks/useExhibitLinks';
 import {IExhibitLink} from '@src/modules/exhibits/entities/exhibitLink';
-import {ARTICLE_MODAL_IDS} from '@src/modules/exhibits/DAL/articles/articleModalIds';
-import {ARTICLE_IDS} from '@src/modules/exhibits/DAL/articles/articleIds';
+import {APP_FONTS} from "@shared/config/fonts";
 
 interface IText extends IExhibitLink {
     type: 'regular' | 'pressable';
@@ -28,28 +27,20 @@ const ExhibitDescription: FC<IProps> = ({
 
     const renderText = useCallback(
         (textObjectArray: IText[]) => {
-            return (
-                <RegularText fontSizeScaled={18}>
-                    {textObjectArray.map(({type, route_id, text}) => {
-                        if (type === 'pressable') {
-                            return (
-                                <RegularText
-                                    fontSizeScaled={18}
-                                    fontWeight={'700'}
-                                    onPress={() => handleLinkPress(route_id)}>
-                                    {`${text}${' '}`}
-                                </RegularText>
-                            );
-                        } else {
-                            return (
-                                <RegularText fontSizeScaled={18}>
-                                    {`${text}${' '}`}
-                                </RegularText>
-                            );
-                        }
-                    })}
-                </RegularText>
-            );
+            return textObjectArray.map(({type, route_id, text}) => {
+                if (type === 'pressable') {
+                    return (
+                        <RegularTextNew
+                            fontSizeScaled={18}
+                            fontFamily={APP_FONTS.BOLD}
+                            onPress={() => handleLinkPress(route_id)}>
+                            {`${text}${' '}`}
+                        </RegularTextNew>
+                    );
+                } else {
+                    return `${text}${' '}`;
+                }
+            });
         },
         [handleLinkPress],
     );
@@ -58,15 +49,12 @@ const ExhibitDescription: FC<IProps> = ({
         if (linkWords) {
             const splittedText = description.split(' ');
             const linkTexts = linkWords.map((linkWord) => linkWord.text);
-            console.log('@LINK_TEXT', linkTexts);
             const endedText: IText[] = [];
             splittedText.forEach((textItem) => {
-                console.log('@LINK_includes', linkTexts.includes(textItem));
                 if (linkTexts.includes(textItem)) {
                     const link = linkWords.find(
                         (linkWord) => linkWord.text === textItem,
                     );
-                    console.log('@LINK', link);
                     if (link) {
                         endedText.push({
                             route_id: link.route_id,
@@ -82,14 +70,19 @@ const ExhibitDescription: FC<IProps> = ({
                     });
                 }
             });
-            console.log('@LINK_ENDED_TEXT', endedText);
             return renderText(endedText);
         } else {
-            return <RegularText fontSizeScaled={18}>{description}</RegularText>;
+            return description;
         }
     }, [description, linkWords, renderText]);
 
-    return <View style={innerStyle}>{selectRenderedText()}</View>;
+    return (
+        <View style={innerStyle}>
+            <RegularTextNew fontSizeScaled={18}>
+                {selectRenderedText()}
+            </RegularTextNew>
+        </View>
+    );
 };
 
 export {ExhibitDescription};

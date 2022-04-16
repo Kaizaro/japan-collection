@@ -29,7 +29,7 @@ interface IRegularTextProps extends TextProps {
     testID?: string;
 }
 
-export const RegularText: FC<IRegularTextProps> = (props) => {
+export const RegularTextNew: FC<IRegularTextProps> = (props) => {
     const {
         fontFamily,
         fontSizeScaled,

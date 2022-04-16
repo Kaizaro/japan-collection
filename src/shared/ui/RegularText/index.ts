@@ -1,1 +1,1 @@
-export {RegularText} from './RegularText';
+export {RegularTextNew} from './RegularTextNew';
