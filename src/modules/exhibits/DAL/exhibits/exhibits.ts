@@ -1,13 +1,12 @@
 import {EXHIBIT_WEAPON_SUBCATEGORY} from '@src/modules/exhibits/entities/exhibitWeaponSubCategory';
 import {ExhibitCategory} from '@src/modules/exhibits/entities/exhibitCategory';
 import {IExhibit} from '@src/modules/exhibits/entities';
+import {EXHIBIT_IMAGES} from '@src/modules/exhibits/DAL/exhibits/exhibitImages';
 import {ARTICLE_MODAL_IDS} from '@src/modules/exhibits/DAL/articles/articleModalIds';
 import {ARTICLE_IDS} from '@src/modules/exhibits/DAL/articles/articleIds';
 
 import threeStarsIcon from '../../../../shared/assets/graphics/icons/three_stars.png';
 import tickIcon from '../../../../shared/assets/graphics/icons/active.png';
-import {ARTICLE_IMAGES} from "@src/modules/exhibits/DAL/articles/articleImages";
-import {EXHIBIT_IMAGES} from "@src/modules/exhibits/DAL/exhibits/exhibitImages";
 
 export const EXHIBITS = [
     {
@@ -34,6 +33,9 @@ export const EXHIBITS = [
         ],
         description:
             'Уникальнейший клинок одного из самых выдающихся кузнецов Японии, Горо Масамунэ (ссылка-кнопка), представителя школы Сосю в провинции Сагами. Выкован в эпоху Камакура в эру Каряку (1326-1329 гг.), и относится к мечам периода Кото (ссылка-модалка «классификация мечей по временным периодам») («старые мечи»). Клинок шире обычного - «дамбира», по классификации длины - «вакидзаси» (ссылка-модалка). По форме относится типу «о-танто», и имеет однолезвийную форму, именуемую «хира-дзукури» (ссылка-модалка – «формы клинков»). На лезвии вырезано изображение самого почитаемого самураями буддийского божества Фудо-мёо. Меч обладает статусом «Мэйбуцу» (меч с именем), имеет собственное имя «Сакаи Масамунэ», поскольку хранился в семье князей Сакаи (ссылка-статья). Это подтверждено экспертизой одного из самых авторитетных экспертов Японии, доктором Фукунага Суйкэном в 1989 году. Признан клинком наивысшего качества «Сайдзёсаку» (ссылка-модалка «Рейтинги мечей по Фудзисиро»).',
+        buttonLink: {
+            route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
+        },
         linkWords: [
             // {
             //     route_id: 'goro_masamune',

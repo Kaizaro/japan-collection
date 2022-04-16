@@ -1,8 +1,7 @@
-import React, {FC, useCallback} from 'react';
+import React, {FC} from 'react';
 
 import {Image, ScrollView, View} from 'react-native';
 
-import {useNavigation} from '@react-navigation/native';
 import {useRoute} from '@react-navigation/core';
 
 import {scaleVertical} from '@shared/utils/scale';
@@ -10,7 +9,6 @@ import {HeaderText, RegularText} from '@shared/ui/text';
 import {ComponentContainer} from '@shared/ui/container';
 import {PressableComponent} from '@shared/ui/buttons/pressable-component';
 import {IDefaultFCProps, TRecord} from '@shared/types';
-import {APP_SCREEN_NAME} from '@shared/constants';
 
 import {ExhibitTrack} from '@src/modules/exhibits/ui/components/exhibit-track/ExhibitTrack';
 import {ExhibitTime} from '@src/modules/exhibits/ui/components/exhibit-time';
@@ -20,7 +18,6 @@ import {ExhibitDictionary} from '@src/modules/exhibits/ui/components/exhibit-dic
 import {useExhibitLinks} from '@src/modules/exhibits/presenter/hooks/useExhibitLinks';
 import {IExhibit} from '@src/modules/exhibits/entities';
 
-import MOCK_IMAGE from '../../../../../shared/assets/graphics/images/exhibits/sakai_masamune.png';
 import BACKGROUND_IMAGE from '../../../../../shared/assets/graphics/images/dragon.png';
 
 import {exhibitDetailsStyles as styles} from './styles';
