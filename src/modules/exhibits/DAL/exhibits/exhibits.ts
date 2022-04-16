@@ -118,6 +118,70 @@ export const EXHIBITS = [
         ],
         description:
             'Удивительный клинок легендарнейшего кузнеца Японии, яркий пример идеальной классической формы и превосходного качества, которое невозможно повторить. Поэтому Масамунэ в основном не подписывал свои клинки. Подлинность подтверждена авторитетным экспертом из старинной семьи оценщиков, Хонъами Кондзюном.',
+        buttonLink: {
+            route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
+        },
+        linkWords: [
+            {
+                route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
+                text: 'Горо',
+            },
+            {
+                route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
+                text: 'Масамунэ',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Кото',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            // {
+            //     route_id: ARTICLE_MODAL_IDS,
+            //     text: '«хира-дзукури»',
+            // },
+            {
+                route_id: ARTICLE_IDS.SAKAI_CLAN,
+                text: 'Сакаи',
+            },
+            // {
+            //     route_id: ARTICLE_MODAL_IDS,
+            //     text: '«Сайдзёсаку»',
+            // },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
+                text: 'Горо Масамунэ',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Кото',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
+                text: 'Вакидзаси',
+            },
+            // {
+            //     route_id: ARTICLE_MODAL_IDS,
+            //     text: '«хира-дзукури»',
+            // },
+            {
+                route_id: ARTICLE_IDS.SAKAI_CLAN,
+                text: 'Сакаи',
+            },
+            // {
+            //     route_id: ARTICLE_MODAL_IDS,
+            //     text: '«Сайдзёсаку»',
+            // },
+            // {
+            //     route_id: 'legend_muramasa_masamune',
+            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            // },
+        ],
+
         linkWords: [
             {
                 route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
@@ -136,6 +200,7 @@ export const EXHIBITS = [
             //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
     },
     {
         id: 'o_tanto_masamune',
