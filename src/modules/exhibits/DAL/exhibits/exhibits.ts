@@ -6,6 +6,8 @@ import {ARTICLE_IDS} from '@src/modules/exhibits/DAL/articles/articleIds';
 
 import threeStarsIcon from '../../../../shared/assets/graphics/icons/three_stars.png';
 import tickIcon from '../../../../shared/assets/graphics/icons/active.png';
+import {ARTICLE_IMAGES} from "@src/modules/exhibits/DAL/articles/articleImages";
+import {EXHIBIT_IMAGES} from "@src/modules/exhibits/DAL/exhibits/exhibitImages";
 
 export const EXHIBITS = [
     {
@@ -98,6 +100,7 @@ export const EXHIBITS = [
             //     name: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
     },
     {
         id: 'katana_masamune',

@@ -21,7 +21,7 @@ import {useExhibitLinks} from '@src/modules/exhibits/presenter/hooks/useExhibitL
 import {IExhibit} from '@src/modules/exhibits/entities';
 
 import MOCK_IMAGE from '../../../../../shared/assets/graphics/images/exhibits/sakai_masamune.png';
-import backgroundImage from '../../../../../shared/assets/graphics/images/dragon.png';
+import BACKGROUND_IMAGE from '../../../../../shared/assets/graphics/images/dragon.png';
 
 import {exhibitDetailsStyles as styles} from './styles';
 
@@ -33,7 +33,7 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
         <ComponentContainer innerStyle={styles.container}>
             <View style={styles.backgroundImageContainer}>
                 <Image
-                    source={backgroundImage}
+                    source={BACKGROUND_IMAGE}
                     style={styles.backgroundImage}
                     resizeMode={'contain'}
                 />
@@ -46,13 +46,15 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                 <View style={styles.subtitle}>
                     <RegularText fontSize={24}>{exhibit.subtitle}</RegularText>
                 </View>
-                <View style={styles.gallery}>
-                    <Image
-                        source={MOCK_IMAGE}
-                        style={styles.image}
-                        resizeMode={'contain'}
-                    />
-                </View>
+                {exhibit.images && (
+                    <View style={styles.gallery}>
+                        <Image
+                            source={exhibit.images[0]}
+                            style={styles.image}
+                            resizeMode={'contain'}
+                        />
+                    </View>
+                )}
                 <PressableComponent
                     onPress={() =>
                         exhibit.buttonLink?.route_id
