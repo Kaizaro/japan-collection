@@ -78,7 +78,7 @@ const ExhibitDescription: FC<IProps> = ({
 
     return (
         <View style={innerStyle}>
-            <RegularTextNew fontSizeScaled={18}>
+            <RegularTextNew fontSizeScaled={18} lineHeightScaled={32}>
                 {selectRenderedText()}
             </RegularTextNew>
         </View>
