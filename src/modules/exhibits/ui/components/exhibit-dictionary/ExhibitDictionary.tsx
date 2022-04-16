@@ -29,7 +29,7 @@ const ExhibitDictionary: FC<IProps> = ({dictionary, innerStyle}) => {
                     style={styles.documentIcon}
                 />
                 <View style={styles.documentText}>
-                    <RegularText fontSize={18}>{document.name}</RegularText>
+                    <RegularText fontSize={18}>{document.text}</RegularText>
                 </View>
             </View>
         );

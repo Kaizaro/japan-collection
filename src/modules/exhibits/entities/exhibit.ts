@@ -10,7 +10,7 @@ export interface IExhibit {
     category: ExhibitCategory;
     subcategory: EXHIBIT_WEAPON_SUBCATEGORY;
     title: string;
-    subtitle?: IExhibitLink;
+    subtitle?: string;
     type: string;
     blacksmith_name: string;
     blacksmith_name_japanese: string;
@@ -19,6 +19,7 @@ export interface IExhibit {
     time: string;
     status: IExhibitStatus[];
     description: string;
+    buttonLink?: IExhibitLink;
     linkWords?: IExhibitLink[];
     dictionaryLinks?: IExhibitLink[];
     images?: ImageSourcePropType[];

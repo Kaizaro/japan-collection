@@ -5,7 +5,7 @@ import {Image, ScrollView, View} from 'react-native';
 import {scaleVertical} from '@shared/utils/scale';
 import {HeaderText, RegularText} from '@shared/ui/text';
 import {ComponentContainer} from '@shared/ui/container';
-import {APP_COLORS, APP_TEXT_COLORS} from '@shared/config/colors';
+import {APP_TEXT_COLORS} from '@shared/config/colors';
 
 import goroNudoMasamune from '../../../../../../shared/assets/graphics/images/articles/goro-nudo-masamune.png';
 

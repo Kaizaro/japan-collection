@@ -6,6 +6,7 @@ import {ARTICLE_IDS} from '@src/modules/exhibits/DAL/articles/articleIds';
 export interface IArticle {
     id: ARTICLE_IDS;
     title: string;
+    subtitle?: string;
     description: string;
     images?: ImageSourcePropType[];
     linkWords?: IExhibitLink[];

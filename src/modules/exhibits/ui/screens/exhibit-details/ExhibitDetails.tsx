@@ -17,6 +17,7 @@ import {ExhibitTime} from '@src/modules/exhibits/ui/components/exhibit-time';
 import {ExhibitStatus} from '@src/modules/exhibits/ui/components/exhibit-status';
 import {ExhibitLocation} from '@src/modules/exhibits/ui/components/exhibit-location';
 import {ExhibitDictionary} from '@src/modules/exhibits/ui/components/exhibit-dictionary';
+import {useExhibitLinks} from '@src/modules/exhibits/presenter/hooks/useExhibitLinks';
 import {IExhibit} from '@src/modules/exhibits/entities';
 
 import MOCK_IMAGE from '../../../../../shared/assets/graphics/images/exhibits/sakai_masamune.png';
@@ -27,6 +28,7 @@ import {exhibitDetailsStyles as styles} from './styles';
 const ExhibitDetails: FC<IDefaultFCProps> = () => {
     const exhibit = useRoute().params?.exhibit as IExhibit;
     const {navigate} = useNavigation();
+    const {handleLinkPress} = useExhibitLinks();
 
     const handleGoroMasamuneLink = useCallback(() => {
         navigate(APP_SCREEN_NAME.ArticleGoroNudoMasamune);
@@ -57,7 +59,7 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                     />
                 </View>
                 <PressableComponent
-                    onPress={handleGoroMasamuneLink}
+                    onPress={handleLinkPress}
                     innerStyle={styles.blacksmith}>
                     <HeaderText fontSize={24}>
                         {exhibit.blacksmith_name}
@@ -84,7 +86,7 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                     </RegularText>
                 </View>
                 <ExhibitDictionary
-                    dictionary={exhibit.links}
+                    dictionary={exhibit.dictionaryLinks}
                     innerStyle={styles.dictionary}
                 />
             </ScrollView>
