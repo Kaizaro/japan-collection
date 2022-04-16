@@ -5,6 +5,7 @@ import {Text, TextProps, TextStyle} from 'react-native';
 interface IDefaultTextProps extends TextProps {
     text?: string;
     fontSize?: number;
+    fontWeight?: string;
     color?: string;
     textStyle?: TextStyle;
 }
