@@ -54,9 +54,14 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                     />
                 </View>
                 <PressableComponent
+                    // onPress={() =>
+                    //     exhibit.linkWords?.[0]?.route_id
+                    //         ? handleLinkPress(exhibit.linkWords[0].route_id)
+                    //         : null
+                    // }
                     onPress={() =>
-                        exhibit.linkWords?.[0]?.route_id
-                            ? handleLinkPress(exhibit.linkWords[0].route_id)
+                        exhibit.buttonLink?.route_id
+                            ? handleLinkPress(exhibit.buttonLink.route_id)
                             : null
                     }
                     innerStyle={styles.blacksmith}>
