@@ -7,11 +7,11 @@ import {AppStack} from '@app/navigation/app-stack/AppStack';
 
 const App: FC = () => {
     return (
-        <GestureHandlerRootView>
-            <UIProvider>
-                <AppStack />
-            </UIProvider>
-        </GestureHandlerRootView>
+        // <GestureHandlerRootView>
+        <UIProvider>
+            <AppStack />
+        </UIProvider>
+        // </GestureHandlerRootView>
     );
 };
 
