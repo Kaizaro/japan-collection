@@ -39,7 +39,11 @@ export const EXHIBITS = [
         linkWords: [
             {
                 route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
-                text: 'Горо Масамунэ',
+                text: 'Горо',
+            },
+            {
+                route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
+                text: 'Масамунэ',
             },
             {
                 route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
@@ -73,7 +77,7 @@ export const EXHIBITS = [
             },
             {
                 route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
-                text: '«вакидзаси»',
+                text: 'Вакидзаси',
             },
             // {
             //     route_id: ARTICLE_MODAL_IDS,
