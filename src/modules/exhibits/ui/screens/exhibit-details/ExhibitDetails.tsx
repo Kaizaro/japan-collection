@@ -27,12 +27,7 @@ import {exhibitDetailsStyles as styles} from './styles';
 
 const ExhibitDetails: FC<IDefaultFCProps> = () => {
     const exhibit = useRoute().params?.exhibit as IExhibit;
-    const {navigate} = useNavigation();
     const {handleLinkPress} = useExhibitLinks();
-
-    const handleGoroMasamuneLink = useCallback(() => {
-        navigate(APP_SCREEN_NAME.ArticleGoroNudoMasamune);
-    }, [navigate]);
 
     return (
         <ComponentContainer innerStyle={styles.container}>
@@ -59,7 +54,11 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                     />
                 </View>
                 <PressableComponent
-                    onPress={handleLinkPress}
+                    onPress={() =>
+                        exhibit.linkWords?.[0]?.route_id
+                            ? handleLinkPress(exhibit.linkWords[0].route_id)
+                            : null
+                    }
                     innerStyle={styles.blacksmith}>
                     <HeaderText fontSize={24}>
                         {exhibit.blacksmith_name}

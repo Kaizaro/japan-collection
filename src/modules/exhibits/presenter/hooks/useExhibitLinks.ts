@@ -2,19 +2,23 @@ import {useCallback} from 'react';
 
 import {useNavigation} from '@react-navigation/native';
 
+import {APP_SCREEN_NAME} from '@shared/constants';
+
 import {IArticle} from '@src/modules/exhibits/entities/article';
 import {ARTICLES} from '@src/modules/exhibits/DAL/articles/articles';
 import {ARTICLE_IDS} from '@src/modules/exhibits/DAL/articles/articleIds';
 import {ARTICLE_MODAL_IDS} from '@src/modules/exhibits/DAL/articleModalIds';
-import {APP_SCREEN_NAME} from "@shared/constants";
 
 const useExhibitLinks = () => {
     const {navigate} = useNavigation();
 
     const handleRouteToArticle = useCallback((route_id: ARTICLE_IDS) => {
-        const article = ARTICLES.find((articleItem) => articleItem.id === route_id)
+        const article = ARTICLES.find(
+            (articleItem) => articleItem.id === route_id,
+        );
+        console.log('@SEAN', article);
 
-        navigate(APP_SCREEN_NAME);
+        // navigate(APP_SCREEN_NAME);
     }, []);
 
     const handleLinkPress = useCallback(
