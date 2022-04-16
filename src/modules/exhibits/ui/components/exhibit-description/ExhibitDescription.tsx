@@ -37,11 +37,22 @@ const ExhibitDescription: FC<IProps> = ({
         [],
     );
 
-    return (
-        <View style={innerStyle}>
-            <RegularText fontSize={18}>{description}</RegularText>
-        </View>
-    );
+    const selectRenderedText = useCallback(() => {
+        if (linkWords) {
+            const splittedText = description.split(' ');
+            const linkTexts = linkWords.map((linkWord) => linkWord.text);
+            splittedText.forEach((textItem) => {
+                console.log(linkTexts.includes(textItem));
+                if (linkTexts.includes(textItem)) {
+                    return;
+                }
+            });
+        } else {
+            return renderExhibitRegularText(description);
+        }
+    }, [description, linkWords, renderExhibitRegularText]);
+
+    return <View style={innerStyle}>{selectRenderedText()}</View>;
 };
 
 export {ExhibitDescription};
