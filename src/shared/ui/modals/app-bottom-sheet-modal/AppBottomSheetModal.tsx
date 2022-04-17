@@ -12,7 +12,7 @@ interface IAppBottomSheetModalProps extends IDefaultFCProps {
     modalName?: string;
     modalVisible: boolean;
     closeModal: () => void;
-    snapPoints?: string[];
+    snapPoints?: string[] | number[];
     isScrollable?: boolean;
     bottomSheetRef?: {current: BottomSheetModal};
 }

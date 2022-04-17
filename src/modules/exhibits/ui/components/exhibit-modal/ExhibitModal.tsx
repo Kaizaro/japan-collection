@@ -9,6 +9,7 @@ import React, {
 
 import {BottomSheetView} from '@gorhom/bottom-sheet';
 
+import {scaleVertical} from '@shared/utils/scale';
 import {HeaderText} from '@shared/ui/text';
 import {AppBottomSheetModal} from '@shared/ui/modals/app-bottom-sheet-modal/AppBottomSheetModal';
 import {IDefaultFCProps} from '@shared/types';
@@ -20,6 +21,8 @@ export interface IContextValue {
     isModalVisible: boolean;
     showModal: () => void;
     dismissModal: () => void;
+    snapPoints: string[] | number[];
+    handleSnapPointsChanges: (snapPointsArray?: string[] | number[]) => void;
     title: string;
     handleTitleChanges: (digit?: string) => void;
     subtitle: string;
@@ -29,10 +32,14 @@ export interface IContextValue {
     clearAllData?: () => void;
 }
 
+const EXHIBIT_MODAL_DEFAULT_SNAP_POINTS = [scaleVertical(249)];
+
 const initialContextValue = {
     isModalVisible: false,
     showModal: () => null,
     dismissModal: () => null,
+    snapPoints: EXHIBIT_MODAL_DEFAULT_SNAP_POINTS,
+    handleSnapPointsChanges: (snapPointsArray) => null,
     title: '',
     handleTitleChanges: (digit) => null,
     subtitle: '',
@@ -45,6 +52,9 @@ const ExhibitModalContext = createContext(initialContextValue);
 
 const ExhibitModalProvider: FC<IDefaultFCProps> = ({children}) => {
     const [isModalVisible, setModalVisible] = useState<boolean>(false);
+    const [snapPoints, setSnapPoints] = useState(
+        initialContextValue.snapPoints,
+    );
     const [title, setTitle] = useState<string>(initialContextValue.title);
     const [subtitle, setSubtitle] = useState<string>(
         initialContextValue.subtitle,
@@ -57,6 +67,13 @@ const ExhibitModalProvider: FC<IDefaultFCProps> = ({children}) => {
     const dismissModal = useCallback(() => {
         setModalVisible(false);
     }, []);
+
+    const handleSnapPointsChanges = useCallback(
+        (snapPointsArray = EXHIBIT_MODAL_DEFAULT_SNAP_POINTS) => {
+            setSnapPoints(snapPointsArray);
+        },
+        [],
+    );
 
     const handleTitleChanges = useCallback((digit: string = '') => {
         setTitle(digit);
@@ -72,11 +89,13 @@ const ExhibitModalProvider: FC<IDefaultFCProps> = ({children}) => {
 
     const clearAllData = useCallback(() => {
         dismissModal();
+        handleSnapPointsChanges();
         handleTitleChanges();
         handleSubtitleChanges();
         handleTextChanges();
     }, [
         dismissModal,
+        handleSnapPointsChanges,
         handleSubtitleChanges,
         handleTextChanges,
         handleTitleChanges,
@@ -115,7 +134,7 @@ const ExhibitModalProvider: FC<IDefaultFCProps> = ({children}) => {
             <AppBottomSheetModal
                 modalVisible={isModalVisible}
                 closeModal={dismissModal}
-                snapPoints={['20%']}
+                snapPoints={snapPoints}
                 innerStyle={styles.externalContainer}>
                 <BottomSheetView style={styles.container}>
                     <HeaderText color={APP_COLORS.RED} fontSize={24}>
