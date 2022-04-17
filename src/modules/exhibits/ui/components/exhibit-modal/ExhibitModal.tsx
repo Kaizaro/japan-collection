@@ -10,11 +10,11 @@ import React, {
 import {BottomSheetView} from '@gorhom/bottom-sheet';
 
 import {HeaderText} from '@shared/ui/text';
+import {AppBottomSheetModal} from '@shared/ui/modals/app-bottom-sheet-modal/AppBottomSheetModal';
 import {IDefaultFCProps} from '@shared/types';
 import {APP_COLORS, APP_TEXT_COLORS} from '@shared/config/colors';
 
 import {exhibitModalStyles as styles} from './styles';
-import {AppBottomSheetModal} from "@shared/ui/modals/app-bottom-sheet-modal/AppBottomSheetModal";
 
 export interface IContextValue {
     isModalVisible: boolean;

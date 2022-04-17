@@ -8,10 +8,8 @@ import {APP_FONTS} from '@shared/config/fonts';
 
 import {useExhibitLinks} from '@src/modules/exhibits/presenter/hooks/useExhibitLinks';
 import {IExhibitLink} from '@src/modules/exhibits/entities/exhibitLink';
-
-interface IText extends IExhibitLink {
-    type: 'regular' | 'pressable';
-}
+import {IExhibitDescriptionText} from "@src/modules/exhibits/entities/exhibitDescriptionText";
+import {parseDescriptionText} from "@src/modules/exhibits/utils/parseDescriptionText";
 
 interface IProps extends IDefaultFCProps {
     description: string;
@@ -26,7 +24,7 @@ const ExhibitDescription: FC<IProps> = ({
     const {handleLinkPress} = useExhibitLinks();
 
     const renderText = useCallback(
-        (textObjectArray: IText[]) => {
+        (textObjectArray: IExhibitDescriptionText[]) => {
             return textObjectArray.map(({type, route_id, text}) => {
                 if (type === 'pressable') {
                     return (
@@ -47,30 +45,8 @@ const ExhibitDescription: FC<IProps> = ({
 
     const selectRenderedText = useCallback(() => {
         if (linkWords) {
-            const splittedText = description.split(' ');
-            const linkTexts = linkWords.map((linkWord) => linkWord.text);
-            const endedText: IText[] = [];
-            splittedText.forEach((textItem) => {
-                if (linkTexts.includes(textItem)) {
-                    const link = linkWords.find(
-                        (linkWord) => linkWord.text === textItem,
-                    );
-                    if (link) {
-                        endedText.push({
-                            route_id: link.route_id,
-                            text: textItem,
-                            type: 'pressable',
-                        });
-                    }
-                } else {
-                    endedText.push({
-                        route_id: '',
-                        text: textItem,
-                        type: 'regular',
-                    });
-                }
-            });
-            return renderText(endedText);
+            const formattedText = parseDescriptionText(description, linkWords);
+            return renderText(formattedText);
         } else {
             return description;
         }
