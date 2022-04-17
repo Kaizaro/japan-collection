@@ -6,10 +6,10 @@ import {RegularTextNew} from '@shared/ui/RegularText';
 import {IDefaultFCProps} from '@shared/types';
 import {APP_FONTS} from '@shared/config/fonts';
 
+import {parseDescriptionText} from '@src/modules/exhibits/utils/parseDescriptionText';
 import {useExhibitLinks} from '@src/modules/exhibits/presenter/hooks/useExhibitLinks';
 import {IExhibitLink} from '@src/modules/exhibits/entities/exhibitLink';
-import {IExhibitDescriptionText} from "@src/modules/exhibits/entities/exhibitDescriptionText";
-import {parseDescriptionText} from "@src/modules/exhibits/utils/parseDescriptionText";
+import {IExhibitDescriptionText} from '@src/modules/exhibits/entities/exhibitDescriptionText';
 
 interface IProps extends IDefaultFCProps {
     description: string;

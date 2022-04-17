@@ -12,7 +12,12 @@ import {ARTICLE_IDS} from '@src/modules/exhibits/DAL/articles/articleIds';
 
 const useExhibitLinks = () => {
     const {navigate} = useNavigation();
-    const {showModal} = useExhibitModal();
+    const {
+        handleTitleChanges,
+        handleSubtitleChanges,
+        handleTextChanges,
+        showModal,
+    } = useExhibitModal();
 
     const handleRouteToArticle = useCallback(
         (route_id: ARTICLE_IDS) => {
@@ -37,11 +42,22 @@ const useExhibitLinks = () => {
                     (articleModalItem) => articleModalItem.id === route_id,
                 );
 
-                console.log('@SEAN', articleModal);
-                showModal();
+                if (articleModal) {
+                    handleTitleChanges(articleModal.title);
+                    if (articleModal.subtitle) {
+                        handleSubtitleChanges(articleModal.subtitle);
+                    }
+                    handleTextChanges(articleModal.text);
+                    showModal();
+                }
             }
         },
-        [showModal],
+        [
+            handleSubtitleChanges,
+            handleTextChanges,
+            handleTitleChanges,
+            showModal,
+        ],
     );
 
     const handleLinkPress = useCallback(
