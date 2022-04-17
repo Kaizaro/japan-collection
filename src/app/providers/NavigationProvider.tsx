@@ -15,3 +15,5 @@ const appTheme = {
 const NavigationProvider: FC = ({children}) => (
     <NavigationContainer theme={appTheme}>{children}</NavigationContainer>
 );
+
+export {NavigationProvider};

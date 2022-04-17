@@ -10,8 +10,8 @@ import {ARTICLE_MODALS} from '@src/modules/exhibits/DAL/articles/articleModals';
 import {ARTICLE_MODAL_IDS} from '@src/modules/exhibits/DAL/articles/articleModalIds';
 import {ARTICLE_IDS} from '@src/modules/exhibits/DAL/articles/articleIds';
 
-const useExhibitLinks = () => {
-    const {navigate} = useNavigation();
+const useExhibitLinks = (isModal = false) => {
+    const navigate = isModal ? null : useNavigation().navigate;
     const {
         handleTitleChanges,
         handleSubtitleChanges,
@@ -25,10 +25,12 @@ const useExhibitLinks = () => {
                 (articleItem) => articleItem.id === route_id,
             );
 
-            navigate(
-                APP_SCREEN_NAME.ExhibitArticle as never,
-                {article} as never,
-            );
+            if (navigate) {
+                navigate(
+                    APP_SCREEN_NAME.ExhibitArticle as never,
+                    {article} as never,
+                );
+            }
         },
         [navigate],
     );

@@ -3,25 +3,29 @@ import React, {FC, useCallback} from 'react';
 import {View} from 'react-native';
 
 import {RegularTextNew} from '@shared/ui/RegularText';
-import {IDefaultFCProps} from '@shared/types';
+import {IDefaultFCProps, TNullable} from '@shared/types';
 import {APP_FONTS} from '@shared/config/fonts';
 
 import {parseDescriptionText} from '@src/modules/exhibits/utils/parseDescriptionText';
 import {useExhibitLinks} from '@src/modules/exhibits/presenter/hooks/useExhibitLinks';
 import {IExhibitLink} from '@src/modules/exhibits/entities/exhibitLink';
 import {IExhibitDescriptionText} from '@src/modules/exhibits/entities/exhibitDescriptionText';
+import {ARTICLE_MODAL_IDS} from '@src/modules/exhibits/DAL/articles/articleModalIds';
+import {ARTICLE_IDS} from '@src/modules/exhibits/DAL/articles/articleIds';
 
 interface IProps extends IDefaultFCProps {
     description: string;
-    linkWords?: IExhibitLink[];
+    linkWords?: TNullable<IExhibitLink[]>;
+    isModal?: boolean;
 }
 
 const ExhibitDescription: FC<IProps> = ({
     description,
     linkWords,
     innerStyle,
+    isModal = false,
 }) => {
-    const {handleLinkPress} = useExhibitLinks();
+    const {handleLinkPress} = useExhibitLinks(isModal);
 
     const renderText = useCallback(
         (textObjectArray: IExhibitDescriptionText[]) => {
@@ -30,8 +34,15 @@ const ExhibitDescription: FC<IProps> = ({
                     return (
                         <RegularTextNew
                             fontSizeScaled={18}
-                            fontFamily={APP_FONTS.BOLD}
-                            onPress={() => handleLinkPress(route_id)}>
+                            fontFamily={
+                                isModal ? APP_FONTS.HEADER : APP_FONTS.BOLD
+                            }
+                            isUnderlined={isModal}
+                            onPress={() =>
+                                handleLinkPress(
+                                    route_id as ARTICLE_IDS | ARTICLE_MODAL_IDS,
+                                )
+                            }>
                             {`${text}${' '}`}
                         </RegularTextNew>
                     );
@@ -40,7 +51,7 @@ const ExhibitDescription: FC<IProps> = ({
                 }
             });
         },
-        [handleLinkPress],
+        [handleLinkPress, isModal],
     );
 
     const selectRenderedText = useCallback(() => {
@@ -54,7 +65,10 @@ const ExhibitDescription: FC<IProps> = ({
 
     return (
         <View style={innerStyle}>
-            <RegularTextNew fontSizeScaled={18} lineHeightScaled={32}>
+            <RegularTextNew
+                fontFamily={isModal ? APP_FONTS.HEADER : APP_FONTS.REGULAR}
+                fontSizeScaled={18}
+                lineHeightScaled={32}>
                 {selectRenderedText()}
             </RegularTextNew>
         </View>

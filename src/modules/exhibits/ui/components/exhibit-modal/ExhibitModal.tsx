@@ -12,8 +12,12 @@ import {BottomSheetView} from '@gorhom/bottom-sheet';
 import {scaleVertical} from '@shared/utils/scale';
 import {HeaderText} from '@shared/ui/text';
 import {AppBottomSheetModal} from '@shared/ui/modals/app-bottom-sheet-modal/AppBottomSheetModal';
-import {IDefaultFCProps} from '@shared/types';
+import {IDefaultFCProps, TNullable} from '@shared/types';
 import {APP_COLORS, APP_TEXT_COLORS} from '@shared/config/colors';
+
+import {IExhibitLink} from '@src/modules/exhibits/entities/exhibitLink';
+
+import {ExhibitDescription} from '../exhibit-description';
 
 import {exhibitModalStyles as styles} from './styles';
 
@@ -29,6 +33,8 @@ export interface IContextValue {
     handleSubtitleChanges: (digit?: string) => void;
     text: string;
     handleTextChanges: (digit?: string) => void;
+    links: TNullable<IExhibitLink[]>;
+    handleLinksChanges: (linksArray: IExhibitLink[]) => void;
     clearAllData?: () => void;
 }
 
@@ -46,6 +52,8 @@ const initialContextValue = {
     handleSubtitleChanges: (digit) => null,
     text: '',
     handleTextChanges: (digit) => null,
+    links: null,
+    handleLinksChanges: (linksArray) => null,
 } as IContextValue;
 
 const ExhibitModalContext = createContext(initialContextValue);
@@ -60,6 +68,9 @@ const ExhibitModalProvider: FC<IDefaultFCProps> = ({children}) => {
         initialContextValue.subtitle,
     );
     const [text, setText] = useState<string>(initialContextValue.text);
+    const [links, setLinks] = useState<TNullable<IExhibitLink[]>>(
+        initialContextValue.links,
+    );
 
     const showModal = useCallback(() => {
         setModalVisible(true);
@@ -87,14 +98,23 @@ const ExhibitModalProvider: FC<IDefaultFCProps> = ({children}) => {
         setText(digit);
     }, []);
 
+    const handleLinksChanges = useCallback(
+        (linksArray: TNullable<IExhibitLink[]> = null) => {
+            setLinks(linksArray);
+        },
+        [],
+    );
+
     const clearAllData = useCallback(() => {
         dismissModal();
         handleSnapPointsChanges();
         handleTitleChanges();
         handleSubtitleChanges();
         handleTextChanges();
+        handleLinksChanges();
     }, [
         dismissModal,
+        handleLinksChanges,
         handleSnapPointsChanges,
         handleSubtitleChanges,
         handleTextChanges,
@@ -112,11 +132,13 @@ const ExhibitModalProvider: FC<IDefaultFCProps> = ({children}) => {
             handleTitleChanges,
             handleSubtitleChanges,
             handleTextChanges,
+            handleLinksChanges,
             clearAllData,
         }),
         [
             clearAllData,
             dismissModal,
+            handleLinksChanges,
             handleSubtitleChanges,
             handleTextChanges,
             handleTitleChanges,
@@ -147,11 +169,17 @@ const ExhibitModalProvider: FC<IDefaultFCProps> = ({children}) => {
                             {subtitle}
                         </HeaderText>
                     </BottomSheetView>
-                    <BottomSheetView style={styles.text}>
-                        <HeaderText color={APP_TEXT_COLORS.MAIN} fontSize={18}>
-                            {text}
-                        </HeaderText>
-                    </BottomSheetView>
+                    <ExhibitDescription
+                        description={text}
+                        linkWords={links as IExhibitLink[]}
+                        isModal={true}
+                        innerStyle={styles.text}
+                    />
+                    {/*<BottomSheetView style={styles.text}>*/}
+                    {/*    <HeaderText color={APP_TEXT_COLORS.MAIN} fontSize={18}>*/}
+                    {/*        {text}*/}
+                    {/*    </HeaderText>*/}
+                    {/*</BottomSheetView>*/}
                 </BottomSheetView>
             </AppBottomSheetModal>
         </ExhibitModalContext.Provider>

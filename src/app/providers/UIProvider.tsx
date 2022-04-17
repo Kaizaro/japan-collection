@@ -3,7 +3,6 @@ import React, {FC} from 'react';
 import {StatusBar} from 'react-native';
 
 import {SafeAreaProvider} from 'react-native-safe-area-context/src/SafeAreaContext';
-import {NavigationContainer} from '@react-navigation/native';
 import {BottomSheetModalProvider} from '@gorhom/bottom-sheet';
 
 import {APP_COLORS} from '@shared/config/colors';
@@ -19,11 +18,7 @@ const UIProvider: FC = ({children}) => {
                 backgroundColor={APP_COLORS.GRAY_MAIN}
             />
             <SafeAreaProvider>
-                <BottomSheetModalProvider>
-                    <ExhibitModalProvider>
-                        <NavigationContainer>{children}</NavigationContainer>
-                    </ExhibitModalProvider>
-                </BottomSheetModalProvider>
+                <BottomSheetModalProvider>{children}</BottomSheetModalProvider>
             </SafeAreaProvider>
         </>
     );
