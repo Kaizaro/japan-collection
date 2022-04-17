@@ -115,7 +115,7 @@ const ExhibitModalProvider: FC<IDefaultFCProps> = ({children}) => {
             <AppBottomSheetModal
                 modalVisible={isModalVisible}
                 closeModal={dismissModal}
-                snapPoints={MIN_HEIGHT_SNAP_POINT}
+                snapPoints={['20%']}
                 innerStyle={styles.externalContainer}>
                 <BottomSheetView style={styles.container}>
                     <HeaderText color={APP_COLORS.RED} fontSize={24}>
