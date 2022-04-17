@@ -7,17 +7,14 @@ import React, {
     useState,
 } from 'react';
 
-import {Alert} from 'react-native';
-
 import {BottomSheetView} from '@gorhom/bottom-sheet';
 
 import {HeaderText} from '@shared/ui/text';
-import {MIN_HEIGHT_SNAP_POINT} from '@shared/ui/AppBottomSheetModal/styles';
-import {AppBottomSheetModal} from '@shared/ui/AppBottomSheetModal/AppBottomSheetModal';
 import {IDefaultFCProps} from '@shared/types';
 import {APP_COLORS, APP_TEXT_COLORS} from '@shared/config/colors';
 
 import {exhibitModalStyles as styles} from './styles';
+import {AppBottomSheetModal} from "@shared/ui/modals/app-bottom-sheet-modal/AppBottomSheetModal";
 
 export interface IContextValue {
     isModalVisible: boolean;

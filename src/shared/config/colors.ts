@@ -1,6 +1,7 @@
 export enum APP_COLORS {
     WHITE = '#FFFFFF',
     BLACK = '#000000',
+    BLACK_30 = '#00000059',
     BG = '#CEC1B4',
     GRAY_MAIN = '#E7E7E7',
     GRAY_SEC = '#BCBCBC',
