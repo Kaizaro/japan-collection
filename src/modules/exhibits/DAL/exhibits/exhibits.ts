@@ -11,6 +11,7 @@ import tickIcon from '../../../../shared/assets/graphics/icons/active.png';
 export const EXHIBITS = [
     {
         id: 'sakai_masamune',
+        exhibit_number: 1,
         category: ExhibitCategory.BLADE_WEAPON,
         subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
         title: 'Вакидзаси «Сакаи Масамунэ»',
@@ -100,6 +101,7 @@ export const EXHIBITS = [
     },
     {
         id: 'katana_masamune',
+        exhibit_number: 2,
         category: ExhibitCategory.BLADE_WEAPON,
         subcategory: EXHIBIT_WEAPON_SUBCATEGORY.KATANA,
         title: 'Катана Масамунэ',
@@ -121,68 +123,11 @@ export const EXHIBITS = [
         buttonLink: {
             route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
         },
-        linkWords: [
+        dictionaryLinks: [
             {
                 route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
                 text: 'Горо',
             },
-            {
-                route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
-                text: 'Масамунэ',
-            },
-            {
-                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
-                text: 'Кото',
-            },
-            {
-                route_id: ARTICLE_MODAL_IDS.KATANA,
-                text: 'Катана',
-            },
-            // {
-            //     route_id: ARTICLE_MODAL_IDS,
-            //     text: '«хира-дзукури»',
-            // },
-            {
-                route_id: ARTICLE_IDS.SAKAI_CLAN,
-                text: 'Сакаи',
-            },
-            // {
-            //     route_id: ARTICLE_MODAL_IDS,
-            //     text: '«Сайдзёсаку»',
-            // },
-        ],
-        dictionaryLinks: [
-            {
-                route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
-                text: 'Горо Масамунэ',
-            },
-            {
-                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
-                text: 'Кото',
-            },
-            {
-                route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
-                text: 'Вакидзаси',
-            },
-            // {
-            //     route_id: ARTICLE_MODAL_IDS,
-            //     text: '«хира-дзукури»',
-            // },
-            {
-                route_id: ARTICLE_IDS.SAKAI_CLAN,
-                text: 'Сакаи',
-            },
-            // {
-            //     route_id: ARTICLE_MODAL_IDS,
-            //     text: '«Сайдзёсаку»',
-            // },
-            // {
-            //     route_id: 'legend_muramasa_masamune',
-            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
-            // },
-        ],
-
-        linkWords: [
             {
                 route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
                 text: 'Масамунэ',
@@ -193,7 +138,7 @@ export const EXHIBITS = [
             },
             {
                 route_id: ARTICLE_MODAL_IDS.SWORD_RATING_FUJISIRO,
-                text: 'Сайдзёсаку',
+                text: '«Сайдзёсаку»',
             },
             // {
             //     route_id: 'legend_muramasa_masamune',
@@ -204,6 +149,7 @@ export const EXHIBITS = [
     },
     {
         id: 'o_tanto_masamune',
+        exhibit_number: 3,
         category: ExhibitCategory.BLADE_WEAPON,
         subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
         title: 'О-танто Масамунэ',
@@ -222,22 +168,31 @@ export const EXHIBITS = [
         ],
         description:
             'Редчайший предмет и великолепный образец японского кузнечного искусства, произведенный великим кузнецом. Меч имеет довольно большой размер, что говорит о том, что возможно он был изготовлен для подношения в храм. Однако его вполне можно было одеть и в качестве малого меча «косигатана».',
-        linkWords: [
+        buttonLink: {
+            route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
+        },
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_IDS.SENGO_MARAMASA_SCHOOL,
+                text: 'ШКОЛА СЭНГО МУРАМАСА',
+            },
             {
                 route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
-                text: 'Горо Масамунэ',
+                text: 'Катана',
             },
-            {
-                route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
-                text: 'Вакидзаси',
-            },
+            // {
+            //     route_id: ARTICLE_MODAL_IDS,
+            //     text: 'Косигатана',
+            // },
             // {
             //     route_id: 'legend_muramasa_masamune',
             //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
     },
     {
+        exhibit_number: 4,
         category: ExhibitCategory.BLADE_WEAPON,
         subcategory: EXHIBIT_WEAPON_SUBCATEGORY.KATANA,
         title: 'Катана Нидай Мурамаса',
@@ -255,22 +210,10 @@ export const EXHIBITS = [
         ],
         description:
             'Меч, выкованный кузнецом Второго поколения кузнецов Мурамаса. Сын основателя школы Сэнго был не менее талантливым, чем его отец. Качество его работы оценивается также высоко. Поскольку легенды о мечах Мурамаса имеют скорее коллективный образ, мы не можем точно сказать какие именно из мечей самые зловещие.',
-        linkWords: [
-            // {
-            //     route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
-            //     text: 'Горо Масамунэ',
-            // },
-            // {
-            //     route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
-            //     text: 'Вакидзаси',
-            // },
-            // {
-            //     route_id: 'legend_muramasa_masamune',
-            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
-            // },
-        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
     },
     {
+        exhibit_number: 5,
         category: ExhibitCategory.BLADE_WEAPON,
         subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
         title: 'О-танто Нидай Мурамаса',
@@ -304,6 +247,7 @@ export const EXHIBITS = [
         ],
     },
     {
+        exhibit_number: 6,
         category: ExhibitCategory.BLADE_WEAPON,
         subcategory: EXHIBIT_WEAPON_SUBCATEGORY.TANTO,
         title: 'Танто Нидай Мурамаса',
@@ -337,6 +281,7 @@ export const EXHIBITS = [
         ],
     },
     {
+        exhibit_number: 7,
         category: ExhibitCategory.BLADE_WEAPON,
         subcategory: EXHIBIT_WEAPON_SUBCATEGORY.KATANA,
         title: 'Катана Сэнго Мурамаса',
@@ -370,6 +315,7 @@ export const EXHIBITS = [
         ],
     },
     {
+        exhibit_number: 8,
         category: ExhibitCategory.BLADE_WEAPON,
         subcategory: EXHIBIT_WEAPON_SUBCATEGORY.TANTO,
         title: 'О-танто Сэнго Мурамаса',
@@ -403,6 +349,7 @@ export const EXHIBITS = [
         ],
     },
     {
+        exhibit_number: 9,
         category: ExhibitCategory.BLADE_WEAPON,
         subcategory: EXHIBIT_WEAPON_SUBCATEGORY.KATANA,
         title: 'Катана Садамунэ',
@@ -436,6 +383,7 @@ export const EXHIBITS = [
         ],
     },
     {
+        exhibit_number: 10,
         category: ExhibitCategory.BLADE_WEAPON,
         subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
         title: 'Вакидзаси Садамунэ',
@@ -469,6 +417,7 @@ export const EXHIBITS = [
         ],
     },
     {
+        exhibit_number: 11,
         category: ExhibitCategory.BLADE_WEAPON,
         subcategory: EXHIBIT_WEAPON_SUBCATEGORY.KATANA,
         title: 'Катана в оправе тати',
@@ -502,6 +451,7 @@ export const EXHIBITS = [
         ],
     },
     {
+        exhibit_number: 12,
         category: ExhibitCategory.BLADE_WEAPON,
         subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
         title: 'Вакидзаси Тадамицу',
@@ -513,19 +463,883 @@ export const EXHIBITS = [
         time: 'Муромати, XVI век',
         description:
             'Кузнечная школа Осафунэ в провинции Бидзэн – это крупнейшая и одна из самых уважаемых школ Японии, существовавшая довольно давно. Не будет большим преувеличением сказать, что около трети всех шедевров раннего времени были созданы в провинции Бидзэн при активном участии мастеров школы Осафунэ. Традиция Бидзэн потерпела серьезную неудачу, когда разлив реки Ёсии почти полностью уничтожил деревни Осафунэ и Хатакэда в 1591 году.',
-        linkWords: [
+        dictionaryLinks: [
             {
                 route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
                 text: 'Вакидзаси',
             },
-            // {
-            //     route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
-            //     text: 'Вакидзаси',
-            // },
-            // {
-            //     route_id: 'legend_muramasa_masamune',
-            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
-            // },
         ],
+    },
+    {
+        exhibit_number: 13,
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: '«син-синто»',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        exhibit_number: 14,
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Вакидзаси Киёмицу',
+        type: 'Вакидзаси',
+        blacksmith_name: 'Киёмицу',
+        blacksmith_name_japanese: '清光',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Вакидзаси второй половины эпохи Эдо, относится к мечам «син-синто». Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: '«син-синто»',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
+                text: 'Вакидзаси',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'син-синто',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'син-синто',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'син-синто',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'син-синто',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'син-синто',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'син-синто',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'син-синто',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'син-синто',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'син-синто',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'син-синто',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'син-синто',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'син-синто',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'син-синто',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'син-синто',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'син-синто',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'син-синто',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'син-синто',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'син-синто',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'син-синто',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'син-синто',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'син-синто',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'син-синто',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'син-синто',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'син-синто',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'син-синто',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'син-синто',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+    },
+    {
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Катана Масасигэ',
+        type: 'Катана',
+        blacksmith_name: 'Масасигэ',
+        blacksmith_name_japanese: '正重作',
+        school: 'Неизвестна',
+        province: 'Неизвестна',
+        time: 'Эпоха Эдо, 1782 – 1876 годы',
+        description:
+            'Катана второй половины эпохи Эдо, относится к мечам «син-синто» - классификация мечей по временным периодам). Клинок довольно тяжёлый и крупный, имеет светлый отблеск стали, что характерно для поздних мечей.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'син-синто',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_MODAL_IDS.KATANA,
+                text: 'Катана',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Классификация мечей по временным периодам',
+            },
+        ],
+        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
     },
 ] as IExhibit[];
