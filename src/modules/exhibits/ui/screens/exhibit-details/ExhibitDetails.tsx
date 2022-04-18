@@ -69,16 +69,22 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                         </RegularText>
                     </View>
                 </PressableComponent>
-                <ExhibitTime time={exhibit.time} innerStyle={styles.time} />
-                <ExhibitStatus
-                    exhibitStatuses={exhibit.status}
-                    innerStyle={styles.status}
-                />
-                <ExhibitLocation
-                    school={exhibit.school}
-                    location={exhibit.province}
-                    innerStyle={styles.location}
-                />
+                {exhibit.time && (
+                    <ExhibitTime time={exhibit.time} innerStyle={styles.time} />
+                )}
+                {exhibit.status && (
+                    <ExhibitStatus
+                        exhibitStatuses={exhibit.status}
+                        innerStyle={styles.status}
+                    />
+                )}
+                {exhibit.school && exhibit.province && (
+                    <ExhibitLocation
+                        school={exhibit.school}
+                        location={exhibit.province}
+                        innerStyle={styles.location}
+                    />
+                )}
                 <ExhibitDescription
                     description={exhibit.description}
                     linkWords={exhibit.linkWords}
