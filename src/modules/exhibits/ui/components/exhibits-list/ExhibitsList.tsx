@@ -11,6 +11,7 @@ import {keyExtractor} from '../../../presenter/lib/keyExtractor';
 import {useExhibitsList} from '../../../presenter/hooks/useExhibitsList';
 
 import {exhibitListStyles as styles} from './styles';
+import {DEFAULT_BOTTOM_INSET} from "@shared/constants/styles";
 
 const ExhibitsList: FC = () => {
     const {
@@ -50,19 +51,19 @@ const ExhibitsList: FC = () => {
             {/*</PressableComponent>*/}
             <FlatList
                 style={styles.flatList}
-                contentInset={{bottom: scaleVertical(20)}}
+                contentInset={DEFAULT_BOTTOM_INSET}
                 keyExtractor={keyExtractor}
                 data={exhibitsList}
                 renderItem={renderItemRow}
                 ListEmptyComponent={renderEmptyList}
                 showsVerticalScrollIndicator={false}
             />
-            <ExhibitFilterModal
-                isVisible={isFilterModalVisible}
-                closeModal={closeFilterModal}
-                selectedCategory={selectedCategory}
-                setSelectedCategory={setSelectedCategory}
-            />
+            {/*<ExhibitFilterModal*/}
+            {/*    isVisible={isFilterModalVisible}*/}
+            {/*    closeModal={closeFilterModal}*/}
+            {/*    selectedCategory={selectedCategory}*/}
+            {/*    setSelectedCategory={setSelectedCategory}*/}
+            {/*/>*/}
         </>
     );
 };

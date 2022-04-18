@@ -3,37 +3,46 @@ import React, {FC, useCallback} from 'react';
 import {View} from 'react-native';
 
 import {RegularTextNew} from '@shared/ui/RegularText';
-import {IDefaultFCProps} from '@shared/types';
+import {IDefaultFCProps, TNullable} from '@shared/types';
+import {APP_FONTS} from '@shared/config/fonts';
 
+import {parseDescriptionText} from '@src/modules/exhibits/utils/parseDescriptionText';
 import {useExhibitLinks} from '@src/modules/exhibits/presenter/hooks/useExhibitLinks';
 import {IExhibitLink} from '@src/modules/exhibits/entities/exhibitLink';
-import {APP_FONTS} from "@shared/config/fonts";
-
-interface IText extends IExhibitLink {
-    type: 'regular' | 'pressable';
-}
+import {IExhibitDescriptionText} from '@src/modules/exhibits/entities/exhibitDescriptionText';
+import {ARTICLE_MODAL_IDS} from '@src/modules/exhibits/DAL/articles/articleModalIds';
+import {ARTICLE_IDS} from '@src/modules/exhibits/DAL/articles/articleIds';
 
 interface IProps extends IDefaultFCProps {
     description: string;
-    linkWords?: IExhibitLink[];
+    linkWords?: TNullable<IExhibitLink[]>;
+    isModal?: boolean;
 }
 
 const ExhibitDescription: FC<IProps> = ({
     description,
     linkWords,
     innerStyle,
+    isModal = false,
 }) => {
-    const {handleLinkPress} = useExhibitLinks();
+    const {handleLinkPress} = useExhibitLinks(isModal);
 
     const renderText = useCallback(
-        (textObjectArray: IText[]) => {
+        (textObjectArray: IExhibitDescriptionText[]) => {
             return textObjectArray.map(({type, route_id, text}) => {
                 if (type === 'pressable') {
                     return (
                         <RegularTextNew
                             fontSizeScaled={18}
-                            fontFamily={APP_FONTS.BOLD}
-                            onPress={() => handleLinkPress(route_id)}>
+                            fontFamily={
+                                isModal ? APP_FONTS.HEADER : APP_FONTS.BOLD
+                            }
+                            isUnderlined={isModal}
+                            onPress={() =>
+                                handleLinkPress(
+                                    route_id as ARTICLE_IDS | ARTICLE_MODAL_IDS,
+                                )
+                            }>
                             {`${text}${' '}`}
                         </RegularTextNew>
                     );
@@ -42,35 +51,13 @@ const ExhibitDescription: FC<IProps> = ({
                 }
             });
         },
-        [handleLinkPress],
+        [handleLinkPress, isModal],
     );
 
     const selectRenderedText = useCallback(() => {
         if (linkWords) {
-            const splittedText = description.split(' ');
-            const linkTexts = linkWords.map((linkWord) => linkWord.text);
-            const endedText: IText[] = [];
-            splittedText.forEach((textItem) => {
-                if (linkTexts.includes(textItem)) {
-                    const link = linkWords.find(
-                        (linkWord) => linkWord.text === textItem,
-                    );
-                    if (link) {
-                        endedText.push({
-                            route_id: link.route_id,
-                            text: textItem,
-                            type: 'pressable',
-                        });
-                    }
-                } else {
-                    endedText.push({
-                        route_id: '',
-                        text: textItem,
-                        type: 'regular',
-                    });
-                }
-            });
-            return renderText(endedText);
+            const formattedText = parseDescriptionText(description, linkWords);
+            return renderText(formattedText);
         } else {
             return description;
         }
@@ -78,7 +65,10 @@ const ExhibitDescription: FC<IProps> = ({
 
     return (
         <View style={innerStyle}>
-            <RegularTextNew fontSizeScaled={18}>
+            <RegularTextNew
+                fontFamily={isModal ? APP_FONTS.HEADER : APP_FONTS.REGULAR}
+                fontSizeScaled={18}
+                lineHeightScaled={32}>
                 {selectRenderedText()}
             </RegularTextNew>
         </View>

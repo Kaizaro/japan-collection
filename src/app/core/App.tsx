@@ -1,17 +1,19 @@
 import React, {FC} from 'react';
 
-// import {GestureHandlerRootView} from 'react-native-gesture-handler';
-
-import {UIProvider} from '@app/providers';
+import {NavigationProvider, UIProvider} from '@app/providers';
 import {AppStack} from '@app/navigation/app-stack/AppStack';
+
+import {ExhibitModalProvider} from '@src/modules/exhibits/ui/components/exhibit-modal';
 
 const App: FC = () => {
     return (
-        // <GestureHandlerRootView>
         <UIProvider>
-            <AppStack />
+            <NavigationProvider>
+                <ExhibitModalProvider>
+                    <AppStack />
+                </ExhibitModalProvider>
+            </NavigationProvider>
         </UIProvider>
-        // </GestureHandlerRootView>
     );
 };
 
