@@ -4,4 +4,5 @@ export enum ExhibitCategory {
     BLUNT_WEAPON = 'blunt_weapon',
     FIREARMS = 'firearms',
     ARMOR = 'armor',
+    TOOLS = 'tools',
 }
