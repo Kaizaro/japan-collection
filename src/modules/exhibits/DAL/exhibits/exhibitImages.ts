@@ -13,20 +13,20 @@ import i37_2 from '../../../../shared/assets/graphics/images/exhibits/37/march22
 import i37_1 from '../../../../shared/assets/graphics/images/exhibits/37/march22 (196).png';
 import i35_2 from '../../../../shared/assets/graphics/images/exhibits/35/march22 (202).png';
 import i35_1 from '../../../../shared/assets/graphics/images/exhibits/35/march22 (200).png';
-import i34_7 from '../../../../shared/assets/graphics/images/exhibits/34/march22 (119).png';
-import i34_6 from '../../../../shared/assets/graphics/images/exhibits/34/march22 (117).png';
-import i34_5 from '../../../../shared/assets/graphics/images/exhibits/34/march22 (116).png';
 import i34_4 from '../../../../shared/assets/graphics/images/exhibits/34/march22 (57).png';
 import i34_3 from '../../../../shared/assets/graphics/images/exhibits/34/march22 (56).png';
 import i34_2 from '../../../../shared/assets/graphics/images/exhibits/34/march22 (54).png';
 import i34_1 from '../../../../shared/assets/graphics/images/exhibits/34/march22 (52).png';
+import i34_7 from '../../../../shared/assets/graphics/images/exhibits/34/march22 (119).png';
+import i34_6 from '../../../../shared/assets/graphics/images/exhibits/34/march22 (117).png';
+import i34_5 from '../../../../shared/assets/graphics/images/exhibits/34/march22 (116).png';
 import i33_3 from '../../../../shared/assets/graphics/images/exhibits/33/march22 (170).png';
 import i33_2 from '../../../../shared/assets/graphics/images/exhibits/33/march22 (160).png';
 import i33_1 from '../../../../shared/assets/graphics/images/exhibits/33/march22 (156).png';
-import i32_4 from '../../../../shared/assets/graphics/images/exhibits/32/march22 (113).png';
-import i32_3 from '../../../../shared/assets/graphics/images/exhibits/32/march22 (112).png';
 import i32_2 from '../../../../shared/assets/graphics/images/exhibits/32/march22 (99).png';
 import i32_1 from '../../../../shared/assets/graphics/images/exhibits/32/march22 (66).png';
+import i32_4 from '../../../../shared/assets/graphics/images/exhibits/32/march22 (113).png';
+import i32_3 from '../../../../shared/assets/graphics/images/exhibits/32/march22 (112).png';
 import i31_6 from '../../../../shared/assets/graphics/images/exhibits/31/march22 (95).png';
 import i31_5 from '../../../../shared/assets/graphics/images/exhibits/31/march22 (76).png';
 import i31_4 from '../../../../shared/assets/graphics/images/exhibits/31/march22 (75).png';
@@ -60,17 +60,13 @@ export const EXHIBIT_IMAGES = {
     29: [i29_1, i29_2, i29_3, i29_4, i29_5],
     30: [i30_1, i30_2, i30_3, i30_4],
     31: [i31_1, i31_2, i31_3, i31_4, i31_5, i31_6],
-    32: [i22_1, i22_2, i22_3],
-    22: [i22_1, i22_2, i22_3],
-    22: [i22_1, i22_2, i22_3],
-    22: [i22_1, i22_2, i22_3],
-    22: [i22_1, i22_2, i22_3],
-    22: [i22_1, i22_2, i22_3],
-    22: [i22_1, i22_2, i22_3],
-    22: [i22_1, i22_2, i22_3],
-    22: [i22_1, i22_2, i22_3],
-    22: [i22_1, i22_2, i22_3],
-    22: [i22_1, i22_2, i22_3],
-    22: [i22_1, i22_2, i22_3],
-    22: [i22_1, i22_2, i22_3],
+    32: [i32_1, i32_2, i32_3, i32_4],
+    33: [i33_1, i33_2, i33_3],
+    34: [i34_1, i34_2, i34_3, i34_4, i34_5, i34_6, i34_7],
+    35: [i35_1, i35_2],
+    37: [i37_1, i37_2],
+    38: [i38_1, i38_2],
+    39: [i39_1, i39_2],
+    40: [i40_1, i40_2],
+    41: [i41_1, i41_2],
 } as Record<number | string, ImageSourcePropType[]>;
