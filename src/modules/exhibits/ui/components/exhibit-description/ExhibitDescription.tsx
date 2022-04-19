@@ -25,7 +25,7 @@ const ExhibitDescription: FC<IProps> = ({
     innerStyle,
     isModal = false,
 }) => {
-    const {handleLinkPress} = useExhibitLinks(isModal);
+    const {handleLinkPress} = useExhibitLinks();
 
     const renderText = useCallback(
         (textObjectArray: IExhibitDescriptionText[]) => {

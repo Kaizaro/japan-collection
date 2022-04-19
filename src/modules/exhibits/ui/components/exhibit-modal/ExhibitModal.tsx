@@ -175,11 +175,6 @@ const ExhibitModalProvider: FC<IDefaultFCProps> = ({children}) => {
                         isModal={true}
                         innerStyle={styles.text}
                     />
-                    {/*<BottomSheetView style={styles.text}>*/}
-                    {/*    <HeaderText color={APP_TEXT_COLORS.MAIN} fontSize={18}>*/}
-                    {/*        {text}*/}
-                    {/*    </HeaderText>*/}
-                    {/*</BottomSheetView>*/}
                 </BottomSheetView>
             </AppBottomSheetModal>
         </ExhibitModalContext.Provider>

@@ -1,6 +1,6 @@
 import {useCallback} from 'react';
 
-import {useNavigation} from '@react-navigation/native';
+import {routeNavigate} from '@app/providers/NavigationProvider';
 
 import {APP_SCREEN_NAME} from '@shared/constants';
 
@@ -10,8 +10,7 @@ import {ARTICLE_MODALS} from '@src/modules/exhibits/DAL/articles/articleModals';
 import {ARTICLE_MODAL_IDS} from '@src/modules/exhibits/DAL/articles/articleModalIds';
 import {ARTICLE_IDS} from '@src/modules/exhibits/DAL/articles/articleIds';
 
-const useExhibitLinks = (isModal = false) => {
-    const navigate = isModal ? null : useNavigation().navigate;
+const useExhibitLinks = () => {
     const {
         handleTitleChanges,
         handleSubtitleChanges,
@@ -19,21 +18,16 @@ const useExhibitLinks = (isModal = false) => {
         showModal,
     } = useExhibitModal();
 
-    const handleRouteToArticle = useCallback(
-        (route_id: ARTICLE_IDS) => {
-            const article = ARTICLES.find(
-                (articleItem) => articleItem.id === route_id,
-            );
+    const handleRouteToArticle = useCallback((route_id: ARTICLE_IDS) => {
+        const article = ARTICLES.find(
+            (articleItem) => articleItem.id === route_id,
+        );
 
-            if (navigate) {
-                navigate(
-                    APP_SCREEN_NAME.ExhibitArticle as never,
-                    {article} as never,
-                );
-            }
-        },
-        [navigate],
-    );
+        routeNavigate(
+            APP_SCREEN_NAME.ExhibitArticle as never,
+            {article} as never,
+        );
+    }, []);
 
     const handleArticleModal = useCallback(
         (route_id: ARTICLE_MODAL_IDS) => {
