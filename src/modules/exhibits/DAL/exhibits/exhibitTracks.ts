@@ -1,5 +1,3 @@
-import {ITrack} from "@shared/assets/sound/trackTypes";
-
 const DEFAULT_DURATION = 30;
 
 export const EXHIBIT_TRACKS = {
@@ -279,12 +277,13 @@ export const EXHIBIT_TRACKS = {
         artist: 'track_46',
         duration: DEFAULT_DURATION,
     },
-    E47: {
-        url: require('../../../../shared/assets/sound/exhibites/47.mp3'),
-        title: 'track_47',
-        artist: 'track_47',
-        duration: DEFAULT_DURATION,
-    },
+    // No record
+    // E47: {
+    //     url: require('../../../../shared/assets/sound/exhibites/47.mp3'),
+    //     title: 'track_47',
+    //     artist: 'track_47',
+    //     duration: DEFAULT_DURATION,
+    // },
     E48: {
         url: require('../../../../shared/assets/sound/exhibites/48.mp3'),
         title: 'track_48',
