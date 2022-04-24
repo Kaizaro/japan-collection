@@ -1,13 +1,13 @@
 import {EXHIBIT_WEAPON_SUBCATEGORY} from '@src/modules/exhibits/entities/exhibitWeaponSubCategory';
 import {ExhibitCategory} from '@src/modules/exhibits/entities/exhibitCategory';
 import {IExhibit} from '@src/modules/exhibits/entities';
+import {EXHIBIT_TRACKS} from '@src/modules/exhibits/DAL/exhibits/exhibitTracks';
 import {EXHIBIT_IMAGES} from '@src/modules/exhibits/DAL/exhibits/exhibitImages';
 import {ARTICLE_MODAL_IDS} from '@src/modules/exhibits/DAL/articles/articleModalIds';
 import {ARTICLE_IDS} from '@src/modules/exhibits/DAL/articles/articleIds';
 
 import threeStarsIcon from '../../../../shared/assets/graphics/icons/three_stars.png';
 import tickIcon from '../../../../shared/assets/graphics/icons/active.png';
-import {EXHIBIT_TRACKS} from "@src/modules/exhibits/DAL/exhibits/exhibitTracks";
 
 export const EXHIBITS = [
     {
@@ -1276,12 +1276,189 @@ export const EXHIBITS = [
         exhibit_number: 50,
         category: ExhibitCategory.TOOLS,
         // subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
-        title: 'Фонарь Гандо',
+        title: 'Асико',
         type: 'Специальные предметы, нидзя (синоби)',
         time: 'Период Эдо (1603 - 1868 гг.)',
         description:
-            'Оригинальная конструкции фонаря защищала свечу от ветра и позволяла лучом направленного света освещать любой предмет, оставляя в темноте человека, держащего его в руках.',
+            'Это приспособление для преодоления вертикальных препятствий, которое крепилось на ноги специальными ремнями.',
         images: EXHIBIT_IMAGES.UNKNOWN,
-        track: EXHIBIT_TRACKS.E49,
+        track: EXHIBIT_TRACKS.E50,
+    },
+    {
+        exhibit_number: 51,
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.TANTO,
+        title: 'Танто школы Мурамаса',
+        type: 'Танто',
+        blacksmith_name: 'Неизвестен',
+        school: 'Сэнго Мурамаса',
+        province: 'Исэ',
+        time: 'Муромати, XVII век',
+        description:
+            'Несмотря на то, принято считать, что традиция Мурамаса это всего несколько поколений, однако в этой школе было много учеников и кузнецов. И характерные признаки школы можно встретить вплоть до новейших времён. Данный клинок представляет из себя работу ранних продолжателей, и был выкован, в XVII веке, чуть позднее первых трёх поколений, и относится к периоду ранних синто.',
+        // TODO need to check SINTO article
+        // linkWords: [
+        //     {
+        //         route_id: ARTICLE_IDS
+        //     }
+        // ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_IDS.SENGO_MARAMASA_SCHOOL,
+                text: 'Школа Сэнго Мурамаса',
+            },
+        ],
+        images: EXHIBIT_IMAGES.UNKNOWN,
+        track: EXHIBIT_TRACKS.E51,
+    },
+    {
+        exhibit_number: 52,
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.KATANA,
+        title: 'Катана Фудзивара Ёсимицу',
+        type: 'Катана',
+        blacksmith_name: 'Фудзивара Ёсимицу (II поколение)',
+        blacksmith_name_japanese: '義光',
+        school: 'Осафунэ',
+        province: 'Бидзэн',
+        time: 'Камакура, XIV век, 1356 г.',
+        description:
+            'Его отец Ёсимицу I поколение, был сыном известного Кагэмицу, кузнеца традиции Бидзэн Осафунэ. Кагэмицу и его второй сын Канэмицу, младший брат Ёсимицу II-го, учились также у самого Масамунэ. Его ранние работы похожи на отца, а поздние на брата.',
+        linkWords: [
+            {
+                route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
+                text: 'Масамунэ',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
+                text: 'Масамунэ',
+            },
+        ],
+        images: EXHIBIT_IMAGES.UNKNOWN,
+        track: EXHIBIT_TRACKS.E52,
+    },
+    {
+        exhibit_number: 53,
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.TANTO,
+        title: 'Танто Кагэфую',
+        type: 'Танто',
+        blacksmith_name: 'Асакура Кагэфую',
+        blacksmith_name_japanese: '朝倉景冬',
+        province: 'Этидзэн',
+        time: 'Муромати, XV век',
+        status: [
+            {
+                text: 'Ходзон Токэн (Оберегаемый Меч) от NBTHK',
+                icon: threeStarsIcon,
+            },
+        ],
+        description:
+            'Имя Кагэфую не присутствует среди кузнецов, потому что это был известный полководец Асакура Кагэфую, увлекавшийся ковкой клинков. Такие клинки, выкованные войнами называются «Буси-ути». Кагэфую сначала занимал пост военного судьи в провинции Этидзэн, после, участвовал в войнах за сёгунов Асикага. В феврале 1490 года он работал над пересадкой сосен из Императорского дворца Сэнто в Хигасияма для Ёсимасы Асикага.',
+        images: EXHIBIT_IMAGES.UNKNOWN,
+        track: EXHIBIT_TRACKS.E53,
+    },
+    {
+        exhibit_number: 54,
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.TANTO,
+        title: 'Танто Юкимицу',
+        type: 'Танто',
+        blacksmith_name: 'Юкимицу',
+        blacksmith_name_japanese: '行光',
+        school: 'Ямасиро, Сосю',
+        province: 'Сагами',
+        time: 'Камакура, XIII век, 1275 год',
+        status: [
+            {
+                text: 'Сайдзё-саку (Исключительно Высокое Качество)',
+                icon: threeStarsIcon,
+            },
+        ],
+        description:
+            'Очень «древний» клинок высочайшего качества, Фудзисиро он оценён как Сайдзё-саку. Кузнец Юкимицу обучался у Сиитого Кунимицу. Работал в городе Камакура, и позднее стал одним из основателей школы Сосю в провинции Сагами. Его иногда считают отчимом или старшим братом легендарного Масамунэ.',
+        // linkWords: [
+        //     {
+        //         route_id: ARTICLE_MODAL_IDS,
+        //         text: 'Сайдзё-саку',
+        //     },
+        // ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
+                text: 'Масамунэ',
+            },
+        ],
+        images: EXHIBIT_IMAGES.UNKNOWN,
+        track: EXHIBIT_TRACKS.E54,
+    },
+    {
+        exhibit_number: 55,
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.KATANA,
+        title: 'Катана Нагамицу',
+        type: 'Катана',
+        blacksmith_name: 'Нагамицу',
+        blacksmith_name_japanese: '長光',
+        school: 'Осафунэ',
+        province: 'Бидзэн',
+        time: 'Камакура, XIII век',
+        status: [
+            {
+                text: 'Заключение Хоъами Ниссю',
+                icon: tickIcon,
+            },
+            {
+                text: 'Сайдзё-саку (Исключительно Высокое Качество)',
+                icon: threeStarsIcon,
+            },
+        ],
+        description:
+            'Мастер Нагамицу (1222-1297 г.г.) признан одним из лучших кузнецов за всю историю Японии. Учился у своего отца Мицутада, и стал основателем школы Осафунэ, самой сильной школы провинции Бидзэн. Несколько его работ имеют статус «Национальное Сокровище». Когда принял монашество, взял имя Дзюнкэй.',
+        images: EXHIBIT_IMAGES.UNKNOWN,
+        track: EXHIBIT_TRACKS.E55,
+    },
+    {
+        exhibit_number: 56,
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Кю-гунто Ёсицукэ',
+        type: 'Вакидзаси',
+        blacksmith_name: 'Ёсицукэ',
+        blacksmith_name_japanese: '義助',
+        province: 'Суруга',
+        time: 'Камакура, XIV век, 1319-1321 г.г.',
+        description:
+            'Старинный клинок XIV-го века установленный в армейскую оправу образца 1875-го года. На оправе имеется фамильный герб, изображающий бабочку, символ рода «Тайра», что говорит о том, что офицер, владелец меча, происходил из очень знатного самурайского рода.',
+        images: EXHIBIT_IMAGES.UNKNOWN,
+        track: EXHIBIT_TRACKS.E56,
+    },
+    {
+        exhibit_number: 57,
+        category: ExhibitCategory.BLADE_WEAPON,
+        subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Кубикири Хиромаса',
+        type: 'Вакидзаси, Кубикири',
+        blacksmith_name: 'Хиромаса',
+        blacksmith_name_japanese: '廣正',
+        school: 'Сосю',
+        province: 'Сагами',
+        time: 'Муромати, XVI век',
+        description:
+            'Очень редкая и необычная форма вакидзаси. Такие клинки использовали для отрезания головы поверженного противника.',
+        linkWords: [
+            {
+                route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
+                text: 'вакидзаси',
+            },
+            {
+                route_id: ARTICLE_MODAL_IDS.KUBIKIRI,
+                text: 'отрезания',
+            },
+        ],
+        images: EXHIBIT_IMAGES.UNKNOWN,
+        track: EXHIBIT_TRACKS.E57,
     },
 ] as IExhibit[];
