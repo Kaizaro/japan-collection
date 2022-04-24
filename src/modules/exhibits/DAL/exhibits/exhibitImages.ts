@@ -68,4 +68,5 @@ export const EXHIBIT_IMAGES = {
     E39: [i39_1, i39_2],
     E40: [i40_1, i40_2],
     E41: [i41_1, i41_2],
+    UNKNOWN: [sakaiMasamuneImage],
 };
