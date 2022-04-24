@@ -1461,4 +1461,28 @@ export const EXHIBITS = [
         images: EXHIBIT_IMAGES.UNKNOWN,
         track: EXHIBIT_TRACKS.E57,
     },
+    {
+        exhibit_number: 58,
+        category: ExhibitCategory.THROWABLE_WEAPON,
+        // subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Сюрикэны',
+        type: 'Метательное оружие',
+        time: 'Эпохи Муромати – Эдо, XVI-XIX в.в.',
+        description:
+            'Несколько разных видов сюрикэнов. Самые распространённые –крестообразные, которые до сих пор иногда находят на полях, применялись для травмирования людей и лошадей, как синоби, так и самураями во время сражений. И более поздние - складной сюрикэн и сюрикэн в виде свастики («мандзи» - яп.).',
+        images: EXHIBIT_IMAGES.UNKNOWN,
+        track: EXHIBIT_TRACKS.E58,
+    },
+    {
+        exhibit_number: 59,
+        category: ExhibitCategory.THROWABLE_WEAPON,
+        // subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
+        title: 'Бо-Сюрикэны в коробочке для лекарств Инро',
+        type: 'Метательное оружие',
+        time: 'Вторая половина эпохи Эдо, XVIII-XIX в.в.',
+        description:
+            'Бо-сюрикэны - прямые сюрикэны, спрятанные в коробочке для лекарств. Коробочка «инро», была неотъемлемым атрибутом одежды самурая, в инро хранили лекарства, а также она была предметом украшения костюма.',
+        images: EXHIBIT_IMAGES.UNKNOWN,
+        track: EXHIBIT_TRACKS.E59,
+    },
 ] as IExhibit[];
