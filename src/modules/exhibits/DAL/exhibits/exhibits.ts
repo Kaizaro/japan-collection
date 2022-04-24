@@ -97,7 +97,7 @@ export const EXHIBITS = [
             //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.E22,
     },
     {
         id: 'katana_masamune',
