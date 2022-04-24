@@ -97,7 +97,7 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                     />
                 )}
             </ScrollView>
-            <ExhibitTrack />
+            {exhibit.track && <ExhibitTrack track={exhibit.track} />}
         </ComponentContainer>
     );
 };

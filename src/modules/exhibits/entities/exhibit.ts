@@ -5,6 +5,7 @@ import {IExhibitStatus} from '@src/modules/exhibits/entities/exhibitStatus';
 import {IExhibitLink} from '@src/modules/exhibits/entities/exhibitLink';
 import {ExhibitCategory} from '@src/modules/exhibits/entities/exhibitCategory';
 import {Track} from "react-native-track-player";
+import {ITrack} from "@shared/assets/sound/trackTypes";
 
 export interface IExhibit {
     id?: string;
@@ -25,5 +26,5 @@ export interface IExhibit {
     linkWords?: IExhibitLink[];
     dictionaryLinks?: IExhibitLink[];
     images?: ImageSourcePropType[];
-    track?: Track;
+    track?: ITrack;
 }
