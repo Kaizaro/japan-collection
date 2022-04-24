@@ -7,6 +7,7 @@ import {ARTICLE_IDS} from '@src/modules/exhibits/DAL/articles/articleIds';
 
 import threeStarsIcon from '../../../../shared/assets/graphics/icons/three_stars.png';
 import tickIcon from '../../../../shared/assets/graphics/icons/active.png';
+import {EXHIBIT_TRACKS} from "@src/modules/exhibits/DAL/exhibits/exhibitTracks";
 
 export const EXHIBITS = [
     {
@@ -98,6 +99,7 @@ export const EXHIBITS = [
             // },
         ],
         images: EXHIBIT_IMAGES.E22,
+        track: EXHIBIT_TRACKS.E1,
     },
     {
         id: 'katana_masamune',
@@ -146,6 +148,7 @@ export const EXHIBITS = [
             // },
         ],
         images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        track: EXHIBIT_TRACKS.E2,
     },
     {
         id: 'o_tanto_masamune',
@@ -190,6 +193,7 @@ export const EXHIBITS = [
             // },
         ],
         images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        track: EXHIBIT_TRACKS.E3,
     },
     {
         exhibit_number: 4,
@@ -211,6 +215,7 @@ export const EXHIBITS = [
         description:
             'Меч, выкованный кузнецом Второго поколения кузнецов Мурамаса. Сын основателя школы Сэнго был не менее талантливым, чем его отец. Качество его работы оценивается также высоко. Поскольку легенды о мечах Мурамаса имеют скорее коллективный образ, мы не можем точно сказать какие именно из мечей самые зловещие.',
         images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        track: EXHIBIT_TRACKS.E4,
     },
     {
         exhibit_number: 5,
@@ -245,6 +250,7 @@ export const EXHIBITS = [
             //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
+        track: EXHIBIT_TRACKS.E5,
     },
     {
         exhibit_number: 6,
@@ -279,6 +285,7 @@ export const EXHIBITS = [
             //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
+        track: EXHIBIT_TRACKS.E6,
     },
     {
         exhibit_number: 7,
@@ -313,6 +320,7 @@ export const EXHIBITS = [
             //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
+        track: EXHIBIT_TRACKS.E7,
     },
     {
         exhibit_number: 8,
@@ -347,6 +355,7 @@ export const EXHIBITS = [
             //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
+        track: EXHIBIT_TRACKS.E8,
     },
     {
         exhibit_number: 9,
@@ -381,6 +390,7 @@ export const EXHIBITS = [
             //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
+        track: EXHIBIT_TRACKS.E9,
     },
     {
         exhibit_number: 10,
@@ -415,6 +425,7 @@ export const EXHIBITS = [
             //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
+        track: EXHIBIT_TRACKS.E10,
     },
     {
         exhibit_number: 11,
@@ -449,6 +460,7 @@ export const EXHIBITS = [
             //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
+        track: EXHIBIT_TRACKS.E11,
     },
     {
         exhibit_number: 12,
@@ -469,6 +481,7 @@ export const EXHIBITS = [
                 text: 'Вакидзаси',
             },
         ],
+        track: EXHIBIT_TRACKS.E12,
     },
     // From here links are correct (except TODO)
     {
@@ -501,6 +514,7 @@ export const EXHIBITS = [
             },
         ],
         images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        track: EXHIBIT_TRACKS.E13,
     },
     {
         exhibit_number: 14,
@@ -532,6 +546,7 @@ export const EXHIBITS = [
             },
         ],
         images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        track: EXHIBIT_TRACKS.E14,
     },
     {
         exhibit_number: 15,
@@ -569,6 +584,7 @@ export const EXHIBITS = [
             },
         ],
         images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        track: EXHIBIT_TRACKS.E15,
     },
     {
         exhibit_number: 16,
@@ -600,6 +616,7 @@ export const EXHIBITS = [
             },
         ],
         images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        track: EXHIBIT_TRACKS.E16,
     },
     {
         exhibit_number: 17,
@@ -655,6 +672,7 @@ export const EXHIBITS = [
             },
         ],
         images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        track: EXHIBIT_TRACKS.E17,
     },
     {
         exhibit_number: 18,
@@ -675,6 +693,7 @@ export const EXHIBITS = [
             },
         ],
         images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        track: EXHIBIT_TRACKS.E18,
     },
     {
         exhibit_number: 19,
@@ -707,6 +726,7 @@ export const EXHIBITS = [
             // },
         ],
         images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        track: EXHIBIT_TRACKS.E19,
     },
     {
         exhibit_number: 20,
@@ -727,6 +747,7 @@ export const EXHIBITS = [
             },
         ],
         images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        track: EXHIBIT_TRACKS.E20,
     },
     {
         exhibit_number: 21,
@@ -764,6 +785,7 @@ export const EXHIBITS = [
             },
         ],
         images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        track: EXHIBIT_TRACKS.E21,
     },
     {
         exhibit_number: 22,
@@ -784,7 +806,8 @@ export const EXHIBITS = [
                 text: 'Кайкэн',
             },
         ],
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.E22,
+        track: EXHIBIT_TRACKS.E22,
     },
     {
         exhibit_number: 23,
@@ -815,6 +838,7 @@ export const EXHIBITS = [
             },
         ],
         images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        track: EXHIBIT_TRACKS.E23,
     },
     {
         exhibit_number: 24,
@@ -835,6 +859,7 @@ export const EXHIBITS = [
             },
         ],
         images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        track: EXHIBIT_TRACKS.E24,
     },
     {
         exhibit_number: 25,
@@ -861,6 +886,7 @@ export const EXHIBITS = [
             },
         ],
         images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        track: EXHIBIT_TRACKS.E25,
     },
     {
         exhibit_number: 26,
@@ -875,6 +901,7 @@ export const EXHIBITS = [
         description:
             'Маленький пистолет замаскированный под обычный кинжал танто.',
         images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        track: EXHIBIT_TRACKS.E26,
     },
     {
         exhibit_number: 27,
@@ -901,7 +928,8 @@ export const EXHIBITS = [
                 text: 'Хинавадзю',
             },
         ],
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.E27,
+        track: EXHIBIT_TRACKS.E27,
     },
     {
         exhibit_number: 28,
@@ -921,7 +949,8 @@ export const EXHIBITS = [
                 text: 'Канабо',
             },
         ],
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.E28,
+        track: EXHIBIT_TRACKS.E28,
     },
     {
         exhibit_number: 29,
@@ -941,7 +970,8 @@ export const EXHIBITS = [
                 text: 'Нагината',
             },
         ],
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.E29,
+        track: EXHIBIT_TRACKS.E29,
     },
     {
         exhibit_number: 30,
@@ -961,7 +991,8 @@ export const EXHIBITS = [
                 text: 'Яри',
             },
         ],
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.E30,
+        track: EXHIBIT_TRACKS.E30,
     },
     {
         exhibit_number: 31,
@@ -982,7 +1013,8 @@ export const EXHIBITS = [
                 text: 'Яри',
             },
         ],
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.E31,
+        track: EXHIBIT_TRACKS.E31,
     },
     {
         exhibit_number: 32,
@@ -1003,7 +1035,8 @@ export const EXHIBITS = [
                 text: 'Яри',
             },
         ],
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.E32,
+        track: EXHIBIT_TRACKS.E32,
     },
     {
         exhibit_number: 33,
@@ -1024,7 +1057,8 @@ export const EXHIBITS = [
                 text: 'Яри',
             },
         ],
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.E33,
+        track: EXHIBIT_TRACKS.E33,
     },
     {
         exhibit_number: 34,
@@ -1044,7 +1078,8 @@ export const EXHIBITS = [
                 text: 'Яри',
             },
         ],
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.E34,
+        track: EXHIBIT_TRACKS.E34,
     },
     {
         exhibit_number: 35,
@@ -1055,7 +1090,8 @@ export const EXHIBITS = [
         time: 'Эпоха Эдо, вторая половина, XVIII-XIX в.в.',
         description:
             'Название Содэгарами дословно переводится, как «запутыватель рукавов». При задержании, острые железные шипы, торчащие в разные стороны, крепко зацеплялись за одежду преступника, и ему после этого было практически невозможно высвободиться.',
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.E35,
+        track: EXHIBIT_TRACKS.E35,
     },
     {
         exhibit_number: 36,
@@ -1067,6 +1103,7 @@ export const EXHIBITS = [
         description:
             'Боевой ухват, использовался для блокирования и прижимания преступника к земле или стене. Некоторые источники утверждают, что сасумата появилась ещё в XVI веке, в период Муромати. Похожими инструментами, но из современных материалов пользуется сегодняшняя японская полиция.',
         images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        track: EXHIBIT_TRACKS.E36,
     },
     {
         exhibit_number: 37,
@@ -1077,7 +1114,8 @@ export const EXHIBITS = [
         time: 'Эпоха Эдо, вторая половина, XVIII-XIX в.в.',
         description:
             'Инструмент для задержания, им можно было, как и прижать человека, так и зацепить, по всем сторонам расположенными шипами, за одежду. Есть версия, что цукубо произошел от сельскохозяйственных граблей.',
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.E37,
+        track: EXHIBIT_TRACKS.E37,
     },
     {
         exhibit_number: 38,
@@ -1088,7 +1126,8 @@ export const EXHIBITS = [
         time: 'Эпоха Эдо, вторая половина, XVIII-XIX в.в.',
         description:
             'Кумадэ переводится как «медвежья лапа». Орудие похожее на грабли. Полиция Эдо зацепляла ими любого преступника, а длина древка в примерно два метра, позволяла это делать на довольно большой дистанции. Появилось ещё во времена полевых сражений, для стаскивания на землю всадников.',
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.E38,
+        track: EXHIBIT_TRACKS.E38,
     },
     {
         exhibit_number: 39,
@@ -1099,7 +1138,8 @@ export const EXHIBITS = [
         time: 'Эпоха Эдо, вторая половина, XVIII-XIX в.в.',
         description:
             'Кумадэ переводится как «медвежья лапа». Орудие похожее на грабли. Полиция Эдо зацепляла ими любого преступника, а длина древка в примерно два метра, позволяла это делать на довольно большой дистанции. Появилось ещё во времена полевых сражений, для стаскивания на землю всадников.',
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.E39,
+        track: EXHIBIT_TRACKS.E39,
     },
     {
         exhibit_number: 40,
@@ -1110,7 +1150,8 @@ export const EXHIBITS = [
         time: 'Эпоха Эдо, вторая половина, XVIII-XIX в.в.',
         description:
             'Инструмент для задержания, им можно было, как и прижать человека, так и зацепить, по всем сторонам расположенными шипами, за одежду. Есть версия, что цукубо произошел от сельскохозяйственных граблей.',
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.E40,
+        track: EXHIBIT_TRACKS.E40,
     },
     {
         exhibit_number: 41,
@@ -1121,6 +1162,7 @@ export const EXHIBITS = [
         time: 'Эпоха Эдо, вторая половина, XVIII-XIX в.в.',
         description:
             'Боевой ухват, использовался для блокирования и прижимания преступника к земле или стене. Некоторые источники утверждают, что сасумата появилась ещё в XVI веке, в период Муромати. Похожими инструментами, но из современных материалов пользуется сегодняшняя японская полиция.',
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.E41,
+        track: EXHIBIT_TRACKS.E41,
     },
 ] as IExhibit[];
