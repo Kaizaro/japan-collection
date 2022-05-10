@@ -250,6 +250,7 @@ export const EXHIBITS = [
             //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
+        images: EXHIBIT_IMAGES.E5,
         track: EXHIBIT_TRACKS.E5,
     },
     {
@@ -285,6 +286,7 @@ export const EXHIBITS = [
             //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
+        images: EXHIBIT_IMAGES.E6,
         track: EXHIBIT_TRACKS.E6,
     },
     {
@@ -320,6 +322,7 @@ export const EXHIBITS = [
             //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
+        images: EXHIBIT_IMAGES.E7,
         track: EXHIBIT_TRACKS.E7,
     },
     {
@@ -355,6 +358,7 @@ export const EXHIBITS = [
             //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
+        images: EXHIBIT_IMAGES.E8,
         track: EXHIBIT_TRACKS.E8,
     },
     {
@@ -390,6 +394,7 @@ export const EXHIBITS = [
             //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
+        images: EXHIBIT_IMAGES.E9,
         track: EXHIBIT_TRACKS.E9,
     },
     {
@@ -425,6 +430,7 @@ export const EXHIBITS = [
             //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
+        images: EXHIBIT_IMAGES.E10,
         track: EXHIBIT_TRACKS.E10,
     },
     {
@@ -460,6 +466,7 @@ export const EXHIBITS = [
             //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
+        images: EXHIBIT_IMAGES.UNKNOWN,
         track: EXHIBIT_TRACKS.E11,
     },
     {
@@ -481,6 +488,7 @@ export const EXHIBITS = [
                 text: 'Вакидзаси',
             },
         ],
+        images: EXHIBIT_IMAGES.UNKNOWN,
         track: EXHIBIT_TRACKS.E12,
     },
     // From here links are correct (except TODO)
