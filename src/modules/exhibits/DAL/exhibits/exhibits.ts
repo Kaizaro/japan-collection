@@ -147,7 +147,7 @@ export const EXHIBITS = [
             //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.UNKNOWN,
         track: EXHIBIT_TRACKS.E2,
     },
     {
@@ -192,7 +192,7 @@ export const EXHIBITS = [
             //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.UNKNOWN,
         track: EXHIBIT_TRACKS.E3,
     },
     {
@@ -214,7 +214,7 @@ export const EXHIBITS = [
         ],
         description:
             'Меч, выкованный кузнецом Второго поколения кузнецов Мурамаса. Сын основателя школы Сэнго был не менее талантливым, чем его отец. Качество его работы оценивается также высоко. Поскольку легенды о мечах Мурамаса имеют скорее коллективный образ, мы не можем точно сказать какие именно из мечей самые зловещие.',
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.UNKNOWN,
         track: EXHIBIT_TRACKS.E4,
     },
     {
@@ -513,7 +513,7 @@ export const EXHIBITS = [
                 text: 'Классификация мечей по временным периодам',
             },
         ],
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.UNKNOWN,
         track: EXHIBIT_TRACKS.E13,
     },
     {
@@ -545,7 +545,7 @@ export const EXHIBITS = [
                 text: 'Классификация мечей по временным периодам',
             },
         ],
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.UNKNOWN,
         track: EXHIBIT_TRACKS.E14,
     },
     {
@@ -583,7 +583,7 @@ export const EXHIBITS = [
                 text: 'Рейтинги мечей по Фудзисиро',
             },
         ],
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.UNKNOWN,
         track: EXHIBIT_TRACKS.E15,
     },
     {
@@ -615,7 +615,7 @@ export const EXHIBITS = [
                 text: 'Рейтинги мечей по Фудзисиро',
             },
         ],
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.UNKNOWN,
         track: EXHIBIT_TRACKS.E16,
     },
     {
@@ -671,7 +671,7 @@ export const EXHIBITS = [
                 text: 'Классификация мечей по временным периодам',
             },
         ],
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.UNKNOWN,
         track: EXHIBIT_TRACKS.E17,
     },
     {
@@ -692,7 +692,7 @@ export const EXHIBITS = [
                 text: 'Катана',
             },
         ],
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.UNKNOWN,
         track: EXHIBIT_TRACKS.E18,
     },
     {
@@ -725,7 +725,7 @@ export const EXHIBITS = [
             //     text: 'Классификация мечей по временным периодам',
             // },
         ],
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.UNKNOWN,
         track: EXHIBIT_TRACKS.E19,
     },
     {
@@ -746,7 +746,7 @@ export const EXHIBITS = [
                 text: 'Танто',
             },
         ],
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.UNKNOWN,
         track: EXHIBIT_TRACKS.E20,
     },
     {
@@ -784,7 +784,7 @@ export const EXHIBITS = [
                 text: 'Сохэй',
             },
         ],
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.UNKNOWN,
         track: EXHIBIT_TRACKS.E21,
     },
     {
@@ -837,7 +837,7 @@ export const EXHIBITS = [
                 text: 'Яри',
             },
         ],
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.UNKNOWN,
         track: EXHIBIT_TRACKS.E23,
     },
     {
@@ -858,7 +858,7 @@ export const EXHIBITS = [
                 text: 'Дзиттэ',
             },
         ],
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.UNKNOWN,
         track: EXHIBIT_TRACKS.E24,
     },
     {
@@ -885,7 +885,7 @@ export const EXHIBITS = [
                 text: 'Кайкэн',
             },
         ],
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.UNKNOWN,
         track: EXHIBIT_TRACKS.E25,
     },
     {
@@ -900,7 +900,7 @@ export const EXHIBITS = [
         time: 'Вторая половина XIX века',
         description:
             'Маленький пистолет замаскированный под обычный кинжал танто.',
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.UNKNOWN,
         track: EXHIBIT_TRACKS.E26,
     },
     {
@@ -1102,7 +1102,7 @@ export const EXHIBITS = [
         time: 'Эпоха Эдо, вторая половина, XVIII-XIX в.в.',
         description:
             'Боевой ухват, использовался для блокирования и прижимания преступника к земле или стене. Некоторые источники утверждают, что сасумата появилась ещё в XVI веке, в период Муромати. Похожими инструментами, но из современных материалов пользуется сегодняшняя японская полиция.',
-        images: [EXHIBIT_IMAGES.SAKAI_MASAMUNE],
+        images: EXHIBIT_IMAGES.UNKNOWN,
         track: EXHIBIT_TRACKS.E36,
     },
     {

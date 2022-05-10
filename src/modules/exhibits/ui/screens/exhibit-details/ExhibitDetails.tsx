@@ -44,10 +44,10 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                 <View style={styles.subtitle}>
                     <RegularText fontSize={24}>{exhibit.subtitle}</RegularText>
                 </View>
-                {exhibit.images && (
+                {exhibit.images?.gallery && (
                     <View style={styles.gallery}>
                         <Image
-                            source={exhibit.images[0]}
+                            source={exhibit.images.gallery[0]}
                             style={styles.image}
                             resizeMode={'contain'}
                         />

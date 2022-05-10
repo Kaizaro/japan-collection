@@ -49,10 +49,92 @@ import i22_3 from '@shared/assets/graphics/images/exhibits/22/march22_274.png';
 import i22_2 from '@shared/assets/graphics/images/exhibits/22/march22_264.png';
 import i22_1 from '@shared/assets/graphics/images/exhibits/22/march22_256.png';
 
+import sakaiMasamuneCardImage from '../../../../shared/assets/graphics/images/exhibits/sakai_masamune_card.png';
 import sakaiMasamuneImage from '../../../../shared/assets/graphics/images/exhibits/sakai_masamune.png';
+import i9_1 from '../../../../shared/assets/graphics/images/exhibits/9/1.png';
+import i9_0 from '../../../../shared/assets/graphics/images/exhibits/9/0.png';
+import i8_2 from '../../../../shared/assets/graphics/images/exhibits/8/2.png';
+import i8_1 from '../../../../shared/assets/graphics/images/exhibits/8/1.png';
+import i8_0 from '../../../../shared/assets/graphics/images/exhibits/8/0.png';
+import i7_2 from '../../../../shared/assets/graphics/images/exhibits/7/2.png';
+import i7_1 from '../../../../shared/assets/graphics/images/exhibits/7/1.png';
+import i7_0 from '../../../../shared/assets/graphics/images/exhibits/7/0.png';
+import i6_2 from '../../../../shared/assets/graphics/images/exhibits/6/2.png';
+import i6_1 from '../../../../shared/assets/graphics/images/exhibits/6/1.png';
+import i6_0 from '../../../../shared/assets/graphics/images/exhibits/6/0.png';
+import i5_2 from '../../../../shared/assets/graphics/images/exhibits/5/2.png';
+import i5_1 from '../../../../shared/assets/graphics/images/exhibits/5/1.png';
+import i5_0 from '../../../../shared/assets/graphics/images/exhibits/5/0.png';
+import i4_2 from '../../../../shared/assets/graphics/images/exhibits/4/2.png';
+import i4_1 from '../../../../shared/assets/graphics/images/exhibits/4/1.png';
+import i4_0 from '../../../../shared/assets/graphics/images/exhibits/4/0.png';
+import i3_2 from '../../../../shared/assets/graphics/images/exhibits/3/2.png';
+import i3_1 from '../../../../shared/assets/graphics/images/exhibits/3/1.png';
+import i3_0 from '../../../../shared/assets/graphics/images/exhibits/3/0.png';
+import i2_2 from '../../../../shared/assets/graphics/images/exhibits/2/2.png';
+import i2_1 from '../../../../shared/assets/graphics/images/exhibits/2/1.png';
+import i2_0 from '../../../../shared/assets/graphics/images/exhibits/2/0.png';
+import i16_2 from '../../../../shared/assets/graphics/images/exhibits/16/2.png';
+import i16_1 from '../../../../shared/assets/graphics/images/exhibits/16/1.png';
+import i16_0 from '../../../../shared/assets/graphics/images/exhibits/16/0.png';
+import i14_2 from '../../../../shared/assets/graphics/images/exhibits/13,14/2.png';
+import i13_2 from '../../../../shared/assets/graphics/images/exhibits/13,14/2.png';
+import i14_1 from '../../../../shared/assets/graphics/images/exhibits/13,14/1.png';
+import i13_1 from '../../../../shared/assets/graphics/images/exhibits/13,14/1.png';
+import i14_0 from '../../../../shared/assets/graphics/images/exhibits/13,14/0.png';
+import i13_0 from '../../../../shared/assets/graphics/images/exhibits/13,14/0.png';
+import i10_1 from '../../../../shared/assets/graphics/images/exhibits/10/1.png';
+import i10_0 from '../../../../shared/assets/graphics/images/exhibits/10/0.png';
 
 export const EXHIBIT_IMAGES = {
-    SAKAI_MASAMUNE: sakaiMasamuneImage,
+    E2: {
+        card: i2_0,
+        gallery: [i2_1, i2_2],
+    },
+    E3: {
+        card: i3_0,
+        gallery: [i3_1, i3_2],
+    },
+    E4: {
+        card: i4_0,
+        gallery: [i4_1, i4_2],
+    },
+    E5: {
+        card: i5_0,
+        gallery: [i5_1, i5_2],
+    },
+    E6: {
+        card: i6_0,
+        gallery: [i6_1, i6_2],
+    },
+    E7: {
+        card: i7_0,
+        gallery: [i7_1, i7_2],
+    },
+    E8: {
+        card: i8_0,
+        gallery: [i8_1, i8_2],
+    },
+    E9: {
+        card: i9_0,
+        gallery: [i9_1],
+    },
+    E10: {
+        card: i10_0,
+        gallery: [i10_1],
+    },
+    E13: {
+        card: i13_0,
+        gallery: [i13_1, i13_2],
+    },
+    E14: {
+        card: i14_0,
+        gallery: [i14_1, i14_2],
+    },
+    E16: {
+        card: i16_0,
+        gallery: [i16_1, i16_2],
+    },
     E22: [i22_1, i22_2, i22_3],
     E27: [i27_1, i27_2, i27_3],
     E28: [i28_1, i28_2, i28_3],
@@ -68,5 +150,5 @@ export const EXHIBIT_IMAGES = {
     E39: [i39_1, i39_2],
     E40: [i40_1, i40_2],
     E41: [i41_1, i41_2],
-    UNKNOWN: [sakaiMasamuneImage],
+    UNKNOWN: {card: sakaiMasamuneCardImage, gallery: [sakaiMasamuneImage]},
 };
