@@ -40,7 +40,10 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                 bounces={false}
                 showsVerticalScrollIndicator={false}
                 contentInset={{bottom: scaleVertical(30)}}>
-                <HeaderText fontSize={48}>{exhibit.title}</HeaderText>
+                <HeaderText
+                    fontSize={
+                        48
+                    }>{`№${exhibit.exhibit_number} ${exhibit.title}`}</HeaderText>
                 <View style={styles.subtitle}>
                     <RegularText fontSize={24}>{exhibit.subtitle}</RegularText>
                 </View>

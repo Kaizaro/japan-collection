@@ -29,7 +29,9 @@ const ExhibitCard: FC<IProps> = ({card}) => {
                 </View>
             )}
             <View style={styles.title}>
-                <HeaderText>{card.title}</HeaderText>
+                <HeaderText>
+                    {`№${card.exhibit_number} ${card.title}`}
+                </HeaderText>
             </View>
             <View style={styles.subtitle}>
                 <RegularText fontSize={16}>{card.subtitle}</RegularText>
