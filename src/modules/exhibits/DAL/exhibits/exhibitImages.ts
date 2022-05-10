@@ -216,7 +216,10 @@ export const EXHIBIT_IMAGES = {
         card: i16_0,
         gallery: [i16_1, i16_2],
     },
-    E22: [i22_1, i22_2, i22_3],
+    E22: {
+        card: sakaiMasamuneCardImage,
+        gallery: [i22_1, i22_2, i22_3],
+    },
     E23: {
         card: i23_0,
         gallery: [i23_1],
