@@ -158,11 +158,8 @@ import i2_0 from '../../../../shared/assets/graphics/images/exhibits/2/0.png';
 import i16_2 from '../../../../shared/assets/graphics/images/exhibits/16/2.png';
 import i16_1 from '../../../../shared/assets/graphics/images/exhibits/16/1.png';
 import i16_0 from '../../../../shared/assets/graphics/images/exhibits/16/0.png';
-import i14_2 from '../../../../shared/assets/graphics/images/exhibits/13,14/2.png';
 import i13_2 from '../../../../shared/assets/graphics/images/exhibits/13,14/2.png';
-import i14_1 from '../../../../shared/assets/graphics/images/exhibits/13,14/1.png';
 import i13_1 from '../../../../shared/assets/graphics/images/exhibits/13,14/1.png';
-import i14_0 from '../../../../shared/assets/graphics/images/exhibits/13,14/0.png';
 import i13_0 from '../../../../shared/assets/graphics/images/exhibits/13,14/0.png';
 import i10_1 from '../../../../shared/assets/graphics/images/exhibits/10/1.png';
 import i10_0 from '../../../../shared/assets/graphics/images/exhibits/10/0.png';
@@ -209,8 +206,8 @@ export const EXHIBIT_IMAGES = {
         gallery: [i13_1, i13_2],
     },
     E14: {
-        card: i14_0,
-        gallery: [i14_1, i14_2],
+        card: i13_0,
+        gallery: [i13_1, i13_2],
     },
     E16: {
         card: i16_0,
