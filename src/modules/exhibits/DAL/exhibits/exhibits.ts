@@ -1466,7 +1466,7 @@ export const EXHIBITS = [
                 text: 'отрезания',
             },
         ],
-        images: EXHIBIT_IMAGES.UNKNOWN,
+        images: EXHIBIT_IMAGES.E57,
         track: EXHIBIT_TRACKS.E57,
     },
     {
