@@ -30,10 +30,11 @@ const MOCK_TRACK = {
 };
 
 const ExhibitTrack: FC<IProps> = ({track}) => {
-    const [playerStatus, setPlayerStatus] = useState<State>(State.None);
+    const [playerStatus, setPlayerStatus] = useState<State | 'buffering'>(
+        'buffering',
+    );
     const isTrackPlaying = useMemo(
-        () =>
-            playerStatus === State.Playing || playerStatus === State.Buffering,
+        () => playerStatus === 'buffering' || playerStatus === State.Playing,
         [playerStatus],
     );
 
