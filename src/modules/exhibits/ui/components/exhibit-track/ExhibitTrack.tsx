@@ -56,6 +56,11 @@ const ExhibitTrack: FC<IProps> = ({track}) => {
         await playTrack();
     }, [getTrackState, playTrack, stopTrack, track]);
 
+    const resetTrack = useCallback(async () => {
+        await TrackPlayer.reset();
+        startTrack();
+    }, [startTrack]);
+
     const handlePlayPauseButtonPress = useCallback(async () => {
         const state = await getTrackState();
         console.log(
@@ -68,7 +73,25 @@ const ExhibitTrack: FC<IProps> = ({track}) => {
         if (state === State.Playing) {
             await pauseTrack();
         } else if (state === State.Paused) {
-            await playTrack();
+            const trackDuration = await TrackPlayer.getDuration();
+            console.log(
+                LOG_TAG,
+                'trackDuration',
+                trackDuration,
+                trackDuration.toFixed(1),
+            );
+            const currentPosition = await TrackPlayer.getPosition();
+            console.log(
+                LOG_TAG,
+                'currentPosition',
+                currentPosition,
+                currentPosition.toFixed(1),
+            );
+            if (currentPosition.toFixed(1) === trackDuration.toFixed(1)) {
+                resetTrack();
+            } else {
+                await playTrack();
+            }
         } else {
             console.error(LOG_TAG, 'track state', state);
             Alert.alert(
@@ -76,7 +99,7 @@ const ExhibitTrack: FC<IProps> = ({track}) => {
                 'Что-то пошло не так. Пожалуйста, перезагрузите приложение.',
             );
         }
-    }, [getTrackState, pauseTrack, playTrack]);
+    }, [getTrackState, pauseTrack, playTrack, resetTrack]);
 
     useEffect(() => {
         startTrack();
