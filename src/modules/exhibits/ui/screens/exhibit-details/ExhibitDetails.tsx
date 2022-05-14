@@ -88,6 +88,11 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                         innerStyle={styles.location}
                     />
                 )}
+                {exhibit.track && (
+                    <View style={styles.player}>
+                        <ExhibitTrack track={exhibit.track} />
+                    </View>
+                )}
                 <ExhibitDescription
                     description={exhibit.description}
                     linkWords={exhibit.linkWords}
@@ -100,7 +105,7 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                     />
                 )}
             </ScrollView>
-            {exhibit.track && <ExhibitTrack track={exhibit.track} />}
+            {/*{exhibit.track && <ExhibitTrack track={exhibit.track} />}*/}
         </ComponentContainer>
     );
 };

@@ -47,6 +47,11 @@ export const exhibitDetailsStyles = StyleSheet.create({
     location: {
         marginTop: scaleVertical(12),
     },
+    player: {
+        marginTop: scaleVertical(32),
+        width: '100%',
+        alignItems: 'center',
+    },
     description: {
         marginTop: scaleVertical(25),
     },
