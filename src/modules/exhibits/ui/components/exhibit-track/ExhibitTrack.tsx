@@ -29,8 +29,12 @@ const MOCK_TRACK = {
 };
 
 const ExhibitTrack: FC<IProps> = ({track}) => {
-    const getTrackState = useCallback(async () => {
-        return await TrackPlayer.getState();
+    const getTrackState = useCallback(() => {
+        return TrackPlayer.getState();
+    }, []);
+
+    const getCurrentTrackPosition = useCallback(() => {
+        return TrackPlayer.getPosition();
     }, []);
 
     const pauseTrack = useCallback(async () => {
@@ -44,6 +48,16 @@ const ExhibitTrack: FC<IProps> = ({track}) => {
     const stopTrack = useCallback(async () => {
         await TrackPlayer.stop();
     }, []);
+
+    const playForward = useCallback(async () => {
+        const currentPosition = await getCurrentTrackPosition();
+        await TrackPlayer.seekTo(currentPosition + 5);
+    }, [getCurrentTrackPosition]);
+
+    const playBack = useCallback(async () => {
+        const currentPosition = await getCurrentTrackPosition();
+        await TrackPlayer.seekTo(currentPosition - 5);
+    }, [getCurrentTrackPosition]);
 
     const startTrack = useCallback(async () => {
         console.log(LOG_TAG, 'startTrackCallback', track);
@@ -109,7 +123,7 @@ const ExhibitTrack: FC<IProps> = ({track}) => {
 
     return (
         <View style={styles.playerContainer}>
-            <PressableComponent>
+            <PressableComponent onPress={playBack}>
                 <Image
                     source={audioBackIcon}
                     style={styles.trackMoveIcon}
@@ -123,7 +137,7 @@ const ExhibitTrack: FC<IProps> = ({track}) => {
                     resizeMode={'contain'}
                 />
             </PressableComponent>
-            <PressableComponent>
+            <PressableComponent onPress={playForward}>
                 <Image
                     source={audioForwardIcon}
                     style={styles.trackMoveIcon}
@@ -135,50 +149,3 @@ const ExhibitTrack: FC<IProps> = ({track}) => {
 };
 
 export {ExhibitTrack};
-
-// import React, {FC, useCallback, useEffect} from 'react';
-//
-// import TrackPlayer, {State} from 'react-native-track-player';
-//
-// import {IDefaultFCProps} from '@shared/types';
-//
-// import {ITrack} from '@src/shared/assets/sound/trackTypes';
-//
-// interface IProps extends IDefaultFCProps {
-//     track: ITrack;
-// }
-//
-// const MOCK_TRACK = {
-//     url: require('../../../../../shared/assets/sound/test_record.m4a'), // Load media from the app bundle
-//     title: 'test_record',
-//     artist: 'TEST',
-//     duration: 30,
-// };
-//
-// const ExhibitTrack: FC<IProps> = ({track}) => {
-//     const stopTrack = useCallback(async () => {
-//         await TrackPlayer.stop();
-//     }, []);
-//
-//     const startTrack = useCallback(async () => {
-//         await TrackPlayer.add(track);
-//         await TrackPlayer.play();
-//         const trackIndex = await TrackPlayer.getCurrentTrack();
-//         const state = await TrackPlayer.getState();
-//         console.log(state, trackIndex);
-//         if (state === State.Playing) {
-//             stopTrack();
-//         }
-//     }, [stopTrack, track]);
-//
-//     useEffect(() => {
-//         startTrack();
-//         // TrackPlayer.play();
-//
-//         return () => stopTrack();
-//     }, [startTrack, stopTrack]);
-//
-//     return <></>;
-// };
-//
-// export {ExhibitTrack};
