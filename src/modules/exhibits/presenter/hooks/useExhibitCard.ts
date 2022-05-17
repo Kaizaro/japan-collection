@@ -10,7 +10,7 @@ const useExhibitCard = (exhibit: IExhibit) => {
     const {navigate} = useNavigation();
 
     const onCardPress = useCallback(
-        () => navigate({name: APP_SCREEN_NAME.ExhibitDetails, params: exhibit}),
+        () => navigate({name: APP_SCREEN_NAME.ExhibitDetails, params: {exhibit}}),
         [exhibit, navigate],
     );
 

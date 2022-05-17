@@ -1,16 +1,11 @@
-import {exhibitsList} from '@shared/assets/mocks/exhibits';
+import {chunk} from 'lodash';
 
 import {IExhibit} from '@src/modules/exhibits/entities';
-
-import fuji from '@shared/assets/graphics/images/fuji.png';
+import {EXHIBITS} from '@src/modules/exhibits/DAL/exhibits/exhibits';
 
 /** @internal */
-export const getExhibitsList = (): IExhibit[] => {
-    const localExhibitsList = exhibitsList;
+export const getExhibitsList = (): IExhibit[][] => {
+    const chunkedExhibitsList = chunk(EXHIBITS, 2);
 
-    localExhibitsList.map((item) => {
-        item.image = fuji;
-    });
-
-    return exhibitsList;
+    return chunkedExhibitsList;
 };

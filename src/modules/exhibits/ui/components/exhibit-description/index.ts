@@ -1,0 +1,1 @@
+export {ExhibitDescription} from './ExhibitDescription';

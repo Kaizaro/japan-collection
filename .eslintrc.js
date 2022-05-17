@@ -18,7 +18,7 @@ module.exports = {
             version: 'detect',
         },
     },
-    plugins: ['@typescript-eslint', 'module-resolver'],
+    plugins: ['@typescript-eslint', 'eslint-plugin-import', 'module-resolver'],
     extends: [
         // default lib for RN
         // '@react-native-community/eslint-plugin-react',
@@ -35,11 +35,146 @@ module.exports = {
         'plugin:react-hooks/recommended',
     ],
     rules: {
-        'no-shadow': 'off',
-        '@typescript-eslint/no-shadow': ['error'],
+        '@typescript-eslint/no-inferrable-types': 0,
+        '@typescript-eslint/ban-ts-comment': 0,
+        '@typescript-eslint/no-var-requires': 0,
+        '@typescript-eslint/no-explicit-any': 'error',
+        'no-shadow': 0,
+        'import/newline-after-import': ['warn', {count: 1}],
+        'sort-imports': [
+            'warn',
+            {
+                ignoreCase: false,
+                ignoreDeclarationSort: true,
+                ignoreMemberSort: false,
+                memberSyntaxSortOrder: ['all', 'single', 'multiple', 'none'],
+                allowSeparatedGroups: true,
+            },
+        ],
+        'import/order': [
+            'warn',
+            {
+                groups: ['builtin', 'external', 'internal', 'sibling', 'index', 'parent', 'unknown', 'type', 'object'],
+                pathGroups: [
+                    {
+                        pattern: 'react',
+                        group: 'builtin',
+                        position: 'before',
+                    },
+                    {
+                        pattern: 'react-native',
+                        group: 'builtin',
+                    },
+                    {
+                        pattern: 'react**',
+                        group: 'external',
+                    },
+                    {
+                        pattern: '@react**',
+                        group: 'external',
+                    },
+                    {
+                        pattern: 'react-native**',
+                        group: 'external',
+                    },
+                    {
+                        pattern: '@mobility/**',
+                        group: 'external',
+                        position: 'after',
+                    },
+                    {
+                        pattern: '@app/**',
+                        group: 'internal',
+                        position: 'after',
+                    },
+                    {
+                        pattern: '@shared/**',
+                        group: 'internal',
+                        position: 'after',
+                    },
+                    {
+                        pattern: '@src/**',
+                        group: 'index',
+                    },
+                    {
+                        pattern: './helpers/**',
+                        group: 'parent',
+                    },
+                    {
+                        pattern: '@helpers/**',
+                        group: 'parent',
+                        position: 'before',
+                    },
+                    {
+                        pattern: '@modules/**',
+                        group: 'parent',
+                        position: 'before',
+                    },
+                    {
+                        pattern: '@hooks/**',
+                        group: 'parent',
+                        position: 'before',
+                    },
+                    {
+                        pattern: '@store',
+                        group: 'object',
+                        position: 'before',
+                    },
+                    {
+                        pattern: '@constants/**',
+                        group: 'object',
+                        position: 'before',
+                    },
+                    {
+                        pattern: '@storeSlices/**',
+                        group: 'object',
+                    },
+                    {
+                        pattern: '@theme',
+                        group: 'object',
+                    },
+                    {
+                        pattern: '@appTheme/**',
+                        group: 'object',
+                    },
+                    {
+                        pattern: './styles',
+                        group: 'object',
+                    },
+                    {
+                        pattern: '@navigationTypes**',
+                        group: 'type',
+                        position: 'before',
+                    },
+                    {
+                        pattern: '@storeTypes/**',
+                        group: 'type',
+                    },
+                    {
+                        pattern: './types',
+                        group: 'type',
+                    },
+                    {
+                        pattern: '@assets/**',
+                        group: 'object',
+                        position: 'after',
+                    },
+                    {
+                        pattern: '@graphics/**',
+                        group: 'object',
+                        position: 'after',
+                    },
+                ],
+                pathGroupsExcludedImportTypes: ['react'],
+                'newlines-between': 'always',
+                alphabetize: {
+                    order: 'desc' /* sort in ascending order. Options: ['ignore', 'asc', 'desc'] */,
+                    caseInsensitive: true /* ignore case. Options: [true, false] */,
+                },
+            },
+        ],
     },
-    // env: {
-    //     node: true,
-    // },
+    globals: {
+        __DEV__: true,
+    },
 };
-

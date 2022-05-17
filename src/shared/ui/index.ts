@@ -1,4 +1,4 @@
-import * as Container from './Container';
-import * as Text from './Text';
+import * as Container from './container';
+import * as Text from './text';
 
 export {Container, Text};

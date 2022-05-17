@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.museumapp">
+  package="com.museum.japancollection">
 
     <uses-permission android:name="android.permission.INTERNET" />
 

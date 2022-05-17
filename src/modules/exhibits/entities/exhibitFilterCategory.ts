@@ -1,4 +1,4 @@
-import {exhibitCategoryId} from '@src/modules/exhibits/data/dictionary/exhibitCategoryId';
+import {exhibitCategoryId} from '@src/modules/exhibits/DAL/dictionary/exhibitCategoryId';
 
 export interface IExhibitFilterCategory {
     id: string;
