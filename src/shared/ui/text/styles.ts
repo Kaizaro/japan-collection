@@ -1,6 +1,7 @@
 import {StyleSheet} from 'react-native';
-import {APP_FONTS} from "@shared/config/fonts";
-import {APP_TEXT_COLORS} from "@shared/config/colors";
+
+import {APP_FONTS} from '@shared/config/fonts';
+import {APP_TEXT_COLORS} from '@shared/config/colors';
 
 /** @internal */
 export const textStyles = StyleSheet.create({

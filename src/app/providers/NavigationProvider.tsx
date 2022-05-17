@@ -1,6 +1,10 @@
 import React, {FC} from 'react';
 
-import {DefaultTheme, NavigationContainer} from '@react-navigation/native';
+import {
+    DefaultTheme,
+    NavigationContainer,
+    createNavigationContainerRef,
+} from '@react-navigation/native';
 
 import {APP_COLORS} from '@shared/config/colors';
 
@@ -12,8 +16,18 @@ const appTheme = {
     },
 };
 
+const navigationRef = createNavigationContainerRef();
+
+const routeNavigate = (name: never, params: never) => {
+    if (navigationRef.isReady()) {
+        navigationRef.navigate(name, params);
+    }
+};
+
 const NavigationProvider: FC = ({children}) => (
-    <NavigationContainer theme={appTheme}>{children}</NavigationContainer>
+    <NavigationContainer ref={navigationRef} theme={appTheme}>
+        {children}
+    </NavigationContainer>
 );
 
-export {NavigationProvider};
+export {NavigationProvider, navigationRef, routeNavigate};

@@ -504,7 +504,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B3N9HQ5L43;
+				DEVELOPMENT_TEAM = 46S9S4966A;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = JapanCollection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -517,7 +517,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.museum.JapanCollection;
+				PRODUCT_BUNDLE_IDENTIFIER = com.museumapp.japancollection;
 				PRODUCT_NAME = JapanCollection;
 				SWIFT_OBJC_BRIDGING_HEADER = "JapanCollection-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -534,7 +534,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B3N9HQ5L43;
+				DEVELOPMENT_TEAM = 46S9S4966A;
 				INFOPLIST_FILE = JapanCollection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -546,7 +546,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.museum.JapanCollection;
+				PRODUCT_BUNDLE_IDENTIFIER = com.museumapp.japancollection;
 				PRODUCT_NAME = JapanCollection;
 				SWIFT_OBJC_BRIDGING_HEADER = "JapanCollection-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

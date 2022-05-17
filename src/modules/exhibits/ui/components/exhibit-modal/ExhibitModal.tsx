@@ -11,6 +11,7 @@ import {BottomSheetView} from '@gorhom/bottom-sheet';
 
 import {scaleVertical} from '@shared/utils/scale';
 import {HeaderText} from '@shared/ui/text';
+import {RegularTextNew} from '@shared/ui/RegularText';
 import {AppBottomSheetModal} from '@shared/ui/modals/app-bottom-sheet-modal/AppBottomSheetModal';
 import {IDefaultFCProps, TNullable} from '@shared/types';
 import {APP_COLORS, APP_TEXT_COLORS} from '@shared/config/colors';
@@ -169,17 +170,15 @@ const ExhibitModalProvider: FC<IDefaultFCProps> = ({children}) => {
                             {subtitle}
                         </HeaderText>
                     </BottomSheetView>
-                    <ExhibitDescription
-                        description={text}
-                        linkWords={links as IExhibitLink[]}
-                        isModal={true}
-                        innerStyle={styles.text}
-                    />
-                    {/*<BottomSheetView style={styles.text}>*/}
-                    {/*    <HeaderText color={APP_TEXT_COLORS.MAIN} fontSize={18}>*/}
-                    {/*        {text}*/}
-                    {/*    </HeaderText>*/}
-                    {/*</BottomSheetView>*/}
+                    <RegularTextNew innerStyle={styles.text}>
+                        {text}
+                    </RegularTextNew>
+                    {/*<ExhibitDescription*/}
+                    {/*    description={text}*/}
+                    {/*    linkWords={links as IExhibitLink[]}*/}
+                    {/*    isModal={true}*/}
+                    {/*    innerStyle={styles.text}*/}
+                    {/*/>*/}
                 </BottomSheetView>
             </AppBottomSheetModal>
         </ExhibitModalContext.Provider>

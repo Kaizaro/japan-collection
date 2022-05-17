@@ -2,4 +2,6 @@ export enum EXHIBIT_WEAPON_SUBCATEGORY {
     WAKIZASHI = 'WAKIZASHI',
     KATANA = 'KATANA',
     TANTO = 'TANTO',
+    YARI = 'YARI',
+    NAGINATA = 'NAGINATA',
 }

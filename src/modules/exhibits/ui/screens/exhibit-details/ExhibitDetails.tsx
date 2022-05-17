@@ -40,14 +40,17 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                 bounces={false}
                 showsVerticalScrollIndicator={false}
                 contentInset={{bottom: scaleVertical(30)}}>
-                <HeaderText fontSize={48}>{exhibit.title}</HeaderText>
+                <HeaderText
+                    fontSize={
+                        48
+                    }>{`№${exhibit.exhibit_number} ${exhibit.title}`}</HeaderText>
                 <View style={styles.subtitle}>
                     <RegularText fontSize={24}>{exhibit.subtitle}</RegularText>
                 </View>
-                {exhibit.images && (
+                {exhibit.images?.gallery && (
                     <View style={styles.gallery}>
                         <Image
-                            source={exhibit.images[0]}
+                            source={exhibit.images.gallery[0]}
                             style={styles.image}
                             resizeMode={'contain'}
                         />
@@ -69,16 +72,27 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                         </RegularText>
                     </View>
                 </PressableComponent>
-                <ExhibitTime time={exhibit.time} innerStyle={styles.time} />
-                <ExhibitStatus
-                    exhibitStatuses={exhibit.status}
-                    innerStyle={styles.status}
-                />
-                <ExhibitLocation
-                    school={exhibit.school}
-                    location={exhibit.province}
-                    innerStyle={styles.location}
-                />
+                {exhibit.time && (
+                    <ExhibitTime time={exhibit.time} innerStyle={styles.time} />
+                )}
+                {exhibit.status && (
+                    <ExhibitStatus
+                        exhibitStatuses={exhibit.status}
+                        innerStyle={styles.status}
+                    />
+                )}
+                {exhibit.school && exhibit.province && (
+                    <ExhibitLocation
+                        school={exhibit.school}
+                        location={exhibit.province}
+                        innerStyle={styles.location}
+                    />
+                )}
+                {exhibit.track && (
+                    <View style={styles.player}>
+                        <ExhibitTrack track={exhibit.track} />
+                    </View>
+                )}
                 <ExhibitDescription
                     description={exhibit.description}
                     linkWords={exhibit.linkWords}
@@ -91,7 +105,7 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                     />
                 )}
             </ScrollView>
-            <ExhibitTrack />
+            {/*{exhibit.track && <ExhibitTrack track={exhibit.track} />}*/}
         </ComponentContainer>
     );
 };
