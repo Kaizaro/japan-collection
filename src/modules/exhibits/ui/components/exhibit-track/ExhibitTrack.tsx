@@ -29,7 +29,7 @@ const MOCK_TRACK = {
     duration: 30,
 };
 
-const ExhibitTrack: FC<IProps> = ({track}) => {
+const ExhibitTrack: FC<IProps> = ({track, innerStyle}) => {
     const [playerStatus, setPlayerStatus] = useState<State | 'buffering'>(
         'buffering',
     );
@@ -74,16 +74,19 @@ const ExhibitTrack: FC<IProps> = ({track}) => {
         await TrackPlayer.seekTo(currentPosition - 5);
     }, [getCurrentTrackPosition]);
 
-    const startTrack = useCallback(async () => {
-        console.log(LOG_TAG, 'startTrackCallback', track);
-        const state = await getPlayerState();
-        console.log(LOG_TAG, state);
-        if (state === State.Playing) {
-            await stopTrack();
-        }
-        await TrackPlayer.add(track);
-        await playTrack();
-    }, [getPlayerState, playTrack, stopTrack, track]);
+    const startTrack = useCallback(
+        async (isPlayNeeded = true) => {
+            console.log(LOG_TAG, 'startTrackCallback', track);
+            const state = await getPlayerState();
+            console.log(LOG_TAG, state);
+            if (state === State.Playing) {
+                await stopTrack();
+            }
+            await TrackPlayer.add(track);
+            isPlayNeeded && (await playTrack());
+        },
+        [getPlayerState, playTrack, stopTrack, track],
+    );
 
     const resetTrack = useCallback(async () => {
         await TrackPlayer.reset();
@@ -139,10 +142,13 @@ const ExhibitTrack: FC<IProps> = ({track}) => {
     }, [getPlayerState, handlePausedPlayer, handlePlayerError, pauseTrack]);
 
     useEffect(() => {
-        startTrack();
+        startTrack(false);
+        setTimeout(() => {
+            playTrack();
+        }, 2000);
 
         return () => stopTrack();
-    }, [startTrack, stopTrack]);
+    }, [playTrack, startTrack, stopTrack]);
 
     const PlayPauseButton = useMemo(
         () => (
@@ -158,7 +164,7 @@ const ExhibitTrack: FC<IProps> = ({track}) => {
     );
 
     return (
-        <View style={styles.playerContainer}>
+        <View style={{...styles.playerContainer, ...innerStyle}}>
             <PressableComponent onPress={playBack}>
                 <Image
                     source={audioBackIcon}

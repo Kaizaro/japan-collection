@@ -10,6 +10,7 @@ import {TRecord} from '@shared/types';
 import {DEFAULT_BOTTOM_INSET} from '@shared/constants/styles';
 import {APP_TEXT_COLORS} from '@shared/config/colors';
 
+import {ExhibitDescription} from '@src/modules/exhibits/ui/components/exhibit-description';
 import {IArticle} from '@src/modules/exhibits/entities/article';
 
 import {articleGoroNudoMasamuneStyles as styles} from './styles';
@@ -43,11 +44,16 @@ const ExhibitArticle: FC = () => {
                         </RegularText>
                     </View>
                 )}
-                <View style={styles.description}>
-                    <RegularText fontSize={18}>
-                        {article.description}
-                    </RegularText>
-                </View>
+                <ExhibitDescription
+                    description={article.description}
+                    linkWords={article.linkWords}
+                    innerStyle={styles.description}
+                />
+                {/*<View style={styles.description}>*/}
+                {/*    <RegularText fontSize={18}>*/}
+                {/*        {article.description}*/}
+                {/*    </RegularText>*/}
+                {/*</View>*/}
             </ScrollView>
         </ComponentContainer>
     );
