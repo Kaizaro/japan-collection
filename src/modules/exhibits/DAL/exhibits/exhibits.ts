@@ -93,10 +93,10 @@ export const EXHIBITS = [
                 route_id: ARTICLE_MODAL_IDS.SWORD_RATING_FUJISIRO,
                 text: '«Сайдзёсаку»',
             },
-            // {
-            //     route_id: 'legend_muramasa_masamune',
-            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
-            // },
+            {
+                route_id: ARTICLE_IDS.LEGEND_MURAMASA_MASAMUNE,
+                text: 'Легенда о противостоянии Мурамаса и Масамунэ',
+            },
         ],
         images: EXHIBIT_IMAGES.UNKNOWN,
         track: EXHIBIT_TRACKS.E1,
@@ -130,10 +130,10 @@ export const EXHIBITS = [
                 route_id: ARTICLE_MODAL_IDS.SWORD_RATING_FUJISIRO,
                 text: '«Сайдзёсаку»',
             },
-            // {
-            //     route_id: 'legend_muramasa_masamune',
-            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
-            // },
+            {
+                route_id: ARTICLE_IDS.LEGEND_MURAMASA_MASAMUNE,
+                text: 'Легенда о противостоянии Мурамаса и Масамунэ',
+            },
         ],
         images: EXHIBIT_IMAGES.E2,
         track: EXHIBIT_TRACKS.E2,
@@ -175,10 +175,10 @@ export const EXHIBITS = [
                 route_id: ARTICLE_MODAL_IDS.KOSIGATANA,
                 text: 'Косигатана',
             },
-            // {
-            //     route_id: 'legend_muramasa_masamune',
-            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
-            // },
+            {
+                route_id: ARTICLE_IDS.LEGEND_MURAMASA_MASAMUNE,
+                text: 'Легенда о противостоянии Мурамаса и Масамунэ',
+            },
         ],
         images: EXHIBIT_IMAGES.E3,
         track: EXHIBIT_TRACKS.E3,
@@ -207,14 +207,14 @@ export const EXHIBITS = [
                 route_id: ARTICLE_IDS.SENGO_MURAMASA_SCHOOL,
                 text: 'Школа Сэнго Мурамаса',
             },
-            // {
-            //     route_id: 'legend_muramasa_masamune',
-            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
-            // },
-            // {
-            //     route_id: 'legend_about_demon_swords_tokugawa',
-            //     text: 'Легенда о демонических клинках и проклятии рода Токугава',
-            // },
+            {
+                route_id: ARTICLE_IDS.LEGEND_MURAMASA_MASAMUNE,
+                text: 'Легенда о противостоянии Мурамаса и Масамунэ',
+            },
+            {
+                route_id: ARTICLE_IDS.LEGEND_DEMON_SWORD_CLAN_TOKUGAWA,
+                text: 'Легенда о демонических клинках и проклятии рода Токугава',
+            },
         ],
         images: EXHIBIT_IMAGES.E4,
         track: EXHIBIT_TRACKS.E4,
@@ -238,19 +238,19 @@ export const EXHIBITS = [
         ],
         description:
             'Малый меч, выкованный кузнецом Второго поколения кузнецов Мурамаса. Сын основателя школы Сэнго был не менее талантливым, чем его отец. Качество его работы оценивается также высоко. Данный клинок, учитывая длину, был изготовлен для ношения при доспехах, в качестве вспомогательного меча «косигатана».',
-        linkWords: [
-            // {
-            //     route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
-            //     text: 'Горо Масамунэ',
-            // },
-            // {
-            //     route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
-            //     text: 'Вакидзаси',
-            // },
-            // {
-            //     route_id: 'legend_muramasa_masamune',
-            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
-            // },
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_IDS.SENGO_MURAMASA_SCHOOL,
+                text: 'Школа Сэнго Мурамаса',
+            },
+            {
+                route_id: ARTICLE_IDS.LEGEND_MURAMASA_MASAMUNE,
+                text: 'Легенда о противостоянии Мурамаса и Масамунэ',
+            },
+            {
+                route_id: ARTICLE_IDS.LEGEND_DEMON_SWORD_CLAN_TOKUGAWA,
+                text: 'Легенда о демонических клинках и проклятии рода Токугава',
+            },
         ],
         images: EXHIBIT_IMAGES.E5,
         track: EXHIBIT_TRACKS.E5,
@@ -273,20 +273,22 @@ export const EXHIBITS = [
             },
         ],
         description:
-            'Танто, короткий клинок, выкованный кузнецом Второго поколения кузнецов Мурамаса. Сын основателя школы Сэнго был не менее талантливым, чем его отец. Качество его работы оценивается также высоко. Танто традиции Мурамаса отличаются, от большинства танто того времени чуть большей длиной. Прекрасный образец танто эпохи Кото (ссылка «классификация мечей по временным периодам»).',
+            'Танто, короткий клинок, выкованный кузнецом Второго поколения кузнецов Мурамаса. Сын основателя школы Сэнго был не менее талантливым, чем его отец. Качество его работы оценивается также высоко. Танто традиции Мурамаса отличаются, от большинства танто того времени чуть большей длиной. Прекрасный образец танто эпохи Кото.',
         linkWords: [
-            // {
-            //     route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
-            //     text: 'Горо Масамунэ',
-            // },
-            // {
-            //     route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
-            //     text: 'Вакидзаси',
-            // },
-            // {
-            //     route_id: 'legend_muramasa_masamune',
-            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
-            // },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_PERIOD,
+                text: 'Кото.',
+            },
+        ],
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_IDS.LEGEND_MURAMASA_MASAMUNE,
+                text: 'Легенда о противостоянии Мурамаса и Масамунэ',
+            },
+            {
+                route_id: ARTICLE_IDS.LEGEND_DEMON_SWORD_CLAN_TOKUGAWA,
+                text: 'Легенда о демонических клинках и проклятии рода Токугава',
+            },
         ],
         images: EXHIBIT_IMAGES.E6,
         track: EXHIBIT_TRACKS.E6,
@@ -310,19 +312,19 @@ export const EXHIBITS = [
         ],
         description:
             '«Демоническая» катана великого Сэнго, основателя школы «Сэнго Мурамаса». Редчайший и легендарный предмет. Мечей «первого» Мурамасы осталось очень немного, это очень коллекционно редкий предмет. Поражает совершенством формы и удивительным балансом. При этом имеет очень скромный и гармоничный вид, характерный для школы Мурамаса, что выдаёт в нём настоящий боевой меч.',
-        linkWords: [
-            // {
-            //     route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
-            //     text: 'Горо Масамунэ',
-            // },
-            // {
-            //     route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
-            //     text: 'Вакидзаси',
-            // },
-            // {
-            //     route_id: 'legend_muramasa_masamune',
-            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
-            // },
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_IDS.SENGO_MURAMASA_SCHOOL,
+                text: 'Школа Сэнго Мурамаса',
+            },
+            {
+                route_id: ARTICLE_IDS.LEGEND_MURAMASA_MASAMUNE,
+                text: 'Легенда о противостоянии Мурамаса и Масамунэ',
+            },
+            {
+                route_id: ARTICLE_IDS.LEGEND_DEMON_SWORD_CLAN_TOKUGAWA,
+                text: 'Легенда о демонических клинках и проклятии рода Токугава',
+            },
         ],
         images: EXHIBIT_IMAGES.E7,
         track: EXHIBIT_TRACKS.E7,
@@ -346,19 +348,19 @@ export const EXHIBITS = [
         ],
         description:
             'Искусное произведение великого Сэнго, основателя школы «Сэнго Мурамаса». Очень редкий предмет. Мечей «первого» Мурамасы осталось очень немного. Очень многие знатные самураи мечтали владеть подобной вещью.',
-        linkWords: [
-            // {
-            //     route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
-            //     text: 'Горо Масамунэ',
-            // },
-            // {
-            //     route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
-            //     text: 'Вакидзаси',
-            // },
-            // {
-            //     route_id: 'legend_muramasa_masamune',
-            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
-            // },
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_IDS.SENGO_MURAMASA_SCHOOL,
+                text: 'Школа Сэнго Мурамаса',
+            },
+            {
+                route_id: ARTICLE_IDS.LEGEND_MURAMASA_MASAMUNE,
+                text: 'Легенда о противостоянии Мурамаса и Масамунэ',
+            },
+            {
+                route_id: ARTICLE_IDS.LEGEND_DEMON_SWORD_CLAN_TOKUGAWA,
+                text: 'Легенда о демонических клинках и проклятии рода Токугава',
+            },
         ],
         images: EXHIBIT_IMAGES.E8,
         track: EXHIBIT_TRACKS.E8,
@@ -382,19 +384,15 @@ export const EXHIBITS = [
         ],
         description:
             'Клинок лучшего ученика и сына великого Масамунэ. Многие эксперты ставят Садамунэ на один уровень со своим отцом. Лезвие имеет хорошую форму, без резких изгибов, достойное продолжение традиции школы Сосю, представителем которой он являлся. Подлинность клинка подтверждается заключением Хонъами Нарисигэ из уважаемой старинной семьи экспертов по мечам.',
-        linkWords: [
-            // {
-            //     route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
-            //     text: 'Горо Масамунэ',
-            // },
-            // {
-            //     route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
-            //     text: 'Вакидзаси',
-            // },
-            // {
-            //     route_id: 'legend_muramasa_masamune',
-            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
-            // },
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_IDS.HIKOSIRO_SADAMUNE,
+                text: 'Хикосиро Садамунэ',
+            },
+            {
+                route_id: ARTICLE_IDS.LEGEND_SADAMUNE,
+                text: 'Легенда о Садамунэ',
+            },
         ],
         images: EXHIBIT_IMAGES.E9,
         track: EXHIBIT_TRACKS.E9,
@@ -417,20 +415,16 @@ export const EXHIBITS = [
             },
         ],
         description:
-            'Клинок лучшего ученика и сына великого Масамунэ. Многие эксперты ставят Садамунэ на один уровень со своим отцом. Клинок большого размера, с сечением «хира-дзукури» (ссылка-модалка - «формы клинков»), такие обычно изготавливали для подношения богам в храм.',
-        linkWords: [
-            // {
-            //     route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
-            //     text: 'Горо Масамунэ',
-            // },
-            // {
-            //     route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
-            //     text: 'Вакидзаси',
-            // },
-            // {
-            //     route_id: 'legend_muramasa_masamune',
-            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
-            // },
+            'Клинок лучшего ученика и сына великого Масамунэ. Многие эксперты ставят Садамунэ на один уровень со своим отцом. Клинок большого размера, с сечением «хира-дзукури», такие обычно изготавливали для подношения богам в храм.',
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_IDS.HIKOSIRO_SADAMUNE,
+                text: 'Хикосиро Садамунэ',
+            },
+            {
+                route_id: ARTICLE_IDS.LEGEND_SADAMUNE,
+                text: 'Легенда о Садамунэ',
+            },
         ],
         images: EXHIBIT_IMAGES.E10,
         track: EXHIBIT_TRACKS.E10,
@@ -454,20 +448,6 @@ export const EXHIBITS = [
         ],
         description:
             'Хиромаса был известным мастером в провинции Сетцу, в начале периода Эдо. Его клинки были довольно хорошего качества, а благодаря прекрасным режущим свойствам попали в рейтинговый список остроты «вадзамоно» (ссылка-модалка). Клинок облачён в великолепно сохранившуюся оправу для ношения при доспехах «итомаки-но-тати» (ссылка-модалка «тати»).',
-        linkWords: [
-            // {
-            //     route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
-            //     text: 'Горо Масамунэ',
-            // },
-            // {
-            //     route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
-            //     text: 'Вакидзаси',
-            // },
-            // {
-            //     route_id: 'legend_muramasa_masamune',
-            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
-            // },
-        ],
         images: EXHIBIT_IMAGES.E11,
         track: EXHIBIT_TRACKS.E11,
     },
@@ -484,16 +464,9 @@ export const EXHIBITS = [
         time: 'Муромати, XVI век',
         description:
             'Кузнечная школа Осафунэ в провинции Бидзэн – это крупнейшая и одна из самых уважаемых школ Японии, существовавшая довольно давно. Не будет большим преувеличением сказать, что около трети всех шедевров раннего времени были созданы в провинции Бидзэн при активном участии мастеров школы Осафунэ. Традиция Бидзэн потерпела серьезную неудачу, когда разлив реки Ёсии почти полностью уничтожил деревни Осафунэ и Хатакэда в 1591 году.',
-        dictionaryLinks: [
-            {
-                route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
-                text: 'Вакидзаси',
-            },
-        ],
         images: EXHIBIT_IMAGES.E12,
         track: EXHIBIT_TRACKS.E12,
     },
-    // From here links are correct (except TODO)
     {
         exhibit_number: 13,
         category: ExhibitCategory.BLADE_WEAPON,
@@ -724,17 +697,6 @@ export const EXHIBITS = [
         ],
         description:
             'Школа Михара зародилась в провинции Бинго примерно в эпоху Сётю, 1324–1326 годы, и просуществовала до XVII века.',
-        dictionaryLinks: [
-            {
-                route_id: ARTICLE_MODAL_IDS.TANTO,
-                text: 'Танто',
-            },
-            // TODO need to add some modals
-            // {
-            //     route_id: ARTICLE_MODAL_IDS,
-            //     text: 'Классификация мечей по временным периодам',
-            // },
-        ],
         images: EXHIBIT_IMAGES.E19,
         track: EXHIBIT_TRACKS.E19,
     },
@@ -750,12 +712,6 @@ export const EXHIBITS = [
         time: 'Эпоха Мэйдзи, вторая половина XIX в.',
         description:
             'После революции Мэйдзи в 1868-ом году, Япония открыла границы для торговли с миром. Из Европы стали приезжать купцы, привозить множество новых европейских товаров. В свою очередь, в Европу они увозили японские товары и предметы искусства. Европейцы не понимали тонкостей ценности тех или иных предметов и мечей. Они покупали то что на их взгляд было красочным и красивым. Подобные танто с красивой резьбой весьма были привлекательны, и японцы с охотностью для них стали изготавливать множество таких танто.',
-        dictionaryLinks: [
-            {
-                route_id: ARTICLE_MODAL_IDS.TANTO,
-                text: 'Танто',
-            },
-        ],
         images: EXHIBIT_IMAGES.E20,
         track: EXHIBIT_TRACKS.E20,
     },
@@ -809,13 +765,6 @@ export const EXHIBITS = [
         time: '1944 – 1945 гг.',
         description:
             'Кинжал вручался командирами подразделений пилотам - смертникам после окончания обучения в знак уважения к их жертве.',
-        dictionaryLinks: [
-            // TODO need to add kaiken modal
-            {
-                route_id: ARTICLE_MODAL_IDS.TANTO,
-                text: 'Кайкэн',
-            },
-        ],
         images: EXHIBIT_IMAGES.E22,
         track: EXHIBIT_TRACKS.E22,
     },
@@ -1244,19 +1193,20 @@ export const EXHIBITS = [
         track: EXHIBIT_TRACKS.E46,
     },
     {
-        // TODO need to check 47 track
+        // TODO need to check and add 47 track
         exhibit_number: 47,
         category: ExhibitCategory.CULTURE,
         // subcategory: EXHIBIT_WEAPON_SUBCATEGORY.WAKIZASHI,
         title: 'Скульптура «Тоётоми Хидэёси»',
         blacksmith_name: 'Скульптор В.Е.Маслов, 2012 г.',
-        images: EXHIBIT_IMAGES.E47,
         dictionaryLinks: [
             {
                 route_id: ARTICLE_IDS.TOETOMI_HIDEOSI,
                 text: 'Тоётоми Хидэёси',
             },
         ],
+        // track: EXHIBIT_TRACKS.E47,
+        images: EXHIBIT_IMAGES.E47,
     },
     {
         exhibit_number: 48,
@@ -1306,12 +1256,6 @@ export const EXHIBITS = [
         time: 'Муромати, XVII век',
         description:
             'Несмотря на то, принято считать, что традиция Мурамаса это всего несколько поколений, однако в этой школе было много учеников и кузнецов. И характерные признаки школы можно встретить вплоть до новейших времён. Данный клинок представляет из себя работу ранних продолжателей, и был выкован, в XVII веке, чуть позднее первых трёх поколений, и относится к периоду ранних синто.',
-        // TODO need to check SINTO article
-        // linkWords: [
-        //     {
-        //         route_id: ARTICLE_IDS
-        //     }
-        // ],
         dictionaryLinks: [
             {
                 route_id: ARTICLE_IDS.SENGO_MURAMASA_SCHOOL,
