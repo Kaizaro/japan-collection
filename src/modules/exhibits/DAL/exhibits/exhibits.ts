@@ -34,7 +34,7 @@ export const EXHIBITS = [
             },
         ],
         description:
-            'Уникальнейший клинок одного из самых выдающихся кузнецов Японии, Горо Масамунэ (ссылка-кнопка), представителя школы Сосю в провинции Сагами. Выкован в эпоху Камакура в эру Каряку (1326-1329 гг.), и относится к мечам периода Кото (ссылка-модалка «классификация мечей по временным периодам») («старые мечи»). Клинок шире обычного - «дамбира», по классификации длины - «вакидзаси» (ссылка-модалка). По форме относится типу «о-танто», и имеет однолезвийную форму, именуемую «хира-дзукури» (ссылка-модалка – «формы клинков»). На лезвии вырезано изображение самого почитаемого самураями буддийского божества Фудо-мёо. Меч обладает статусом «Мэйбуцу» (меч с именем), имеет собственное имя «Сакаи Масамунэ», поскольку хранился в семье князей Сакаи (ссылка-статья). Это подтверждено экспертизой одного из самых авторитетных экспертов Японии, доктором Фукунага Суйкэном в 1989 году. Признан клинком наивысшего качества «Сайдзёсаку» (ссылка-модалка «Рейтинги мечей по Фудзисиро»).',
+            'Уникальнейший клинок одного из самых выдающихся кузнецов Японии, Горо Масамунэ, представителя школы Сосю в провинции Сагами. Выкован в эпоху Камакура в эру Каряку (1326-1329 гг.), и относится к мечам периода Кото («старые мечи»). Клинок шире обычного - «дамбира», по классификации длины - «вакидзаси». По форме относится типу «о-танто», и имеет однолезвийную форму, именуемую «хира-дзукури» (ссылка-модалка – «формы клинков»). На лезвии вырезано изображение самого почитаемого самураями буддийского божества Фудо-мёо. Меч обладает статусом «Мэйбуцу» (меч с именем), имеет собственное имя «Сакаи Масамунэ», поскольку хранился в семье князей Сакаи (ссылка-статья). Это подтверждено экспертизой одного из самых авторитетных экспертов Японии, доктором Фукунага Суйкэном в 1989 году. Признан клинком наивысшего качества «Сайдзёсаку» (ссылка-модалка «Рейтинги мечей по Фудзисиро»).',
         buttonLink: {
             route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
         },
@@ -55,18 +55,18 @@ export const EXHIBITS = [
                 route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
                 text: '«вакидзаси»',
             },
-            // {
-            //     route_id: ARTICLE_MODAL_IDS,
-            //     text: '«хира-дзукури»',
-            // },
+            {
+                route_id: ARTICLE_MODAL_IDS.BLADE_SHAPES,
+                text: '«хира-дзукури»',
+            },
             {
                 route_id: ARTICLE_IDS.SAKAI_CLAN,
                 text: 'Сакаи',
             },
-            // {
-            //     route_id: ARTICLE_MODAL_IDS,
-            //     text: '«Сайдзёсаку»',
-            // },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_FUJISIRO,
+                text: '«Сайдзёсаку»',
+            },
         ],
         dictionaryLinks: [
             {
@@ -81,18 +81,18 @@ export const EXHIBITS = [
                 route_id: ARTICLE_MODAL_IDS.WAKIZASHI,
                 text: 'Вакидзаси',
             },
-            // {
-            //     route_id: ARTICLE_MODAL_IDS,
-            //     text: '«хира-дзукури»',
-            // },
+            {
+                route_id: ARTICLE_MODAL_IDS.BLADE_SHAPES,
+                text: '«хира-дзукури»',
+            },
             {
                 route_id: ARTICLE_IDS.SAKAI_CLAN,
                 text: 'Сакаи',
             },
-            // {
-            //     route_id: ARTICLE_MODAL_IDS,
-            //     text: '«Сайдзёсаку»',
-            // },
+            {
+                route_id: ARTICLE_MODAL_IDS.SWORD_RATING_FUJISIRO,
+                text: '«Сайдзёсаку»',
+            },
             // {
             //     route_id: 'legend_muramasa_masamune',
             //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
@@ -126,18 +126,6 @@ export const EXHIBITS = [
             route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
         },
         dictionaryLinks: [
-            {
-                route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
-                text: 'Горо',
-            },
-            {
-                route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
-                text: 'Масамунэ',
-            },
-            {
-                route_id: ARTICLE_MODAL_IDS.KATANA,
-                text: 'Катана',
-            },
             {
                 route_id: ARTICLE_MODAL_IDS.SWORD_RATING_FUJISIRO,
                 text: '«Сайдзёсаку»',
@@ -176,17 +164,17 @@ export const EXHIBITS = [
         },
         dictionaryLinks: [
             {
-                route_id: ARTICLE_IDS.SENGO_MARAMASA_SCHOOL,
-                text: 'ШКОЛА СЭНГО МУРАМАСА',
+                route_id: ARTICLE_IDS.SENGO_MURAMASA_SCHOOL,
+                text: 'Школа Сэнго Мурамаса',
             },
             {
                 route_id: ARTICLE_IDS.GORO_NUDO_MASAMUNE,
                 text: 'Катана',
             },
-            // {
-            //     route_id: ARTICLE_MODAL_IDS,
-            //     text: 'Косигатана',
-            // },
+            {
+                route_id: ARTICLE_MODAL_IDS.KOSIGATANA,
+                text: 'Косигатана',
+            },
             // {
             //     route_id: 'legend_muramasa_masamune',
             //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
@@ -214,6 +202,20 @@ export const EXHIBITS = [
         ],
         description:
             'Меч, выкованный кузнецом Второго поколения кузнецов Мурамаса. Сын основателя школы Сэнго был не менее талантливым, чем его отец. Качество его работы оценивается также высоко. Поскольку легенды о мечах Мурамаса имеют скорее коллективный образ, мы не можем точно сказать какие именно из мечей самые зловещие.',
+        dictionaryLinks: [
+            {
+                route_id: ARTICLE_IDS.SENGO_MURAMASA_SCHOOL,
+                text: 'Школа Сэнго Мурамаса',
+            },
+            // {
+            //     route_id: 'legend_muramasa_masamune',
+            //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
+            // },
+            // {
+            //     route_id: 'legend_about_demon_swords_tokugawa',
+            //     text: 'Легенда о демонических клинках и проклятии рода Токугава',
+            // },
+        ],
         images: EXHIBIT_IMAGES.E4,
         track: EXHIBIT_TRACKS.E4,
     },
@@ -1312,7 +1314,7 @@ export const EXHIBITS = [
         // ],
         dictionaryLinks: [
             {
-                route_id: ARTICLE_IDS.SENGO_MARAMASA_SCHOOL,
+                route_id: ARTICLE_IDS.SENGO_MURAMASA_SCHOOL,
                 text: 'Школа Сэнго Мурамаса',
             },
         ],
