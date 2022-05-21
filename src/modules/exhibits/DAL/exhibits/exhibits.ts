@@ -466,7 +466,7 @@ export const EXHIBITS = [
             //     text: 'Легенда О противостоянии Мурамаса и Масамунэ',
             // },
         ],
-        images: EXHIBIT_IMAGES.UNKNOWN,
+        images: EXHIBIT_IMAGES.E11,
         track: EXHIBIT_TRACKS.E11,
     },
     {
@@ -488,7 +488,7 @@ export const EXHIBITS = [
                 text: 'Вакидзаси',
             },
         ],
-        images: EXHIBIT_IMAGES.UNKNOWN,
+        images: EXHIBIT_IMAGES.E12,
         track: EXHIBIT_TRACKS.E12,
     },
     // From here links are correct (except TODO)
@@ -591,7 +591,7 @@ export const EXHIBITS = [
                 text: 'Рейтинги мечей по Фудзисиро',
             },
         ],
-        images: EXHIBIT_IMAGES.UNKNOWN,
+        images: EXHIBIT_IMAGES.E15,
         track: EXHIBIT_TRACKS.E15,
     },
     {
@@ -679,7 +679,7 @@ export const EXHIBITS = [
                 text: 'Классификация мечей по временным периодам',
             },
         ],
-        images: EXHIBIT_IMAGES.UNKNOWN,
+        images: EXHIBIT_IMAGES.E17,
         track: EXHIBIT_TRACKS.E17,
     },
     {
@@ -700,7 +700,7 @@ export const EXHIBITS = [
                 text: 'Катана',
             },
         ],
-        images: EXHIBIT_IMAGES.UNKNOWN,
+        images: EXHIBIT_IMAGES.E18,
         track: EXHIBIT_TRACKS.E18,
     },
     {
@@ -733,7 +733,7 @@ export const EXHIBITS = [
             //     text: 'Классификация мечей по временным периодам',
             // },
         ],
-        images: EXHIBIT_IMAGES.UNKNOWN,
+        images: EXHIBIT_IMAGES.E19,
         track: EXHIBIT_TRACKS.E19,
     },
     {
@@ -754,7 +754,7 @@ export const EXHIBITS = [
                 text: 'Танто',
             },
         ],
-        images: EXHIBIT_IMAGES.UNKNOWN,
+        images: EXHIBIT_IMAGES.E20,
         track: EXHIBIT_TRACKS.E20,
     },
     {
@@ -792,7 +792,7 @@ export const EXHIBITS = [
                 text: 'Сохэй',
             },
         ],
-        images: EXHIBIT_IMAGES.UNKNOWN,
+        images: EXHIBIT_IMAGES.E21,
         track: EXHIBIT_TRACKS.E21,
     },
     {
@@ -1365,7 +1365,7 @@ export const EXHIBITS = [
         ],
         description:
             'Имя Кагэфую не присутствует среди кузнецов, потому что это был известный полководец Асакура Кагэфую, увлекавшийся ковкой клинков. Такие клинки, выкованные войнами называются «Буси-ути». Кагэфую сначала занимал пост военного судьи в провинции Этидзэн, после, участвовал в войнах за сёгунов Асикага. В феврале 1490 года он работал над пересадкой сосен из Императорского дворца Сэнто в Хигасияма для Ёсимасы Асикага.',
-        images: EXHIBIT_IMAGES.UNKNOWN,
+        images: EXHIBIT_IMAGES.E53,
         track: EXHIBIT_TRACKS.E53,
     },
     {
@@ -1399,7 +1399,7 @@ export const EXHIBITS = [
                 text: 'Масамунэ',
             },
         ],
-        images: EXHIBIT_IMAGES.UNKNOWN,
+        images: EXHIBIT_IMAGES.E54,
         track: EXHIBIT_TRACKS.E54,
     },
     {

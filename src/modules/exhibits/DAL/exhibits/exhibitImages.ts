@@ -55,6 +55,11 @@ import i56_0 from '../../../../shared/assets/graphics/images/exhibits/56/0.png';
 import i55_2 from '../../../../shared/assets/graphics/images/exhibits/55/2.png';
 import i55_1 from '../../../../shared/assets/graphics/images/exhibits/55/1.png';
 import i55_0 from '../../../../shared/assets/graphics/images/exhibits/55/0.png';
+import i54_2 from '../../../../shared/assets/graphics/images/exhibits/54/2.png';
+import i54_1 from '../../../../shared/assets/graphics/images/exhibits/54/1.png';
+import i54_0 from '../../../../shared/assets/graphics/images/exhibits/54/0.png';
+import i53_1 from '../../../../shared/assets/graphics/images/exhibits/53/1.png';
+import i53_0 from '../../../../shared/assets/graphics/images/exhibits/53/0.png';
 import i52_2 from '../../../../shared/assets/graphics/images/exhibits/52/2.png';
 import i52_1 from '../../../../shared/assets/graphics/images/exhibits/52/1.png';
 import i52_0 from '../../../../shared/assets/graphics/images/exhibits/52/0.png';
@@ -142,15 +147,39 @@ import i23_0 from '../../../../shared/assets/graphics/images/exhibits/23/0.png';
 import i22_2 from '../../../../shared/assets/graphics/images/exhibits/22/2.png';
 import i22_1 from '../../../../shared/assets/graphics/images/exhibits/22/1.png';
 import i22_0 from '../../../../shared/assets/graphics/images/exhibits/22/0.png';
+import i21_2 from '../../../../shared/assets/graphics/images/exhibits/21/2.png';
+import i21_1 from '../../../../shared/assets/graphics/images/exhibits/21/1.png';
+import i21_0 from '../../../../shared/assets/graphics/images/exhibits/21/0.png';
+import i20_2 from '../../../../shared/assets/graphics/images/exhibits/20/2.png';
+import i20_1 from '../../../../shared/assets/graphics/images/exhibits/20/1.png';
+import i20_0 from '../../../../shared/assets/graphics/images/exhibits/20/0.png';
 import i2_2 from '../../../../shared/assets/graphics/images/exhibits/2/2.png';
 import i2_1 from '../../../../shared/assets/graphics/images/exhibits/2/1.png';
 import i2_0 from '../../../../shared/assets/graphics/images/exhibits/2/0.png';
+import i19_2 from '../../../../shared/assets/graphics/images/exhibits/19/2.png';
+import i19_1 from '../../../../shared/assets/graphics/images/exhibits/19/1.png';
+import i19_0 from '../../../../shared/assets/graphics/images/exhibits/19/0.png';
+import i18_2 from '../../../../shared/assets/graphics/images/exhibits/18/2.png';
+import i18_1 from '../../../../shared/assets/graphics/images/exhibits/18/1.png';
+import i18_0 from '../../../../shared/assets/graphics/images/exhibits/18/0.png';
+import i17_2 from '../../../../shared/assets/graphics/images/exhibits/17/2.png';
+import i17_1 from '../../../../shared/assets/graphics/images/exhibits/17/1.png';
+import i17_0 from '../../../../shared/assets/graphics/images/exhibits/17/0.png';
 import i16_2 from '../../../../shared/assets/graphics/images/exhibits/16/2.png';
 import i16_1 from '../../../../shared/assets/graphics/images/exhibits/16/1.png';
 import i16_0 from '../../../../shared/assets/graphics/images/exhibits/16/0.png';
+import i15_2 from '../../../../shared/assets/graphics/images/exhibits/15/2.png';
+import i15_1 from '../../../../shared/assets/graphics/images/exhibits/15/1.png';
+import i15_0 from '../../../../shared/assets/graphics/images/exhibits/15/0.png';
 import i13_2 from '../../../../shared/assets/graphics/images/exhibits/13,14/2.png';
 import i13_1 from '../../../../shared/assets/graphics/images/exhibits/13,14/1.png';
 import i13_0 from '../../../../shared/assets/graphics/images/exhibits/13,14/0.png';
+import i12_2 from '../../../../shared/assets/graphics/images/exhibits/12/2.png';
+import i12_1 from '../../../../shared/assets/graphics/images/exhibits/12/1.png';
+import i12_0 from '../../../../shared/assets/graphics/images/exhibits/12/0.png';
+import i11_2 from '../../../../shared/assets/graphics/images/exhibits/11/2.png';
+import i11_1 from '../../../../shared/assets/graphics/images/exhibits/11/1.png';
+import i11_0 from '../../../../shared/assets/graphics/images/exhibits/11/0.png';
 import i10_1 from '../../../../shared/assets/graphics/images/exhibits/10/1.png';
 import i10_0 from '../../../../shared/assets/graphics/images/exhibits/10/0.png';
 
@@ -191,6 +220,14 @@ export const EXHIBIT_IMAGES = {
         card: i10_0,
         gallery: [i10_1],
     },
+    E11: {
+        card: i11_0,
+        gallery: [i11_1, i11_2],
+    },
+    E12: {
+        card: i12_0,
+        gallery: [i12_1, i12_2],
+    },
     E13: {
         card: i13_0,
         gallery: [i13_1, i13_2],
@@ -199,9 +236,33 @@ export const EXHIBIT_IMAGES = {
         card: i13_0,
         gallery: [i13_1, i13_2],
     },
+    E15: {
+        card: i15_0,
+        gallery: [i15_1, i15_2],
+    },
     E16: {
         card: i16_0,
         gallery: [i16_1, i16_2],
+    },
+    E17: {
+        card: i17_0,
+        gallery: [i17_1, i17_2],
+    },
+    E18: {
+        card: i18_0,
+        gallery: [i18_1, i18_2],
+    },
+    E19: {
+        card: i19_0,
+        gallery: [i19_1, i19_2],
+    },
+    E20: {
+        card: i20_0,
+        gallery: [i20_1, i20_2],
+    },
+    E21: {
+        card: i21_0,
+        gallery: [i21_1, i21_2],
     },
     E22: {
         card: i22_0,
@@ -289,6 +350,14 @@ export const EXHIBIT_IMAGES = {
     E52: {
         card: i52_0,
         gallery: [i52_1, i52_2],
+    },
+    E53: {
+        card: i53_0,
+        gallery: [i53_1],
+    },
+    E54: {
+        card: i54_0,
+        gallery: [i54_1, i54_2],
     },
     E55: {
         card: i55_0,
