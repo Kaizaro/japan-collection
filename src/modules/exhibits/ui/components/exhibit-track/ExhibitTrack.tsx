@@ -29,7 +29,7 @@ const MOCK_TRACK = {
     duration: 30,
 };
 
-const ExhibitTrack: FC<IProps> = ({track}) => {
+const ExhibitTrack: FC<IProps> = ({track, innerStyle}) => {
     const [playerStatus, setPlayerStatus] = useState<State | 'buffering'>(
         'buffering',
     );
@@ -158,7 +158,7 @@ const ExhibitTrack: FC<IProps> = ({track}) => {
     );
 
     return (
-        <View style={styles.playerContainer}>
+        <View style={{...styles.playerContainer, ...innerStyle}}>
             <PressableComponent onPress={playBack}>
                 <Image
                     source={audioBackIcon}
