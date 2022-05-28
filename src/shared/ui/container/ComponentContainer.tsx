@@ -1,15 +1,33 @@
-import React, {FC} from 'react';
+import React, {FC, useMemo} from 'react';
 
 import {View} from 'react-native';
 
+import {
+    IPaddingContainer,
+    PaddingContainer,
+} from '@shared/ui/container/PaddingContainer';
 import {IDefaultFCProps} from '@shared/types';
 
-import {componentContainerStyles} from './styles';
+interface IProps extends IDefaultFCProps, IPaddingContainer {
+    isHorizontalPaddingEnabled?: boolean;
+}
 
-const ComponentContainer: FC<IDefaultFCProps> = ({children, innerStyle}) => (
-    <View style={{...componentContainerStyles.container, ...innerStyle}}>
-        {children}
-    </View>
-);
+const ComponentContainer: FC<IProps> = ({
+    isHorizontalPaddingEnabled = true,
+    children,
+    innerStyle,
+}) => {
+    const Component = useMemo(
+        () =>
+            isHorizontalPaddingEnabled ? (
+                <PaddingContainer>{children}</PaddingContainer>
+            ) : (
+                children
+            ),
+        [children, isHorizontalPaddingEnabled],
+    );
+
+    return <View style={innerStyle}>{Component}</View>;
+};
 
 export {ComponentContainer};

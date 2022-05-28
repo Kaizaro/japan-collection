@@ -1,6 +1,6 @@
 import React, {FC, useCallback} from 'react';
 
-import {Image} from 'react-native';
+import {Image, useWindowDimensions} from 'react-native';
 
 import Carousel from 'react-native-reanimated-carousel';
 
@@ -13,6 +13,8 @@ interface IProps extends IDefaultFCProps {
 }
 
 const ExhibitCarousel: FC<IProps> = ({images}) => {
+    const {width} = useWindowDimensions();
+
     const renderItem = useCallback(
         ({item}) => (
             <Image source={item} style={styles.image} resizeMode={'contain'} />
@@ -22,7 +24,7 @@ const ExhibitCarousel: FC<IProps> = ({images}) => {
 
     return (
         <Carousel
-            width={styles.image.width}
+            width={width}
             height={styles.image.height}
             data={images}
             renderItem={renderItem}
