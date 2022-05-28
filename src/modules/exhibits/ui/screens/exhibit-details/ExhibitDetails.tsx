@@ -22,6 +22,7 @@ import {IExhibit} from '@src/modules/exhibits/entities';
 import BACKGROUND_IMAGE from '../../../../../shared/assets/graphics/images/dragon.png';
 
 import {exhibitDetailsStyles as styles} from './styles';
+import {ExhibitCarousel} from "@src/modules/exhibits/ui/components/exhibit-carousel";
 
 const ExhibitDetails: FC<IDefaultFCProps> = () => {
     const {exhibit} = useRoute().params as TRecord<IExhibit>;
@@ -49,11 +50,7 @@ const ExhibitDetails: FC<IDefaultFCProps> = () => {
                 </View>
                 {exhibit.images?.gallery && (
                     <View style={styles.gallery}>
-                        <Image
-                            source={exhibit.images.gallery[0]}
-                            style={styles.image}
-                            resizeMode={'contain'}
-                        />
+                        <ExhibitCarousel images={exhibit.images.gallery} />
                     </View>
                 )}
                 <PressableComponent

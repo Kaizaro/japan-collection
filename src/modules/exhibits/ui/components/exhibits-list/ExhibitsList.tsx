@@ -2,6 +2,8 @@ import React, {FC, useCallback} from 'react';
 
 import {FlatList, View} from 'react-native';
 
+import Carousel from 'react-native-reanimated-carousel';
+
 import {scaleVertical} from '@shared/utils/scale';
 import {DEFAULT_SCROLL_VIEW_INSET} from '@shared/constants/styles';
 
