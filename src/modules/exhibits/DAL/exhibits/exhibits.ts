@@ -98,7 +98,7 @@ export const EXHIBITS = [
                 text: 'Легенда о противостоянии Мурамаса и Масамунэ',
             },
         ],
-        images: EXHIBIT_IMAGES.UNKNOWN,
+        images: EXHIBIT_IMAGES.E1,
         track: EXHIBIT_TRACKS.E1,
     },
     {

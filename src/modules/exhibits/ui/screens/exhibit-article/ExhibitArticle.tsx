@@ -49,11 +49,6 @@ const ExhibitArticle: FC = () => {
                     linkWords={article.linkWords}
                     innerStyle={styles.description}
                 />
-                {/*<View style={styles.description}>*/}
-                {/*    <RegularText fontSize={18}>*/}
-                {/*        {article.description}*/}
-                {/*    </RegularText>*/}
-                {/*</View>*/}
             </ScrollView>
         </ComponentContainer>
     );

@@ -182,8 +182,14 @@ import i11_1 from '../../../../shared/assets/graphics/images/exhibits/11/1.png';
 import i11_0 from '../../../../shared/assets/graphics/images/exhibits/11/0.png';
 import i10_1 from '../../../../shared/assets/graphics/images/exhibits/10/1.png';
 import i10_0 from '../../../../shared/assets/graphics/images/exhibits/10/0.png';
+import i1_1 from '../../../../shared/assets/graphics/images/exhibits/1/1.png';
+import i1_0 from '../../../../shared/assets/graphics/images/exhibits/1/0.png';
 
 export const EXHIBIT_IMAGES = {
+    E1: {
+        card: i1_0,
+        gallery: [i1_1],
+    },
     E2: {
         card: i2_0,
         gallery: [i2_1, i2_2],
