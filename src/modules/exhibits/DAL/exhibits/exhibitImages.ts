@@ -105,6 +105,9 @@ import i38_1 from '../../../../shared/assets/graphics/images/exhibits/38/1.png';
 import i38_0 from '../../../../shared/assets/graphics/images/exhibits/38/0.png';
 import i37_1 from '../../../../shared/assets/graphics/images/exhibits/37/1.png';
 import i37_0 from '../../../../shared/assets/graphics/images/exhibits/37/0.png';
+import i36_2 from '../../../../shared/assets/graphics/images/exhibits/36/2.png';
+import i36_1 from '../../../../shared/assets/graphics/images/exhibits/36/1.png';
+import i36_0 from '../../../../shared/assets/graphics/images/exhibits/36/0.png';
 import i35_1 from '../../../../shared/assets/graphics/images/exhibits/35/1.png';
 import i35_0 from '../../../../shared/assets/graphics/images/exhibits/35/0.png';
 import i34_2 from '../../../../shared/assets/graphics/images/exhibits/34/2.png';
@@ -308,6 +311,7 @@ export const EXHIBIT_IMAGES = {
         gallery: [i34_1, i34_2],
     },
     E35: {card: i35_0, gallery: [i35_1]},
+    E36: {card: i36_0, gallery: [i36_1, i36_2]},
     E37: {card: i37_0, gallery: [i37_1]},
     E38: {card: i38_0, gallery: [i38_1]},
     E39: {card: i39_0, gallery: [i39_1]},
