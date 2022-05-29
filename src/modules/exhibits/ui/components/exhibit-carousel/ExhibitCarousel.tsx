@@ -28,6 +28,7 @@ const ExhibitCarousel: FC<IProps> = ({images}) => {
             height={styles.image.height}
             data={images}
             renderItem={renderItem}
+            loop={false}
         />
     );
 };
