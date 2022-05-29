@@ -1,4 +1,4 @@
-import React, {FC, useCallback} from 'react';
+import React, {FC, useCallback, useEffect, useMemo, useState} from 'react';
 
 import {FlatList, View} from 'react-native';
 
@@ -6,7 +6,10 @@ import Carousel from 'react-native-reanimated-carousel';
 
 import {scaleVertical} from '@shared/utils/scale';
 import {DEFAULT_SCROLL_VIEW_INSET} from '@shared/constants/styles';
+import {APP_TEXT_COLORS} from '@shared/config/colors';
 
+import {getSearchRowNumbers} from '@src/modules/exhibits/utils/getSearchRowNumbers';
+import {ExhibitSearch} from '@src/modules/exhibits/ui/components/exhibit-search';
 import {ExhibitFilterModal} from '@src/modules/exhibits/ui/components/exhibit-filter/modal';
 import {ExhibitCard} from '@src/modules/exhibits/ui/components/exhibit-card';
 
@@ -18,12 +21,22 @@ import {exhibitListStyles as styles} from './styles';
 const ExhibitsList: FC = () => {
     const {
         exhibitsList,
-        selectedCategory,
-        setSelectedCategory,
-        showFilterModal,
-        isFilterModalVisible,
-        closeFilterModal,
+        searchText,
+        setSearchText
     } = useExhibitsList();
+
+    const SearchRow = useMemo(
+        () => (
+            <ExhibitSearch
+                autoFocus={false}
+                value={searchText}
+                onChangeText={setSearchText}
+                placeholder={'Введите название или номер экспоната'}
+                placeholderTextColor={APP_TEXT_COLORS.MAIN_OPACITY}
+            />
+        ),
+        [searchText, setSearchText],
+    );
 
     const renderItemCard = useCallback((card, index) => {
         return <ExhibitCard key={`${card.title}_${index}`} card={card} />;
@@ -58,6 +71,7 @@ const ExhibitsList: FC = () => {
                 data={exhibitsList}
                 renderItem={renderItemRow}
                 ListEmptyComponent={renderEmptyList}
+                ListHeaderComponent={SearchRow}
                 showsVerticalScrollIndicator={false}
             />
             {/*<ExhibitFilterModal*/}

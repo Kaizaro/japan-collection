@@ -6,6 +6,9 @@ import {AppSplash} from '@app/splash';
 import {AppHeader} from '@app/navigation/header';
 
 import {APP_SCREEN_NAME} from '@shared/constants';
+import {APP_COLORS} from '@shared/config/colors';
+
+import {App} from './src/app/core';
 
 import {Exhibits} from '@src/modules/exhibits/ui/screens/exhibits';
 import {ExhibitDetails} from '@src/modules/exhibits/ui/screens/exhibit-details';
@@ -15,7 +18,11 @@ const Stack = createNativeStackNavigator();
 
 const AppStack = () => {
     return (
-        <Stack.Navigator initialRouteName={APP_SCREEN_NAME.Splash}>
+        <Stack.Navigator
+            initialRouteName={APP_SCREEN_NAME.Splash}
+            screenOptions={{
+                contentStyle: {backgroundColor: APP_COLORS.GRAY_MAIN},
+            }}>
             <Stack.Screen
                 name={APP_SCREEN_NAME.Splash}
                 component={AppSplash}

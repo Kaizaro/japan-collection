@@ -1,6 +1,7 @@
 import {StyleSheet} from 'react-native';
 
 import {scaleVertical} from '@shared/utils/scale';
+import {APP_COLORS} from "@shared/config/colors";
 
 export const exhibitListStyles = StyleSheet.create({
     flatList: {

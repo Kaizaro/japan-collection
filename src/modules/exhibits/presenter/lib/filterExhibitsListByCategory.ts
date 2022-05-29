@@ -1,7 +1,7 @@
 import {IExhibit} from '@src/modules/exhibits/entities';
 import {TExhibitFilterCategoryId} from '@src/modules/exhibits/entities';
 
-export const filterExhibitsList = (
+export const filterExhibitsListByCategory = (
     list: IExhibit[],
     selectedCategory: TExhibitFilterCategoryId,
 ): IExhibit[] => {
