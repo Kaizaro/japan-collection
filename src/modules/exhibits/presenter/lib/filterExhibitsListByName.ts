@@ -18,7 +18,9 @@ export const filterExhibitsListByName = (searchText: string): IExhibit[] => {
             }
         } else {
             const filteredExhibits = EXHIBITS.filter((exhibit) =>
-                exhibit.title.startsWith(searchText),
+                exhibit.title
+                    .toLowerCase()
+                    .startsWith(searchText.toLowerCase()),
             );
 
             if (filteredExhibits) {
