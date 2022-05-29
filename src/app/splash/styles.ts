@@ -14,9 +14,9 @@ export const appSplashStyles = StyleSheet.create({
     image: {
         position: 'absolute',
         top: scaleVertical(0),
-        left: scaleHorizontal(-300),
-        width: scaleHorizontal(1375),
-        height: scaleVertical(1294),
+        left: scaleHorizontal(-180),
+        width: scaleHorizontal(1300),
+        height: scaleVertical(1200),
     },
     dataContainer: {
         width: '100%',

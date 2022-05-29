@@ -24,13 +24,8 @@ export const exhibitDetailsStyles = StyleSheet.create({
     },
     gallery: {
         marginTop: scaleVertical(32),
-        borderRadius: scaleVertical(16),
-        overflow: 'hidden',
-    },
-    image: {
-        width: scaleHorizontal(714),
-        height: scaleVertical(391),
-        // height: scaleVertical(500),
+        // borderRadius: scaleVertical(16),
+        // overflow: 'hidden',
     },
     blacksmith: {
         marginTop: scaleVertical(44),

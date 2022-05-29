@@ -6,17 +6,23 @@ import {AppSplash} from '@app/splash';
 import {AppHeader} from '@app/navigation/header';
 
 import {APP_SCREEN_NAME} from '@shared/constants';
+import {APP_COLORS} from '@shared/config/colors';
+
+import {App} from './src/app/core';
 
 import {Exhibits} from '@src/modules/exhibits/ui/screens/exhibits';
 import {ExhibitDetails} from '@src/modules/exhibits/ui/screens/exhibit-details';
 import {ExhibitArticle} from '@src/modules/exhibits/ui/screens/exhibit-article';
-import {ArticleGoroNudoMasamune} from '@src/modules/exhibits/ui/screens/articles/goro-nudo-masamune';
 
 const Stack = createNativeStackNavigator();
 
 const AppStack = () => {
     return (
-        <Stack.Navigator initialRouteName={APP_SCREEN_NAME.Splash}>
+        <Stack.Navigator
+            initialRouteName={APP_SCREEN_NAME.Splash}
+            screenOptions={{
+                contentStyle: {backgroundColor: APP_COLORS.GRAY_MAIN},
+            }}>
             <Stack.Screen
                 name={APP_SCREEN_NAME.Splash}
                 component={AppSplash}
@@ -35,11 +41,6 @@ const AppStack = () => {
             <Stack.Screen
                 name={APP_SCREEN_NAME.ExhibitArticle}
                 component={ExhibitArticle}
-                options={{header: AppHeader}}
-            />
-            <Stack.Screen
-                name={APP_SCREEN_NAME.ArticleGoroNudoMasamune}
-                component={ArticleGoroNudoMasamune}
                 options={{header: AppHeader}}
             />
         </Stack.Navigator>
