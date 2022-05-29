@@ -1,17 +1,12 @@
-import React, {FC, useCallback, useEffect, useMemo, useState} from 'react';
+import React, {FC, useCallback, useMemo} from 'react';
 
 import {FlatList, View} from 'react-native';
 
-import Carousel from 'react-native-reanimated-carousel';
-
-import {scaleVertical} from '@shared/utils/scale';
 import {RegularText} from '@shared/ui/text';
 import {DEFAULT_SCROLL_VIEW_INSET} from '@shared/constants/styles';
 import {APP_TEXT_COLORS} from '@shared/config/colors';
 
-import {getSearchRowNumbers} from '@src/modules/exhibits/utils/getSearchRowNumbers';
 import {ExhibitSearch} from '@src/modules/exhibits/ui/components/exhibit-search';
-import {ExhibitFilterModal} from '@src/modules/exhibits/ui/components/exhibit-filter/modal';
 import {ExhibitCard} from '@src/modules/exhibits/ui/components/exhibit-card';
 
 import {keyExtractor} from '../../../presenter/lib/keyExtractor';
@@ -64,27 +59,16 @@ const ExhibitsList: FC = () => {
     }, []);
 
     return (
-        <>
-            {/*<PressableComponent onPress={showFilterModal}>*/}
-            {/*    <RegularTextNew>{'Выбор категории'}</RegularTextNew>*/}
-            {/*</PressableComponent>*/}
-            <FlatList
-                style={styles.flatList}
-                contentInset={DEFAULT_SCROLL_VIEW_INSET}
-                keyExtractor={keyExtractor}
-                data={exhibitsList}
-                renderItem={renderItemRow}
-                ListEmptyComponent={EmptyList}
-                ListHeaderComponent={SearchRow}
-                showsVerticalScrollIndicator={false}
-            />
-            {/*<ExhibitFilterModal*/}
-            {/*    isVisible={isFilterModalVisible}*/}
-            {/*    closeModal={closeFilterModal}*/}
-            {/*    selectedCategory={selectedCategory}*/}
-            {/*    setSelectedCategory={setSelectedCategory}*/}
-            {/*/>*/}
-        </>
+        <FlatList
+            style={styles.flatList}
+            contentInset={DEFAULT_SCROLL_VIEW_INSET}
+            keyExtractor={keyExtractor}
+            data={exhibitsList}
+            renderItem={renderItemRow}
+            ListEmptyComponent={EmptyList}
+            ListHeaderComponent={SearchRow}
+            showsVerticalScrollIndicator={false}
+        />
     );
 };
 
