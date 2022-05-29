@@ -20,4 +20,9 @@ export const exhibitListStyles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
     },
+    emptyContainer: {
+        height: '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
 });

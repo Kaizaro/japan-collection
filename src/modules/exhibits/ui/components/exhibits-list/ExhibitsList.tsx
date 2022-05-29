@@ -5,6 +5,7 @@ import {FlatList, View} from 'react-native';
 import Carousel from 'react-native-reanimated-carousel';
 
 import {scaleVertical} from '@shared/utils/scale';
+import {RegularText} from '@shared/ui/text';
 import {DEFAULT_SCROLL_VIEW_INSET} from '@shared/constants/styles';
 import {APP_TEXT_COLORS} from '@shared/config/colors';
 
@@ -19,11 +20,7 @@ import {useExhibitsList} from '../../../presenter/hooks/useExhibitsList';
 import {exhibitListStyles as styles} from './styles';
 
 const ExhibitsList: FC = () => {
-    const {
-        exhibitsList,
-        searchText,
-        setSearchText
-    } = useExhibitsList();
+    const {exhibitsList, searchText, setSearchText} = useExhibitsList();
 
     const SearchRow = useMemo(
         () => (
@@ -55,8 +52,15 @@ const ExhibitsList: FC = () => {
         [renderItemCard],
     );
 
-    const renderEmptyList = useCallback<() => JSX.Element>(() => {
-        return <></>;
+    const EmptyList = useMemo<JSX.Element>(() => {
+        return (
+            <View style={styles.emptyContainer}>
+                <RegularText
+                    fontSize={20}
+                    text={'Не найдено ни одного экспоната'}
+                />
+            </View>
+        );
     }, []);
 
     return (
@@ -70,7 +74,7 @@ const ExhibitsList: FC = () => {
                 keyExtractor={keyExtractor}
                 data={exhibitsList}
                 renderItem={renderItemRow}
-                ListEmptyComponent={renderEmptyList}
+                ListEmptyComponent={EmptyList}
                 ListHeaderComponent={SearchRow}
                 showsVerticalScrollIndicator={false}
             />
