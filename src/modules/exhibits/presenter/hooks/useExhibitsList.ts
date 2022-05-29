@@ -38,12 +38,12 @@ const useExhibitsList = () => {
     //     }
     // }, [exhibitsList, searchText]);
 
-    useEffect(() => {
-        setExhibitsList(getExhibitsList());
-    }, []);
+    // useEffect(() => {
+    //     setExhibitsList(getExhibitsList());
+    // }, []);
 
     useEffect(() => {
-        if (searchText) {
+        if (searchText.length || searchText.length === 0) {
             setExhibitsList(
                 getExhibitsList(filterExhibitsListByName(searchText)),
             );

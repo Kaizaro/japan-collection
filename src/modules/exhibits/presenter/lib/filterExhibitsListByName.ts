@@ -11,8 +11,8 @@ export const filterExhibitsListByName = (searchText: string): IExhibit[] => {
         console.log('@FILTER', parsedNumber);
         console.log('@FILTER', 'isNaN', !isNaN(parsedNumber));
         if (!isNaN(parsedNumber)) {
-            const filteredExhibits = EXHIBITS.filter(
-                (exhibit) => parsedNumber === exhibit.exhibit_number,
+            const filteredExhibits = EXHIBITS.filter((exhibit) =>
+                exhibit.exhibit_number?.toString().startsWith(searchText),
             );
             console.log('@FILTER', 'filteredExhibits', filteredExhibits);
 
