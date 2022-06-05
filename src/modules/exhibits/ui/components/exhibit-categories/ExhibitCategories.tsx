@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useMemo} from 'react';
 
 import {View} from 'react-native';
 
@@ -18,11 +18,27 @@ interface IProps
         ExhibitWeaponSamuraiSubCategoryProps {}
 
 const ExhibitCategories: FC<IProps> = (props) => {
+    const {selectedMainCategory, selectedWeaponSubCategory, innerStyle} = props;
+    const isWeaponSubCategoryVisible = useMemo(
+        () => !!selectedMainCategory,
+        [selectedMainCategory],
+    );
+    const isWeaponSamuraiSubCategoryVisible = useMemo(
+        () => !!selectedWeaponSubCategory,
+        [selectedWeaponSubCategory],
+    );
+
     return (
-        <View>
+        <View style={innerStyle}>
             <ExhibitMainCategories {...props} />
-            <ExhibitWeaponSubCategories {...props} />
-            <ExhibitWeaponSamuraiSubCategories {...props} />
+            {isWeaponSubCategoryVisible && (
+                <>
+                    <ExhibitWeaponSubCategories {...props} />
+                    {isWeaponSamuraiSubCategoryVisible && (
+                        <ExhibitWeaponSamuraiSubCategories {...props} />
+                    )}
+                </>
+            )}
         </View>
     );
 };
