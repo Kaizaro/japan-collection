@@ -38,7 +38,10 @@ const filterExhibitsListByWeaponCategory = (
     selectedWeaponSamuraiSubCategory?: TNullable<EXHIBIT_WEAPONS_SAMURAI_CATEGORY>,
     selectedWeaponSamuraiBladeSubCategory?: TNullable<EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY>,
 ) => {
-    if (selectedWeaponSubCategory === EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI) {
+    if (
+        selectedWeaponSubCategory === EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI &&
+        selectedWeaponSamuraiSubCategory
+    ) {
         return filterExhibitsListByWeaponSamuraiSubCategory(
             selectedWeaponSamuraiSubCategory,
             selectedWeaponSamuraiBladeSubCategory,

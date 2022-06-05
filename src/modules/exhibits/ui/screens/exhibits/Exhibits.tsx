@@ -21,6 +21,8 @@ const Exhibits: FC = () => {
         setSearchText,
         selectedCategory,
         setSelectedCategory,
+        selectedWeaponSubCategory,
+        setSelectedWeaponSubCategory,
     } = useExhibitsList();
 
     const SearchRow = useMemo(
@@ -40,10 +42,17 @@ const Exhibits: FC = () => {
         () => (
             <ExhibitCategories
                 selectedMainCategory={selectedCategory}
-                setSelectedMainCategory={setSelectedCategory}
+                onTabPress={setSelectedCategory}
+                selectedWeaponSubCategory={selectedWeaponSubCategory}
+                onTagPress={setSelectedWeaponSubCategory}
             />
         ),
-        [selectedCategory, setSelectedCategory],
+        [
+            selectedCategory,
+            selectedWeaponSubCategory,
+            setSelectedCategory,
+            setSelectedWeaponSubCategory,
+        ],
     );
 
     const Header = useMemo(
@@ -95,6 +104,7 @@ const Exhibits: FC = () => {
                 ListEmptyComponent={EmptyList}
                 ListHeaderComponent={Header}
                 showsVerticalScrollIndicator={false}
+                bounces={false}
             />
         </ComponentContainer>
     );

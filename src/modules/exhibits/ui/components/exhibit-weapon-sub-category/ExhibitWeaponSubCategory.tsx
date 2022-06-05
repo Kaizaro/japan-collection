@@ -37,7 +37,7 @@ const ExhibitWeaponSubCategory: FC<IProps> = ({
         <PressableComponent
             onPress={() => onTagPress(tagId)}
             innerStyle={{...styles.container, ...innerStyle}}>
-            <HeaderText fontSize={64} color={textColor} text={tagTitle} />
+            <HeaderText fontSize={20} color={textColor} text={tagTitle} />
         </PressableComponent>
     );
 };

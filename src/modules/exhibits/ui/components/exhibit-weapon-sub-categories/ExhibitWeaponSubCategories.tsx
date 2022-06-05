@@ -19,8 +19,9 @@ const ExhibitWeaponSubCategories: FC<IProps> = ({innerStyle, ...props}) => {
         <ScrollView
             horizontal={true}
             showsHorizontalScrollIndicator={false}
-            bounces={false}
-            style={{...styles.container, ...innerStyle}}>
+            style={{...styles.container, ...innerStyle}}
+            contentContainerStyle={styles.scrollViewContainer}
+            bounces={false}>
             <ExhibitWeaponSubCategory
                 {...props}
                 tagId={EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI}
