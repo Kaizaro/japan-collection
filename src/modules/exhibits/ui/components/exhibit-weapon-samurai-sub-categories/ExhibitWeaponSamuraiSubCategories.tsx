@@ -19,14 +19,13 @@ interface IProps
 
 const ExhibitWeaponSamuraiSubCategories: FC<IProps> = ({
     innerStyle,
-    selectedWeaponSamuraiSubCategory,
     ...props
 }) => {
     const isWeaponSamuraiBladeSubCategoryVisible = useMemo(
         () =>
-            selectedWeaponSamuraiSubCategory ===
+            props.selectedWeaponSamuraiSubCategory ===
             EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
-        [selectedWeaponSamuraiSubCategory],
+        [props.selectedWeaponSamuraiSubCategory],
     );
 
     return (
