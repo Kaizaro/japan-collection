@@ -15,13 +15,16 @@ export const filterExhibitsListByCategory = (
     selectedWeaponSamuraiSubCategory: TNullable<EXHIBIT_WEAPONS_SAMURAI_CATEGORY>,
     selectedWeaponSamuraiBladeSubCategory: TNullable<EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY>,
 ): IExhibit[] => {
-    if (selectedCategory === EXHIBIT_CATEGORY.JAPANESE_WEAPON) {
+    if (
+        selectedCategory === EXHIBIT_CATEGORY.JAPANESE_WEAPON &&
+        selectedWeaponSubCategory
+    ) {
         return filterExhibitsListByWeaponCategory(
             selectedWeaponSubCategory,
             selectedWeaponSamuraiSubCategory,
             selectedWeaponSamuraiBladeSubCategory,
         );
-    } else if (selectedCategory === EXHIBIT_CATEGORY.JAPANESE_CULTURE) {
+    } else if (selectedCategory) {
         return EXHIBITS.filter(
             (item) => item.mainCategory === selectedCategory,
         );
