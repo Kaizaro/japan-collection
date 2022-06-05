@@ -1,4 +1,4 @@
-export enum ExhibitCategory {
+export enum EXHIBIT_CATEGORY {
     JAPANESE_WEAPON = 'JAPANESE_WEAPON',
     JAPANESE_CULTURE = 'JAPANESE_CULTURE',
 

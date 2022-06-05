@@ -5,5 +5,5 @@ export const filterExhibitsListByCategory = (
     list: IExhibit[],
     selectedCategory: TExhibitFilterCategoryId,
 ): IExhibit[] => {
-    return list.filter((item) => item.category === selectedCategory);
+    return list.filter((item) => item.mainCategory === selectedCategory);
 };
