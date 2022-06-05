@@ -41,7 +41,7 @@ const ExhibitCard: FC<IProps> = ({card}) => {
             </View>
             <View style={styles.categoryIconContainer}>
                 <Image
-                    source={getCategoryIcon(card.category)}
+                    source={getCategoryIcon(card.mainCategory)}
                     resizeMode={'contain'}
                     style={styles.categoryIcon}
                 />

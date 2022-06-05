@@ -1,46 +1,23 @@
 import {useCallback, useEffect, useState} from 'react';
 
+import {TNullable} from '@shared/types';
+
 import {getExhibitsList} from '@src/modules/exhibits/useCase/get-exhibits-list';
 import {filterExhibitsListByName} from '@src/modules/exhibits/presenter/lib/filterExhibitsListByName';
 import {filterExhibitsListByCategory} from '@src/modules/exhibits/presenter/lib/filterExhibitsListByCategory';
 import {
+    EXHIBIT_CATEGORY,
+    EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY,
+    EXHIBIT_WEAPONS_SAMURAI_CATEGORY,
+    EXHIBIT_WEAPONS_SUBCATEGORY,
     IExhibit,
-    TExhibitFilterCategoryId,
 } from '@src/modules/exhibits/entities';
 
 const useExhibitsList = () => {
     const [exhibitsList, setExhibitsList] = useState<IExhibit[][]>([]);
+
+    // Row engine
     const [searchText, setSearchText] = useState('');
-    // const [selectedCategory, setSelectedCategory] =
-    //     useState<TExhibitFilterCategoryId | null>(null);
-
-    // const filterExhibitsList = useCallback(() => {
-    //     console.log('@FILTER', searchText);
-    //     console.log('@FILTER', searchText.length);
-    //     if (searchText.length === 0) {
-    //         return exhibitsList;
-    //     } else if (searchText.length < 3) {
-    //         const parsedNumber = parseInt(searchText, 10);
-    //         console.log('@FILTER', parsedNumber);
-    //         console.log('@FILTER', 'isNaN', !isNaN(parsedNumber));
-    //         if (!isNaN(parsedNumber)) {
-    //             const filteredExhibits = exhibitsList.filter(
-    //                 (exhibit) => parsedNumber === exhibit.exhibit_number,
-    //             );
-    //             console.log('@FILTER', 'filteredExhibits', filteredExhibits);
-    //
-    //             if (filteredExhibits) {
-    //                 return exhibitsList;
-    //             } else {
-    //                 return [];
-    //             }
-    //         }
-    //     }
-    // }, [exhibitsList, searchText]);
-
-    // useEffect(() => {
-    //     setExhibitsList(getExhibitsList());
-    // }, []);
 
     useEffect(() => {
         if (searchText.length || searchText.length === 0) {
@@ -50,18 +27,112 @@ const useExhibitsList = () => {
         }
     }, [searchText]);
 
-    // useEffect(() => {
-    //     if (selectedCategory) {
-    //         setExhibitsList(
-    //             filterExhibitsList(getExhibitsList(), selectedCategory),
-    //         );
-    //     }
-    // }, [selectedCategory]);
+    // Categories filter
+    const [selectedCategory, setSelectedCategory] =
+        useState<TNullable<EXHIBIT_CATEGORY>>(null);
+    const [selectedWeaponSubCategory, setSelectedWeaponSubCategory] =
+        useState<TNullable<EXHIBIT_WEAPONS_SUBCATEGORY>>(null);
+    const [
+        selectedWeaponSamuraiSubCategory,
+        setSelectedWeaponSamuraiSubCategory,
+    ] = useState<TNullable<EXHIBIT_WEAPONS_SAMURAI_CATEGORY>>(null);
+    const [
+        selectedWeaponSamuraiBladeSubCategory,
+        setSelectedWeaponSamuraiBladeSubCategory,
+    ] = useState<TNullable<EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY>>(null);
+
+    const handleSelectCategory = useCallback(
+        (category: EXHIBIT_CATEGORY) => {
+            if (selectedCategory === category) {
+                setSelectedCategory(null);
+            } else {
+                setSelectedCategory(category);
+            }
+            setSelectedWeaponSubCategory(null);
+            setSelectedWeaponSamuraiSubCategory(null);
+        },
+        [selectedCategory],
+    );
+
+    const handleSelectWeaponSubCategory = useCallback(
+        (category: EXHIBIT_WEAPONS_SUBCATEGORY) => {
+            if (selectedWeaponSubCategory === category) {
+                setSelectedWeaponSubCategory(null);
+            } else {
+                setSelectedWeaponSubCategory(category);
+            }
+            setSelectedWeaponSamuraiSubCategory(null);
+        },
+        [selectedWeaponSubCategory],
+    );
+
+    const handleSelectWeaponSamuraiSubCategory = useCallback(
+        (category: EXHIBIT_WEAPONS_SAMURAI_CATEGORY) => {
+            if (selectedWeaponSamuraiSubCategory === category) {
+                setSelectedWeaponSamuraiSubCategory(null);
+            } else {
+                setSelectedWeaponSamuraiSubCategory(category);
+            }
+        },
+        [selectedWeaponSamuraiSubCategory],
+    );
+
+    const handleSelectWeaponSamuraiBladeSubCategory = useCallback(
+        (category: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY) => {
+            if (selectedWeaponSamuraiBladeSubCategory === category) {
+                setSelectedWeaponSamuraiBladeSubCategory(null);
+            } else {
+                setSelectedWeaponSamuraiBladeSubCategory(category);
+            }
+        },
+        [selectedWeaponSamuraiBladeSubCategory],
+    );
+
+    useEffect(() => {
+        if (
+            selectedCategory ||
+            selectedWeaponSubCategory ||
+            selectedWeaponSamuraiSubCategory ||
+            selectedWeaponSamuraiBladeSubCategory
+        ) {
+            setExhibitsList(
+                getExhibitsList(
+                    filterExhibitsListByCategory(
+                        selectedCategory,
+                        selectedWeaponSubCategory,
+                        selectedWeaponSamuraiSubCategory,
+                        selectedWeaponSamuraiBladeSubCategory,
+                    ),
+                ),
+            );
+        }
+    }, [
+        selectedCategory,
+        selectedWeaponSamuraiBladeSubCategory,
+        selectedWeaponSamuraiSubCategory,
+        selectedWeaponSubCategory,
+    ]);
 
     return {
         exhibitsList,
+
+        // Row engine
         searchText,
         setSearchText,
+
+        // Filter categories
+        selectedCategory,
+        setSelectedCategory,
+        handleSelectCategory,
+        selectedWeaponSubCategory,
+        setSelectedWeaponSubCategory,
+        handleSelectWeaponSubCategory,
+        selectedWeaponSamuraiSubCategory,
+        setSelectedWeaponSamuraiSubCategory,
+        handleSelectWeaponSamuraiSubCategory,
+        selectedWeaponSamuraiBladeSubCategory,
+        setSelectedWeaponSamuraiBladeSubCategory,
+        handleSelectWeaponSamuraiBladeSubCategory,
     };
 };
 

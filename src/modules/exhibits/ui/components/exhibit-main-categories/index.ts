@@ -1,0 +1,1 @@
+export {ExhibitMainCategories} from './ExhibitMainCategories';
