@@ -25,6 +25,8 @@ const Exhibits: FC = () => {
         handleSelectWeaponSubCategory,
         selectedWeaponSamuraiSubCategory,
         handleSelectWeaponSamuraiSubCategory,
+        selectedWeaponSamuraiBladeSubCategory,
+        handleSelectWeaponSamuraiBladeSubCategory,
     } = useExhibitsList();
 
     const SearchRow = useMemo(
@@ -53,14 +55,22 @@ const Exhibits: FC = () => {
                 selectWeaponSamuraiSubCategory={
                     handleSelectWeaponSamuraiSubCategory
                 }
+                selectedWeaponSamuraiBladeSubCategory={
+                    selectedWeaponSamuraiBladeSubCategory
+                }
+                selectWeaponSamuraiBladeSubCategory={
+                    handleSelectWeaponSamuraiBladeSubCategory
+                }
                 innerStyle={styles.categories}
             />
         ),
         [
             handleSelectCategory,
+            handleSelectWeaponSamuraiBladeSubCategory,
             handleSelectWeaponSamuraiSubCategory,
             handleSelectWeaponSubCategory,
             selectedCategory,
+            selectedWeaponSamuraiBladeSubCategory,
             selectedWeaponSamuraiSubCategory,
             selectedWeaponSubCategory,
         ],

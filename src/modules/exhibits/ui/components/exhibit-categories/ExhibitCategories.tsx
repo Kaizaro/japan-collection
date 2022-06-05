@@ -8,10 +8,13 @@ import {ExhibitWeaponSubCategoryProps} from '@src/modules/exhibits/ui/components
 import {ExhibitWeaponSubCategories} from '@src/modules/exhibits/ui/components/exhibit-weapon-sub-categories';
 import {ExhibitWeaponSamuraiSubCategoryProps} from '@src/modules/exhibits/ui/components/exhibit-weapon-samurai-sub-category/ExhibitWeaponSamuraiSubCategory';
 import {ExhibitWeaponSamuraiSubCategories} from '@src/modules/exhibits/ui/components/exhibit-weapon-samurai-sub-categories';
+import {ExhibitWeaponSamuraiBladeSubCategoryProps} from '@src/modules/exhibits/ui/components/exhibit-weapon-samurai-blade-sub-category';
+import {ExhibitWeaponSamuraiBladeSubCategories} from '@src/modules/exhibits/ui/components/exhibit-weapon-samurai-blade-sub-categories';
 import {ExhibitMainCategoryProps} from '@src/modules/exhibits/ui/components/exhibit-main-category';
 import {ExhibitMainCategories} from '@src/modules/exhibits/ui/components/exhibit-main-categories';
 import {
     EXHIBIT_CATEGORY,
+    EXHIBIT_WEAPONS_SAMURAI_CATEGORY,
     EXHIBIT_WEAPONS_SUBCATEGORY,
 } from '@src/modules/exhibits/entities';
 
@@ -21,10 +24,16 @@ interface IProps
     extends IDefaultFCProps,
         ExhibitMainCategoryProps,
         ExhibitWeaponSubCategoryProps,
-        ExhibitWeaponSamuraiSubCategoryProps {}
+        ExhibitWeaponSamuraiSubCategoryProps,
+        ExhibitWeaponSamuraiBladeSubCategoryProps {}
 
 const ExhibitCategories: FC<IProps> = (props) => {
-    const {selectedMainCategory, selectedWeaponSubCategory, innerStyle} = props;
+    const {
+        selectedMainCategory,
+        selectedWeaponSubCategory,
+        selectedWeaponSamuraiSubCategory,
+        innerStyle,
+    } = props;
     const isWeaponSubCategoryVisible = useMemo(
         () => selectedMainCategory === EXHIBIT_CATEGORY.JAPANESE_WEAPON,
         [selectedMainCategory],
