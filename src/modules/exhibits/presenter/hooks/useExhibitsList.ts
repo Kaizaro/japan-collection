@@ -50,6 +50,7 @@ const useExhibitsList = () => {
             }
             setSelectedWeaponSubCategory(null);
             setSelectedWeaponSamuraiSubCategory(null);
+            setSelectedWeaponSamuraiBladeSubCategory(null);
         },
         [selectedCategory],
     );
@@ -62,6 +63,7 @@ const useExhibitsList = () => {
                 setSelectedWeaponSubCategory(category);
             }
             setSelectedWeaponSamuraiSubCategory(null);
+            setSelectedWeaponSamuraiBladeSubCategory(null);
         },
         [selectedWeaponSubCategory],
     );
@@ -73,6 +75,7 @@ const useExhibitsList = () => {
             } else {
                 setSelectedWeaponSamuraiSubCategory(category);
             }
+            setSelectedWeaponSamuraiBladeSubCategory(null);
         },
         [selectedWeaponSamuraiSubCategory],
     );
