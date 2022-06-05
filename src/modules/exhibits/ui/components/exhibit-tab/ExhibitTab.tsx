@@ -1,7 +1,5 @@
 import React, {FC, useMemo} from 'react';
 
-import {View} from 'react-native';
-
 import {HeaderText} from '@shared/ui/text';
 import {PressableComponent} from '@shared/ui/buttons/pressable-component';
 import {APP_TEXT_COLORS} from '@shared/config/colors';
@@ -21,7 +19,7 @@ const ExhibitTab: FC<IProps> = ({
     innerStyle,
 }) => {
     const textColor = useMemo(
-        () => (isActive ? null : APP_TEXT_COLORS.MAIN_OPACITY),
+        () => (isActive ? APP_TEXT_COLORS.MAIN : APP_TEXT_COLORS.MAIN_OPACITY),
         [isActive],
     );
 
