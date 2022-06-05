@@ -1,3 +1,5 @@
+import {TNullable} from '@shared/types';
+
 import {
     EXHIBIT_CATEGORY,
     EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY,
@@ -8,10 +10,10 @@ import {
 import {EXHIBITS} from '@src/modules/exhibits/DAL/exhibits/exhibits';
 
 export const filterExhibitsListByCategory = (
-    selectedCategory: EXHIBIT_CATEGORY,
-    selectedWeaponSubCategory?: EXHIBIT_WEAPONS_SUBCATEGORY,
-    selectedWeaponSamuraiSubCategory?: EXHIBIT_WEAPONS_SAMURAI_CATEGORY,
-    selectedWeaponSamuraiBladeSubCategory?: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY,
+    selectedCategory: TNullable<EXHIBIT_CATEGORY>,
+    selectedWeaponSubCategory: TNullable<EXHIBIT_WEAPONS_SUBCATEGORY>,
+    selectedWeaponSamuraiSubCategory: TNullable<EXHIBIT_WEAPONS_SAMURAI_CATEGORY>,
+    selectedWeaponSamuraiBladeSubCategory: TNullable<EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY>,
 ): IExhibit[] => {
     if (selectedCategory === EXHIBIT_CATEGORY.JAPANESE_WEAPON) {
         return filterExhibitsListByWeaponCategory(
@@ -29,9 +31,9 @@ export const filterExhibitsListByCategory = (
 };
 
 const filterExhibitsListByWeaponCategory = (
-    selectedWeaponSubCategory?: EXHIBIT_WEAPONS_SUBCATEGORY,
-    selectedWeaponSamuraiSubCategory?: EXHIBIT_WEAPONS_SAMURAI_CATEGORY,
-    selectedWeaponSamuraiBladeSubCategory?: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY,
+    selectedWeaponSubCategory?: TNullable<EXHIBIT_WEAPONS_SUBCATEGORY>,
+    selectedWeaponSamuraiSubCategory?: TNullable<EXHIBIT_WEAPONS_SAMURAI_CATEGORY>,
+    selectedWeaponSamuraiBladeSubCategory?: TNullable<EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY>,
 ) => {
     if (selectedWeaponSubCategory === EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI) {
         return filterExhibitsListByWeaponSamuraiSubCategory(
@@ -46,8 +48,8 @@ const filterExhibitsListByWeaponCategory = (
 };
 
 const filterExhibitsListByWeaponSamuraiSubCategory = (
-    selectedWeaponSamuraiSubCategory?: EXHIBIT_WEAPONS_SAMURAI_CATEGORY,
-    selectedWeaponSamuraiBladeSubCategory?: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY,
+    selectedWeaponSamuraiSubCategory?: TNullable<EXHIBIT_WEAPONS_SAMURAI_CATEGORY>,
+    selectedWeaponSamuraiBladeSubCategory?: TNullable<EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY>,
 ) => {
     if (
         selectedWeaponSamuraiSubCategory ===
@@ -67,8 +69,8 @@ const filterExhibitsListByWeaponSamuraiSubCategory = (
 };
 
 const filterExhibitsListByWeaponSamuraiBladeSubCategory = (
-    selectedWeaponSamuraiSubCategory?: EXHIBIT_WEAPONS_SAMURAI_CATEGORY,
-    selectedWeaponSamuraiBladeSubCategory?: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY,
+    selectedWeaponSamuraiSubCategory?: TNullable<EXHIBIT_WEAPONS_SAMURAI_CATEGORY>,
+    selectedWeaponSamuraiBladeSubCategory?: TNullable<EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY>,
 ) => {
     if (selectedWeaponSamuraiBladeSubCategory) {
         return EXHIBITS.filter(
