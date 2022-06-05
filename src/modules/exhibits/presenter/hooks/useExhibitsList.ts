@@ -48,6 +48,8 @@ const useExhibitsList = () => {
             } else {
                 setSelectedCategory(category);
             }
+            setSelectedWeaponSubCategory(null);
+            setSelectedWeaponSamuraiSubCategory(null);
         },
         [selectedCategory],
     );
@@ -59,6 +61,7 @@ const useExhibitsList = () => {
             } else {
                 setSelectedWeaponSubCategory(category);
             }
+            setSelectedWeaponSamuraiSubCategory(null);
         },
         [selectedWeaponSubCategory],
     );
