@@ -43,10 +43,10 @@ const useExhibitsList = () => {
 
     const handleSelectCategory = useCallback(
         (category: EXHIBIT_CATEGORY) => {
-            if (!selectedCategory) {
-                setSelectedCategory(category);
-            } else {
+            if (selectedCategory === category) {
                 setSelectedCategory(null);
+            } else {
+                setSelectedCategory(category);
             }
         },
         [selectedCategory],
@@ -54,10 +54,10 @@ const useExhibitsList = () => {
 
     const handleSelectWeaponSubCategory = useCallback(
         (category: EXHIBIT_WEAPONS_SUBCATEGORY) => {
-            if (!selectedWeaponSubCategory) {
-                setSelectedWeaponSubCategory(category);
-            } else {
+            if (selectedWeaponSubCategory === category) {
                 setSelectedWeaponSubCategory(null);
+            } else {
+                setSelectedWeaponSubCategory(category);
             }
         },
         [selectedWeaponSubCategory],
@@ -65,10 +65,10 @@ const useExhibitsList = () => {
 
     const handleSelectWeaponSamuraiSubCategory = useCallback(
         (category: EXHIBIT_WEAPONS_SAMURAI_CATEGORY) => {
-            if (!selectedWeaponSamuraiSubCategory) {
-                setSelectedWeaponSamuraiSubCategory(category);
-            } else {
+            if (selectedWeaponSamuraiSubCategory === category) {
                 setSelectedWeaponSamuraiSubCategory(null);
+            } else {
+                setSelectedWeaponSamuraiSubCategory(category);
             }
         },
         [selectedWeaponSamuraiSubCategory],
@@ -76,10 +76,10 @@ const useExhibitsList = () => {
 
     const handleSelectWeaponSamuraiBladeSubCategory = useCallback(
         (category: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY) => {
-            if (!selectedWeaponSamuraiBladeSubCategory) {
-                setSelectedWeaponSamuraiBladeSubCategory(category);
-            } else {
+            if (selectedWeaponSamuraiBladeSubCategory === category) {
                 setSelectedWeaponSamuraiBladeSubCategory(null);
+            } else {
+                setSelectedWeaponSamuraiBladeSubCategory(category);
             }
         },
         [selectedWeaponSamuraiBladeSubCategory],
