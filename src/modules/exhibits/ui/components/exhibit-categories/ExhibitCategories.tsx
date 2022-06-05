@@ -1,24 +1,23 @@
 import React, {FC} from 'react';
 
-import {IDefaultFCProps, TNullable} from '@shared/types';
+import {IDefaultFCProps} from '@shared/types';
 
+import {ExhibitWeaponSubCategoryProps} from '@src/modules/exhibits/ui/components/exhibit-weapon-sub-category/ExhibitWeaponSubCategory';
+import {ExhibitWeaponSubCategories} from '@src/modules/exhibits/ui/components/exhibit-weapon-sub-categories';
+import {ExhibitMainCategoryProps} from '@src/modules/exhibits/ui/components/exhibit-main-category';
 import {ExhibitMainCategories} from '@src/modules/exhibits/ui/components/exhibit-main-categories';
-import {EXHIBIT_CATEGORY} from '@src/modules/exhibits/entities';
 
-interface IProps extends IDefaultFCProps {
-    selectedMainCategory: TNullable<EXHIBIT_CATEGORY>;
-    setSelectedMainCategory: () => void;
-}
+interface IProps
+    extends IDefaultFCProps,
+        ExhibitMainCategoryProps,
+        ExhibitWeaponSubCategoryProps {}
 
-const ExhibitCategories: FC<IProps> = ({
-    selectedMainCategory,
-    setSelectedMainCategory,
-}) => {
+const ExhibitCategories: FC<IProps> = (props) => {
     return (
-        <ExhibitMainCategories
-            selectedMainCategory={selectedMainCategory}
-            setSelectedMainCategory={setSelectedMainCategory}
-        />
+        <>
+            <ExhibitMainCategories {...props} />
+            <ExhibitWeaponSubCategories {...props} />
+        </>
     );
 };
 
