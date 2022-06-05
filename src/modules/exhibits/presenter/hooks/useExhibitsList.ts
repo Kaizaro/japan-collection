@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 
 import {TNullable} from '@shared/types';
 
@@ -41,6 +41,50 @@ const useExhibitsList = () => {
         setSelectedWeaponSamuraiBladeSubCategory,
     ] = useState<TNullable<EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY>>(null);
 
+    const handleSelectCategory = useCallback(
+        (category: EXHIBIT_CATEGORY) => {
+            if (!selectedCategory) {
+                setSelectedCategory(category);
+            } else {
+                setSelectedCategory(null);
+            }
+        },
+        [selectedCategory],
+    );
+
+    const handleSelectWeaponSubCategory = useCallback(
+        (category: EXHIBIT_WEAPONS_SUBCATEGORY) => {
+            if (!selectedWeaponSubCategory) {
+                setSelectedWeaponSubCategory(category);
+            } else {
+                setSelectedWeaponSubCategory(null);
+            }
+        },
+        [selectedWeaponSubCategory],
+    );
+
+    const handleSelectWeaponSamuraiSubCategory = useCallback(
+        (category: EXHIBIT_WEAPONS_SAMURAI_CATEGORY) => {
+            if (!selectedWeaponSamuraiSubCategory) {
+                setSelectedWeaponSamuraiSubCategory(category);
+            } else {
+                setSelectedWeaponSamuraiSubCategory(null);
+            }
+        },
+        [selectedWeaponSamuraiSubCategory],
+    );
+
+    const handleSelectWeaponSamuraiBladeSubCategory = useCallback(
+        (category: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY) => {
+            if (!selectedWeaponSamuraiBladeSubCategory) {
+                setSelectedWeaponSamuraiBladeSubCategory(category);
+            } else {
+                setSelectedWeaponSamuraiBladeSubCategory(null);
+            }
+        },
+        [selectedWeaponSamuraiBladeSubCategory],
+    );
+
     useEffect(() => {
         if (
             selectedCategory ||
@@ -76,12 +120,16 @@ const useExhibitsList = () => {
         // Filter categories
         selectedCategory,
         setSelectedCategory,
+        handleSelectCategory,
         selectedWeaponSubCategory,
         setSelectedWeaponSubCategory,
+        handleSelectWeaponSubCategory,
         selectedWeaponSamuraiSubCategory,
         setSelectedWeaponSamuraiSubCategory,
+        handleSelectWeaponSamuraiSubCategory,
         selectedWeaponSamuraiBladeSubCategory,
         setSelectedWeaponSamuraiBladeSubCategory,
+        handleSelectWeaponSamuraiBladeSubCategory,
     };
 };
 

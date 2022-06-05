@@ -13,14 +13,14 @@ interface IProps extends IDefaultFCProps {
     tagId?: EXHIBIT_WEAPONS_SUBCATEGORY;
     selectedWeaponSubCategory: TNullable<EXHIBIT_WEAPONS_SUBCATEGORY>;
     tagTitle?: string;
-    onTagPress?: () => void;
+    selectWeaponSubCategory: (category: EXHIBIT_WEAPONS_SUBCATEGORY) => void;
 }
 
 const ExhibitWeaponSubCategory: FC<IProps> = ({
     tagId,
     selectedWeaponSubCategory,
     tagTitle,
-    onTagPress,
+    selectWeaponSubCategory,
     innerStyle,
 }) => {
     const isActive = useMemo(
@@ -35,7 +35,7 @@ const ExhibitWeaponSubCategory: FC<IProps> = ({
 
     return (
         <PressableComponent
-            onPress={() => onTagPress(tagId)}
+            onPress={() => selectWeaponSubCategory(tagId)}
             innerStyle={{...styles.container, ...innerStyle}}>
             <HeaderText fontSize={20} color={textColor} text={tagTitle} />
         </PressableComponent>

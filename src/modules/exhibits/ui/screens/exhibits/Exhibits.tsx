@@ -20,9 +20,11 @@ const Exhibits: FC = () => {
         searchText,
         setSearchText,
         selectedCategory,
-        setSelectedCategory,
+        handleSelectCategory,
         selectedWeaponSubCategory,
-        setSelectedWeaponSubCategory,
+        handleSelectWeaponSubCategory,
+        selectedWeaponSamuraiSubCategory,
+        handleSelectWeaponSamuraiSubCategory,
     } = useExhibitsList();
 
     const SearchRow = useMemo(
@@ -42,16 +44,24 @@ const Exhibits: FC = () => {
         () => (
             <ExhibitCategories
                 selectedMainCategory={selectedCategory}
-                onTabPress={setSelectedCategory}
+                selectMainCategory={handleSelectCategory}
                 selectedWeaponSubCategory={selectedWeaponSubCategory}
-                onTagPress={setSelectedWeaponSubCategory}
+                selectWeaponSubCategory={handleSelectWeaponSubCategory}
+                selectedWeaponSamuraiSubCategory={
+                    selectedWeaponSamuraiSubCategory
+                }
+                selectWeaponSamuraiSubCategory={
+                    handleSelectWeaponSamuraiSubCategory
+                }
             />
         ),
         [
+            handleSelectCategory,
+            handleSelectWeaponSamuraiSubCategory,
+            handleSelectWeaponSubCategory,
             selectedCategory,
+            selectedWeaponSamuraiSubCategory,
             selectedWeaponSubCategory,
-            setSelectedCategory,
-            setSelectedWeaponSubCategory,
         ],
     );
 

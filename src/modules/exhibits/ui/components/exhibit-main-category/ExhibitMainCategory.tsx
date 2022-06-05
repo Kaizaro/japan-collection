@@ -11,14 +11,14 @@ interface IProps extends IDefaultFCProps {
     tabId?: EXHIBIT_CATEGORY;
     selectedMainCategory: TNullable<EXHIBIT_CATEGORY>;
     tabTitle?: string;
-    onTabPress?: () => void;
+    selectMainCategory: (category: EXHIBIT_CATEGORY) => void;
 }
 
 const ExhibitMainCategory: FC<IProps> = ({
     tabId,
     selectedMainCategory,
     tabTitle,
-    onTabPress,
+    selectMainCategory,
     innerStyle,
 }) => {
     const isActive = useMemo(
@@ -32,10 +32,10 @@ const ExhibitMainCategory: FC<IProps> = ({
     );
 
     const handleTabPress = useCallback(() => {
-        if (onTabPress) {
-            onTabPress(tabId);
+        if (selectMainCategory) {
+            selectMainCategory(tabId);
         }
-    }, [onTabPress, tabId]);
+    }, [selectMainCategory, tabId]);
 
     return (
         <PressableComponent onPress={handleTabPress} innerStyle={innerStyle}>
