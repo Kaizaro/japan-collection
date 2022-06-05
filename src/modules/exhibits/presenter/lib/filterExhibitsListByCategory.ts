@@ -1,9 +1,94 @@
-import {IExhibit} from '@src/modules/exhibits/entities';
-import {TExhibitFilterCategoryId} from '@src/modules/exhibits/entities';
+import {TNullable} from '@shared/types';
+
+import {
+    EXHIBIT_CATEGORY,
+    EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY,
+    EXHIBIT_WEAPONS_SAMURAI_CATEGORY,
+    EXHIBIT_WEAPONS_SUBCATEGORY,
+    IExhibit,
+} from '@src/modules/exhibits/entities';
+import {EXHIBITS} from '@src/modules/exhibits/DAL/exhibits/exhibits';
 
 export const filterExhibitsListByCategory = (
-    list: IExhibit[],
-    selectedCategory: TExhibitFilterCategoryId,
+    selectedCategory: TNullable<EXHIBIT_CATEGORY>,
+    selectedWeaponSubCategory: TNullable<EXHIBIT_WEAPONS_SUBCATEGORY>,
+    selectedWeaponSamuraiSubCategory: TNullable<EXHIBIT_WEAPONS_SAMURAI_CATEGORY>,
+    selectedWeaponSamuraiBladeSubCategory: TNullable<EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY>,
 ): IExhibit[] => {
-    return list.filter((item) => item.category === selectedCategory);
+    if (
+        selectedCategory === EXHIBIT_CATEGORY.JAPANESE_WEAPON &&
+        selectedWeaponSubCategory
+    ) {
+        return filterExhibitsListByWeaponCategory(
+            selectedWeaponSubCategory,
+            selectedWeaponSamuraiSubCategory,
+            selectedWeaponSamuraiBladeSubCategory,
+        );
+    } else if (selectedCategory) {
+        return EXHIBITS.filter(
+            (item) => item.mainCategory === selectedCategory,
+        );
+    } else {
+        return EXHIBITS;
+    }
+};
+
+const filterExhibitsListByWeaponCategory = (
+    selectedWeaponSubCategory?: TNullable<EXHIBIT_WEAPONS_SUBCATEGORY>,
+    selectedWeaponSamuraiSubCategory?: TNullable<EXHIBIT_WEAPONS_SAMURAI_CATEGORY>,
+    selectedWeaponSamuraiBladeSubCategory?: TNullable<EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY>,
+) => {
+    if (
+        selectedWeaponSubCategory === EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI &&
+        selectedWeaponSamuraiSubCategory
+    ) {
+        return filterExhibitsListByWeaponSamuraiSubCategory(
+            selectedWeaponSamuraiSubCategory,
+            selectedWeaponSamuraiBladeSubCategory,
+        );
+    } else {
+        return EXHIBITS.filter(
+            (item) => item.weaponSubCategory === selectedWeaponSubCategory,
+        );
+    }
+};
+
+const filterExhibitsListByWeaponSamuraiSubCategory = (
+    selectedWeaponSamuraiSubCategory?: TNullable<EXHIBIT_WEAPONS_SAMURAI_CATEGORY>,
+    selectedWeaponSamuraiBladeSubCategory?: TNullable<EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY>,
+) => {
+    if (
+        selectedWeaponSamuraiSubCategory ===
+        EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON
+    ) {
+        return filterExhibitsListByWeaponSamuraiBladeSubCategory(
+            selectedWeaponSamuraiSubCategory,
+            selectedWeaponSamuraiBladeSubCategory,
+        );
+    } else {
+        return EXHIBITS.filter(
+            (item) =>
+                item.weaponSamuraiTypeSubCategory ===
+                selectedWeaponSamuraiSubCategory,
+        );
+    }
+};
+
+const filterExhibitsListByWeaponSamuraiBladeSubCategory = (
+    selectedWeaponSamuraiSubCategory?: TNullable<EXHIBIT_WEAPONS_SAMURAI_CATEGORY>,
+    selectedWeaponSamuraiBladeSubCategory?: TNullable<EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY>,
+) => {
+    if (selectedWeaponSamuraiBladeSubCategory) {
+        return EXHIBITS.filter(
+            (item) =>
+                item.weaponSamuraiBladeCategory ===
+                selectedWeaponSamuraiBladeSubCategory,
+        );
+    } else {
+        return EXHIBITS.filter(
+            (item) =>
+                item.weaponSamuraiTypeSubCategory ===
+                selectedWeaponSamuraiSubCategory,
+        );
+    }
 };
