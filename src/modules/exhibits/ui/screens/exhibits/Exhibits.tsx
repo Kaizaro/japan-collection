@@ -9,12 +9,19 @@ import {APP_TEXT_COLORS} from '@shared/config/colors';
 
 import {exhibitListStyles as styles} from '@src/modules/exhibits/ui/screens/exhibits/styles';
 import {ExhibitSearch} from '@src/modules/exhibits/ui/components/exhibit-search';
+import {ExhibitCategories} from '@src/modules/exhibits/ui/components/exhibit-categories';
 import {ExhibitCard} from '@src/modules/exhibits/ui/components/exhibit-card';
 import {keyExtractor} from '@src/modules/exhibits/presenter/lib/keyExtractor';
 import {useExhibitsList} from '@src/modules/exhibits/presenter/hooks/useExhibitsList';
 
 const Exhibits: FC = () => {
-    const {exhibitsList, searchText, setSearchText} = useExhibitsList();
+    const {
+        exhibitsList,
+        searchText,
+        setSearchText,
+        selectedCategory,
+        setSelectedCategory,
+    } = useExhibitsList();
 
     const SearchRow = useMemo(
         () => (
@@ -27,6 +34,26 @@ const Exhibits: FC = () => {
             />
         ),
         [searchText, setSearchText],
+    );
+
+    const Categories = useMemo(
+        () => (
+            <ExhibitCategories
+                selectedMainCategory={selectedCategory}
+                setSelectedMainCategory={setSelectedCategory}
+            />
+        ),
+        [selectedCategory, setSelectedCategory],
+    );
+
+    const Header = useMemo(
+        () => (
+            <>
+                {SearchRow}
+                {Categories}
+            </>
+        ),
+        [Categories, SearchRow],
     );
 
     const renderItemCard = useCallback((card, index) => {
@@ -66,7 +93,7 @@ const Exhibits: FC = () => {
                 data={exhibitsList}
                 renderItem={renderItemRow}
                 ListEmptyComponent={EmptyList}
-                ListHeaderComponent={SearchRow}
+                ListHeaderComponent={Header}
                 showsVerticalScrollIndicator={false}
             />
         </ComponentContainer>
