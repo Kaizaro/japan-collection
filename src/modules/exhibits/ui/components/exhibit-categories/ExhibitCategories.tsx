@@ -15,6 +15,8 @@ import {
     EXHIBIT_WEAPONS_SUBCATEGORY,
 } from '@src/modules/exhibits/entities';
 
+import {exhibitCategoriesStyles as styles} from './styles';
+
 interface IProps
     extends IDefaultFCProps,
         ExhibitMainCategoryProps,
@@ -37,9 +39,15 @@ const ExhibitCategories: FC<IProps> = (props) => {
             <ExhibitMainCategories {...props} />
             {isWeaponSubCategoryVisible && (
                 <>
-                    <ExhibitWeaponSubCategories {...props} />
+                    <ExhibitWeaponSubCategories
+                        {...props}
+                        innerStyle={styles.tags}
+                    />
                     {isWeaponSamuraiSubCategoryVisible && (
-                        <ExhibitWeaponSamuraiSubCategories {...props} />
+                        <ExhibitWeaponSamuraiSubCategories
+                            {...props}
+                            innerStyle={styles.rows}
+                        />
                     )}
                 </>
             )}

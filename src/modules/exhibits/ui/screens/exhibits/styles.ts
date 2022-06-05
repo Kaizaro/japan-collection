@@ -24,4 +24,7 @@ export const exhibitListStyles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
+    categories: {
+        marginTop: scaleVertical(8),
+    },
 });

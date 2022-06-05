@@ -53,6 +53,7 @@ const Exhibits: FC = () => {
                 selectWeaponSamuraiSubCategory={
                     handleSelectWeaponSamuraiSubCategory
                 }
+                innerStyle={styles.categories}
             />
         ),
         [
