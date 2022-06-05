@@ -593,9 +593,8 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 15,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
-        weaponSamuraiBladeCategory:
-            EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.IMPERIAL_ARMY,
         title: 'Катана Сукэкуни',
         type: 'Катана в оправе армейского офицерского меча обр. 1938 года',
         blacksmith_name: 'Минамото Сукэкуни',
@@ -840,9 +839,8 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 22,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
-        weaponSamuraiBladeCategory:
-            EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.TANTO,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.IMPERIAL_ARMY,
         title: 'Кинжал Камикадзе',
         type: 'Кайкэн, подразделение Токко-Тай, 特攻隊',
         blacksmith_name: 'неизвестен',
@@ -856,9 +854,8 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 23,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
-        weaponSamuraiBladeCategory:
-            EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SHINOBI,
         title: 'Каракури-дзиттэ',
         type: 'Специальное оружие, предмет скрытого ношения',
         blacksmith_name: 'Куниёси',
@@ -888,9 +885,8 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 24,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
-        weaponSamuraiBladeCategory:
-            EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.EDO_POLICE,
         title: 'Дзиттэ со скрытым клинком',
         type: 'Дзиттэ предмет скрытого ношения',
         blacksmith_name: 'Неизвестен',
@@ -910,9 +906,8 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 25,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
-        weaponSamuraiBladeCategory:
-            EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.TANTO,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SHINOBI,
         title: 'Кинжал замаскированный под веер',
         type: 'Кайкэн, предмет скрытого ношения',
         blacksmith_name: 'Неизвестен',
@@ -1147,8 +1142,8 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 35,
-        mainCategory: EXHIBIT_CATEGORY.TOOLS,
-        // weaponSamuraiBladeCategory: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.EDO_POLICE,
         title: 'Содэгарами (袖搦)',
         type: 'Инструменты для задержания',
         time: 'Эпоха Эдо, вторая половина, XVIII-XIX в.в.',
@@ -1159,8 +1154,8 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 36,
-        mainCategory: EXHIBIT_CATEGORY.TOOLS,
-        // weaponSamuraiBladeCategory: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.EDO_POLICE,
         title: 'Сасумата (без шипа) (刺股)',
         type: 'Инструменты для задержания',
         time: 'Эпоха Эдо, вторая половина, XVIII-XIX в.в.',
@@ -1171,8 +1166,8 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 37,
-        mainCategory: EXHIBIT_CATEGORY.TOOLS,
-        // weaponSamuraiBladeCategory: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.EDO_POLICE,
         title: 'Цукубо (с крючками) (突棒)',
         type: 'Инструменты для задержания',
         time: 'Эпоха Эдо, вторая половина, XVIII-XIX в.в.',
@@ -1183,8 +1178,8 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 38,
-        mainCategory: EXHIBIT_CATEGORY.TOOLS,
-        // weaponSamuraiBladeCategory: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.EDO_POLICE,
         title: 'Кумадэ (средний прямой шип) (熊手)',
         type: 'Инструменты для задержания',
         time: 'Эпоха Эдо, вторая половина, XVIII-XIX в.в.',
@@ -1195,8 +1190,8 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 39,
-        mainCategory: EXHIBIT_CATEGORY.TOOLS,
-        // weaponSamuraiBladeCategory: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.EDO_POLICE,
         title: 'Кумадэ (три загнутых шипа) (熊手)',
         type: 'Инструменты для задержания',
         time: 'Эпоха Эдо, вторая половина, XVIII-XIX в.в.',
@@ -1207,8 +1202,8 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 40,
-        mainCategory: EXHIBIT_CATEGORY.TOOLS,
-        // weaponSamuraiBladeCategory: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.EDO_POLICE,
         title: 'Цукубо (простой) (突棒)',
         type: 'Инструменты для задержания',
         time: 'Эпоха Эдо, вторая половина, XVIII-XIX в.в.',
@@ -1219,8 +1214,8 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 41,
-        mainCategory: EXHIBIT_CATEGORY.TOOLS,
-        // weaponSamuraiBladeCategory: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.EDO_POLICE,
         title: 'Сасумата (с шипом) (刺股)',
         type: 'Инструменты для задержания',
         time: 'Эпоха Эдо, вторая половина, XVIII-XIX в.в.',
@@ -1275,8 +1270,8 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 45,
-        mainCategory: EXHIBIT_CATEGORY.ARMOR,
-        // weaponSamuraiBladeCategory: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SHINOBI,
         title: 'Доспех Кусари Татами Гусоку',
         subtitle: '(с гербом, синяя шнуровка)',
         type: 'Татами Гусоку. Доспех синоби',
@@ -1314,8 +1309,8 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 48,
-        mainCategory: EXHIBIT_CATEGORY.TOOLS,
-        // weaponSamuraiBladeCategory: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.EDO_POLICE,
         title: 'Наручники Тэдзё',
         type: 'Специальные предметы, полиция Эдо',
         time: 'Период Эдо, 1603 – 1868 гг.',
@@ -1326,8 +1321,8 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 49,
-        mainCategory: EXHIBIT_CATEGORY.TOOLS,
-        // weaponSamuraiBladeCategory: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SHINOBI,
         title: 'Фонарь Гандо',
         type: 'Специальные предметы, нидзя (синоби)',
         time: 'Период Эдо (1603 - 1868 гг.)',
@@ -1338,8 +1333,8 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 50,
-        mainCategory: EXHIBIT_CATEGORY.TOOLS,
-        // weaponSamuraiBladeCategory: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SHINOBI,
         title: 'Асико',
         type: 'Специальные предметы, нидзя (синоби)',
         time: 'Период Эдо (1603 - 1868 гг.)',
@@ -1500,9 +1495,8 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 56,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
-        weaponSamuraiBladeCategory:
-            EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.IMPERIAL_ARMY,
         title: 'Кю-гунто Ёсицукэ',
         type: 'Вакидзаси',
         blacksmith_name: 'Ёсицукэ',
@@ -1546,8 +1540,8 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 58,
-        mainCategory: EXHIBIT_CATEGORY.THROWABLE_WEAPON,
-        // weaponSamuraiBladeCategory: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SHINOBI,
         title: 'Сюрикэны',
         type: 'Метательное оружие',
         time: 'Эпохи Муромати – Эдо, XVI-XIX в.в.',
@@ -1558,8 +1552,8 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 59,
-        mainCategory: EXHIBIT_CATEGORY.THROWABLE_WEAPON,
-        // weaponSamuraiBladeCategory: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SHINOBI,
         title: 'Бо-Сюрикэны в коробочке для лекарств Инро',
         type: 'Метательное оружие',
         time: 'Вторая половина эпохи Эдо, XVIII-XIX в.в.',
@@ -1570,7 +1564,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 60,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.KATANA,
         title: 'Катана Рай Куницугу',
@@ -1630,9 +1627,8 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 62,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
-        weaponSamuraiBladeCategory:
-            EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.TANTO,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.IMPERIAL_ARMY,
         title: 'Танто Микаса-то Хидэаки',
         type: 'Танто',
         blacksmith_name: 'Хории Хидэаки',
@@ -1672,8 +1668,8 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 64,
-        mainCategory: EXHIBIT_CATEGORY.PERCUSSION_WEAPON,
-        // weaponSamuraiBladeCategory: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.TANTO,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SHINOBI,
         title: 'Кусари-тигирики',
         type: 'Цепное оружие',
         time: 'Эпоха Эдо',
@@ -1697,8 +1693,8 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 66,
-        mainCategory: EXHIBIT_CATEGORY.TOOLS,
-        // weaponSamuraiBladeCategory: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.TANTO,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SHINOBI,
         title: 'Макибиси',
         type: 'Травмирующие предметы',
         time: 'Эпоха Эдо',
@@ -1743,15 +1739,13 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 69,
-        mainCategory: EXHIBIT_CATEGORY.TOOLS,
-        // weaponSamuraiBladeCategory: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.TANTO,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.EDO_POLICE,
         title: 'Цуки-яри',
         type: 'Инструменты для задержания',
         time: 'Эпоха Эдо, вторая половина, XVIII-XIX в.в.',
         description:
             'Захват и одновременно оружие, используемый самурайской полицией Эдо. На древке, также как и на прочих полицейских инструментах, установлены железные полосы с шипами, которые позволяли зацепляться за одежду при задержании преступников.',
         images: EXHIBIT_IMAGES.E69,
-        // TODO - need to add 69 track.
-        // track: EXHIBIT_TRACKS.E69,
     },
 ] as IExhibit[];
