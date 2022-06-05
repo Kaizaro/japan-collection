@@ -1,6 +1,10 @@
 import {EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY} from '@src/modules/exhibits/entities/categories/exhibitWeaponsSamuraiBladeSubCategory';
 import {EXHIBIT_CATEGORY} from '@src/modules/exhibits/entities/categories/exhibitCategory';
-import {IExhibit} from '@src/modules/exhibits/entities';
+import {
+    EXHIBIT_WEAPONS_SAMURAI_CATEGORY,
+    EXHIBIT_WEAPONS_SUBCATEGORY,
+    IExhibit,
+} from '@src/modules/exhibits/entities';
 import {EXHIBIT_TRACKS} from '@src/modules/exhibits/DAL/exhibits/exhibitTracks';
 import {EXHIBIT_IMAGES} from '@src/modules/exhibits/DAL/exhibits/exhibitImages';
 import {ARTICLE_MODAL_IDS} from '@src/modules/exhibits/DAL/articles/articleModalIds';
@@ -14,6 +18,9 @@ export const EXHIBITS = [
         id: 'sakai_masamune',
         exhibit_number: 1,
         mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
         title: 'Вакидзаси «Сакаи Масамунэ»',
@@ -105,7 +112,10 @@ export const EXHIBITS = [
     {
         id: 'katana_masamune',
         exhibit_number: 2,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.KATANA,
         title: 'Катана Масамунэ',
@@ -143,7 +153,10 @@ export const EXHIBITS = [
     {
         id: 'o_tanto_masamune',
         exhibit_number: 3,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
         title: 'О-танто Масамунэ',
@@ -188,7 +201,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 4,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.KATANA,
         title: 'Катана Нидай Мурамаса',
@@ -225,7 +241,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 5,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
         title: 'О-танто Нидай Мурамаса',
@@ -262,7 +281,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 6,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.TANTO,
         title: 'Танто Нидай Мурамаса',
@@ -301,7 +323,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 7,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.KATANA,
         title: 'Катана Сэнго Мурамаса',
@@ -338,9 +363,12 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 8,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
-            EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.TANTO,
+            EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
         title: 'О-танто Сэнго Мурамаса',
         type: 'Танто',
         blacksmith_name: 'Сэнго Мурамаса, I поколение',
@@ -375,7 +403,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 9,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.KATANA,
         title: 'Катана Садамунэ',
@@ -408,7 +439,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 10,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
         title: 'Вакидзаси Садамунэ',
@@ -441,7 +475,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 11,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.KATANA,
         title: 'Катана в оправе тати',
@@ -464,7 +501,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 12,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
         title: 'Вакидзаси Тадамицу',
@@ -481,9 +521,12 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 13,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
-            EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
+            EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.KATANA,
         title: 'Катана Масасигэ',
         type: 'Катана',
         blacksmith_name: 'Масасигэ',
@@ -514,7 +557,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 14,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
         title: 'Вакидзаси Киёмицу',
@@ -586,9 +632,12 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 16,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
-            EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
+            EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.KATANA,
         title: 'Катана Кунихиро',
         type: 'Катана',
         blacksmith_name: 'Кунихиро',
@@ -619,7 +668,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 17,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
         title: 'Вакидзаси Кубикири Сукэсада',
@@ -676,7 +728,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 18,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.KATANA,
         title: 'Катана',
@@ -698,7 +753,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 19,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.TANTO,
         title: 'Танто в оправе айкути',
@@ -721,7 +779,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 20,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.TANTO,
         title: 'Танто в костяной оправе',
@@ -737,7 +798,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 21,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.TANTO,
         title: 'Танто в оправе айкути',
@@ -874,9 +938,9 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 26,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
-        weaponSamuraiBladeCategory:
-            EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.TANTO,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory: EXHIBIT_WEAPONS_SAMURAI_CATEGORY.FIREARMS,
         title: 'Танто-тэппо',
         type: 'Специальный предмет. Предмет скрытого ношения',
         blacksmith_name: 'Неизвестен',
@@ -890,8 +954,9 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 27,
-        mainCategory: EXHIBIT_CATEGORY.FIREARMS,
-        // weaponSamuraiBladeCategory: ,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory: EXHIBIT_WEAPONS_SAMURAI_CATEGORY.FIREARMS,
         title: 'Фитильное ружьё Танэгасима',
         type: 'Аркебуза',
         blacksmith_name: 'Цуда Ёсимаса',
@@ -918,8 +983,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 28,
-        mainCategory: EXHIBIT_CATEGORY.BLUNT_WEAPON,
-        // weaponSamuraiBladeCategory: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLUNT_WEAPON,
         title: 'Канабо',
         type: 'Палица',
         blacksmith_name: 'Неизвестен',
@@ -939,9 +1006,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 29,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
-        weaponSamuraiBladeCategory:
-            EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.NAGINATA,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.PERCUSSION_WEAPON,
         title: 'Нагината 長刀',
         type: 'Нагината',
         blacksmith_name: 'Неизвестен',
@@ -961,9 +1029,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 30,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
-        weaponSamuraiBladeCategory:
-            EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.YARI,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.PERCUSSION_WEAPON,
         title: 'Оми-яри',
         type: 'Яри',
         blacksmith_name: 'Нобусигэ',
@@ -983,9 +1052,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 31,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
-        weaponSamuraiBladeCategory:
-            EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.YARI,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.PERCUSSION_WEAPON,
         title: 'Су-яри',
         type: 'Яри',
         blacksmith_name: 'Ивами-но-ками Фудзивара Кунисукэ, I поколение',
@@ -1006,9 +1076,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 32,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
-        weaponSamuraiBladeCategory:
-            EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.YARI,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.PERCUSSION_WEAPON,
         title: 'Дзюмондзи - яри',
         type: 'Яри',
         blacksmith_name: 'Ивами-но-ками Фудзивара Масанао',
@@ -1029,9 +1100,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 33,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
-        weaponSamuraiBladeCategory:
-            EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.YARI,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.PERCUSSION_WEAPON,
         title: 'Каригата Дзюмондзи Яри',
         type: 'Яри',
         blacksmith_name: 'Этидзэн Дайдзё Фудзивара Куницугу',
@@ -1052,9 +1124,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 34,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
-        weaponSamuraiBladeCategory:
-            EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.YARI,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.PERCUSSION_WEAPON,
         title: 'Катакама Яри',
         type: 'Яри',
         blacksmith_name: 'Неизвестен',
@@ -1158,8 +1231,9 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 42,
-        mainCategory: EXHIBIT_CATEGORY.ARMOR,
-        // weaponSamuraiBladeCategory: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory: EXHIBIT_WEAPONS_SAMURAI_CATEGORY.ARMOR,
         title: 'Доспех татехаги окэгава-до Тосэй-гусоку',
         type: 'Тосэй-гусоку',
         blacksmith_name: 'Неизвестен',
@@ -1171,8 +1245,9 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 43,
-        mainCategory: EXHIBIT_CATEGORY.ARMOR,
-        // weaponSamuraiBladeCategory: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory: EXHIBIT_WEAPONS_SAMURAI_CATEGORY.ARMOR,
         title: 'Доспех Тати-до Гусоку',
         subtitle: '(с драконом, красная шнуровка)',
         type: 'Парадные',
@@ -1185,8 +1260,9 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 44,
-        mainCategory: EXHIBIT_CATEGORY.ARMOR,
-        // weaponSamuraiBladeCategory: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory: EXHIBIT_WEAPONS_SAMURAI_CATEGORY.ARMOR,
         title: 'Доспех Тати-до Гусоку',
         subtitle: '(с гербом, синяя шнуровка)',
         type: 'Парадные',
@@ -1274,7 +1350,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 51,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.TANTO,
         title: 'Танто школы Мурамаса',
@@ -1296,7 +1375,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 52,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.KATANA,
         title: 'Катана Фудзивара Ёсимицу',
@@ -1325,7 +1407,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 53,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.TANTO,
         title: 'Танто Кагэфую',
@@ -1347,7 +1432,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 54,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.TANTO,
         title: 'Танто Юкимицу',
@@ -1382,7 +1470,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 55,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.KATANA,
         title: 'Катана Нагамицу',
@@ -1425,7 +1516,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 57,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
         title: 'Кубикири Хиромаса',
@@ -1511,7 +1605,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 61,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.KATANA,
         title: 'Катана Фудзивара Кунитоми',
@@ -1555,8 +1652,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 63,
-        mainCategory: EXHIBIT_CATEGORY.CULTURE,
-        // weaponSamuraiBladeCategory: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.TANTO,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLUNT_WEAPON,
         title: 'Тобигути рода Мацуи',
         type: 'Тобигути',
         time: 'Эпоха Эдо',
@@ -1573,7 +1672,7 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 64,
-        mainCategory: EXHIBIT_CATEGORY.BLUNT_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.PERCUSSION_WEAPON,
         // weaponSamuraiBladeCategory: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.TANTO,
         title: 'Кусари-тигирики',
         type: 'Цепное оружие',
@@ -1585,8 +1684,9 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 65,
-        mainCategory: EXHIBIT_CATEGORY.TOOLS,
-        // weaponSamuraiBladeCategory: EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.TANTO,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory: EXHIBIT_WEAPONS_SAMURAI_CATEGORY.STAFFS,
         title: 'Сайхай',
         type: 'Жезлы',
         time: 'Эпоха Эдо',
@@ -1609,7 +1709,10 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 67,
-        mainCategory: EXHIBIT_CATEGORY.BLADE_WEAPON,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.SAMURAI,
+        weaponSamuraiTypeSubCategory:
+            EXHIBIT_WEAPONS_SAMURAI_CATEGORY.BLADE_WEAPON,
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.TANTO,
         title: 'Танто в костяной оправе',
