@@ -6,7 +6,7 @@ const ICON_SIZE = scaleVertical(32);
 
 export const exhibitCardStyles = StyleSheet.create({
     card: {
-        width: scaleHorizontal(347),
+        width: '48%',
         paddingBottom: scaleVertical(5),
     },
     imageContainer: {
