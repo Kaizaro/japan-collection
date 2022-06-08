@@ -8,6 +8,7 @@ export const exhibitTabsStyles = StyleSheet.create({
         alignItems: 'center',
     },
     item: {
-        width: '50%',
+        width: '52%',
     },
+
 });

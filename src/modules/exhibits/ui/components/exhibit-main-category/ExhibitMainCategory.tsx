@@ -12,6 +12,7 @@ interface IProps extends IDefaultFCProps {
     selectedMainCategory: TNullable<EXHIBIT_CATEGORY>;
     tabTitle?: string;
     selectMainCategory: (category: EXHIBIT_CATEGORY) => void;
+    fontSizeScaled?: number;
 }
 
 const ExhibitMainCategory: FC<IProps> = ({
@@ -19,6 +20,7 @@ const ExhibitMainCategory: FC<IProps> = ({
     selectedMainCategory,
     tabTitle,
     selectMainCategory,
+    fontSizeScaled,
     innerStyle,
 }) => {
     const isActive = useMemo(
@@ -39,7 +41,11 @@ const ExhibitMainCategory: FC<IProps> = ({
 
     return (
         <PressableComponent onPress={handleTabPress} innerStyle={innerStyle}>
-            <HeaderText fontSize={64} color={textColor} text={tabTitle} />
+            <HeaderText
+                fontSize={fontSizeScaled ?? 58}
+                color={textColor}
+                text={tabTitle}
+            />
         </PressableComponent>
     );
 };

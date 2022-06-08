@@ -1,4 +1,4 @@
-import React, {FC, useCallback} from 'react';
+import React, {FC, useCallback, useEffect} from 'react';
 
 import {Image, View} from 'react-native';
 
@@ -13,9 +13,14 @@ import nextIcon from '../../shared/assets/graphics/icons/next.png';
 import {displayName as appName} from '../../../app.json';
 
 import {appSplashStyles as styles} from './styles';
+import {lockOrientation} from "@shared/utils/lockOrientation";
 
 const AppSplash: FC = () => {
     const {navigate} = useNavigation();
+
+    useEffect(() => {
+        lockOrientation();
+    }, []);
 
     const handleNextButtonPress = useCallback(() => {
         navigate(APP_SCREEN_NAME.Exhibits);

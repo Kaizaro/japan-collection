@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect} from 'react';
 
 import {Image, ScrollView, View} from 'react-native';
 
@@ -24,10 +24,15 @@ import {IExhibit} from '@src/modules/exhibits/entities';
 import BACKGROUND_IMAGE from '../../../../../shared/assets/graphics/images/dragon.png';
 
 import {exhibitDetailsStyles as styles} from './styles';
+import {lockOrientation} from "@shared/utils/lockOrientation";
 
 const ExhibitDetails: FC<IDefaultFCProps> = () => {
     const {exhibit} = useRoute().params as TRecord<IExhibit>;
     const {handleLinkPress} = useExhibitLinks();
+
+    useEffect(() => {
+        lockOrientation();
+    }, []);
 
     return (
         <ComponentContainer

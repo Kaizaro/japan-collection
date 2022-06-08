@@ -3,6 +3,7 @@ import React, {FC} from 'react';
 import {StatusBar} from 'react-native';
 
 import {SafeAreaProvider} from 'react-native-safe-area-context/src/SafeAreaContext';
+import {OrientationLocker, PORTRAIT} from 'react-native-orientation-locker';
 import {BottomSheetModalProvider} from '@gorhom/bottom-sheet';
 
 import {APP_COLORS} from '@shared/config/colors';
