@@ -14,7 +14,7 @@ export const exhibitCardStyles = StyleSheet.create({
         overflow: 'hidden',
     },
     image: {
-        width: scaleHorizontal(347),
+        width: '100%',
         height: scaleVertical(260),
     },
     title: {
