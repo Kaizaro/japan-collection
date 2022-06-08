@@ -36,14 +36,14 @@ const ExhibitWeaponSubCategories: FC<IProps> = ({innerStyle, ...props}) => {
             />
             <ExhibitWeaponSubCategory
                 {...props}
-                tagId={EXHIBIT_WEAPONS_SUBCATEGORY.IMPERIAL_ARMY}
-                tagTitle={'Вооружение Императорской армии'}
+                tagId={EXHIBIT_WEAPONS_SUBCATEGORY.SHINOBI}
+                tagTitle={'Вооружение Синоби'}
                 innerStyle={styles.item}
             />
             <ExhibitWeaponSubCategory
                 {...props}
-                tagId={EXHIBIT_WEAPONS_SUBCATEGORY.SHINOBI}
-                tagTitle={'Вооружение Синоби'}
+                tagId={EXHIBIT_WEAPONS_SUBCATEGORY.IMPERIAL_ARMY}
+                tagTitle={'Вооружение Императорской армии'}
                 innerStyle={styles.item}
             />
         </ScrollView>

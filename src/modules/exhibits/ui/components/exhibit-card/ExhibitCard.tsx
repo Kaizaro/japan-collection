@@ -33,9 +33,9 @@ const ExhibitCard: FC<IProps> = ({card}) => {
                     {`№${card.exhibit_number} ${card.title}`}
                 </HeaderText>
             </View>
-            <View style={styles.subtitle}>
-                <RegularText fontSize={16}>{card.subtitle}</RegularText>
-            </View>
+            {/*<View style={styles.subtitle}>*/}
+            {/*    <RegularText fontSize={16}>{card.subtitle}</RegularText>*/}
+            {/*</View>*/}
             <View style={styles.description}>
                 <RegularText numberOfLines={3}>{card.description}</RegularText>
             </View>

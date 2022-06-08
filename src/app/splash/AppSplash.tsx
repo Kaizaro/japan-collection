@@ -16,15 +16,15 @@ import {appSplashStyles as styles} from './styles';
 import {lockOrientation} from "@shared/utils/lockOrientation";
 
 const AppSplash: FC = () => {
-    const {navigate} = useNavigation();
+    const {reset} = useNavigation();
 
     useEffect(() => {
         lockOrientation();
     }, []);
 
     const handleNextButtonPress = useCallback(() => {
-        navigate(APP_SCREEN_NAME.Exhibits);
-    }, [navigate]);
+        reset({index: 0, routes: [{name: APP_SCREEN_NAME.Exhibits}]});
+    }, [reset]);
 
     return (
         <View style={styles.container}>

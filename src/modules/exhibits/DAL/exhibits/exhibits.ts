@@ -24,7 +24,7 @@ export const EXHIBITS = [
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
         title: 'Вакидзаси «Сакаи Масамунэ»',
-        subtitle: 'それは長い間確立された',
+        // subtitle: 'それは長い間確立された',
         type: 'Вакидзаси',
         blacksmith_name: 'Горо Нюдо Масамунэ',
         blacksmith_name_japanese: '五郎入道正宗',
@@ -119,7 +119,7 @@ export const EXHIBITS = [
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.KATANA,
         title: 'Катана Масамунэ',
-        subtitle: 'それは長い間確立された',
+        // subtitle: 'それは長い間確立された',
         type: 'Катана',
         blacksmith_name: 'Горо Нюдо Масамунэ',
         blacksmith_name_japanese: '五郎入道正宗',
@@ -160,7 +160,7 @@ export const EXHIBITS = [
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
         title: 'О-танто Масамунэ',
-        subtitle: 'それは長い間確立された',
+        // subtitle: 'それは長い間確立された',
         type: 'Вакидзаси',
         blacksmith_name: 'Горо Нюдо Масамунэ',
         blacksmith_name_japanese: '五郎入道正宗',
