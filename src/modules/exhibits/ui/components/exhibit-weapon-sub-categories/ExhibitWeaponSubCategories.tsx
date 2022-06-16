@@ -46,6 +46,12 @@ const ExhibitWeaponSubCategories: FC<IProps> = ({innerStyle, ...props}) => {
                 tagTitle={'Вооружение Императорской армии'}
                 innerStyle={styles.item}
             />
+            <ExhibitWeaponSubCategory
+                {...props}
+                tagId={EXHIBIT_WEAPONS_SUBCATEGORY.CULTURE}
+                tagTitle={'Искусство'}
+                innerStyle={styles.item}
+            />
         </ScrollView>
     );
 };

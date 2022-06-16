@@ -6,6 +6,7 @@ import {APP_TEXT_COLORS} from '@shared/config/colors';
 
 import {IDefaultFCProps, TNullable} from '@src/shared/types';
 import {EXHIBIT_CATEGORY} from '@src/modules/exhibits/entities';
+import {View} from "react-native";
 
 interface IProps extends IDefaultFCProps {
     tabId?: EXHIBIT_CATEGORY;
@@ -40,13 +41,13 @@ const ExhibitMainCategory: FC<IProps> = ({
     }, [selectMainCategory, tabId]);
 
     return (
-        <PressableComponent onPress={handleTabPress} innerStyle={innerStyle}>
+        <View style={innerStyle}>
             <HeaderText
                 fontSize={fontSizeScaled ?? 58}
                 color={textColor}
                 text={tabTitle}
             />
-        </PressableComponent>
+        </View>
     );
 };
 

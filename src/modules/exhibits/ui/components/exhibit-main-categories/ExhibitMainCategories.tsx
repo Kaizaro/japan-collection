@@ -23,12 +23,12 @@ const ExhibitMainCategories: FC<IProps> = ({innerStyle, ...props}) => {
                 tabTitle={'Вооружение'}
                 innerStyle={styles.item}
             />
-            <ExhibitMainCategory
-                {...props}
-                tabId={EXHIBIT_CATEGORY.JAPANESE_CULTURE}
-                tabTitle={'Искусство'}
-                innerStyle={styles.item}
-            />
+            {/*<ExhibitMainCategory*/}
+            {/*    {...props}*/}
+            {/*    tabId={EXHIBIT_CATEGORY.JAPANESE_CULTURE}*/}
+            {/*    tabTitle={'Искусство'}*/}
+            {/*    innerStyle={styles.item}*/}
+            {/*/>*/}
         </View>
     );
 };
