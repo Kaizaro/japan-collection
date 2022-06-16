@@ -5,12 +5,15 @@ import {PressableComponent} from '@shared/ui/buttons/pressable-component';
 import {APP_COLORS, APP_TEXT_COLORS} from '@shared/config/colors';
 
 import {IDefaultFCProps, TNullable} from '@src/shared/types';
-import {EXHIBIT_WEAPONS_SUBCATEGORY} from '@src/modules/exhibits/entities';
+import {
+    EXHIBIT_CATEGORY,
+    EXHIBIT_WEAPONS_SUBCATEGORY,
+} from '@src/modules/exhibits/entities';
 
 import {exhibitWeaponsSubCategoryStyles as styles} from './styles';
 
 interface IProps extends IDefaultFCProps {
-    tagId?: EXHIBIT_WEAPONS_SUBCATEGORY;
+    tagId?: EXHIBIT_CATEGORY | EXHIBIT_WEAPONS_SUBCATEGORY;
     selectedWeaponSubCategory: TNullable<EXHIBIT_WEAPONS_SUBCATEGORY>;
     tagTitle?: string;
     selectWeaponSubCategory: (category: EXHIBIT_WEAPONS_SUBCATEGORY) => void;
