@@ -24,7 +24,7 @@ export const EXHIBITS = [
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
         title: 'Вакидзаси «Сакаи Масамунэ»',
-        subtitle: 'それは長い間確立された',
+        // subtitle: 'それは長い間確立された',
         type: 'Вакидзаси',
         blacksmith_name: 'Горо Нюдо Масамунэ',
         blacksmith_name_japanese: '五郎入道正宗',
@@ -119,7 +119,7 @@ export const EXHIBITS = [
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.KATANA,
         title: 'Катана Масамунэ',
-        subtitle: 'それは長い間確立された',
+        // subtitle: 'それは長い間確立された',
         type: 'Катана',
         blacksmith_name: 'Горо Нюдо Масамунэ',
         blacksmith_name_japanese: '五郎入道正宗',
@@ -160,7 +160,7 @@ export const EXHIBITS = [
         weaponSamuraiBladeCategory:
             EXHIBIT_WEAPONS_SAMURAI_BLADE_SUBCATEGORY.WAKIZASHI,
         title: 'О-танто Масамунэ',
-        subtitle: 'それは長い間確立された',
+        // subtitle: 'それは長い間確立された',
         type: 'Вакидзаси',
         blacksmith_name: 'Горо Нюдо Масамунэ',
         blacksmith_name_japanese: '五郎入道正宗',
@@ -1284,7 +1284,8 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 46,
-        mainCategory: EXHIBIT_CATEGORY.JAPANESE_CULTURE,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.CULTURE,
         title: 'Свиток «Триумф Маэда Тосииэ»',
         subtitle: '前田犬千代凱旋図',
         type: 'Татами Гусоку. Доспех синоби',
@@ -1296,7 +1297,8 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 47,
-        mainCategory: EXHIBIT_CATEGORY.JAPANESE_CULTURE,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.CULTURE,
         title: 'Скульптура «Тоётоми Хидэёси»',
         blacksmith_name: 'Скульптор В.Е.Маслов, 2012 г.',
         dictionaryLinks: [
@@ -1725,7 +1727,8 @@ export const EXHIBITS = [
     },
     {
         exhibit_number: 68,
-        mainCategory: EXHIBIT_CATEGORY.JAPANESE_CULTURE,
+        mainCategory: EXHIBIT_CATEGORY.JAPANESE_WEAPON,
+        weaponSubCategory: EXHIBIT_WEAPONS_SUBCATEGORY.CULTURE,
         title: 'Гравюра «Сражение Таданобу и Какухана в горах Ёсино»',
         type: 'Укиё-э, цветная ксилография',
         blacksmith_name: 'Художник: Огата Гэкко',

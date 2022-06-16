@@ -6,12 +6,14 @@ import {APP_TEXT_COLORS} from '@shared/config/colors';
 
 import {IDefaultFCProps, TNullable} from '@src/shared/types';
 import {EXHIBIT_CATEGORY} from '@src/modules/exhibits/entities';
+import {View} from "react-native";
 
 interface IProps extends IDefaultFCProps {
     tabId?: EXHIBIT_CATEGORY;
     selectedMainCategory: TNullable<EXHIBIT_CATEGORY>;
     tabTitle?: string;
     selectMainCategory: (category: EXHIBIT_CATEGORY) => void;
+    fontSizeScaled?: number;
 }
 
 const ExhibitMainCategory: FC<IProps> = ({
@@ -19,6 +21,7 @@ const ExhibitMainCategory: FC<IProps> = ({
     selectedMainCategory,
     tabTitle,
     selectMainCategory,
+    fontSizeScaled,
     innerStyle,
 }) => {
     const isActive = useMemo(
@@ -38,9 +41,13 @@ const ExhibitMainCategory: FC<IProps> = ({
     }, [selectMainCategory, tabId]);
 
     return (
-        <PressableComponent onPress={handleTabPress} innerStyle={innerStyle}>
-            <HeaderText fontSize={64} color={textColor} text={tabTitle} />
-        </PressableComponent>
+        <View style={innerStyle}>
+            <HeaderText
+                fontSize={fontSizeScaled ?? 58}
+                color={textColor}
+                text={tabTitle}
+            />
+        </View>
     );
 };
 
