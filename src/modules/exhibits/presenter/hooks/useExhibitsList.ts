@@ -28,8 +28,9 @@ const useExhibitsList = () => {
     }, [searchText]);
 
     // Categories filter
-    const [selectedCategory, setSelectedCategory] =
-        useState<TNullable<EXHIBIT_CATEGORY>>(null);
+    const [selectedCategory, setSelectedCategory] = useState<
+        TNullable<EXHIBIT_CATEGORY>
+    >(EXHIBIT_CATEGORY.JAPANESE_WEAPON);
     const [selectedWeaponSubCategory, setSelectedWeaponSubCategory] =
         useState<TNullable<EXHIBIT_WEAPONS_SUBCATEGORY>>(null);
     const [
@@ -50,6 +51,7 @@ const useExhibitsList = () => {
             }
             setSelectedWeaponSubCategory(null);
             setSelectedWeaponSamuraiSubCategory(null);
+            setSelectedWeaponSamuraiBladeSubCategory(null);
         },
         [selectedCategory],
     );
@@ -62,6 +64,7 @@ const useExhibitsList = () => {
                 setSelectedWeaponSubCategory(category);
             }
             setSelectedWeaponSamuraiSubCategory(null);
+            setSelectedWeaponSamuraiBladeSubCategory(null);
         },
         [selectedWeaponSubCategory],
     );
@@ -73,6 +76,7 @@ const useExhibitsList = () => {
             } else {
                 setSelectedWeaponSamuraiSubCategory(category);
             }
+            setSelectedWeaponSamuraiBladeSubCategory(null);
         },
         [selectedWeaponSamuraiSubCategory],
     );

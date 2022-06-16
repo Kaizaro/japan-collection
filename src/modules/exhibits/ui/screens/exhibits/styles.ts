@@ -17,7 +17,7 @@ export const exhibitListStyles = StyleSheet.create({
         flexDirection: 'row',
         width: '100%',
         justifyContent: 'space-between',
-        alignItems: 'center',
+        // alignItems: 'center',
     },
     emptyContainer: {
         height: '100%',

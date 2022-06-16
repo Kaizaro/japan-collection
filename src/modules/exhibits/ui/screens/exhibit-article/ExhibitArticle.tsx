@@ -1,10 +1,12 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect} from 'react';
 
 import {Image, ScrollView, View} from 'react-native';
 
 import {useRoute} from '@react-navigation/core';
 
+import {lockOrientation} from '@shared/utils/lockOrientation';
 import {HeaderText, RegularText} from '@shared/ui/text';
+import {PaddingContainer} from '@shared/ui/container/PaddingContainer';
 import {ComponentContainer} from '@shared/ui/container';
 import {TRecord} from '@shared/types';
 import {DEFAULT_BOTTOM_INSET} from '@shared/constants/styles';
@@ -15,10 +17,13 @@ import {ExhibitCarousel} from '@src/modules/exhibits/ui/components/exhibit-carou
 import {IArticle} from '@src/modules/exhibits/entities/article';
 
 import {articleGoroNudoMasamuneStyles as styles} from './styles';
-import {PaddingContainer} from "@shared/ui/container/PaddingContainer";
 
 const ExhibitArticle: FC = () => {
     const {article} = useRoute().params as TRecord<IArticle>;
+
+    useEffect(() => {
+        lockOrientation();
+    }, []);
 
     return (
         <ComponentContainer

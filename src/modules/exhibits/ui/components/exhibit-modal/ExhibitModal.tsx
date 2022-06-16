@@ -39,7 +39,7 @@ export interface IContextValue {
     clearAllData?: () => void;
 }
 
-const EXHIBIT_MODAL_DEFAULT_SNAP_POINTS = [scaleVertical(249)];
+const EXHIBIT_MODAL_DEFAULT_SNAP_POINTS = ['40%'];
 
 const initialContextValue = {
     isModalVisible: false,

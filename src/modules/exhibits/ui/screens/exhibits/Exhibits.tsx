@@ -1,4 +1,4 @@
-import React, {FC, useCallback, useMemo} from 'react';
+import React, {FC, useCallback, useEffect, useMemo} from 'react';
 
 import {FlatList, View} from 'react-native';
 
@@ -13,6 +13,7 @@ import {ExhibitCategories} from '@src/modules/exhibits/ui/components/exhibit-cat
 import {ExhibitCard} from '@src/modules/exhibits/ui/components/exhibit-card';
 import {keyExtractor} from '@src/modules/exhibits/presenter/lib/keyExtractor';
 import {useExhibitsList} from '@src/modules/exhibits/presenter/hooks/useExhibitsList';
+import {lockOrientation} from "@shared/utils/lockOrientation";
 
 const Exhibits: FC = () => {
     const {
@@ -25,7 +26,13 @@ const Exhibits: FC = () => {
         handleSelectWeaponSubCategory,
         selectedWeaponSamuraiSubCategory,
         handleSelectWeaponSamuraiSubCategory,
+        selectedWeaponSamuraiBladeSubCategory,
+        handleSelectWeaponSamuraiBladeSubCategory,
     } = useExhibitsList();
+
+    useEffect(() => {
+        lockOrientation();
+    }, []);
 
     const SearchRow = useMemo(
         () => (
@@ -53,14 +60,22 @@ const Exhibits: FC = () => {
                 selectWeaponSamuraiSubCategory={
                     handleSelectWeaponSamuraiSubCategory
                 }
+                selectedWeaponSamuraiBladeSubCategory={
+                    selectedWeaponSamuraiBladeSubCategory
+                }
+                selectWeaponSamuraiBladeSubCategory={
+                    handleSelectWeaponSamuraiBladeSubCategory
+                }
                 innerStyle={styles.categories}
             />
         ),
         [
             handleSelectCategory,
+            handleSelectWeaponSamuraiBladeSubCategory,
             handleSelectWeaponSamuraiSubCategory,
             handleSelectWeaponSubCategory,
             selectedCategory,
+            selectedWeaponSamuraiBladeSubCategory,
             selectedWeaponSamuraiSubCategory,
             selectedWeaponSubCategory,
         ],
