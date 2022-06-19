@@ -8,8 +8,6 @@ import {AppHeader} from '@app/navigation/header';
 import {APP_SCREEN_NAME} from '@shared/constants';
 import {APP_COLORS} from '@shared/config/colors';
 
-import {App} from './src/app/core';
-
 import {Exhibits} from '@src/modules/exhibits/ui/screens/exhibits';
 import {ExhibitDetails} from '@src/modules/exhibits/ui/screens/exhibit-details';
 import {ExhibitArticle} from '@src/modules/exhibits/ui/screens/exhibit-article';
