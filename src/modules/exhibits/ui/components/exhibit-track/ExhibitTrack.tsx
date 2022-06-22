@@ -1,4 +1,11 @@
-import React, {FC, useCallback, useEffect, useMemo, useState} from 'react';
+import React, {
+    FC,
+    useCallback,
+    useEffect,
+    useMemo,
+    useRef,
+    useState,
+} from 'react';
 
 import {Alert, Image, View} from 'react-native';
 
@@ -37,6 +44,7 @@ const ExhibitTrack: FC<IProps> = ({track, innerStyle}) => {
         () => playerStatus === 'buffering' || playerStatus === State.Playing,
         [playerStatus],
     );
+    const _timeoutRef = useRef<unknown>();
 
     const getPlayerState = useCallback(async () => {
         const playerState = await TrackPlayer.getState();
@@ -135,15 +143,24 @@ const ExhibitTrack: FC<IProps> = ({track, innerStyle}) => {
             await pauseTrack();
         } else if (state === State.Paused) {
             handlePausedPlayer();
+        } else if (state === State.Ready) {
+            clearTimeout(_timeoutRef.current);
+            startTrack();
         } else {
             console.error(LOG_TAG, 'track state', state);
             handlePlayerError();
         }
-    }, [getPlayerState, handlePausedPlayer, handlePlayerError, pauseTrack]);
+    }, [
+        getPlayerState,
+        handlePausedPlayer,
+        handlePlayerError,
+        pauseTrack,
+        startTrack,
+    ]);
 
     useEffect(() => {
         startTrack(false);
-        setTimeout(() => {
+        _timeoutRef.current = setTimeout(() => {
             playTrack();
         }, 2000);
 
